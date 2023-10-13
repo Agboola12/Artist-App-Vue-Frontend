@@ -72,6 +72,8 @@
 <script>
 import axios from "axios";
 import { Cloudinary } from "@cloudinary/url-gen";
+// import Cloudinary from "@cloudinary/url-gen"
+// import Cloudinary from "@cloudinary/vue"
 
 
 export default {

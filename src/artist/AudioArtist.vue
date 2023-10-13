@@ -23,12 +23,12 @@
                         </div> -->
                         <div class=" form-group col-md-3 border  ml-2">
                             <label for="file-upload" class="custom-file-upload btn btn">Select Image
-                                <input id="file-upload" name="image" type="file" ref="imageInput" @change="handleImageChange" accept='audio/mpeg' />
+                                <input id="file-upload"  type="file" ref="image" @change="handleImageChange"  />
                             </label>
                         </div>
                         <div class=" form-group row mt-4">
                             <label class="col-md-2 fw-bold">Mp3:</label>
-                            <input type="file" name="mp3" id="mp3" @change="handleMp3Upload" accept="audio/mp3" >
+                            <input type="file"  ref="mp3" @change="handleMp3Change"  >
                         </div>
                         <div class=" form-group row mt-4">
                             <label class="col-md-2 fw-bold">Song Bio:</label>
@@ -83,8 +83,7 @@ export default {
             facebookHandle:"",
             instagramHandle: "",
             imageFile: null,
-            mp3File: null,
-            // mp3Url: null,
+            mp3File: "",
         }
     },
     created() {  
@@ -106,17 +105,47 @@ export default {
     handleImageChange(event) {
       this.imageFile = event.target.files[0];
     },
-    
-    handleMp3Upload(event) {
-      this.mp3File = event.target.files[0];
+
+
+ async  handleMp3Change(e) {
+        const file = e.target.files[0]
+         var reader = new FileReader();
+         reader.onload = function(event) {
+             var data = event.target.result.split(','), 
+             decodedImageData = btoa(data[1]);                
+             console.log(decodedImageData);
+         };
+         reader.readAsDataURL(file);
+         reader.onloadend = () => {
+           setpreviewMusic(reader.result);
+         }
+
+
+        
     },
 
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
     onCreate(){
         const artistId = this.user;
         const formData = new FormData();
         formData.append("songTitle", this.songTitle);
         formData.append('image', this.imageFile);
-        formData.append('mp3', this.mp3File);
+        formData.append('mp3Url', this.mp3File);
         formData.append("songDescription", this.songDescription);
         formData.append("websiteUrl", this.websiteUrl);
         formData.append("tiktokHandle", this.tiktokHandle);
