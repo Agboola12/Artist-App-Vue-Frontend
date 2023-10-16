@@ -28,7 +28,7 @@
                         </div>
                         <div class=" form-group row mt-4">
                             <label class="col-md-2 fw-bold">Mp3:</label>
-                            <input type="file"  ref="mp3" @change="handleMp3Change"  >
+                            <input type="file"  ref="file" @change="handleMp3Change"  >
                         </div>
                         <div class=" form-group row mt-4">
                             <label class="col-md-2 fw-bold">Song Bio:</label>
@@ -84,6 +84,8 @@ export default {
             instagramHandle: "",
             imageFile: null,
             mp3File: "",
+            file:"",
+            fileUrl: ""
         }
     },
     created() {  
@@ -107,45 +109,40 @@ export default {
     },
 
 
- async  handleMp3Change(e) {
-        const file = e.target.files[0]
-         var reader = new FileReader();
-         reader.onload = function(event) {
-             var data = event.target.result.split(','), 
-             decodedImageData = btoa(data[1]);                
-             console.log(decodedImageData);
-         };
-         reader.readAsDataURL(file);
-         reader.onloadend = () => {
-           setpreviewMusic(reader.result);
-         }
+  async handleMp3Change(e) {
+    this.file = e.target.files[0]
+      var reader = new FileReader();
+      reader.onload = function(event) {
+          var data = event.target.result.split(','), 
+          decodedImageData = btoa(data[1]);                   
+          console.log(decodedImageData);
+      };
+      reader.readAsDataURL(file);
+      reader.onloadend = () => {
+        setpreviewMusic(reader.result);
+      }
 
 
-        
+    
+      const musicData= new FormData();
+      musicData.append("file", this.files);
+      musicData.append("folder", "Music");
+      musicData.append("upload_preset", this.cloudinaryPresetUpload);
+      musicData.append("resource_type", "raw");
+      try {
+    await  axios.post("https://api.cloudinary.com/v1_1/dbzwg4li4/upload",musicData);
+        this.fileUrl = res.data.secure_url
+      } catch (error) {
+        console.log(error);
+      }
     },
 
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
     onCreate(){
         const artistId = this.user;
         const formData = new FormData();
         formData.append("songTitle", this.songTitle);
         formData.append('image', this.imageFile);
-        formData.append('mp3Url', this.mp3File);
+        formData.append('mp3Url', this.fileUrl);
         formData.append("songDescription", this.songDescription);
         formData.append("websiteUrl", this.websiteUrl);
         formData.append("tiktokHandle", this.tiktokHandle);
