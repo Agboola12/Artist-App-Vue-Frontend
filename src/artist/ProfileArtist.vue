@@ -1,9 +1,9 @@
 <template>
-      <div class="mt-5 pb-5 " style="margin-left: 5em;" v-if="user" >
+      <div class="mt-5 pb-5 "  v-if="user" >
 
 
         
-        <div class="col-md-9  " style="margin-left: 2em;">
+        <div class="col-md-9  " >
             <table class="table table-borderless " style="font-size: 18px;">
                 <tbody>
                     <tr>
@@ -67,7 +67,7 @@
                </div>
            <div class="mt-4" style="margin-left: 10em;">
             <!-- <button @click="updateUserProfile(id)"  class="btn btn w-50 p-2 text-light" style="background-color: #A10035; ">Update Profile</button>  -->
-                  <input type="submit"  class="btn btn  w-50 p-2 text-light" value="Update Profile" style="background-color: #A10035; "/>
+                  <input type="submit"  class="btn btn  w-75 p-2 text-light" value="Update Profile" style="background-color: #A10035; "/>
            </div>
           </div>
     </div>

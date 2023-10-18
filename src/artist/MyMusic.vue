@@ -7,14 +7,14 @@
             <p>We've got you covered. Just select a release type to get started:</p>
             
             <div class="row  mt-5">
-                <div class="col-md-5 card shadow p-5">
+                <div class="col-md-5 col-sm-1 card shadow mr-5 mb-3 p-5">
                     <h2>Music</h2>
                     <i class="h2 fa fa-file-audio "></i>
                 <a href="audioartist">
                     <input type="button" value="Create New" class=" btn btn-outline-danger text-white mx-auto" />
                 </a>  
                 </div>
-                <div class="col-md-5 card shadow offset-1 p-5" >
+                <div class="col-md-5 col-sm-1 card shadow   p-5" >
                     <h2>Video</h2>
                     <i class="h2 fa fa-file-video"></i>
                     <input type="buton" value="Create New" class="  mx-auto btn btn-outline-danger text-white" /> 
