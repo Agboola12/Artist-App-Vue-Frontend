@@ -18,17 +18,18 @@
                     </div>
                     <div class="form-group row mt-4">
                         <label class="col-md-2 fw-bold">Song Image:</label>
-                        <!-- <div class="col-md-3 show-image">
-                            <h3 class="text-center mt-4">Show Image Upload</h3>
-                        </div> -->
+                        <div class="col-md-3 show-image">
+                            <!-- <h3 class="text-center mt-4">Show Image Upload</h3> -->
+                            <img v-if="imageShow" :src="imageShow" height="200" width="150" />
+                        </div>
                         <div class=" form-group col-md-3 border  ml-2">
                             <label for="file-upload" class="custom-file-upload btn btn">Select Image
-                                <input id="file-upload"  type="file" ref="image" @change="handleImageChange"  />
+                                <input id="file-upload"  type="file"  @change="handleImageChange"  />
                             </label>
                         </div>
                         <div class=" form-group row mt-4">
                             <label class="col-md-2 fw-bold">Mp3:</label>
-                            <input type="file"  ref="file" @change="handleMp3Change"  >
+                            <input type="file"  ref="mp3" @change="handleMp3Change" class="col-md-4"  >
                         </div>
                         <div class=" form-group row mt-4">
                             <label class="col-md-2 fw-bold">Song Bio:</label>
@@ -83,9 +84,8 @@ export default {
             facebookHandle:"",
             instagramHandle: "",
             imageFile: null,
-            mp3File: "",
-            file:"",
-            fileUrl: ""
+            mp3File: null,
+            imageShow: null
         }
     },
     created() {  
@@ -105,36 +105,14 @@ export default {
     },
     
     handleImageChange(event) {
+        const file = event.target.files[0];
+      this.imageShow = URL.createObjectURL(file);
       this.imageFile = event.target.files[0];
     },
 
 
-  async handleMp3Change(e) {
-    this.file = e.target.files[0]
-      var reader = new FileReader();
-      reader.onload = function(event) {
-          var data = event.target.result.split(','), 
-          decodedImageData = btoa(data[1]);                   
-          console.log(decodedImageData);
-      };
-      reader.readAsDataURL(file);
-      reader.onloadend = () => {
-        setpreviewMusic(reader.result);
-      }
-
-
-    
-      const musicData= new FormData();
-      musicData.append("file", this.files);
-      musicData.append("folder", "Music");
-      musicData.append("upload_preset", this.cloudinaryPresetUpload);
-      musicData.append("resource_type", "raw");
-      try {
-    await  axios.post("https://api.cloudinary.com/v1_1/dbzwg4li4/upload",musicData);
-        this.fileUrl = res.data.secure_url
-      } catch (error) {
-        console.log(error);
-      }
+    handleMp3Change(e) {
+    this.mp3File = e.target.files[0]
     },
 
     onCreate(){
@@ -142,7 +120,7 @@ export default {
         const formData = new FormData();
         formData.append("songTitle", this.songTitle);
         formData.append('image', this.imageFile);
-        formData.append('mp3Url', this.fileUrl);
+        formData.append('mp3', this.mp3File);
         formData.append("songDescription", this.songDescription);
         formData.append("websiteUrl", this.websiteUrl);
         formData.append("tiktokHandle", this.tiktokHandle);
@@ -185,24 +163,25 @@ export default {
         
     }
 
-    /* input[type="file"] {
+    .custom-file-upload input[type="file"] {
     display: none;
-} */
+} 
 
-/* .custom-file-upload {
+.custom-file-upload {
         margin-top: 4em;
         border: 1px solid #A10035;
-} */
-/* .border{
+}
+
+.border{
     height: 10em;
     width: 11em;
     background-color: #E7E7F3;
-} */
-/* .show-image{
+}
+ .show-image{
     background-color: #E7E7F3;
-    height: 10em;
+    height: 13em;
     width: 11em;
-} */
+} 
 
 .form-control{
     width: 23em;
