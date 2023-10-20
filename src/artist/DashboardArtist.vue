@@ -25,7 +25,7 @@
           </ul>
 
           <div class="tab-content">
-            <div id="home" class="container tab-pane active">
+            <div id="home" class="container tab-pane active mb-4">
               <br /><br />
               <h3 class="ml-5 fw-bold">Dashboard</h3>
               <div class="card shadow p-5 mt-4">

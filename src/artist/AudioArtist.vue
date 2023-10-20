@@ -54,7 +54,7 @@
                         </div>
                     </div>          
                     <div class="mt-4 pb-5" style="margin-left: 13em; ">
-                           <input type="submit" value="" class="btn btn ml-5  w-25 p-2 text-light" style="background-color: #A10035;"/>
+                           <input type="submit" value="" class="btn btn ml-5  w-50 p-2 text-light" style="background-color: #A10035;"/>
                     </div>
                 </form>
                  </div>
