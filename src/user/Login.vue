@@ -39,9 +39,10 @@ export default {
 
       axios.post("http://localhost:8000/loginUser", info)
       .then ((res)=>{
-        console.log(res);
-        alert("welcome" )
-        // this.$router.push("/alluser")
+          if(res.data.status){
+            localStorage.setItem("token", res.data.token)
+            this.$router.push("/allmuscians");
+          }
       })
       .catch((err)=>{
         console.log(err);

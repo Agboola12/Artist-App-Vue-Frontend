@@ -1,7 +1,8 @@
 <template>
     <div class="col-sm-6 mx-auto shadow-lg p-3 mb-5 bg-white rounded" id="body">
       <div class="container mt-4 text-dark">
-        <h3>
+        <h3 v-if="user">
+          <p>{{ user.firstName }}</p>
           <i class="fa fa-arrow-alt-circle-left"></i>
           All Musicians
         </h3>
@@ -123,8 +124,34 @@
   </template>
   
   <script>
-  export default {};
-  </script>
+  export default {
+    data(){
+      return{
+      firstName: "",
+      email: "",
+      user : null
+
+    }
+  },
+  created() {  
+      this.fetchProfile();
+    
+  },
+    method:{
+        fetchPrfofile(){
+          axios.get("http://localhost:8000/getArtist" )
+        .then((res) => {
+            console.log(res.data);
+            this.user = res.data.data;
+        
+        })
+        .catch((error) => {
+          console.error(error);
+        });
+        }
+    }
+  }
+    </script>
   
   <style scoped>
   img {
