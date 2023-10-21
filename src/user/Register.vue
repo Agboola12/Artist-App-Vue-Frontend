@@ -8,7 +8,7 @@
           <input
             type="text"
             name="fname"
-            v-model="fname"
+            v-model="firstName"
             class="form-control fa fa-user border-right-0 shadow-none border-top-0 border-left-0"
             id="fname"
             placeholder="Fullname"
@@ -30,7 +30,7 @@
           <input
             type="password"
             name="password"
-            v-model="password"
+            v-model="passWord"
             class="form-control border-right-0 shadow-none border-top-0 border-left-0"
             id="password"
             placeholder="Enter password"
@@ -54,7 +54,7 @@
           <i class="fa fa-google"></i>Sign up with google
         </button>
         <p class="mt-5">
-          Have an account? <a href="#" style="color: #a10035">Sign In</a>
+          Have an account? <a href="login" style="color: #a10035">Sign In</a>
         </p>
       </div>
     </div>
@@ -68,9 +68,9 @@ import axios from "axios";
 export default {
   data() {
     return {
-      fname: " ",
+      firstName: " ",
       email: " ",
-      password: "",
+      passWord: "",
     };
   },
   methods: {
@@ -79,9 +79,9 @@ export default {
     onCreatePost() {
       
       const info ={
-        fname : this.fname,
+        firstName : this.firstName,
         email : this.email,
-        password :this.password,
+        passWord :this.passWord,
       }
 
       axios

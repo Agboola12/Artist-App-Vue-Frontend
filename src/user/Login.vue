@@ -7,7 +7,7 @@
         <input type="email" class="form-control border-right-0 shadow-none border-top-0 border-left-0" id="email" v-model="email" placeholder="Enter email" name="email">
       </div>
       <div class="form-group">
-        <input type="password" class="form-control border-right-0 shadow-none border-top-0 border-left-0" id="pwd" v-model="password" placeholder="Enter password" name="pwd">
+        <input type="password" class="form-control border-right-0 shadow-none border-top-0 border-left-0" id="pwd" v-model="passWord" placeholder="Enter password" name="pwd">
       </div> <br/>
       <a href="#" >Forgot Password</a>
       <div class="mx-5">
@@ -26,8 +26,7 @@ export default {
   data(){
     return{
           email: '',
-          password: '',
-          type: "login"
+          passWord: '',
     }
   },
   methods:{
@@ -35,14 +34,14 @@ export default {
       
      const info = {
         email: this.email,
-        password : this.password,
-        type: this.type
+        passWord : this.passWord,
       }
 
-      axios.post("http://localhost/Vue-Php-Project/Php-Backend/config.php", info)
+      axios.post("http://localhost:8000/loginUser", info)
       .then ((res)=>{
         console.log(res);
-        this.$router.push("/alluser")
+        alert("welcome" )
+        // this.$router.push("/alluser")
       })
       .catch((err)=>{
         console.log(err);
