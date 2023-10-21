@@ -25,14 +25,6 @@
             placeholder="Enter email"
           />
         </div>
-        <div class="form-group">
-          <input
-            type="file"
-            @change="onFileChange"
-            class="form-control border-right-0 shadow-none border-top-0 border-left-0"
-            ref="file"
-          />
-        </div>
         
         <div class="form-group">
           <input
@@ -71,9 +63,6 @@
 
 <script>
 import axios from "axios";
-import { Cloudinary } from "@cloudinary/url-gen";
-// import Cloudinary from "@cloudinary/url-gen"
-// import Cloudinary from "@cloudinary/vue"
 
 
 export default {
@@ -82,75 +71,24 @@ export default {
       fname: " ",
       email: " ",
       password: "",
-      type: "signUp",
-      cloudinaryUrl: "https://api.cloudinary.com/v1_1/dbzwg4li4/upload",
-      cloudinaryPresetUpload: "y4bs18oz",
-      files:'',
-      fileUrl:''
     };
   },
   methods: {
-    uploadCloudinary(formData){
-      axios
-      .post(
-        this.cloudinaryUrl, formData )
-      .then((res) => {
-        console.log(res);
-        this.fileUrl = res.data.secure_url
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-    },
-
-    onFileChange (e) {
-      var files = e.target.files || e.dataTransfer.files
-      if (!files.length) {
-        return
-      }
-      
-      this.files = files[0]
-      const formData = new FormData();    
-      formData.append("file", this.files);
-      formData.append("folder", "Music");
-      formData.append("upload_preset", this.cloudinaryPresetUpload);
-      formData.append("resource_type", "raw");
-      this.uploadCloudinary(formData)
-    },
-    createImage (file) {
-      var reader = new FileReader()
-      var vm = this
-
-      reader.onload = (e) => {
-        vm.image = file.toString('base64')
-        console.log(vm.image)
-      }
-      reader.readAsDataURL(file)
-    },
+    
 
     onCreatePost() {
       
-      // const formData = new FormData();
-      // formData.append("fname", this.fname);
-      // formData.append("email", this.email);
-      // formData.append("userImg", this.fileUrl);
-      // formData.append("password", this.password);
-      // formData.append("type", this.type);
-
       const info ={
         fname : this.fname,
         email : this.email,
-        userImg : this.fileUrl,
         password :this.password,
-        type: this.type
       }
-     console.log(info);
 
       axios
         .post(
-          "http://localhost/Vue-Php-Project/Php-Backend/config.php", info )
+          "http://localhost:8000/createUser", info)
         .then((res) => {
-          // console.log(res);
+          console.log(res);
                     this.$router.push('/login')
         })
         .catch((err) => {
