@@ -81,13 +81,11 @@ export default {
     
   },
   methods: {
-
     fetchUserProfile() {
-      axios.get("http://localhost:8000/getArtist" )
+      axios.get("http://localhost:8000/getArtist")
         .then((res) => {
             console.log(res.data);
           this.user = res.data.data;
-        
         })
         .catch((error) => {
           console.error(error);
