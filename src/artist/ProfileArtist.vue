@@ -116,7 +116,6 @@ export default {
           this.country = userData.country;
           this.mobile = userData.mobile;
           this.avatarFile = userData.imageUrl;
-        
         })
         .catch((error) => {
           console.error(error);

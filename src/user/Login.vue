@@ -30,8 +30,8 @@ export default {
     }
   },
   methods:{
-    loginPost(){
-      
+    
+    loginPost(){    
      const info = {
         email: this.email,
         passWord : this.passWord,

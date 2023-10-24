@@ -127,29 +127,29 @@
   export default {
     data(){
       return{
-      // firstName: "",
-      // email: "",
-      user : null
+      user : null,
+      id: ""
 
     }
   },
   created() {  
-
-    this.fetchUser();    
+    this.getUser();
+    this.id = this.$route.params.id;
+    
   },
     method:{
 
-      fetchUser() {
-      axios.get("http://localhost:8000/getArtist" )
+      getUser() {
+      axios.get("http://localhost:8000/getUser")
         .then((res) => {
             console.log(res.data);
           this.user = res.data.data;
-        
         })
         .catch((error) => {
           console.error(error);
         });
     }
+
     }
   }
     </script>
