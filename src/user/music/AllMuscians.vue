@@ -2,7 +2,7 @@
     <div class="col-sm-6 mx-auto shadow-lg p-3 mb-5 bg-white rounded" id="body">
       <div class="container mt-4 text-dark">
         <h3 v-if="user">
-          <p>{{ user.firstName }}</p>
+          <p> Welcome Mr{{ user.firstName }}</p>
           <i class="fa fa-arrow-alt-circle-left"></i>
           All Musicians
         </h3>
@@ -23,23 +23,23 @@
         </ul>
       </div>
   
-      <div class="container mt-5" id="head">
-        <div>
-          <img src="../assets/Camera/04.jpg" />
+      <div class="container mt-5" id="head" v-for="(artist, index) in artists" :key="index" >
+        <div > 
+           <img :src="artist.imageUrl" alt="profile" class="w-100"/>
         </div>
         <div class="text">
-          <h5>Mid night Crew</h5>
+          <h5> {{ artist.firstName }}</h5>
           <small class="p">Band</small> <br />
           <small class="p">#100,000 avg per price</small><br />
-          <small class="p">Lagos</small>
+          <small class="p">{{ artists.state }}</small>
         </div>
         <div class="ml-auto">
           <i class="fa fa-heart"></i>
         </div>
+        <hr  class="text-dark"/>
       </div>
-      <hr />
   
-      <div class="container mt-5" id="head">
+      <!-- <div class="container mt-5" id="head">
         <div>
           <img src="../assets/Camera/02.jpg" />
         </div>
@@ -85,9 +85,9 @@
           <i class="fa fa-heart"></i>
         </div>
       </div>
-      <hr />
+      <hr /> -->
   
-      <div class="container mt-5" id="head">
+      <!-- <div class="container mt-5" id="head">
         <div>
           <img src="../assets/Camera/11.jpg" />
         </div>
@@ -100,7 +100,7 @@
         <div class="ml-auto">
           <i class="fa fa-heart"></i>
         </div>
-      </div>
+      </div> -->
       <hr />
 
       <ul class="nav" id="footer">
@@ -124,35 +124,44 @@
   </template>
   
   <script>
+import axios from 'axios';
   export default {
-    data(){
-      return{
-      user : null,
-      id: ""
-
-    }
-  },
-  created() {  
-    this.getUser();
-    this.id = this.$route.params.id;
-    
-  },
-    method:{
-
+    data() {
+      return {
+        user: null,
+        id: "",
+        artists: null,
+      };
+    },
+    created() {
+      this.getUser();
+      this.getAllArtist();
+      this.id = this.$route.params.id;
+    },
+    methods: {
       getUser() {
-      axios.get("http://localhost:8000/getUser")
-        .then((res) => {
-            console.log(res.data);
-          this.user = res.data.data;
-        })
-        .catch((error) => {
-          console.error(error);
-        });
-    }
+        axios.get("http://localhost:8000/getUser")
+          .then((res) => {
+            // console.log(res.data);
+            this.user = res.data.data;
+          })
+          .catch((error) => {
+            console.error(error);
+          });
+      },
 
+      getAllArtist(){
+        axios.get("http://localhost:8000/getAllArtist")
+        .then((res)=>{
+          console.log(res.data);
+          this.artists = res.data;
+
+        })
+      }
     }
   }
-    </script>
+</script>
+
   
   <style scoped>
   img {
