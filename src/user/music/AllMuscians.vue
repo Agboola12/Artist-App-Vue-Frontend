@@ -31,77 +31,13 @@
           <h5> {{ artist.firstName }}</h5>
           <small class="p">Band</small> <br />
           <small class="p">#100,000 avg per price</small><br />
-          <small class="p">{{ artists.state }}</small>
-        </div>
-        <div class="ml-auto">
-          <i class="fa fa-heart"></i>
-        </div>
-        <hr  class="text-dark"/>
-      </div>
-  
-      <!-- <div class="container mt-5" id="head">
-        <div>
-          <img src="../assets/Camera/02.jpg" />
-        </div>
-        <div class="text">
-          <h5>Mid night Crew</h5>
-          <small class="p">Band</small> <br />
-          <small class="p">#100,000 avg per price</small><br />
-          <small class="p">Lagos</small>
+          <small class="p">{{ artist.state }}</small>
         </div>
         <div class="ml-auto">
           <i class="fa fa-heart"></i>
         </div>
       </div>
-      <hr />
   
-      <div class="container mt-5" id="head">
-        <div>
-          <img src="../assets/Camera/04.jpg" />
-        </div>
-        <div class="text">
-          <h5>Mid night Crew</h5>
-          <small class="p">Band</small> <br />
-          <small class="p">#100,000 avg per price</small><br />
-          <small class="p">Lagos</small>
-        </div>
-        <div class="ml-auto">
-          <i class="fa fa-heart"></i>
-        </div>
-      </div>
-      <hr />
-  
-      <div class="container mt-5" id="head">
-        <div>
-          <img src="../assets/Camera/12.jpg" />
-        </div>
-        <div class="text">
-          <h5>Mid night Crew</h5>
-          <small class="p">Band</small> <br />
-          <small class="p">#100,000 avg per price</small><br />
-          <small class="p">Lagos</small>
-        </div>
-        <div class="ml-auto">
-          <i class="fa fa-heart"></i>
-        </div>
-      </div>
-      <hr /> -->
-  
-      <!-- <div class="container mt-5" id="head">
-        <div>
-          <img src="../assets/Camera/11.jpg" />
-        </div>
-        <div class="text">
-          <h5>Mid night Crew</h5>
-          <small class="p">Band</small> <br />
-          <small class="p">#100,000 avg per price</small><br />
-          <small class="p">Lagos</small>
-        </div>
-        <div class="ml-auto">
-          <i class="fa fa-heart"></i>
-        </div>
-      </div> -->
-      <hr />
 
       <ul class="nav" id="footer">
         <li class="nav-item  mr-3">
