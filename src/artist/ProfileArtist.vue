@@ -43,7 +43,8 @@
     <div class="modal-content" >
       <div class="modal-header">
         <h5 class="modal-title mx-auto" >Edit Profile</h5>
-      <img :src="avatarFile" alt="profile" class="w-25" style="border-radius: 50px;"/>
+      <!-- <img :src="avatarFile" alt="profile" class="w-25" style="border-radius: 50px;"/> -->
+      <img v-if="imageShow" :src="imageShow" alt="profile" class="w-25" style="border-radius: 50px;" />
         <button type="button" data-dismiss="modal" class="close"  aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -93,7 +94,9 @@ export default {
       state: "",
       country:"",
       mobile:"",
-      image:"null",
+      image: null,
+      imageShow:  null,
+      avatarFile: null
     }
   },
   created() {  
@@ -115,7 +118,7 @@ export default {
           this.state = userData.state;
           this.country = userData.country;
           this.mobile = userData.mobile;
-          this.avatarFile = userData.imageUrl;
+          this.imageShow = userData.imageUrl;
         })
         .catch((error) => {
           console.error(error);
@@ -123,6 +126,8 @@ export default {
     },
     handleImageChange(event) {
       this.image = event.target.files[0];
+      const file = event.target.files[0];
+      this.imageShow = URL.createObjectURL(file);
     },
     updateUserProfile() {
       

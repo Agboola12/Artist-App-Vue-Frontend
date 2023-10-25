@@ -11,11 +11,11 @@
         <div class="container row" >
             <p class="text-center mt-4 h2">Music Uploaded</p>
             <div class="col-md-5 offset-4 mt-4"  >
-                <div  v-if="users">
-                 <p>{{ users.id }}      
-                  {{ users.songTitle }} 
-                    <button @click="songID(users.id)"  class="btn btn-primary ml-5" data-toggle="modal" data-target="#exampleModal" ><i class="fa fa-info-circle"></i></button> 
-                    <button @click="delSong(users.id)"  class="btn btn-danger ml-3"><i class="fas fa-trash"></i></button> 
+                <div   v-for="(user, index) in users" :key="index">
+                 <p>{{ index +1 }}.      
+                  {{ user.songTitle }} 
+                    <button @click="songID(user.id)"  class="btn btn-primary ml-5" data-toggle="modal" data-target="#exampleModal" ><i class="fa fa-info-circle"></i></button> 
+                    <button @click="delSong(user.id)"  class="btn btn-danger ml-3"><i class="fas fa-trash"></i></button> 
                   </p>  
                 </div>
             </div>
@@ -28,7 +28,8 @@
     <div class="modal-content" >
       <div class="modal-header">
         <h5 class="modal-title mx-auto" >Song Information</h5>
-      <img :src="imageUrl" alt="profile" class="w-25" style="border-radius: 50px;"/>
+      <!-- <img :src="imageUrl" alt="profile" class="w-25" style="border-radius: 50px;"/> -->
+      <img v-if="imageShow" :src="imageShow" alt="profile" class="w-25" style="border-radius: 50px;" />
         <button type="button" data-dismiss="modal" class="close"  aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -113,8 +114,8 @@ export default {
         instagramHandle:"",
         tiktokHandle:"",
         websiteUrl:"",
-        image:"null",
-
+        image: null,
+        imageShow: null
 
         
         
@@ -176,6 +177,7 @@ export default {
                this.imageUrl = songs.imageUrl;
                this.websiteUrl = songs.websiteUrl;
                this.tiktokHandle = songs.tiktokHandle;
+               this.imageShow = songs.imageUrl;
 
             })
             .catch(err =>{
@@ -196,6 +198,8 @@ export default {
 
         handleImageChange(event) {
       this.image = event.target.files[0];
+      const file = event.target.files[0];
+      this.imageShow = URL.createObjectURL(file);
     },
 
     updateUserSong() {
