@@ -1,5 +1,5 @@
 <template>
-<button class="btn btn toggle-button m-5" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">
+<button class="btn btn toggle-button mt-5 ml-5" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">
   <i class="fas fa-bars"></i>
 </button>
 
@@ -14,17 +14,30 @@
     <p>hjsdbjk</p>
   </div>
 </div>
-        <div class="row">
+        <!-- <div class="row">
           <div class="col-md-3 " v-for="(artist, index) in artists" :key="index" >
             <div class="card" style="width:400px">
-              <img class="card-img-top" src="img_avatar1.png" alt="Card image">
+              <img class="card-img-top" :src="artist.imageurl" alt="Card image">
               <div class="card-body">
-                <h4 class="card-title">John Doe</h4>
-                <p class="card-text">Some example text.</p>
+                <h4 class="card-title">{{ artist.firstName }}</h4>
+                <p class="card-text">Band</p>
                 <a href="#" class="btn btn-primary">See Profile</a>
               </div>
             </div>
       </div>
+    </div> -->
+    <div class="container">
+      <div class="row" >
+          <div class="card col-md-3" style="width:300px" v-for="(artist, index) in artists" :key="index">
+            <img class="card-img-top" :src="artist.imageUrl" alt="Card image">
+              <div class="card-body">
+                <h4 class="card-title">{{ artist.firstName }}</h4>
+                <p class="card-text">Band</p>
+                <a href="#" class="btn btn-primary">See Profile</a>
+              </div>
+          </div>
+      </div>
+
     </div>
 </template>
 
