@@ -1,5 +1,5 @@
 <template>
-<button class="btn btn-primary toggle-button" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">
+<button class="btn btn toggle-button m-5" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">
   <i class="fas fa-bars"></i>
 </button>
 
@@ -14,24 +14,11 @@
     <p>hjsdbjk</p>
   </div>
 </div>
-
-        <div class="container "  >
-        <section class=" my-5 row" style="max-width: 23rem;" v-for="(artist, index) in artists" :key="index">
-          <div class="card col-md-3 testimonial-card mt-2 mb-3">
-            <div class="card-up aqua-gradient"></div>
-            <div class="avatar mx-auto white">
-              <img :src="artist.imageUrl" class="rounded-circle img-fluid"
-                alt="profile">
-            </div>
-            <div class="card-body text-center">
-              <h4 class="card-title font-weight-bold">Martha Smith</h4>
-              <hr>
-              <p><i class="fas fa-quote-left"></i> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos,
-                adipisci</p>
-            </div>
-          </div>
-        </section>
-  </div>
+        <div class="row">
+          <div class="col-md-3 " v-for="(artist, index) in artists" :key="index" >
+            
+      </div>
+    </div>
 </template>
 
 <script>
@@ -73,26 +60,7 @@ import axios from 'axios';
   }
 </script>
 <style scoped>
-body {
-	background-color: #f5f7fa;
-}
 
-.testimonial-card .card-up {
-  height: 120px;
-  overflow: hidden;
-  border-top-left-radius: .25rem;
-  border-top-right-radius: .25rem;
-}
 
-.aqua-gradient {
-  background: linear-gradient(40deg, #2096ff, #05ffa3) !important;
-}
 
-.testimonial-card .avatar {
-  width: 120px;
-  margin-top: -60px;
-  overflow: hidden;
-  border: 5px solid #fff;
-  border-radius: 50%;
-}
 </style>
