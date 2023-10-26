@@ -33,6 +33,7 @@ import LoginArtist from '../artist/LoginArtist.vue'
 import RegisterArtist from '../artist/RegisterArtist.vue'
 import SongDetails from '../artist/SongDetails.vue'
 import DashboardUser from '../user/music/DashboardUser.vue'
+import NewUser from '../user/music/NewUser.vue'
 
 axios.interceptors.request.use((value) =>{
   value.headers = {
@@ -178,6 +179,7 @@ const router = createRouter({
     {path: '/registerartist' , name: 'registerartist', component: RegisterArtist},
     {path: '/songdetails' , name: 'songdetails', component: SongDetails},
     {path: '/dashboarduser' , name: 'dashboarduser', component: DashboardUser},
+    {path: '/newuser' , name: 'newuser', component: NewUser},
     
 
     

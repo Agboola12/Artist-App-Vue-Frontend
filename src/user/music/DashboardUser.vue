@@ -25,25 +25,42 @@
             <i class="fas fa-bars"></i>
           </button>
           
-          <div class="container">
 
-              <div class="row w-100">
-                  <div class="card col-md-4 m-2 " v-for="(artist, index) in artists" :key="index">
+          <!-- <div class="container mt-5 ml-5" style="height: 10em;">
+              <div class="row" >
+                  <div class="card shadow  rounded col-md-3 mr-4"  v-for="(artist, index) in artists" :key="index">
                 <div class="icon">
-                    <img :src="artist.imageUrl" alt="profile" class="w-100" height="100" width="100"/>
+                    <img :src="artist.imageUrl" alt="card-img-top" class="card-img-top" />
                 </div>
                 <div class="card_body">
-                    <h2> {{ artist.firstName }}</h2>
-                    <p>Band</p> 
+                    <h2 class="card-title"> {{ artist.firstName }}</h2>
+                    <p class="card-text">Band</p> 
                     <p>#100,000 avg per price</p>
                     <p>{{ artist.state }}</p>
                 </div>
                 <span>Check My Profile</span>
             </div>
-            
         </div>
-          </div>
+          </div> -->
            
+          <div class="container row" style="margin-top: 2em; margin-left: 5em;">
+  <section class="my-5 col-md-3 " style="max-width: 23rem;" v-for="(artist, index) in artists" :key="index">
+      
+    <div class="card shadows testimonial-card mt-2 mb-3" >
+      <div class="card-up aqua-gradient"></div>
+      <div class="avatar mx-auto white">
+        <img :src="artist.imageUrl" class=" img-fluid"  alt="woman avatar">
+      </div>
+      <div class="card-body text-center">
+        <h4 class="card-title font-weight-bold">Martha Smith</h4>
+        <hr>
+        <p><i class="fas fa-quote-left"></i> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos,
+          adipisci</p>
+      </div>
+    </div>
+    
+  </section>
+</div>
 
           
           
@@ -101,8 +118,8 @@ import axios from 'axios';
   <style scoped>
   .app {
     display: flex;
-    height: 100vh;
-    overflow: hidden;
+    /* height: ; */
+    overflow:hidden ;
   }
   
   .sidebar {
@@ -111,6 +128,8 @@ import axios from 'axios';
     color: #fff;
     transition: width 0.3s;
     overflow: hidden;
+    height: 100vh;
+    /* position: fixed; */
   }
   
   .sidebar-open {
@@ -131,83 +150,47 @@ import axios from 'axios';
   
   ul {
     list-style: none;
-    /* padding: 0; */
-    /* margin: 0; */
     margin-top: 3em;
   }
   
   ul li {
     margin-bottom: 10px;
   }
-  
   .main-content {
+    
     flex: 1;
     padding: 20px;
-    /* background-color: #f0f0f0; */
+    overflow-y: scroll;
+  }
+  
+  @media  (max-width: 677px) {
+    .sidebar-open {
+    width: 200px;
   }
 
-  .card {
-  --bg: #f7f7f8;
-  --hover-bg: #FFE5F4;
-  --hover-text: #E50087;
-  /* max-width: 23ch; */
-  text-align: center;
-  background: var(--bg);
-  padding: 1.5em;
-  padding-block: 1.8em;
-  border-radius: 5px;
-  position: relative;
+    }
+     @media  (max-width: 1024px) {
+      
+
+    }
+ 
+  testimonial-card .card-up {
+  height: 120px;
   overflow: hidden;
-  transition: .3s cubic-bezier(.6,.4,0,1),transform .15s ease;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 1em;
+  border-top-left-radius: .25rem;
+  border-top-right-radius: .25rem;
 }
 
-.card__body {
-  color: #464853;
-  line-height: 1.5em;
-  font-size: 1em;
+.aqua-gradient {
+  background: linear-gradient(40deg, #2096ff, #05ffa3) !important;
 }
 
-.card > :not(span) {
-  transition: .3s cubic-bezier(.6,.4,0,1);
-}
-
-.card > strong {
-  display: block;
-  font-size: 1.4rem;
-  letter-spacing: -.035em;
-}
-
-.card span {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: var(--hover-text);
-  border-radius: 5px;
-  font-weight: bold;
-  top: 100%;
-  transition: all .3s cubic-bezier(.6,.4,0,1);
-}
-
-.card:hover span {
-  top: 0;
-  font-size: 1.2em;
-}
-
-.card:hover {
-  background: var(--hover-bg);
-}
-
-.card:hover>div,.card:hover>strong {
-  opacity: 0;
+.testimonial-card .avatar {
+  width: 120px;
+  margin-top: -60px;
+  overflow: hidden;
+  border: 5px solid #fff;
+  border-radius: 20%;
 }
     </style>
   
