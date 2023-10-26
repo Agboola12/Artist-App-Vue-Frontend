@@ -15,14 +15,13 @@
   </div>
 </div>
 
-      <div class="main-content">
-        <div class="container row" v-for="(artist, index) in artists" :key="index" >
-        <section class=" my-5 col-md-3" style="max-width: 23rem;">
-          <div class="card testimonial-card mt-2 mb-3">
+        <div class="container "  >
+        <section class=" my-5 row" style="max-width: 23rem;" v-for="(artist, index) in artists" :key="index">
+          <div class="card col-md-3 testimonial-card mt-2 mb-3">
             <div class="card-up aqua-gradient"></div>
             <div class="avatar mx-auto white">
-              <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20%2831%29.jpg" class="rounded-circle img-fluid"
-                alt="woman avatar">
+              <img :src="artist.imageUrl" class="rounded-circle img-fluid"
+                alt="profile">
             </div>
             <div class="card-body text-center">
               <h4 class="card-title font-weight-bold">Martha Smith</h4>
@@ -33,7 +32,6 @@
           </div>
         </section>
   </div>
-</div>
 </template>
 
 <script>
