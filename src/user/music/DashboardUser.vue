@@ -43,22 +43,17 @@
         </div>
           </div> -->
            
-          <div class="container row" style="margin-top: 2em; margin-left: 5em;">
-  <section class="my-5 col-md-3 " style="max-width: 23rem;" v-for="(artist, index) in artists" :key="index">
-      
-    <div class="card shadows testimonial-card mt-2 mb-3" >
-      <div class="card-up aqua-gradient"></div>
-      <div class="avatar mx-auto white">
-        <img :src="artist.imageUrl" class=" img-fluid"  alt="woman avatar">
-      </div>
-      <div class="card-body text-center">
-        <h4 class="card-title font-weight-bold">Martha Smith</h4>
-        <hr>
-        <p><i class="fas fa-quote-left"></i> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos,
-          adipisci</p>
-      </div>
-    </div>
-    
+      <div class="container row" style="margin-top: 2em;">
+          <section class="my-5 mx-auto col-md-3" style="max-width: 23rem;" v-for="(artist, index) in artists" :key="index">
+          <div class="card shadows testimonial-card mt-2 mb-3" >
+              <div class="card-up aqua-gradient"></div>
+              <div class="avatar mx-auto white">
+                    <img :src="artist.imageUrl" class=" img-fluid"  alt="woman avatar">
+              </div>
+              <div class="card-body text-center">
+                <h4 class="card-title font-weight-bold">Martha Smith</h4>
+              </div>
+          </div>
   </section>
 </div>
 

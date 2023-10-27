@@ -1,5 +1,5 @@
 <template>
-<button class="btn btn toggle-button mt-5 ml-5" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">
+<button  class="btn btn toggle-button mt-5 ml-5" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">
   <i class="fas fa-bars"></i>
 </button>
 
@@ -14,26 +14,42 @@
     <p>hjsdbjk</p>
   </div>
 </div>
-        <!-- <div class="row">
-          <div class="col-md-3 " v-for="(artist, index) in artists" :key="index" >
-            <div class="card" style="width:400px">
-              <img class="card-img-top" :src="artist.imageurl" alt="Card image">
+    <div id="main-content" >
+      <div class="container">
+        <div class="row " >
+          <h1 class="mb-5">Popular Musicians</h1> 
+          <div class=" col-md-3 mx-auto" style="width:300px" v-for="(artist, index) in artists" :key="index">
+            <img class="card-img-top w-100" :src="artist.imageUrl" alt="Card image" height="300" >
               <div class="card-body">
                 <h4 class="card-title">{{ artist.firstName }}</h4>
                 <p class="card-text">Band</p>
-                <a href="#" class="btn btn-primary">See Profile</a>
+              </div>
+          </div>
+      </div>
+      
+      <div class="row mt-5" >
+        <h1 class="mb-3">Recommended For You</h1> 
+        <div class=" col-md-3 mx-auto" style="width:300px" v-for="(artist, index) in artists" :key="index">
+            <img class="card-img-top w-100" :src="artist.imageUrl" alt="Card image" height="300" >
+              <div class="card-body">
+                <h4 class="card-title">{{ artist.firstName }}</h4>
+                <p class="card-text">Band</p>
               </div>
             </div>
+          </div>
+        </div>
+
+      <div class=" find container-fluid p-4 text-center">
+        <h2>Not sure of what you want?</h2>
+        <p>Finding the perfect musician has ever been easier</p>
+        <button class="btn"> Hover me </button>
       </div>
-    </div> -->
-    <div class="container">
-      <div class="row" >
-          <div class="card col-md-3" style="width:300px" v-for="(artist, index) in artists" :key="index">
-            <img class="card-img-top" :src="artist.imageUrl" alt="Card image">
-              <div class="card-body">
-                <h4 class="card-title">{{ artist.firstName }}</h4>
-                <p class="card-text">Band</p>
-                <a href="#" class="btn btn-primary">See Profile</a>
+
+      <div class="container">
+          <div class="row">
+              <div class="col-md-3 col-sm-12">
+                <i class="fa-solid fa-microphone-stand fa-spin fa-2xs"></i>
+                <p>sudjkbc n</p>
               </div>
           </div>
       </div>
@@ -80,6 +96,45 @@ import axios from 'axios';
   }
 </script>
 <style scoped>
+
+  #main-content{
+    height: auto;
+    overflow-x: visible;
+  }
+
+  .find{
+    background-color: #FFDDDD;
+
+  }
+
+  .btn {
+ background-color: #A10035;
+ padding: 14px 40px;
+ color: #fff;
+ text-transform: uppercase;
+ letter-spacing: 2px;
+ cursor: pointer;
+ border-radius: 10px;
+ border: 2px dashed #A10035;
+ box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+ transition: .4s;
+}
+
+.btn span:last-child {
+ display: none;
+}
+
+.btn:hover {
+ transition: .4s;
+ border: 2px dashed #A10035;
+ background-color: #fff;
+ color: #A10035;
+}
+
+.btn:active {
+ background-color: #FFDDDD;
+}
+
 
 
 
