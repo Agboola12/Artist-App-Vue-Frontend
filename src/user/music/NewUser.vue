@@ -16,7 +16,7 @@
 </div>
     <div id="main-content" >
       <div class="container">
-        <div class="row " >
+        <div class="row">
           <h1 class="mb-5">Popular Musicians</h1> 
           <div class=" col-md-3 mx-auto" style="width:300px" v-for="(artist, index) in artists" :key="index">
             <img class="card-img-top w-100" :src="artist.imageUrl" alt="Card image" height="300" >
@@ -45,20 +45,30 @@
         <button class="btn"> Find Musicians </button>
       </div>
 
-      <div class="container mt-5">
-          <div class="row mx-auto">
-              <div class="col-md-3 text-center p-5" style="background-color: #FFDDDD; border-radius: 50px;">
+      <div class="container p-5" >
+          <div class="row" >
+              <div class="col-md-3"  >
                 <!-- <i class="fa-solid fa-microphone-stand fa-spin fa-2xs"></i> -->
-                  <i class="fa fa-microphone" style="color: #A10035;"></i>
+                <p class="p-4 text-center" style="height: 100px; width: 100px; border-radius: 50px ;background-color: #FFDDDD; ">
+                  <i class="fa fa-microphone p-3" style="color: #A10035;"></i>
+                </p> 
+                <p class="ml-4">Artists</p>
               </div>
-              <div class="col-md-3 text-center p-5" style="background-color: #FFDDDD; border-radius: 50px;">
+              <div class="col-md-3 " >
                 <!-- <i class="fa-solid fa-microphone-stand fa-spin fa-2xs"></i> -->
-                  <i class="fa fa-microphone text-center " style="color: #A10035;"></i>
+                <p class="p-4 text-center" style="height: 100px; width: 100px; border-radius: 50px ;background-color: #FFDDDD; ">
+                  <i class="fa fa-microphone p-3" style="color: #A10035;"></i>
+                </p> 
+                <p class="ml-4">Bands</p>
               </div>
-              <div class="col-md-3 text-center p-5" style="background-color: #FFDDDD; border-radius: 50px;">
+              <div class="col-md-3 " >
                 <!-- <i class="fa-solid fa-microphone-stand fa-spin fa-2xs"></i> -->
-                  <i class="fa fa-microphone  " style="color: #A10035;"></i>
+                <p class="p-4 text-center" style="height: 100px; width: 100px; border-radius: 50px ;background-color: #FFDDDD; ">
+                  <i class="fa fa-microphone p-3" style="color: #A10035;"></i>
+                </p> 
+                <p class="ml-4">Djs</p>
               </div>
+              
           </div>
       </div>
 
