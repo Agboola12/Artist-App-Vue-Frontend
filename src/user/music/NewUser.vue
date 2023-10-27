@@ -42,14 +42,22 @@
       <div class=" find container-fluid p-4 text-center">
         <h2>Not sure of what you want?</h2>
         <p>Finding the perfect musician has ever been easier</p>
-        <button class="btn"> Hover me </button>
+        <button class="btn"> Find Musicians </button>
       </div>
 
-      <div class="container">
-          <div class="row">
-              <div class="col-md-3 col-sm-12">
-                <i class="fa-solid fa-microphone-stand fa-spin fa-2xs"></i>
-                <p>sudjkbc n</p>
+      <div class="container mt-5">
+          <div class="row mx-auto">
+              <div class="col-md-3 text-center p-5" style="background-color: #FFDDDD; border-radius: 50px;">
+                <!-- <i class="fa-solid fa-microphone-stand fa-spin fa-2xs"></i> -->
+                  <i class="fa fa-microphone" style="color: #A10035;"></i>
+              </div>
+              <div class="col-md-3 text-center p-5" style="background-color: #FFDDDD; border-radius: 50px;">
+                <!-- <i class="fa-solid fa-microphone-stand fa-spin fa-2xs"></i> -->
+                  <i class="fa fa-microphone text-center " style="color: #A10035;"></i>
+              </div>
+              <div class="col-md-3 text-center p-5" style="background-color: #FFDDDD; border-radius: 50px;">
+                <!-- <i class="fa-solid fa-microphone-stand fa-spin fa-2xs"></i> -->
+                  <i class="fa fa-microphone  " style="color: #A10035;"></i>
               </div>
           </div>
       </div>
