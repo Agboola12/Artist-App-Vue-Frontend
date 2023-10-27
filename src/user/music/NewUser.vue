@@ -39,36 +39,44 @@
           </div>
         </div>
 
-      <div class=" find container-fluid p-4 text-center">
+      <div class=" find  p-4 text-center">
         <h2>Not sure of what you want?</h2>
         <p>Finding the perfect musician has ever been easier</p>
         <button class="btn"> Find Musicians </button>
       </div>
 
-      <div class="container p-5" >
-          <div class="row" >
-              <div class="col-md-3"  >
+      <div class=" middle container p-5" >
+          <div class="row" style="margin-left:5em ;" >
+              <div class="col-md-3 "  >
                 <!-- <i class="fa-solid fa-microphone-stand fa-spin fa-2xs"></i> -->
                 <p class="p-4 text-center" style="height: 100px; width: 100px; border-radius: 50px ;background-color: #FFDDDD; ">
                   <i class="fa fa-microphone p-3" style="color: #A10035;"></i>
                 </p> 
                 <p class="ml-4">Artists</p>
               </div>
-              <div class="col-md-3 " >
-                <!-- <i class="fa-solid fa-microphone-stand fa-spin fa-2xs"></i> -->
+              <div class="col-md-3  " >
                 <p class="p-4 text-center" style="height: 100px; width: 100px; border-radius: 50px ;background-color: #FFDDDD; ">
                   <i class="fa fa-microphone p-3" style="color: #A10035;"></i>
                 </p> 
                 <p class="ml-4">Bands</p>
               </div>
-              <div class="col-md-3 " >
-                <!-- <i class="fa-solid fa-microphone-stand fa-spin fa-2xs"></i> -->
+              <div class="col-md-3  " >
                 <p class="p-4 text-center" style="height: 100px; width: 100px; border-radius: 50px ;background-color: #FFDDDD; ">
                   <i class="fa fa-microphone p-3" style="color: #A10035;"></i>
                 </p> 
                 <p class="ml-4">Djs</p>
               </div>
-              
+          </div>
+      </div>
+
+      <div class="container">
+          <div class="row">
+            <div class="card img-fluid" style="width:500px">
+                <img class="card-img-top" src="../../assets/Camera/bride.jpg" alt="Card image" style="width:100%">
+                <div class="card-img-overlay ">
+                  <h2 class="card-title fixed-bottom text-center">Wedding Party</h2>
+                </div>
+            </div>
           </div>
       </div>
 
@@ -122,8 +130,9 @@ import axios from 'axios';
 
   .find{
     background-color: #FFDDDD;
-
   }
+
+ 
 
   .btn {
  background-color: #A10035;
