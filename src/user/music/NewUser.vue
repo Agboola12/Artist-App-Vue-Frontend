@@ -6,12 +6,26 @@
 
 <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
   <div class="offcanvas-header">
-    <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Backdroped with scrolling</h5>
+    <h5 class="offcanvas-title mx-auto" id="offcanvasWithBothOptionsLabel">
+      <img src="../../assets/Camera/Logo.png" height="100" width="100"/>
+    </h5>
     <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
   </div>
-  <div class="offcanvas-body">
-    <p>Try scrolling the rest of the page to see this option in action.</p>
-    <p>hjsdbjk</p>
+  <div class="offcanvas-body mt-5">
+    <ul class="navvBar " >
+        <li class="nav-item">
+          <a class="nav-link" href="allmuscians">All</a>
+        </li> <hr/>
+        <li class="nav-item ">
+          <a class="nav-link" href="musicartist">Music Artiste</a>
+        </li> <hr/>
+        <li class="nav-item ">
+          <a class="nav-link" href="brands">Bands</a>
+        </li> <hr/>
+        <li class="nav-item ">
+          <a class="nav-link" href="djs">Djs</a>
+        </li>
+    </ul>
   </div>
 </div>
     <div id="main-content" >
@@ -100,7 +114,7 @@
 
       <div class="footer">
           <div>
-            
+
           </div>
       </div>
 
@@ -147,7 +161,13 @@ import axios from 'axios';
 </script>
 <style scoped>
 
-  #main-content{
+.offcanvas{
+  background-color: white;
+  
+}
+
+#main-content{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     height: auto;
     overflow-x: visible;
   }
@@ -155,7 +175,14 @@ import axios from 'axios';
   .find{
     background-color: #FFDDDD;
   }
-
+  .navvBar{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+  .navvBar li a{
+    
+    text-decoration: none;
+    color:#A10035
+  }
  
 
   .btn {
