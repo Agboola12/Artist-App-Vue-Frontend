@@ -15,17 +15,18 @@
     <ul class="navvBar " >
         <li class="nav-item">
           <a class="nav-link" href="allmuscians">All</a>
-        </li> <hr/>
+        </li> 
         <li class="nav-item ">
           <a class="nav-link" href="musicartist">Music Artiste</a>
-        </li> <hr/>
+        </li> 
         <li class="nav-item ">
           <a class="nav-link" href="brands">Bands</a>
-        </li> <hr/>
+        </li> 
         <li class="nav-item ">
           <a class="nav-link" href="djs">Djs</a>
         </li>
     </ul>
+    
   </div>
 </div>
     <div id="main-content" >
@@ -163,7 +164,6 @@ import axios from 'axios';
 
 .offcanvas{
   background-color: white;
-  
 }
 
 #main-content{
@@ -178,10 +178,18 @@ import axios from 'axios';
   .navvBar{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
   }
-  .navvBar li a{
-    
+  .navvBar  {
+    list-style: none;
     text-decoration: none;
-    color:#A10035
+  }
+  .navvBar li a{
+    list-style: none;
+    text-decoration: none;
+    color: #A10035
+  }
+  .navvBar  :hover{
+    color:white;
+    background-color: #A10035;
   }
  
 
