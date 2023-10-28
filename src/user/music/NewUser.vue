@@ -71,38 +71,36 @@
 
       <div class="container">
           <div class="row">
-            <div class="col-md-3">
-              <div class="card img-fluid" style="width:500px">
-                <img class="card-img-top" src="../../assets/Camera/bride.jpg" alt="Card image" style="width:100%">
-                <div class="card-img-overlay" style="margin-top: 100%;">
+            <div class="col-md-4">
+              <div class="card img-fluid" >
+                <img class="card-img-top " src="../../assets/Camera/bride.jpg" height="300"  alt="Card image" >
+                <div class="card-img-overlay" style="margin-top: 60%;">
                   <h2 class="card-title text-light text-center">Wedding Party</h2>
                 </div>
               </div>
             </div>
-            <div class="col-md-3">
-              <div class="card img-fluid" style="width:500px">
-                <img class="card-img-top" src="../../assets/Camera/bride.jpg" alt="Card image" style="width:100%">
-                <div class="card-img-overlay" style="margin-top: 100%;">
+            <div class="col-md-4">
+              <div class="card img-fluid" >
+                <img class="card-img-top " src="../../assets/Camera/church.jpg" height="300"  alt="Card image" >
+                <div class="card-img-overlay" style="margin-top: 60%;">
                   <h2 class="card-title text-light text-center">Wedding Party</h2>
                 </div>
               </div>
             </div>
-            <div class="col-md-3">
-              <div class="card img-fluid" style="width:500px">
-                <img class="card-img-top" src="../../assets/Camera/bride.jpg" alt="Card image" style="width:100%">
-                <div class="card-img-overlay" style="margin-top: 100%;">
+            <div class="col-md-4">
+              <div class="card img-fluid" >
+                <img class="card-img-top " src="../../assets/Camera/birthday.jpg" height="300"  alt="Card image" >
+                <div class="card-img-overlay" style="margin-top: 60%;">
                   <h2 class="card-title text-light text-center">Wedding Party</h2>
                 </div>
               </div>
             </div>
-            <div class="col-md-3">
-              <div class="card img-fluid" style="width:500px">
-                <img class="card-img-top" src="../../assets/Camera/bride.jpg" alt="Card image" style="width:100%">
-                <div class="card-img-overlay" style="margin-top: 100%;">
-                  <h2 class="card-title text-light text-center">Wedding Party</h2>
-                </div>
-              </div>
-            </div>
+          </div>
+      </div>
+
+      <div class="footer">
+          <div>
+            
           </div>
       </div>
 
