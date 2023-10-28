@@ -12,17 +12,17 @@
     <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
   </div>
   <div class="offcanvas-body mt-5">
-    <ul class="navvBar " >
-        <li class="nav-item">
+    <ul class="navvBar list-unstyled" >
+        <li>
           <a class="nav-link" href="allmuscians">All</a>
         </li> 
-        <li class="nav-item ">
+        <li >
           <a class="nav-link" href="musicartist">Music Artiste</a>
         </li> 
-        <li class="nav-item ">
+        <li >
           <a class="nav-link" href="brands">Bands</a>
         </li> 
-        <li class="nav-item ">
+        <li >
           <a class="nav-link" href="djs">Djs</a>
         </li>
     </ul>
@@ -185,11 +185,13 @@ import axios from 'axios';
   .navvBar li a{
     list-style: none;
     text-decoration: none;
-    color: #A10035
+    color: #A10035;
+    padding:2em;
   }
   .navvBar  :hover{
     color:white;
     background-color: #A10035;
+    border-radius: 20px;
   }
  
 
