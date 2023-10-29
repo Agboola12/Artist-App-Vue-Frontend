@@ -113,7 +113,7 @@
           </div>
       </div>
 
-      <div class="footer text-center p-3 text-light mt-5" style="background-color: #A10035;">
+      <div class="footer text-center p-4 text-light mt-5" style="background-color: #A10035;">
           <h3 class="">
               Jahnus Music Industry @2023
           </h3>
