@@ -94,7 +94,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-3">
               <div class="card img-fluid" >
                 <img class="card-img-top " src="../../assets/Camera/church.jpg" height="300"  alt="Card image" >
                 <div class="card-img-overlay" style="margin-top: 60%;">
@@ -102,7 +102,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-3">
               <div class="card img-fluid" >
                 <img class="card-img-top " src="../../assets/Camera/birthday.jpg" height="300"  alt="Card image" >
                 <div class="card-img-overlay" style="margin-top: 60%;">
