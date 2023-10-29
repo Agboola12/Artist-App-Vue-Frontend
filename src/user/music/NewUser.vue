@@ -33,7 +33,7 @@
       <div class="container">
         <div class="row">
           <h1 class="mb-5">Popular Musicians</h1> 
-          <div class=" col-md-4 mx-auto" style="width:300px" v-for="(artist, index) in artists" :key="index">
+          <div class=" col-md-3 mx-auto" style="width:300px" v-for="(artist, index) in artists" :key="index">
             <img class="card-img-top w-100" :src="artist.imageUrl" alt="Card image" height="300" >
               <div class="card-body">
                 <h4 class="card-title">{{ artist.firstName }}</h4>
@@ -94,7 +94,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-4">
               <div class="card img-fluid" >
                 <img class="card-img-top " src="../../assets/Camera/church.jpg" height="300"  alt="Card image" >
                 <div class="card-img-overlay" style="margin-top: 60%;">
@@ -102,7 +102,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-4">
               <div class="card img-fluid" >
                 <img class="card-img-top " src="../../assets/Camera/birthday.jpg" height="300"  alt="Card image" >
                 <div class="card-img-overlay" style="margin-top: 60%;">
