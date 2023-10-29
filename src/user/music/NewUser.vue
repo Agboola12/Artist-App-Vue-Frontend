@@ -33,7 +33,7 @@
       <div class="container">
         <div class="row">
           <h1 class="mb-5">Popular Musicians</h1> 
-          <div class=" col-md-3 mx-auto" style="width:300px" v-for="(artist, index) in artists" :key="index">
+          <div class=" col-md-4 mx-auto" style="width:300px" v-for="(artist, index) in artists" :key="index">
             <img class="card-img-top w-100" :src="artist.imageUrl" alt="Card image" height="300" >
               <div class="card-body">
                 <h4 class="card-title">{{ artist.firstName }}</h4>
