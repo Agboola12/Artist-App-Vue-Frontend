@@ -3,8 +3,13 @@
     <div class="main-content">
         <div class="container">
             <div class="row">
-                  <div class="col-md-3">
-
+                <h2>All Musicians</h2>
+                  <div class="col-md-3" v-for="(artist, index) in artists" :key="index">
+                    <div class="card-body">
+                         <h4 class="card-title">{{ artist.firstName }}</h4>
+                         <p class="card-text">Band</p>
+                         <p class="card-text">{{ artist.state}}, {{ artists.country }}</p>
+                     </div>
                   </div>
             </div>
         </div>
@@ -16,21 +21,25 @@ import UserSideBar from '../UserSideBar.vue'
 export default {
     components: { UserSideBar },
 
-
     data() {
         return {
-            id: "",
             artists: null,
         };
     },
-    // getting all the artist
-    getAllArtist() {
-                axios.get("http://localhost:8000/getAllArtist")
-                    .then((res) => {
-                    console.log(res.data);
-                    this.artists = res.data;
-                });
-            },
+    created() {
+        this.getAllArtist();
+    },
+    methods: {
+      
+        // getting all the artist
+        getAllArtist() {
+            axios.get("http://localhost:8000/getAllArtist")
+                .then((res) => {
+                console.log(res.data);
+                this.artists = res.data;
+            });
+        }
+    },
         
 
 
