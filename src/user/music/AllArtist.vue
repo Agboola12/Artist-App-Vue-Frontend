@@ -14,7 +14,25 @@
 <script>
 import UserSideBar from '../UserSideBar.vue'
 export default {
-components: { UserSideBar },
+    components: { UserSideBar },
+
+
+    data() {
+        return {
+            id: "",
+            artists: null,
+        };
+    },
+    // getting all the artist
+    getAllArtist() {
+                axios.get("http://localhost:8000/getAllArtist")
+                    .then((res) => {
+                    console.log(res.data);
+                    this.artists = res.data;
+                });
+            },
+        
+
 
 }
 </script>
