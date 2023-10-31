@@ -21,7 +21,7 @@ import Land from '../Land.vue'
 import Home from '../Home.vue'
 import MusicArtist from '../user/music/MusicArtist.vue'
 import AllMuscians from '../user/music/AllMuscians.vue'
-import Brands from '../user/music/Brands.vue'
+import Bands from '../user/music/Bands.vue'
 import Djs from '../user/music/Djs.vue'
 import DashboardArtist from '../artist/DashboardArtist.vue'
 import ProfileArtist from '../artist/ProfileArtist.vue'
@@ -34,6 +34,7 @@ import RegisterArtist from '../artist/RegisterArtist.vue'
 import SongDetails from '../artist/SongDetails.vue'
 import DashboardUser from '../user/music/DashboardUser.vue'
 import NewUser from '../user/music/NewUser.vue'
+import UserSideBar from '../user/UserSideBar.vue'
 
 axios.interceptors.request.use((value) =>{
   value.headers = {
@@ -46,130 +47,31 @@ axios.interceptors.request.use((value) =>{
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
-    {
-      path: '/',
-      name: 'landing',
-      component: Landing
-    },
-    {
-      path: '/land',
-      name: 'land',
-      component: Land
-    },
+    {  path: '/',  name: 'landing',  component: Landing},
+    {  path: '/land',  name: 'land',  component: Land},
     
-    {
-      path: '/about',
-      name: 'about',
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import('../views/AboutView.vue')
-    },   
-    {
-      path: '/register',
-      name: 'register',
-      component: Register
-    },
-    {
-      path: '/login',
-      name: 'login',
-      component: Login
-    },
-    {
-      path: '/alluser',
-      name: 'alluser',
-      component: AllUser
-    },
-    {
-      path: '/bookingone',
-      name: 'bookingone',
-      component: BookingOne
-    },
-    {
-      path: '/bookingtwo',
-      name: 'bookingtwo',
-      component: BookingTwo
-    },
-    {
-      path: '/bookingthree',
-      name: 'bookingthree',
-      component: BookingThree
-    },
-    {
-      path: '/bookingfour',
-      name: 'bookingfour',
-      component:BookingFour
-    },
-    {
-      path: '/bookingfive',
-      name: 'bookingfive',
-      component:BookingFive
-    },
-    {
-      path: '/bookingsix',
-      name: 'bookingsix',
-      component:BookingSix
-    },
-    {
-      path: '/bookingseven',
-      name: 'bookingseven',
-      component:BookingSeven
-    },
-    {
-      path: '/bookingeight',
-      name: 'bookingeight',
-      component:BookingEight
-    },
-    {
-      path: '/bookingnine',
-      name: 'bookingnine',
-      component:BookingNine
-    },
-    {
-      path: '/bookingten',
-      name: 'bookingten',
-      component:BookingTen
-    },
-    {
-      path: '/booking',
-      name: 'booking',
-      component:Booking
-    },
-    {
-      path: '/musicartist',
-      name: 'musicartist',
-      component:MusicArtist
-    },
-    {
-      path: '/artistprofile',
-      name: 'artistprofile',
-      component: ArtistProfile
-    },
-    {
-      path: '/allmuscians',
-      name: 'allmuscians',
-      component: AllMuscians
-    },
-    {
-      path: '/brands',
-      name: 'brands',
-      component: Brands
-    },
-    {
-      path: '/djs',
-      name: 'djs',
-      component: Djs
-    },
-    {
-      path: '/profileartist',
-      name: 'profileartist',
-      component: ProfileArtist
-    },
-    {
-      path: '/home',
-      name: 'home',
-      component: Home
-    },
+    {  path: '/about',  name: 'about',  component: () => import('../views/AboutView.vue')},   
+    {  path: '/register',  name: 'register',  component: Register},
+    {  path: '/login',  name: 'login',  component: Login},
+    {  path: '/alluser',  name: 'alluser',  component: AllUser},
+    {  path: '/bookingone',  name: 'bookingone',  component: BookingOne},
+    {  path: '/bookingtwo',  name: 'bookingtwo',  component: BookingTwo},
+    {  path: '/bookingthree',  name: 'bookingthree',  component: BookingThree},
+    {  path: '/bookingfour',  name: 'bookingfour',  component:BookingFour},
+    {  path: '/bookingfive',  name: 'bookingfive',  component:BookingFive},
+    {  path: '/bookingsix',  name: 'bookingsix',  component:BookingSix},
+    {  path: '/bookingseven',  name: 'bookingseven',  component:BookingSeven},
+    {  path: '/bookingeight',  name: 'bookingeight',  component:BookingEight},
+    {  path: '/bookingnine',  name: 'bookingnine',  component:BookingNine},
+    {  path: '/bookingten',  name: 'bookingten',  component:BookingTen},
+    {  path: '/booking',  name: 'booking',  component:Booking},
+    {  path: '/musicartist',  name: 'musicartist',  component:MusicArtist},
+    {  path: '/artistprofile',  name: 'artistprofile',  component: ArtistProfile},
+    {  path: '/allmuscians',  name: 'allmuscians',  component: AllMuscians},
+    {  path: '/bands',  name: 'bands',  component: Bands},
+    {  path: '/djs',  name: 'djs',  component: Djs},
+    {  path: '/profileartist',  name: 'profileartist',  component: ProfileArtist},
+    {  path: '/home',  name: 'home',  component: Home},
     {path: '/dashboardartist' , name: 'dashboardartist', component: DashboardArtist},
     {path: '/navartist' , name: 'navartist', component: NavArtist},
     {path: '/mymusic' , name: 'mymusic', component: MyMusic},
@@ -180,6 +82,7 @@ const router = createRouter({
     {path: '/songdetails' , name: 'songdetails', component: SongDetails},
     {path: '/dashboarduser' , name: 'dashboarduser', component: DashboardUser},
     {path: '/newuser' , name: 'newuser', component: NewUser},
+    {path: '/usersidebar' , name: 'usersidebar', component: UserSideBar},
     
 
     
