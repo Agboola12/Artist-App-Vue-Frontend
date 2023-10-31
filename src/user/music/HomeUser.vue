@@ -15,7 +15,7 @@
       
       <div class="row mt-5" >
         <h1 class="mb-3">Recommended For You</h1> 
-        <div class=" col-md-5 mx-auto" style="width:300px" v-for="(artist, index) in artists" :key="index">
+        <div class=" col-md-4 mx-auto" style="width:300px" v-for="(artist, index) in artists" :key="index">
             <img class="card-img-top w-100" :src="artist.imageUrl" alt="Card image" height="300" >
               <div class="card-body">
                 <h4 class="card-title">{{ artist.firstName }}</h4>

@@ -5,10 +5,11 @@
             <div class="row">
                 <h2>All Musicians</h2>
                   <div class="col-md-3" v-for="(artist, index) in artists" :key="index">
+                    <img class="card-img-top w-100" :src="artist.imageUrl" alt="Card image" height="200" >
                     <div class="card-body">
                          <h4 class="card-title">{{ artist.firstName }}</h4>
                          <p class="card-text">Band</p>
-                         <p class="card-text">{{ artist.state}}, {{ artists.country }}</p>
+                         <p class="card-text">{{ artist.state}}, {{ artist.country }}</p>
                      </div>
                   </div>
             </div>
@@ -17,6 +18,7 @@
 </template>
 
 <script>
+import axios from 'axios';
 import UserSideBar from '../UserSideBar.vue'
 export default {
     components: { UserSideBar },
