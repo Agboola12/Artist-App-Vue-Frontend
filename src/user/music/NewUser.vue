@@ -4,17 +4,11 @@
 </button>
 
 
-<div class="offcanvas offcanvas-start"  style="width: 20%;" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
-  <!-- <div class="offcanvas-header"> -->
-    <!-- </div> -->
-    
+<div class="offcanvas offcanvas-start"  style="width: 25%;" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
   <div class="offcanvas-body ">
-
-    
     <div class="wrapper">
       <div class="sidebar">
-        <!-- <h2>Sidebar</h2> -->
-        <h2 class="offcanvas-title mx-auto" id="offcanvasWithBothOptionsLabel">
+        <h2 >
           Prime
           <button type="button" class="btn-close text-reset ml-auto" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </h2>
@@ -32,20 +26,6 @@
       </div>
     </div>
 </div>
-    <!-- <ul class="navvBar list-unstyled" >
-        <li>
-          <a class="nav-link" href="allmuscians">All</a>
-        </li> 
-        <li >
-          <a class="nav-link" href="musicartist">Music Artiste</a>
-        </li> 
-        <li >
-          <a class="nav-link" href="brands">Bands</a>
-        </li> 
-        <li >
-          <a class="nav-link" href="djs">Djs</a>
-        </li>
-    </ul> -->
   </div>
 
 </div>
@@ -275,7 +255,7 @@ import axios from 'axios';
 .wrapper .sidebar{
   list-style: none;
   text-decoration: none;
-  width: 20%;
+  width: 25%;
   height: 100%;
   background: #4b4276;
   padding: 30px 0px;
@@ -290,6 +270,8 @@ import axios from 'axios';
 }
 
 .wrapper .sidebar ul li{
+  list-style: none;
+  text-decoration: none;
   padding: 15px;
   border-bottom: 1px solid #bdb8d7;
   border-bottom: 1px solid rgba(0,0,0,0.05);
@@ -297,6 +279,8 @@ import axios from 'axios';
 }    
 
 .wrapper .sidebar ul li a{
+  list-style: none;
+  text-decoration: none;
   color: #bdb8d7;
   display: block;
 }
