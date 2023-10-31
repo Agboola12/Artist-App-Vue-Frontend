@@ -4,7 +4,7 @@
       <div class="container">
         <div class="row">
           <div class="col-md-4">
-            
+
           </div>
         </div>
 
@@ -20,3 +20,12 @@ export default {
     components: { UserSideBar }
 }
 </script>
+
+<style scoped>
+
+#main-content{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    height: auto;
+    overflow-x: visible;
+  }
+</style>

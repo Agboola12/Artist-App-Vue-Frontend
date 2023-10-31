@@ -110,6 +110,7 @@ import UserSideBar from '../UserSideBar.vue';
         this.id = this.$route.params.id;
     },
     methods: {
+      // login user
         getUser() {
             axios.get("http://localhost:8000/getUser")
                 .then((res) => {
@@ -120,6 +121,7 @@ import UserSideBar from '../UserSideBar.vue';
                 console.error(error);
             });
         },
+        // getting all the artist
         getAllArtist() {
             axios.get("http://localhost:8000/getAllArtist")
                 .then((res) => {

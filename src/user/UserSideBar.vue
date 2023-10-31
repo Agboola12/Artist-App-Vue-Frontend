@@ -14,6 +14,7 @@
         </h2>
         <ul>
             <li><a href="homeuser"><i class="fas fa-home"></i>Home</a></li>
+            <li><a href="allartist"><i class="fas fa-home"></i>All</a></li>
             <li><a href="musicartist"><i class="fas fa-user"></i>Music Artists</a></li>
             <li><a href="bands"><i class="fas fa-address-card"></i>Bands</a></li>
             <li><a href="djs"><i class="fas fa-blog"></i>Djs</a></li>
