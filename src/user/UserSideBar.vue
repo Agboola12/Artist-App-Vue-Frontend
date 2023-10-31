@@ -39,7 +39,8 @@ export default {
 
 <style scoped>
 .offcanvas{
-  background: #4b4276;
+  /* background: #4b4276; */
+  background: #A10035;
 }
 
 .btn {
@@ -95,13 +96,16 @@ export default {
   text-decoration: none;
   width: 25%;
   height: 100%;
-  background: #4b4276;
+  /* background: #4b4276; */
   padding: 30px 0px;
   position: fixed;
 }
 
 .wrapper .sidebar h2{
-  color: #fff;
+  /* color: #fff; */
+  color: #A10035;
+  /* font-weight: bolder; */
+  font-size: 3em;
   text-transform: uppercase;
   text-align: center;
   margin-bottom: 30px;
@@ -119,7 +123,8 @@ export default {
 .wrapper .sidebar ul li a{
   list-style: none;
   text-decoration: none;
-  color: #bdb8d7;
+  /* color: #bdb8d7; */
+  color: #A10035;
   display: block;
 }
 
@@ -128,11 +133,14 @@ export default {
 }
 
 .wrapper .sidebar ul li:hover{
-  background-color: #594f8d;
+  /* background-color: #594f8d; */
+  background-color: #A10035;
 }
     
 .wrapper .sidebar ul li:hover a{
-  color: #fff;
+  color: #FFDDDD;
+  border-radius: 50px;
+  /* color: #fff; */
 }
  
 .wrapper .sidebar .social_media{
