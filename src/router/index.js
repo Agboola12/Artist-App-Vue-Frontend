@@ -32,7 +32,7 @@ import AudioArtist from '../artist/AudioArtist.vue'
 import LoginArtist from '../artist/LoginArtist.vue'
 import RegisterArtist from '../artist/RegisterArtist.vue'
 import SongDetails from '../artist/SongDetails.vue'
-import NewUser from '../user/music/NewUser.vue'
+import HomeUser from '../user/music/HomeUser.vue'
 import UserSideBar from '../user/UserSideBar.vue'
 
 axios.interceptors.request.use((value) =>{
@@ -79,7 +79,7 @@ const router = createRouter({
     {path: '/loginartist' , name: 'loginartist', component: LoginArtist},
     {path: '/registerartist' , name: 'registerartist', component: RegisterArtist},
     {path: '/songdetails' , name: 'songdetails', component: SongDetails},
-    {path: '/newuser' , name: 'newuser', component: NewUser},
+    {path: '/homeuser' , name: 'homeuser', component: HomeUser},
     {path: '/usersidebar' , name: 'usersidebar', component: UserSideBar},
     
 
