@@ -10,7 +10,7 @@
       <div class="sidebar">
         <h2 >
           Prime
-          <button type="button" class="btn-close text-reset ml-auto" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          <button type="button" class="btn-close text-reset mr-auto" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </h2>
         <ul>
             <li><a href="homeuser"><i class="fas fa-home"></i>Home</a></li>
@@ -19,7 +19,7 @@
             <li><a href="bands"><i class="fas fa-address-card"></i>Bands</a></li>
             <li><a href="djs"><i class="fas fa-blog"></i>Djs</a></li>
         </ul> 
-        <div class="social_media">
+        <div class="social_media mb-4">
           <a href="#"><i class="fab fa-facebook-f"></i></a>
           <a href="#"><i class="fab fa-twitter"></i></a>
           <a href="#"><i class="fab fa-instagram"></i></a>
@@ -102,9 +102,7 @@ export default {
 }
 
 .wrapper .sidebar h2{
-  /* color: #fff; */
-  color: #A10035;
-  /* font-weight: bolder; */
+  color: white;
   font-size: 3em;
   text-transform: uppercase;
   text-align: center;
@@ -123,8 +121,7 @@ export default {
 .wrapper .sidebar ul li a{
   list-style: none;
   text-decoration: none;
-  /* color: #bdb8d7; */
-  color: #A10035;
+  color: white;
   display: block;
 }
 
@@ -134,12 +131,12 @@ export default {
 
 .wrapper .sidebar ul li:hover{
   /* background-color: #594f8d; */
-  background-color: #A10035;
+  background-color: white;
+  border-radius: 5px;
 }
     
 .wrapper .sidebar ul li:hover a{
-  color: #FFDDDD;
-  border-radius: 50px;
+  color: black;
   /* color: #fff; */
 }
  
@@ -154,12 +151,12 @@ export default {
 .wrapper .sidebar .social_media a{
   display: block;
   width: 40px;
-  background: #594f8d;
+  background: white;
   height: 40px;
   line-height: 45px;
   text-align: center;
   margin: 0 5px;
-  color: #bdb8d7;
+  color: #A10035;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
 }

@@ -1,4 +1,5 @@
 <template>
+    <UserSideBar/>
     <div class="container "  style="margin-top: 5em;  ">
         <div class="col-sm-6 mx-auto " style="border: 1px solid gray; border-style: none; ">
             <h1 class="text-center mt-5">How it works</h1>
@@ -14,8 +15,10 @@
 </template>
 
 <script>
+import UserSideBar from '../UserSideBar.vue'
 
 export default {
+  components: { UserSideBar },
 
 }
 </script>
