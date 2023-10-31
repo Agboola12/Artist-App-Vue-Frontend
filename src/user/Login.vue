@@ -41,7 +41,7 @@ export default {
       .then ((res)=>{
           if(res.data.status){
             localStorage.setItem("token", res.data.token)
-            this.$router.push("/dashboarduser");
+            this.$router.push("/newuser");
           }
       })
       .catch((err)=>{
