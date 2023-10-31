@@ -74,6 +74,5 @@ text-decoration: none;
 
 </style>
 
-<!-- designing of artist interface tomorrow -->
 
 

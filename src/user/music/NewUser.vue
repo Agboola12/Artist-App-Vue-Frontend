@@ -4,14 +4,15 @@
 </button>
 
 
-<div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+<div class="offcanvas offcanvas-start" style="width: 20%;" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
   <div class="offcanvas-header">
     <h5 class="offcanvas-title mx-auto" id="offcanvasWithBothOptionsLabel">
-      <img src="../../assets/Camera/Logo.png" height="100" width="100"/>
+      <img src="../../assets/Camera/Logo.png" class="mt-5" height="100" width="100"/>
     </h5>
     <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
   </div>
-  <div class="offcanvas-body mt-5">
+
+  <div class="offcanvas-body ">
     <ul class="navvBar list-unstyled" >
         <li>
           <a class="nav-link" href="allmuscians">All</a>
@@ -26,8 +27,8 @@
           <a class="nav-link" href="djs">Djs</a>
         </li>
     </ul>
-    
   </div>
+
 </div>
     <div id="main-content" >
       <div class="container">
@@ -57,7 +58,7 @@
       <div class=" find  p-4 text-center">
         <h2>Not sure of what you want?</h2>
         <p>Finding the perfect musician has ever been easier</p>
-        <button class="btn"> Find Musicians </button>
+        <button class="btnn"> Find Musicians </button>
       </div>
 
       <div class=" middle container p-5" >
@@ -188,14 +189,24 @@ import axios from 'axios';
     color: #A10035;
     padding:2em;
   }
+  .navvBar a{
+      padding: 15px 25px;
+      text-decoration: none;
+      font-size: 18px;
+      color: #ffffff;
+      display: block;
+      transition: 0.3s;
+  }
+
   .navvBar  :hover{
-    color:white;
-    background-color: #A10035;
-    border-radius: 20px;
+    /* color:white; */
+    /* background-color: #A10035; */
+    /* border-radius: 20px; */
+    background-color: #555;
   }
  
 
-  .btn {
+  .btnn {
  background-color: #A10035;
  padding: 14px 40px;
  color: #fff;
@@ -208,18 +219,18 @@ import axios from 'axios';
  transition: .4s;
 }
 
-.btn span:last-child {
+.btnn span:last-child {
  display: none;
 }
 
-.btn:hover {
+.btnn:hover {
  transition: .4s;
  border: 2px dashed #A10035;
  background-color: #fff;
  color: #A10035;
 }
 
-.btn:active {
+.btnn:active {
  background-color: #FFDDDD;
 }
 
