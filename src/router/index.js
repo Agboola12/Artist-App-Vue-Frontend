@@ -32,7 +32,6 @@ import AudioArtist from '../artist/AudioArtist.vue'
 import LoginArtist from '../artist/LoginArtist.vue'
 import RegisterArtist from '../artist/RegisterArtist.vue'
 import SongDetails from '../artist/SongDetails.vue'
-import DashboardUser from '../user/music/DashboardUser.vue'
 import NewUser from '../user/music/NewUser.vue'
 import UserSideBar from '../user/UserSideBar.vue'
 
@@ -80,7 +79,6 @@ const router = createRouter({
     {path: '/loginartist' , name: 'loginartist', component: LoginArtist},
     {path: '/registerartist' , name: 'registerartist', component: RegisterArtist},
     {path: '/songdetails' , name: 'songdetails', component: SongDetails},
-    {path: '/dashboarduser' , name: 'dashboarduser', component: DashboardUser},
     {path: '/newuser' , name: 'newuser', component: NewUser},
     {path: '/usersidebar' , name: 'usersidebar', component: UserSideBar},
     
