@@ -1,4 +1,5 @@
 <template>
+    <UserSideBar/>
         <div class="container-fluid row">
             <div class="col-md-4">
                 <div class="mt-5 ">
@@ -145,8 +146,10 @@
 </template>
 
 <script>
-export default {
+import UserSideBar from '../UserSideBar.vue';
 
+export default {
+    components: { UserSideBar }
 }
 </script>
 
