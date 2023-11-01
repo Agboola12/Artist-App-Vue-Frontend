@@ -1,8 +1,11 @@
 <template>
       <UserSideBar/>
     <div id="main-content" >
+      <div class="">
+
+        <a href="bookingone" class=""  ><button class="btn btn-danger col-md-8 w-25 ">Booking</button></a>
+      </div>
       <div class="container">
-       <a href="bookingone" class="mr-auto" ><button class="btn btn-danger ">Booking</button></a>
         <div class="row">
           <h1 class="mb-5">Popular Musicians</h1> 
           <div class=" col-md-4 mx-auto" style="width:300px" v-for="(artist, index) in artists" :key="index">
