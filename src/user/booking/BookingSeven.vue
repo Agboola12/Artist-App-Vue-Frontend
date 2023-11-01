@@ -1,4 +1,5 @@
 <template>
+        <a href="homeuser" style="margin-left: 90%;"><button class="btn btn-danger  ">Go Back Home</button></a>
     <div class="container shadow p-3  bg-white rounded"  style="margin-top: 5em; width: 80%;">
       <div class="col-sm-5 mx-auto " style="border: 1px solid gray; border-style: none; ">
           <h1 class="ml-5">Booking</h1>

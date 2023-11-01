@@ -1,5 +1,5 @@
 <template>
-    <UserSideBar/>
+    
     <div class="container" >
         <a href="homeuser" style="margin-left: 90%;"><button class="btn btn-danger  ">Go Back Home</button></a>
         <div class="col-sm-6 mx-auto " style="border: 1px solid gray; border-style: none; ">
