@@ -1,9 +1,9 @@
 <template>
       <UserSideBar/>
     <div id="main-content" >
-      <div class="">
-
-        <a href="bookingone" class=""  ><button class="btn btn-danger col-md-8 w-25 ">Booking</button></a>
+      <div style="margin-left: 80%;">
+        <a href="bookingone" class="mr-5"  ><button class="btn btn-danger">Booking</button></a>
+          <i class="fa fa-user"></i>
       </div>
       <div class="container">
         <div class="row">
