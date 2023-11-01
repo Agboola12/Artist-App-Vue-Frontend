@@ -2,6 +2,7 @@
       <UserSideBar/>
     <div id="main-content" >
       <div class="container">
+       <a href="bookingone" class="mr-auto" ><button class="btn btn-danger ">Booking</button></a>
         <div class="row">
           <h1 class="mb-5">Popular Musicians</h1> 
           <div class=" col-md-4 mx-auto" style="width:300px" v-for="(artist, index) in artists" :key="index">
@@ -28,7 +29,7 @@
       <div class=" find  p-4 text-center">
         <h2>Not sure of what you want?</h2>
         <p>Finding the perfect musician has ever been easier</p>
-        <button class="btnn"> Find Musicians </button>
+        <button class="btn btn-danger"> Find Musicians </button>
       </div>
 
       <div class=" middle container p-5" >
