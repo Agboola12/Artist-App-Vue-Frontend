@@ -1,7 +1,7 @@
 <template>
     <UserSideBar/>
-    <a href="homeuser" class="ml-auto"><button class="btn btn-danger  ">Go Back Home</button></a>
     <div class="container" >
+        <a href="homeuser" style="margin-left: 90%;"><button class="btn btn-danger  ">Go Back Home</button></a>
         <div class="col-sm-6 mx-auto " style="border: 1px solid gray; border-style: none; ">
             <h1 class="text-center mt-5">How it works</h1>
             <ol >
