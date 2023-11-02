@@ -26,6 +26,13 @@
             />
           </div>
           <div class="form-group">
+            <select>
+              <option>Band</option>
+              <option>Artist</option>
+              <option></option>
+            </select>
+          </div>
+          <div class="form-group">
             <input
               type="number"
               name="mobile"
