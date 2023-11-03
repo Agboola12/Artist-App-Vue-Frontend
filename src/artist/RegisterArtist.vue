@@ -26,34 +26,14 @@
             />
           </div>
           <div class="form-group">
-
-  <legend>Select a maintenance drone:</legend>
-
-  <div>
-    <input type="radio" id="huey" name="drone" value="huey" checked />
-    <label for="huey">Huey</label>
-  </div>
-
-  <div>
-    <input type="radio" id="dewey" name="drone" value="dewey" />
-    <label for="dewey">Dewey</label>
-  </div>
-
-  <div>
-    <input type="radio" id="louie" name="drone" value="louie" />
-    <label for="louie">Louie</label>
-  </div>
-
-
-
-            <!-- <select class="w-100 form-control border-right-0 shadow-none border-top-0 border-left-0"  v-model="musicType">
+            <select class="w-100 form-control border-right-0 shadow-none border-top-0 border-left-0"  v-model="musicType">
               <option disabled selected hidden >Select the music type</option>
                 <optgroup label="music type">
                   <option value="Artist">Artist</option>
                   <option value="Bands">Bands</option>
                   <option value="Djs">Djs</option>
                 </optgroup>
-              </select> -->
+              </select>
           </div>
           <div class="form-group">
             <input
