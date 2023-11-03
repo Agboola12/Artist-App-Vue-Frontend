@@ -26,19 +26,27 @@
             />
           </div>
           <div class="form-group">
-            <fieldset>
-                 <p>Please select your type of music:</p>
-                 <div>
-                   <input type="radio" id="contactChoice1" name="contact" value="email" />
-                   <label for="contactChoice1">Email</label>
+      <select class="w-100  border-right-0 shadow-none border-top-0 border-left-0" id="country">
+        <option value="">Select a country</option>
 
-                   <input type="radio" id="contactChoice2" name="contact" value="phone" />
-                   <label for="contactChoice2">Phone</label>
+        <optgroup label="Africa">
+          <option value="AF">Afghanistan</option>
+          <option value="DZ">Algeria</option>
+          <option value="AO">Angola</option>
+          ...
+          <option value="ZW">Zimbabwe</option>
+        </optgroup>
 
-                   <input type="radio" id="contactChoice3" name="contact" value="mail" />
-                   <label for="contactChoice3">Mail</label>
-                 </div>
-            </fieldset>
+        <optgroup label="Asia">
+          <option value="AM">Armenia</option>
+          <option value="AZ">Azerbaijan</option>
+          <option value="BH">Bahrain</option>
+          ...
+          <option value="YE">Yemen</option>
+        </optgroup>
+
+       
+      </select>
           </div>
           <div class="form-group">
             <input
