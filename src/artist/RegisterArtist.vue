@@ -26,27 +26,15 @@
             />
           </div>
           <div class="form-group">
-      <select class="w-100  border-right-0 shadow-none border-top-0 border-left-0" id="country">
-        <option value="">Select a country</option>
-
-        <optgroup label="Africa">
-          <option value="AF">Afghanistan</option>
-          <option value="DZ">Algeria</option>
-          <option value="AO">Angola</option>
-          ...
-          <option value="ZW">Zimbabwe</option>
-        </optgroup>
-
-        <optgroup label="Asia">
-          <option value="AM">Armenia</option>
-          <option value="AZ">Azerbaijan</option>
-          <option value="BH">Bahrain</option>
-          ...
-          <option value="YE">Yemen</option>
-        </optgroup>
-
-       
-      </select>
+            <!-- <select class="w-100 form-control border-right-0 shadow-none border-top-0 border-left-0" v-model="musicType">
+              <option disabled >Select the music type</option>
+                <optgroup label="music type">
+                  <option value="Artist">Artist</option>
+                  <option value="Bands">Bands</option>
+                  <option value="Djs">Djs</option>
+                </optgroup>
+              </select> -->
+              
           </div>
           <div class="form-group">
             <input
