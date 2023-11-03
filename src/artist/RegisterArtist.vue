@@ -26,10 +26,7 @@
             />
           </div>
           <div class="form-group">
-            <label>Select the of song </label> <br/>
-            <input type="radio" v-model="selectedOption" value="option1" class="mr-2 ">
-            <input type="radio" v-model="selectedOption" value="option1" class="mr-2 ">
-            <input type="radio" v-model="selectedOption" value="option1" class="mr-2 ">
+            
           </div>
           <div class="form-group">
             <input
