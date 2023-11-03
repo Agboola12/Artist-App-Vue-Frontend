@@ -12,7 +12,7 @@
       <a href="#" >Forgot Password</a>
       <div class="mx-5">
       <button type="submit" id="continue" class="btn btn  mt-4">Continue</button> <br/><br/>
-      <p >Don't have an account? <a href="registerartist" style="color: #A10035;">Sign In</a></p>
+      <p >Don't have an account? <a href="registerartist" style="color: #A10035;">Sign Up</a></p>
       </div>
     </form>
   </div>
