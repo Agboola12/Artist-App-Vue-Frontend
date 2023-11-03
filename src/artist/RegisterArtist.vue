@@ -26,14 +26,14 @@
             />
           </div>
           <div class="form-group">
-            <!-- <select class="w-100 form-control border-right-0 shadow-none border-top-0 border-left-0" v-model="musicType">
-              <option disabled >Select the music type</option>
+            <select class="w-100 form-control border-right-0 shadow-none border-top-0 border-left-0"  v-model="musicType">
+              <option disabled selected hidden >Select the music type</option>
                 <optgroup label="music type">
                   <option value="Artist">Artist</option>
                   <option value="Bands">Bands</option>
                   <option value="Djs">Djs</option>
                 </optgroup>
-              </select> -->
+              </select>
               
           </div>
           <div class="form-group">
@@ -127,6 +127,7 @@ import FooterArtist from "./FooterArtist.vue";
         return {
             firstName: " ",
             email: " ",
+            musicType: "Artist",
             mobile: "",
             state: "",
             country: "",
@@ -145,6 +146,7 @@ import FooterArtist from "./FooterArtist.vue";
             const formData = new FormData();
              formData.append("firstName", this.firstName);
              formData.append("email", this.email);
+             formData.append("musicType", this.musicType);
              formData.append("mobile", this.mobile);
              formData.append("state", this.state);
              formData.append("country", this.country);
