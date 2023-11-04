@@ -17,7 +17,18 @@
 import UserSideBar from '../UserSideBar.vue';
 
 export default {
-    components: { UserSideBar }
+    components: { UserSideBar },
+    data(){
+      return{
+
+      }
+    },
+    created(){
+
+    },
+    methods: {
+      
+    }
 }
 </script>
 
