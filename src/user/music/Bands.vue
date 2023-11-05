@@ -28,8 +28,9 @@ export default {
         this.getDjs();
     },
     methods: {
+
        getDjs(){
-        axios.get("http://localhost:8000/getDjs")
+        axios.get("http://localhost:8000/getBands")
           .then((res) => {
             console.log(res.data);
             // this.user = res.data.data;
