@@ -2,12 +2,16 @@
       <UserSideBar/>
       <div class="main-content">
           <div class="container">
-              <div class="row">
+              <div class="row" v-if="user">
                     <div class="col-md-3">
 
                     </div>
               </div>
+              <div v-else>
+                  <p>Please log in to access your profile.</p>
+                </div>
           </div>
+          
       </div>
 </template>
 
