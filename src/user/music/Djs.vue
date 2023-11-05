@@ -12,6 +12,7 @@
 </template>
 
 <script>
+import axios from 'axios';
 import UserSideBar from '../UserSideBar.vue'
 export default {
   components: { UserSideBar },
