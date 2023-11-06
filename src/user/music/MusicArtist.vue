@@ -25,11 +25,11 @@ export default {
       }
     },
     created(){
-        this.getBands();
+        this.getMusicArtist();
     },
     methods: {
 
-      getBands(){
+      getMusicArtist(){
         axios.get("http://localhost:8000/getMusicArtist")
           .then((res) => {
             console.log(res.data);
