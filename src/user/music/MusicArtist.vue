@@ -30,7 +30,7 @@ export default {
     methods: {
 
       getBands(){
-        axios.get("http://localhost:8000/getBands")
+        axios.get("http://localhost:8000/getMusicArtist")
           .then((res) => {
             console.log(res.data);
             // this.user = res.data.data;
