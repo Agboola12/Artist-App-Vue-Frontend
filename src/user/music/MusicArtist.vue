@@ -3,9 +3,15 @@
   <div class="main-content">
       <div class="container">
         <div class="row">
-          <div class="col-md-4">
-
-          </div>
+          <div class="row" >
+                    <div class="col-md-3" v-for="(user, index) in users" :key="index">
+                      <img class="card-img-top w-100" :src="user.imageUrl" alt="Card image" height="300" >
+              <div class="card-body">
+                <h4 class="card-title">{{ user.firstName }}</h4>
+                <p class="card-text">{{user.musicType}}</p>
+              </div>
+                    </div>
+                  </div>
         </div>
 
       </div>
