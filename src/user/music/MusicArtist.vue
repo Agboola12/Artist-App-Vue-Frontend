@@ -14,10 +14,32 @@
 </template>
 
 <script>
+import axios from 'axios';
 import UserSideBar from '../UserSideBar.vue';
 
 export default {
-    components: { UserSideBar }
+    components: { UserSideBar },
+    data(){
+      return{
+          user: null
+      }
+    },
+    created(){
+        this.getBands();
+    },
+    methods: {
+
+      getBands(){
+        axios.get("http://localhost:8000/getBands")
+          .then((res) => {
+            console.log(res.data);
+            // this.user = res.data.data;
+          })
+          .catch((error) => {
+            console.error(error);
+          });
+       }
+    }
 }
 </script>
 

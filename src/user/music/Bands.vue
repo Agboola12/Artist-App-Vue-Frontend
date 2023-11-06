@@ -32,8 +32,8 @@ export default {
       getBands(){
         axios.get("http://localhost:8000/getBands")
           .then((res) => {
-            console.log(res.data);
-            // this.user = res.data.data;
+            console.log(res.data.data);
+            this.user = res.data.data;
           })
           .catch((error) => {
             console.error(error);
