@@ -29,7 +29,7 @@
             <select class="w-100 form-control border-right-0 shadow-none border-top-0 border-left-0"  v-model="musicType">
               <option disabled selected hidden >Select the music type</option>
                 <optgroup label="music type">
-                  <option value="Artist">Artist</option>
+                  <option value="Music Artist">Music Artist</option>
                   <option value="Bands">Bands</option>
                   <option value="Djs">Djs</option>
                 </optgroup>
@@ -126,7 +126,7 @@ import FooterArtist from "./FooterArtist.vue";
         return {
             firstName: " ",
             email: " ",
-            musicType: "Artist",
+            musicType: "Music Artist",
             mobile: "",
             state: "",
             country: "",
