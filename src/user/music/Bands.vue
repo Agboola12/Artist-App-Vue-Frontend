@@ -25,11 +25,11 @@ export default {
       }
     },
     created(){
-        this.getDjs();
+        this.getBands();
     },
     methods: {
 
-       getDjs(){
+      getBands(){
         axios.get("http://localhost:8000/getBands")
           .then((res) => {
             console.log(res.data);
