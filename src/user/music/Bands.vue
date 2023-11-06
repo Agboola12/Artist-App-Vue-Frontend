@@ -27,7 +27,7 @@ export default {
     components: { UserSideBar },
     data(){
       return{
-          user: null
+          users: null
       }
     },
     created(){
@@ -39,7 +39,7 @@ export default {
         axios.get("http://localhost:8000/getBands")
           .then((res) => {
             console.log(res.data.data);
-            this.user = res.data.data;
+            this.users = res.data.data;
           })
           .catch((error) => {
             console.error(error);
