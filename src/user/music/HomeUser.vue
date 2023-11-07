@@ -24,14 +24,15 @@
                     </div>
 
                     <!-- main content -->
-                    <div class="container mt-4 ml-5">
+                    <div class="container mt-4 mb-5 ml-5">
                       <div class='d-flex '>
                         <h4>Top Songs</h4>
                         <p style="margin-left: 70%;"> <a href="">View All</a></p>
                     </div>
-                        <!-- <div class="border border-dark">
-
-                        </div> -->
+                        <div class=' border border-dark d-flex' v-for="(song, index) in songs" :key="index">
+                            <p>{{ song.songTitle }}</p>
+                            <audio controls> <source :src="song.mp3Url" type="audio/mpeg" ></audio>
+                        </div>
                     </div>
               </div>
               <div class="col-md-4">
@@ -133,7 +134,7 @@ import UserSideBar from '../UserSideBar.vue';
             user: null,
             id: "",
             artists: null,
-            song: null
+            songs: null
         };
     },
     created() {
@@ -168,8 +169,8 @@ import UserSideBar from '../UserSideBar.vue';
         AllSong() {
             axios.get("http://localhost:8000/AllSong")
                 .then((res) => {
-                console.log(res.data);
-                this.song = res.data;
+                console.log(res.data.data);
+                this.songs = res.data.data;
             });
         }
     },
