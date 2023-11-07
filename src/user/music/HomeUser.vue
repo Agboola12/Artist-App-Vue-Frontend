@@ -24,14 +24,14 @@
                     </div>
 
                     <!-- main content -->
-                    <div class="container">
+                    <div class="container mt-4 ml-5">
                       <div class='d-flex '>
                         <h4>Top Songs</h4>
-      <p> <a href="">View All</a></p>
-    </div>
-                        <div class="border border-dark">
+                        <p style="margin-left: 70%;"> <a href="">View All</a></p>
+                    </div>
+                        <!-- <div class="border border-dark">
 
-                        </div>
+                        </div> -->
                     </div>
               </div>
               <div class="col-md-4">
@@ -133,11 +133,13 @@ import UserSideBar from '../UserSideBar.vue';
             user: null,
             id: "",
             artists: null,
+            song: null
         };
     },
     created() {
         this.getUser();
         this.getAllArtist();
+        this.AllSong();
         this.id = this.$route.params.id;
     },
     methods: {
@@ -160,6 +162,14 @@ import UserSideBar from '../UserSideBar.vue';
                 .then((res) => {
                 console.log(res.data);
                 this.artists = res.data;
+            });
+        },
+
+        AllSong() {
+            axios.get("http://localhost:8000/AllSong")
+                .then((res) => {
+                console.log(res.data);
+                this.song = res.data;
             });
         }
     },
