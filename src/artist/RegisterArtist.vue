@@ -26,35 +26,23 @@
             />
           </div>
           <div class="form-group">
-            <!-- <fieldset>
-    <legend>Choose a Color:</legend>
-    <label for="colorSelect">Select a color:</label>
-    <select id="colorSelect" name="color">
-      <option value="red">Red</option>
-      <option value="green">Green</option>
-      <option value="blue">Blue</option>
-      <option value="yellow">Yellow</option>
-    </select>
-  </fieldset> -->
-
-  <fieldset>
-    <legend>Choose an Option</legend>
-
-    <label>
-      <input type="radio" v-model="musicType" name="option" value="Music Artist">
-      Option 1
-    </label>
-
-    <label>
-      <input type="radio" v-model="musicType" name="option" value="Bands">
-      Option 2
-    </label>
-
-    <label>
-      <input type="radio" v-model="musicType" name="option" value="Djs">
-      Option 3
-    </label>
-  </fieldset>
+              <fieldset>
+                <legend>Choose an Option</legend>
+                <label>
+                  <input type="radio" v-model="musicType" name="option" value="Music Artist">
+                  Option 1
+                </label>
+              
+                <label>
+                  <input type="radio" v-model="musicType" name="option" value="Bands">
+                  Option 2
+                </label>
+              
+                <label>
+                  <input type="radio" v-model="musicType" name="option" value="Djs">
+                  Option 3
+                </label>
+              </fieldset>
           </div>
           
           <div class="form-group">
