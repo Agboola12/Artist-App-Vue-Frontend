@@ -9,7 +9,7 @@
     </div>
 
       <div id="main-content" >
-      <div class="container">
+      <!-- <div class="container">
         <div class="row">
           <h1 class="mb-5">Popular Musicians</h1> 
           <div class=" col-md-3 mx-auto"  v-for="(artist, index) in artists" :key="index">
@@ -42,7 +42,6 @@
       <div class=" middle container p-5" >
           <div class="row" style="margin-left:5em ;" >
               <div class="col-md-3 "  >
-                <!-- <i class="fa-solid fa-microphone-stand fa-spin fa-2xs"></i> -->
                 <p class="p-4 text-center" style="height: 100px; width: 100px; border-radius: 50px ;background-color: #FFDDDD; ">
                   <i class="fa fa-microphone p-3" style="color: #A10035;"></i>
                 </p> 
@@ -90,13 +89,7 @@
               </div>
             </div>
           </div>
-      </div>
-
-      <div class="footer text-center p-3 text-light mt-5" style="background-color: #A10035;">
-          <h3 class="">
-              Jahnus Music Industry @2023
-          </h3>
-      </div>
+      </div> -->
 
     </div>
 </template>
@@ -118,17 +111,18 @@ import UserSideBar from '../UserSideBar.vue';
         this.id = this.$route.params.id;
     },
     methods: {
+      
       // login user
         getUser() {
             axios.get("http://localhost:8000/getUser")
                 .then((res) => {
-                // console.log(res.data);
                 this.user = res.data.data;
             })
                 .catch((error) => {
                 console.error(error);
             });
         },
+
         // getting all the artist
         getAllArtist() {
             axios.get("http://localhost:8000/getAllArtist")
