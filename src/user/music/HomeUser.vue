@@ -25,9 +25,12 @@
 
                     <!-- main content -->
                     <div class="container">
+                      <div class='d-flex '>
                         <h4>Top Songs</h4>
-                        <div>
-                          
+      <p> <a href="">View All</a></p>
+    </div>
+                        <div class="border border-dark">
+
                         </div>
                     </div>
               </div>
