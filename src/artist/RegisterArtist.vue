@@ -26,7 +26,7 @@
             />
           </div>
           <div class="form-group">
-            <fieldset>
+            <!-- <fieldset>
     <legend>Choose a Color:</legend>
     <label for="colorSelect">Select a color:</label>
     <select id="colorSelect" name="color">
@@ -35,6 +35,25 @@
       <option value="blue">Blue</option>
       <option value="yellow">Yellow</option>
     </select>
+  </fieldset> -->
+
+  <fieldset>
+    <legend>Choose an Option</legend>
+
+    <label>
+      <input type="radio" name="option" value="option1">
+      Option 1
+    </label>
+
+    <label>
+      <input type="radio" name="option" value="option2">
+      Option 2
+    </label>
+
+    <label>
+      <input type="radio" name="option" value="option3">
+      Option 3
+    </label>
   </fieldset>
           </div>
           <div class="form-group">
