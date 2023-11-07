@@ -1,10 +1,14 @@
 <template>
-      <UserSideBar/>
-    <div id="main-content" >
-      <div style="margin-left: 80%;">
-        <a href="bookingone" class="mr-5"  ><button class="btn btn-danger">Booking</button></a>
-          <i class="fa fa-user"></i>
-      </div>
+  
+  <div class='d-flex '>
+      <p> <UserSideBar/> </p>
+      <p class="mt-5" style="margin-left: 70%;">
+          <a href="bookingone" ><button class="btn btn-danger">Booking</button></a>
+          <i class="fa fa-user ml-5"></i>
+      </p>
+    </div>
+
+      <div id="main-content" >
       <div class="container">
         <div class="row">
           <h1 class="mb-5">Popular Musicians</h1> 
@@ -134,7 +138,7 @@ import UserSideBar from '../UserSideBar.vue';
             });
         }
     },
-    components: { UserSideBar }
+    components: { UserSideBar, UserSideBar }
 }
 </script>
 <style scoped>

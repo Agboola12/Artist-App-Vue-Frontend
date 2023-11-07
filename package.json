@@ -10,6 +10,7 @@
   "dependencies": {
     "@cloudinary/url-gen": "^1.11.1",
     "@cloudinary/vue": "^1.11.2",
+    "@mui/icons-material": "^5.14.16",
     "axios": "^1.4.0",
     "pinia": "^2.0.32",
     "vue": "^3.2.47",
