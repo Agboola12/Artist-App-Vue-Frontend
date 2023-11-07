@@ -8,7 +8,20 @@
       </p>
     </div>
 
-      <div id="main-content" >
+      <div class="container-fluid" id="main-content" >
+          <div class="row">
+              <div class="col-md-8">
+                    <div class="container">
+                        <div class="row">
+                          <div class=""></div>
+                        </div>
+                    </div>
+              </div>
+              <div class="col-md-4">
+
+              </div>
+          </div>
+
       <!-- <div class="container">
         <div class="row">
           <h1 class="mb-5">Popular Musicians</h1> 
@@ -111,7 +124,7 @@ import UserSideBar from '../UserSideBar.vue';
         this.id = this.$route.params.id;
     },
     methods: {
-      
+
       // login user
         getUser() {
             axios.get("http://localhost:8000/getUser")
