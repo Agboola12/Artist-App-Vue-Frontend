@@ -41,31 +41,22 @@
     <legend>Choose an Option</legend>
 
     <label>
-      <input type="radio" name="option" value="option1">
+      <input type="radio" v-model="musicType" name="option" value="Music Artist">
       Option 1
     </label>
 
     <label>
-      <input type="radio" name="option" value="option2">
+      <input type="radio" v-model="musicType" name="option" value="Bands">
       Option 2
     </label>
 
     <label>
-      <input type="radio" name="option" value="option3">
+      <input type="radio" v-model="musicType" name="option" value="Djs">
       Option 3
     </label>
   </fieldset>
           </div>
-          <div class="form-group">
-            <select class="w-100 form-control border-right-0 shadow-none border-top-0 border-left-0"  v-model="musicType">
-              <option disabled selected hidden >Select the music type</option>
-                <optgroup label="music type">
-                  <option value="Music Artist">Music Artist</option>
-                  <option value="Bands">Bands</option>
-                  <option value="Djs">Djs</option>
-                </optgroup>
-              </select>
-          </div>
+          
           <div class="form-group">
             <input
               type="number"
