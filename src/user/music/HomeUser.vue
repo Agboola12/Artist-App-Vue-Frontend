@@ -11,9 +11,23 @@
       <div class="container-fluid" id="main-content" >
           <div class="row">
               <div class="col-md-8">
-                    <div class="container">
+                    <div class="container ml-5 p-3" style="background-color: #FFDDDD; border-radius: 20px;">
                         <div class="row">
-                          <div class=""></div>
+                          <div class="col-md-4 ml-2">
+                <img class="card-img-top " src="../../assets/Camera/desktop.png" height="300"  alt="Card image" >
+                          </div>
+                          <div class="col-md-7 mr-5" v-if="user" style="margin-top: 6em;">
+                                <h3>Hi, {{user.firstName}}</h3>
+                                <p>Here you can invite your favourite artist for your different kind of ceremony</p>
+                          </div>
+                        </div>
+                    </div>
+
+                    <!-- main content -->
+                    <div class="container">
+                        <h4>Top Songs</h4>
+                        <div>
+                          
                         </div>
                     </div>
               </div>
@@ -129,6 +143,7 @@ import UserSideBar from '../UserSideBar.vue';
         getUser() {
             axios.get("http://localhost:8000/getUser")
                 .then((res) => {
+                  console.log(res.data.data);
                 this.user = res.data.data;
             })
                 .catch((error) => {
