@@ -26,6 +26,18 @@
             />
           </div>
           <div class="form-group">
+            <fieldset>
+    <legend>Choose a Color:</legend>
+    <label for="colorSelect">Select a color:</label>
+    <select id="colorSelect" name="color">
+      <option value="red">Red</option>
+      <option value="green">Green</option>
+      <option value="blue">Blue</option>
+      <option value="yellow">Yellow</option>
+    </select>
+  </fieldset>
+          </div>
+          <div class="form-group">
             <select class="w-100 form-control border-right-0 shadow-none border-top-0 border-left-0"  v-model="musicType">
               <option disabled selected hidden >Select the music type</option>
                 <optgroup label="music type">
