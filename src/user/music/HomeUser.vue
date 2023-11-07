@@ -29,9 +29,10 @@
                         <h4>Top Songs</h4>
                         <p style="margin-left: 70%;"> <a href="">View All</a></p>
                     </div>
-                        <div class=' border border-dark d-flex' v-for="(song, index) in songs" :key="index">
-                            <p>{{ song.songTitle }}</p>
-                            <audio controls> <source :src="song.mp3Url" type="audio/mpeg" ></audio>
+                        <div class=' shadow-sm p-3 mb-5 bg-light rounded p-3 d-flex m-2' v-for="(song, index) in songs" :key="index">
+                          <p>0{{ index + 1 }}</p> 
+                          <p class="ml-3 mr-3"> {{ song.songTitle }}</p>
+                          <audio  controls> <source :src="song.mp3Url" type="audio/mpeg" ></audio>
                         </div>
                     </div>
               </div>
