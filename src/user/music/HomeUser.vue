@@ -48,8 +48,13 @@
                     <div>
                       <h4>Popular Artist</h4>
                       <div class="row">
-                          <div class="col-md-4" >
-
+                          <div class="col-md-4 mx-auto" v-for="(artist, index) in artists" :key="index">
+                            <div class="card h-50 ">
+                              <img class="card-img-top" :src="artist.imageUrl" alt="image" >
+                              <div class="card-body">
+                                <p class="card-title">{{ artist.firstName }}</p>
+                              </div>
+                            </div>
                           </div>
                       </div>
                     </div>
