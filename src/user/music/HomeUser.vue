@@ -27,11 +27,12 @@
                     <div class="container mt-4 mb-5 ml-5">
                       <div class='d-flex '>
                         <h4>Top Songs</h4>
-                        <p style="margin-left: 70%;"> <a href="">View All</a></p>
+                        <p style="margin-left: 70%;"> <a href="allartist">View All</a></p>
                     </div>
-                        <div class=' shadow-sm p-3 mb-5 bg-light rounded p-3 d-flex m-2' v-for="(song, index) in songs" :key="index">
-                          <p>0{{ index + 1 }}</p> 
-                          <p class="ml-3 mr-3"> {{ song.songTitle }}</p>
+                        <div class=' shadow-sm p-3 mb-5  p-3 d-flex m-2' v-for="(song, index) in songs" :key="index" id="song">
+                          <p>0{{ index + 1 }}.</p>
+                          <img :src="song.imageUrl" alt="cover" class="ml-4" width="50" height="50" style="border-radius: 50px;"/> 
+                          <p class="ml-4 mr-4"> {{ song.songTitle }}</p>
                           <audio  controls> <source :src="song.mp3Url" type="audio/mpeg" ></audio>
                         </div>
                     </div>
@@ -192,6 +193,13 @@ import UserSideBar from '../UserSideBar.vue';
     background-color: #FFDDDD;
   }
   
+  #song{
+    border-radius: 20px;
+  }
+  
+  #song:hover{
+    background-color: #FFDDDD;
+  }
 
   
 
