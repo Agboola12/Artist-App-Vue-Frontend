@@ -76,6 +76,7 @@ export default {
 
     data(){
         return{
+            artistName: null,
             user: null,
             songTitle: "",
             songDescription: "",
@@ -98,6 +99,7 @@ export default {
       axios.get("http://localhost:8000/getArtist" )
         .then((res) => {
           this.user = res.data.data.id
+          this.artistName = res.data.data.firstName
         })
         .catch((error) => {
           console.error(error);
@@ -117,6 +119,7 @@ export default {
 
     onCreate(){
         const artistId = this.user;
+        const artistName = this.artistName;
         const formData = new FormData();
         formData.append("songTitle", this.songTitle);
         formData.append('image', this.imageFile);
@@ -127,6 +130,7 @@ export default {
         formData.append("facebookHandle", this.facebookHandle);
         formData.append("instagramHandle", this.instagramHandle);
         formData.append("artistId", artistId);
+        formData.append("artistName", artistName);
 
             axios.post("http://localhost:8000/createMusic",  formData)
             .then(res =>{

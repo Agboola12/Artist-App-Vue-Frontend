@@ -15,10 +15,10 @@
   <div class="offcanvas-body ">
     <div class="wrapper">
       <div class="sidebar">
-        <p >
-          <h2>Prime</h2>
-          <button type="button" class="btn-close text-reset mr-auto" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        </p>
+        <h2 >
+          Prime
+          <button type="button" class="btn-close text-reset mr-auto w-25 " data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </h2>
         <ul>
             <li><a href="homeuser"><i class="fas fa-home"></i>Home</a></li>
             <li><a href="allartist"><i class="fas fa-border-all"></i>All Artist</a></li>
