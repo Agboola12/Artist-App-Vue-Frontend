@@ -50,7 +50,11 @@ export default {
     overflow-x: visible;
   }
 
-  #cardi :hover{
+  #cardi{
+    transition: ease-out 1s;
+  }
+
+  #cardi:hover{
         transform:scale(1.1) ;
   }
 </style>

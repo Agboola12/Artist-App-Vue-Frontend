@@ -33,8 +33,8 @@
                     <h4 class="mb-4 ">Top Songs</h4>
                     <div class="shadow-sm p-1 d-flex jumbotron" v-for="(song, index) in songs" :key="index" >
                       <img :src="song.imageUrl" alt="cover" class="ml-4" width="50" height="50" style="border-radius: 50px;"/> 
-                      <p class="ml-4 mr-4"> {{ song.songTitle }}</p><br/>
                       <!-- <p class="ml-4 mr-4"> {{ song.artistName }}</p> -->
+                      <p class="ml-4 mr-4"> {{ song.songTitle }}</p><br/>
                     </div>
 
                     <div class="mt-5 ">

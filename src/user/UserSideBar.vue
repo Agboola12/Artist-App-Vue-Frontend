@@ -15,16 +15,16 @@
   <div class="offcanvas-body ">
     <div class="wrapper">
       <div class="sidebar">
-        <h2 >
-          Prime
+        <p >
+          <h2>Prime</h2>
           <button type="button" class="btn-close text-reset mr-auto" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        </h2>
+        </p>
         <ul>
             <li><a href="homeuser"><i class="fas fa-home"></i>Home</a></li>
-            <li><a href="allartist"><i class="fas fa-home"></i>All</a></li>
-            <li><a href="musicartist"><i class="fas fa-user"></i>Music Artists</a></li>
-            <li><a href="bands"><i class="fas fa-address-card"></i>Bands</a></li>
-            <li><a href="djs"><i class="fas fa-blog"></i>Djs</a></li>
+            <li><a href="allartist"><i class="fas fa-border-all"></i>All Artist</a></li>
+            <li><a href="musicartist"><i class="fas fa-music"></i>Music Artists</a></li>
+            <li><a href="bands"><i class="fas fa-drum"></i>Bands</a></li>
+            <li><a href="djs"><i class="fas fa-compact-disc"></i>Djs</a></li>
         </ul> 
         <div class="social_media mb-4">
           <a href="#"><i class="fab fa-facebook-f"></i></a>
