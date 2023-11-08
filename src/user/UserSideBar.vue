@@ -1,5 +1,5 @@
 <template>
-  <button  class="btn btn toggle-button mt-5 ml-5" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">
+  <button  class="btn btn toggle-button mt-3 ml-4" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">
   <i class="fas fa-bars"></i>
 </button>
 
@@ -45,7 +45,7 @@ export default {
 
 .btn {
  background-color: #A10035;
- padding: 14px 40px;
+ padding: 10px 20px;
  color: #fff;
  text-transform: uppercase;
  letter-spacing: 2px;

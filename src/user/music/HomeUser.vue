@@ -2,15 +2,15 @@
   
   <div class='d-flex '>
       <p> <UserSideBar/> </p>
-      <p class="mt-5" style="margin-left: 70%;">
+      <p class="mt-4" style="margin-left: 70%;">
           <a href="bookingone" ><button class="btn btn-danger">Booking</button></a>
           <i class="fa fa-user ml-5"></i>
       </p>
     </div>
 
-      <div class="container-fluid" id="main-content" >
+      <div class="container-fluid mt-4" id="main-content" >
           <div class="row">
-              <div class="col-md-7 offset-1">
+              <div class="col-md-7 ml-4">
                     <div class="container  p-3" style="background-color: #FFDDDD; border-radius: 20px;">
                         <div class="row">
                           <div class="col-md-4 ml-2">
@@ -36,14 +36,24 @@
                           <audio  controls> <source :src="song.mp3Url" type="audio/mpeg" ></audio>
                         </div>
                     </div>
-              </div>
-              <div class="col-md-3 ml-5">
-                <h4>Top Songs</h4>
-                <div class="shadow-sm p-3  jumbotron" v-for="(song, index) in songs" :key="index" >
+                  </div>
+                  <div class="col-md-3 offset-1">
+                    <h4 class="mb-4 ">Top Songs</h4>
+                    <div class="shadow-sm p-1 d-flex jumbotron" v-for="(song, index) in songs" :key="index" >
+                      <img :src="song.imageUrl" alt="cover" class="ml-4" width="50" height="50" style="border-radius: 50px;"/> 
+                      <p class="ml-4 mr-4"> {{ song.songTitle }}</p><br/>
+                      <!-- <p class="ml-4 mr-4"> {{ song.artistName }}</p> -->
+                    </div>
 
-                </div>
+                    <div>
+                      <h4>Popular Artist</h4>
+                      <div class="row">
+                          <div class="col-md-4" >
 
-              </div>
+                          </div>
+                      </div>
+                    </div>
+                   </div>
           </div>
 
       <!-- <div class="container">
