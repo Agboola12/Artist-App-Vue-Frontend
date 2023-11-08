@@ -1,7 +1,14 @@
 <template>
+  
+  <div class='d-flex '>
   <button  class="btn btn toggle-button mt-3 ml-4" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">
   <i class="fas fa-bars"></i>
 </button>
+      <p class="mt-4" style="margin-left: 65%;">
+          <a href="bookingone" ><button class="btn btn-danger">Booking</button></a>
+          <i class="fa fa-user ml-3 "></i>
+      </p>
+    </div>
 
 
 <div class="offcanvas offcanvas-start"  style="width: 25%;" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">

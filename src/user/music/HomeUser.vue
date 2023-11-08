@@ -1,13 +1,5 @@
 <template>
-  
-  <div class='d-flex '>
-      <p> <UserSideBar/> </p>
-      <p class="mt-4" style="margin-left: 70%;">
-          <a href="bookingone" ><button class="btn btn-danger">Booking</button></a>
-          <i class="fa fa-user ml-5"></i>
-      </p>
-    </div>
-
+       <UserSideBar/> 
       <div class="container-fluid mt-4" id="main-content" >
           <div class="row">
               <div class="col-md-7 ml-4">
@@ -27,7 +19,7 @@
                     <div class="container mt-4 mb-5 ">
                       <div class='d-flex '>
                         <h4>Top Songs</h4>
-                        <p style="margin-left: 70%;"> <a href="allartist">View All</a></p>
+                        <p id="ppa" style="margin-left: 70%;"> <a href="allsong">View All</a></p>
                     </div>
                         <div class=' shadow-sm p-3 mb-5 d-flex m-2' v-for="(song, index) in songs" :key="index" id="song">
                           <p>0{{ index + 1 }}.</p>
@@ -46,7 +38,10 @@
                     </div>
 
                     <div class="mt-5 ">
-                      <h4 class="mb-3">Popular Artist</h4>
+                      <div class='d-flex '>
+                        <h4>Popular Artist</h4>
+                        <p id="ppa" style="margin-left: 25%;"> <a href="allartist">View All</a></p>
+                    </div>
                       <div class="row">
                           <div class="col-md-4 mx-auto" v-for="(artist, index) in artists" :key="index">
                             <div class="card h-50 border-0">
@@ -160,8 +155,8 @@ import UserSideBar from '../UserSideBar.vue';
     },
     created() {
         this.getUser();
-        this.getAllArtist();
-        this.AllSong();
+        this.popularArtist();
+        this.popularSong();
         this.id = this.$route.params.id;
     },
     methods: {
@@ -179,7 +174,7 @@ import UserSideBar from '../UserSideBar.vue';
         },
 
         // getting the popularArtist
-        getAllArtist() {
+        popularArtist() {
             axios.get("http://localhost:8000/popularArtist")
                 .then((res) => {
                 console.log(res.data);
@@ -187,8 +182,8 @@ import UserSideBar from '../UserSideBar.vue';
             });
         },
 
-        AllSong() {
-            axios.get("http://localhost:8000/AllSong")
+        popularSong() {
+            axios.get("http://localhost:8000/popularSong")
                 .then((res) => {
                 console.log(res.data.data);
                 this.songs = res.data.data;
@@ -220,6 +215,10 @@ import UserSideBar from '../UserSideBar.vue';
     background-color: #FFDDDD;
   }
 
+  #ppa a{
+    color: #df0e0e;
+    text-decoration: none;
+  }
   
 
 

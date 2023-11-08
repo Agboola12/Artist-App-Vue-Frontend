@@ -20,7 +20,7 @@ import ArtistProfile from '../user/booking/ArtistProfile.vue'
 import Land from '../Land.vue'
 import Home from '../Home.vue'
 import MusicArtist from '../user/music/MusicArtist.vue'
-import AllMuscians from '../user/music/AllMuscians.vue'
+import AllSong from '../user/music/AllSong.vue'
 import Bands from '../user/music/Bands.vue'
 import Djs from '../user/music/Djs.vue'
 import DashboardArtist from '../artist/DashboardArtist.vue'
@@ -67,7 +67,7 @@ const router = createRouter({
     {  path: '/booking',  name: 'booking',  component:Booking},
     {  path: '/musicartist',  name: 'musicartist',  component:MusicArtist},
     {  path: '/artistprofile',  name: 'artistprofile',  component: ArtistProfile},
-    {  path: '/allmuscians',  name: 'allmuscians',  component: AllMuscians},
+    {  path: '/allsong',  name: 'allsong',  component: AllSong},
     {  path: '/bands',  name: 'bands',  component: Bands},
     {  path: '/djs',  name: 'djs',  component: Djs},
     {  path: '/profileartist',  name: 'profileartist',  component: ProfileArtist},

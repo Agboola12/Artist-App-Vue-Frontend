@@ -2,9 +2,9 @@
     <UserSideBar/>
     <div class="main-content">
         <div class="container">
-            <div class="row">
-                <h2>All Musicians</h2>
-                  <div class="col-md-3" v-for="(artist, index) in artists" :key="index">
+            <div class="row mt-3">
+                <h2 class="text-center">All Musicians</h2>
+                  <div class="col-md-3 mt-4" v-for="(artist, index) in artists" :key="index">
                     <img class="card-img-top w-100" :src="artist.imageUrl" alt="Card image" height="200" >
                     <div class="card-body">
                          <h4 class="card-title">{{ artist.firstName }}</h4>
