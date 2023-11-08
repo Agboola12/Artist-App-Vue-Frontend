@@ -1,7 +1,7 @@
 <template>
   <UserSideBar/>
-  <div class="main-content">
-      <div class="container">
+  <div class="container main-content">
+      <!-- <div class="container">
         <div class="row">
           <div class="row" >
                     <div class="col-md-3" v-for="(user, index) in users" :key="index">
@@ -14,7 +14,19 @@
                   </div>
         </div>
 
-      </div>
+      </div> -->
+
+            <div class="row mt-3">
+                <h2 class="text-center">All Band Artists</h2>
+                  <div class="col-md-3 mt-4" v-for="(user, index) in users" :key="index">
+                    <img class="card-img-top w-100" :src="artist.imageUrl" alt="Card image" height="200" >
+                    <div class="card-body">
+                         <h4 class="card-title">{{ artist.firstName }}</h4>
+                         <p class="card-text">Band</p>
+                         <p class="card-text">{{ artist.state}}, {{ artist.country }}</p>
+                     </div>
+                  </div>
+            </div>
   </div>
 
 </template>
