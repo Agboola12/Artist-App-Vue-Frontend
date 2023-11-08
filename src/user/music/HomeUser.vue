@@ -10,8 +10,8 @@
 
       <div class="container-fluid" id="main-content" >
           <div class="row">
-              <div class="col-md-8">
-                    <div class="container ml-5 p-3" style="background-color: #FFDDDD; border-radius: 20px;">
+              <div class="col-md-7 offset-1">
+                    <div class="container  p-3" style="background-color: #FFDDDD; border-radius: 20px;">
                         <div class="row">
                           <div class="col-md-4 ml-2">
                 <img class="card-img-top " src="../../assets/Camera/desktop.png" height="300"  alt="Card image" >
@@ -24,12 +24,12 @@
                     </div>
 
                     <!-- main content -->
-                    <div class="container mt-4 mb-5 ml-5">
+                    <div class="container mt-4 mb-5 ">
                       <div class='d-flex '>
                         <h4>Top Songs</h4>
                         <p style="margin-left: 70%;"> <a href="allartist">View All</a></p>
                     </div>
-                        <div class=' shadow-sm p-3 mb-5  p-3 d-flex m-2' v-for="(song, index) in songs" :key="index" id="song">
+                        <div class=' shadow-sm p-3 mb-5 d-flex m-2' v-for="(song, index) in songs" :key="index" id="song">
                           <p>0{{ index + 1 }}.</p>
                           <img :src="song.imageUrl" alt="cover" class="ml-4" width="50" height="50" style="border-radius: 50px;"/> 
                           <p class="ml-4 mr-4"> {{ song.songTitle }}</p>
@@ -37,7 +37,11 @@
                         </div>
                     </div>
               </div>
-              <div class="col-md-4">
+              <div class="col-md-3 ml-5">
+                <h4>Top Songs</h4>
+                <div class="shadow-sm p-3  jumbotron" v-for="(song, index) in songs" :key="index" >
+
+                </div>
 
               </div>
           </div>
