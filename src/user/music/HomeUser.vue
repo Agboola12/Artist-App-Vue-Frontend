@@ -45,14 +45,14 @@
                       <!-- <p class="ml-4 mr-4"> {{ song.artistName }}</p> -->
                     </div>
 
-                    <div>
-                      <h4>Popular Artist</h4>
+                    <div class="mt-5 ">
+                      <h4 class="mb-3">Popular Artist</h4>
                       <div class="row">
                           <div class="col-md-4 mx-auto" v-for="(artist, index) in artists" :key="index">
-                            <div class="card h-50 ">
+                            <div class="card h-50 border-0">
                               <img class="card-img-top" :src="artist.imageUrl" alt="image" >
                               <div class="card-body">
-                                <p class="card-title">{{ artist.firstName }}</p>
+                                <small class="card-title">{{ artist.firstName }}</small>
                               </div>
                             </div>
                           </div>
@@ -178,9 +178,9 @@ import UserSideBar from '../UserSideBar.vue';
             });
         },
 
-        // getting all the artist
+        // getting the popularArtist
         getAllArtist() {
-            axios.get("http://localhost:8000/getAllArtist")
+            axios.get("http://localhost:8000/popularArtist")
                 .then((res) => {
                 console.log(res.data);
                 this.artists = res.data;
