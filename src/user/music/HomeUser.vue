@@ -33,6 +33,7 @@
                     <h4 class="mb-4 ">Top Songs</h4>
                     <div class="shadow-sm p-2 jumbotron" v-for="(song, index) in songs" :key="index" >
                       <small class="d-flex">
+                        <p>0{{ index + 1 }}.</p>
                         <img :src="song.imageUrl" alt="cover" class="ml-4" width="50" height="50" style="border-radius: 50px;"/> 
                         <h5 class="ml-4"> {{ song.artistName }}</h5>
                       </small>
