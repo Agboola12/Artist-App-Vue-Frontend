@@ -10,7 +10,7 @@
                          <h4 class="card-title">{{ artist.firstName }}</h4>
                          <p class="card-text">Band</p>
                          <p class="card-text">{{ artist.state}}, {{ artist.country }}</p>
-                       <button  class="border-0 btn btn-danger" @click="artistProfile(artist.id)">Check Profile</button> 
+                       <button  class="border-0 btn btn-danger" @click="Artistprofile(artist.id)">Check Profile</button> 
                      </div>
                   </div>
             </div>
@@ -43,14 +43,14 @@ export default {
             });
         },
 
-        artistProfile(id){
-                    axios.post("http://localhost:8000/getArtistDetails", id) 
-                .then((res) => {
-                    console.log(res.data);
-                    this.$router.push("/artistprofile");
-            });
+        Artistprofile(id){
+            // axios.get("http://localhost:8000/getAllArtist")
+            //     .then((res) => {
+            //     console.log(res.data);
+            //     this.artists = res.data;
+            // });
 
-            // this.$router.push('/artistprofile/'+id)
+            this.$router.push('/artistprofile/'+id)
         }
 
     },

@@ -66,7 +66,7 @@ const router = createRouter({
     {  path: '/bookingten',  name: 'bookingten',  component:BookingTen},
     {  path: '/booking',  name: 'booking',  component:Booking},
     {  path: '/musicartist',  name: 'musicartist',  component:MusicArtist},
-    {  path: '/artistprofile',  name: 'artistprofile',  component: ArtistProfile},
+    {  path: '/artistprofile/:artistId',  name: 'artistprofile',  component: ArtistProfile,props:true},
     {  path: '/allsong',  name: 'allsong',  component: AllSong},
     {  path: '/bands',  name: 'bands',  component: Bands},
     {  path: '/djs',  name: 'djs',  component: Djs},

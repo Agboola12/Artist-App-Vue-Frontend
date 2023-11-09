@@ -53,6 +53,7 @@
                         <!-- photos -->
                         <div>
                             <h4>Photos</h4>
+                            {{ this.artistId }}
                             <div class="row">
                             <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
                                 <img src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp" class="w-100 shadow-1-strong rounded mb-4" alt="Boat on Calm Water"
@@ -109,9 +110,16 @@
                         <div>
                             <h4>Song Lists</h4>
                             <div id="list">
+                                <div class=' shadow-sm p-3 mb-5 d-flex m-2' v-for="(song, index) in musics" :key="index" id="song">
+                                   <p>0{{ index + 1 }}.</p>
+                                   <img :src="song.imageUrl" alt="cover" class="ml-4" width="50" height="50" style="border-radius: 50px;"/> 
+                                   <p class="ml-4 mr-4"> {{ song.songTitle }}</p>
+                                   <audio  controls> <source :src="song.mp3Url" type="audio/mpeg" ></audio>
+                                </div>
+
+
                                 <div class="row">
                                     <div class="col-md-4 offset-1 mt-3">
-                                        
                                         <audio controls> <source src="../assets/audio/wale.mp3" type="audio/mpeg" ></audio>
                                     </div>
                                     <div class="col-md-4 offset-1 mt-3">
@@ -146,24 +154,29 @@
 </template>
 
 <script>
+import axios from 'axios';
 import UserSideBar from '../UserSideBar.vue';
 
 export default {
     components: { UserSideBar },
+    props:['artistId'],
     data(){
     return{
-          email: '',
-          passWord: '',
+        user: null,
+        musics: null
+
     }
   },
   created(){
         this.getArtistDetails();
-  },  
-  methods:{  
+  },
+  methods:{
     getArtistDetails(){    
-      axios.get("http://localhost:8000/getArtistDetails")
+      axios.get("http://localhost:8000/getArtistDetails/"+ this.artistId)
       .then ((res)=>{
-          console.log(res);
+            console.log(res.data);
+            this.user = res.data.user
+            this.musics = res.data.musics
       })
       .catch((err)=>{
         console.log(err);
