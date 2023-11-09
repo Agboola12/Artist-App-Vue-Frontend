@@ -31,10 +31,12 @@
                   </div>
                   <div class="col-md-3 offset-1">
                     <h4 class="mb-4 ">Top Songs</h4>
-                    <div class="shadow-sm p-1 d-flex jumbotron" v-for="(song, index) in songs" :key="index" >
-                      <img :src="song.imageUrl" alt="cover" class="ml-4" width="50" height="50" style="border-radius: 50px;"/> 
-                      <h4 class="ml-4 mr-4"> {{ song.artistName }}</h4>
-                      <p class="ml-4 mr-4"> {{ song.songTitle }}</p><br/>
+                    <div class="shadow-sm p-2 jumbotron" v-for="(song, index) in songs" :key="index" >
+                      <small class="d-flex">
+                        <img :src="song.imageUrl" alt="cover" class="ml-4" width="50" height="50" style="border-radius: 50px;"/> 
+                        <h5 class="ml-4"> {{ song.artistName }}</h5>
+                      </small>
+                      <p class="text-center"> {{ song.songTitle }}</p>
                     </div>
 
                     <div class="mt-5 ">
