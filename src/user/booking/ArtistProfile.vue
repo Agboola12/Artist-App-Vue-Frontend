@@ -7,8 +7,11 @@
                     <!-- <i class="fa fa-heart text-right"></i> -->
                     <img :src="user.imageUrl" alt="cover" class="ml-2" width="400" height="400" style="border-radius: 20px;"/> 
                     <div class="mt-3">
-                            <p><i class="fa fa-user mr-2"></i>Artiste</p>
-                            <p><i class="fa fa-map-marker mr-2"></i>Lagos</p>
+                            <p><i class="fa fa-user mr-2"></i>{{user.firstName}}</p>
+                            <p><i class="glyphicon glyphicon-headphones mr-2"></i>{{user.musicType}}</p>
+                            <p><i class="fa fa-message mr-2"></i>{{user.email}}</p>
+                            <p><i class="glyphicon glyphicon-earphone mr-2"></i>{{user.mobile}}</p>
+                            <p><i class="fa fa-map-marker mr-2"></i>{{user.state}}, {{ user.country }}</p>
                     </div>
                 </div>
             </div>
