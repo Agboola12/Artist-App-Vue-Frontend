@@ -1,10 +1,11 @@
 <template>
     <UserSideBar/>
-        <div class="container-fluid row">
-            <div class="col-md-4">
+        <div class="container-fluid ">
+            <div  class="row" v-if="user">
+                <div class="col-md-4">
                 <div class="mt-5 ">
-                    <i class="fa fa-heart text-right"></i>
-                    <img src="../assets/Camera/04.jpg" width="400px"/>             
+                    <!-- <i class="fa fa-heart text-right"></i> -->
+                    <img :src="user.imageUrl" alt="cover" class="ml-2" width="400" height="400" style="border-radius: 20px;"/> 
                     <div class="mt-3">
                             <p><i class="fa fa-user mr-2"></i>Artiste</p>
                             <p><i class="fa fa-map-marker mr-2"></i>Lagos</p>
@@ -43,13 +44,15 @@
                         <!-- About -->
                         <div>
                             <h4>About</h4>
-                            <p>I am Emmanuel, a passionate and talented wedding musician with a deep love for creating beautiful
+                            <p>I am {{user.firstName}}, a passionate and talented wedding musician with a deep love for creating beautiful
                                 music. Growing up in a musicial family. I began singing and playing instruments a young age...
                             </p>
                             <p><i class="fa fa-user mr-2"></i>Artiste</p>
                             <p><i class="fa fa-map-marker mr-2"></i>Lagos</p>
                             <p><i class="fa fa-usd mr-2"></i>3,000,000</p>
                         </div>
+            </div>
+            
                         <!-- photos -->
                         <div>
                             <h4>Photos</h4>
@@ -118,7 +121,7 @@
                                 </div>
 
 
-                                <div class="row">
+                                <!-- <div class="row">
                                     <div class="col-md-4 offset-1 mt-3">
                                         <audio controls> <source src="../assets/audio/wale.mp3" type="audio/mpeg" ></audio>
                                     </div>
@@ -134,7 +137,7 @@
                                         
                                         <audio controls> <source src="../assets/audio/wale.mp3" type="audio/mpeg" ></audio>
                                     </div>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                         <!-- Genre -->
@@ -193,7 +196,7 @@ export default {
     }
 
     #list{
-        background-color: #FFCECE;
+        /* background-color: #FFCECE; */
         border-radius: 20px;
     }
 
