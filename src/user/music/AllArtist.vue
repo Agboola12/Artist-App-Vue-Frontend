@@ -44,11 +44,10 @@ export default {
         },
 
         artistProfile(id){
-                    axios.post("http://localhost:8000/updateSong", id) 
-            //     .then((res) => {
-            //     console.log(res.data);
-            //     this.artists = res.data;
-            // });
+                    axios.post("http://localhost:8000/getArtistDetails", id) 
+                .then((res) => {
+                    console.log(res.data);
+            });
 
             // this.$router.push('/artistprofile/'+id)
         }
