@@ -47,6 +47,7 @@ export default {
                     axios.post("http://localhost:8000/getArtistDetails", id) 
                 .then((res) => {
                     console.log(res.data);
+                    this.$router.push("/artistprofile");
             });
 
             // this.$router.push('/artistprofile/'+id)
