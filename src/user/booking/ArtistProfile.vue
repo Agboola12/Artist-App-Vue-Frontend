@@ -114,14 +114,14 @@
                         <!-- Songs -->
                         <div>
                             <h4 id="song" class="title">Song Lists</h4>
-                            <div id="list">
+                            <div id="list" v-if="musics.length > 0">
                                 <div class=' shadow p-3 mb-5 d-flex m-2' v-for="(song, index) in musics" :key="index" id="song">
                                    <p>0{{ index + 1 }}.</p>
                                    <img :src="song.imageUrl" alt="cover" class="ml-4" width="50" height="50" style="border-radius: 50px;"/> 
                                    <p class="ml-4 mr-4"> {{ song.songTitle }}</p>
                                    <audio  controls> <source :src="song.mp3Url" type="audio/mpeg" ></audio>
                                 </div>
-
+                                <p v-else>No Song is available.</p>
 
                                 <!-- <div class="row">
                                     <div class="col-md-4 offset-1 mt-3">
