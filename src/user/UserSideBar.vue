@@ -34,6 +34,7 @@
           <a href="#"><i class="fab fa-facebook-f"></i></a>
           <a href="#"><i class="fab fa-twitter"></i></a>
           <a href="#"><i class="fab fa-instagram"></i></a>
+          <router-link to="/login"><i class="fas fa-sign-out-alt"></i></router-link>
       </div>
     </div>
 </div>

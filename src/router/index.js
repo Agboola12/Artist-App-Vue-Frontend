@@ -4,7 +4,6 @@ import { createRouter, createWebHistory } from 'vue-router'
 import Register from '../user/Register.vue'
 import Login from '../user/Login.vue'
 import Landing from '../Landing.vue'
-import AllUser from '../user/booking/AllUser.vue'
 import BookingOne from '../user/booking/BookingOne.vue'
 import BookingTwo from '../user/booking/BookingTwo.vue'
 import BookingThree from '../user/booking/BookingThree.vue'
@@ -53,7 +52,6 @@ const router = createRouter({
     {  path: '/about',  name: 'about',  component: () => import('../views/AboutView.vue')},   
     {  path: '/register',  name: 'register',  component: Register},
     {  path: '/login',  name: 'login',  component: Login},
-    {  path: '/alluser',  name: 'alluser',  component: AllUser},
     {  path: '/bookingone',  name: 'bookingone',  component: BookingOne},
     {  path: '/bookingtwo',  name: 'bookingtwo',  component: BookingTwo},
     {  path: '/bookingthree',  name: 'bookingthree',  component: BookingThree},

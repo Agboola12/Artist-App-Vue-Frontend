@@ -1,15 +1,19 @@
 <template>
     
-    <div class="container" >
+    <div class="container mt-5" >
         <a href="homeuser" style="margin-left: 90%;"><button class="btn btn-danger  ">Go Back Home</button></a>
-        <div class="col-sm-6 mx-auto " style="border: 1px solid gray; border-style: none; ">
-            <h1 class="text-center mt-5">How it works</h1>
+        <div class="col-sm-6" style="border: 1px solid gray; border-style: none; margin-left: 30%; ">
+            <h1 class=" ml-5 mb-5 mt-5">How it works</h1>
             <ol >
                 <li class="m-4">Tell us about event.</li>
                 <li class="m-4"> Relevant musicians are instantly alerted.</li>
                 <li class="m-4"> Available musicians respond with tailored quotes.</li>
                 <button class="btn btn ml-5  w-50 text-light"> <a href="bookingtwo">Next</a></button>
             </ol>
+        </div>
+
+        <div style="width: 10px; background-color: red;">
+            <p>such;os;ejhcf</p>
         </div>
 
     </div>
