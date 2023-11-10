@@ -1,5 +1,5 @@
 <template>
-    <div class="container shadow w-75 p-5" align="center" style="margin-top: 5em;  ">
+    <div class="container shadow w-75 p-5" style="margin-top: 5em;margin-left: 30%;  ">
     <div class="col-sm-5" style="border: 1px solid gray; border-style: none;">
     <h2 class=" text-center">Welcome Back Artist</h2><br/>
     <form @submit.prevent="loginPost" method="post">
