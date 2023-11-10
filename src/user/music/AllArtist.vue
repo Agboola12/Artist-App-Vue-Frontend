@@ -44,12 +44,6 @@ export default {
         },
 
         Artistprofile(id){
-            // axios.get("http://localhost:8000/getAllArtist")
-            //     .then((res) => {
-            //     console.log(res.data);
-            //     this.artists = res.data;
-            // });
-
             this.$router.push('/artistprofile/'+id)
         }
 
