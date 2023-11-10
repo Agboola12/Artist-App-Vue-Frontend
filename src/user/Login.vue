@@ -1,5 +1,5 @@
 <template>
-    <div class="container " align="center" style="margin-top: 5em;  ">
+    <div class="container" style="margin-top: 5em;  ">
     <div class="col-sm-5" style="border: 1px solid gray; border-style: none;">
     <h2 class=" text-center">Welcome Back</h2><br/>
     <form @submit.prevent="loginPost" method="post">

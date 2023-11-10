@@ -1,5 +1,5 @@
 <template>
-  <div class="container"  style="margin-top: 5em; margin-left: 50%;">
+  <div class="container"  style="margin-top: 5em; margin-left: 30%;">
     <div class="col-sm-5" style="border: 1px solid gray; border-style: none">
       <h2 class="text-center">Create an account</h2>
       <br />
