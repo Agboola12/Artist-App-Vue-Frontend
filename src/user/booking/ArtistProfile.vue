@@ -121,7 +121,6 @@
                                    <p class="ml-4 mr-4"> {{ song.songTitle }}</p>
                                    <audio  controls> <source :src="song.mp3Url" type="audio/mpeg" ></audio>
                                 </div>
-                                <p v-else>No Song is available.</p>
 
                                 <!-- <div class="row">
                                     <div class="col-md-4 offset-1 mt-3">
@@ -141,6 +140,7 @@
                                     </div>
                                 </div> -->
                             </div>
+                            <p v-else> Song is yet  to be uploaded.</p>
                         </div>
                         <!-- Genre -->
                         <div class="mt-3">
