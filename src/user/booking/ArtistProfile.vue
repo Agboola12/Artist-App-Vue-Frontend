@@ -121,24 +121,6 @@
                                    <p class="ml-4 mr-4"> {{ song.songTitle }}</p>
                                    <audio  controls> <source :src="song.mp3Url" type="audio/mpeg" ></audio>
                                 </div>
-
-                                <!-- <div class="row">
-                                    <div class="col-md-4 offset-1 mt-3">
-                                        <audio controls> <source src="../assets/audio/wale.mp3" type="audio/mpeg" ></audio>
-                                    </div>
-                                    <div class="col-md-4 offset-1 mt-3">
-                                        
-                                        <audio controls> <source src="../assets/audio/wale.mp3" type="audio/mpeg" ></audio>
-                                    </div>
-                                    <div class="col-md-4 offset-1 mt-3">
-                                       
-                                        <audio controls> <source src="../assets/audio/wale.mp3" type="audio/mpeg" ></audio>
-                                    </div>
-                                    <div class="col-md-4 offset-1 mt-3">
-                                        
-                                        <audio controls> <source src="../assets/audio/wale.mp3" type="audio/mpeg" ></audio>
-                                    </div>
-                                </div> -->
                             </div>
                             <p v-else> Song is yet  to be uploaded.</p>
                         </div>
