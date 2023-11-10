@@ -1,17 +1,17 @@
 <template>
     <UserSideBar/>
-        <div class="container-fluid ">
+        <div class="container-fluid" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">
             <div  class="row" v-if="user">
                 <div class="col-md-4">
                 <div class="mt-5 ">
                     <!-- <i class="fa fa-heart text-right"></i> -->
                     <img :src="user.imageUrl" alt="cover" class="ml-2" width="400" height="400" style="border-radius: 20px;"/> 
-                    <div class="mt-3">
-                            <p><i class="fa fa-user mr-2"></i>{{user.firstName}}</p>
-                            <p><i class="glyphicon glyphicon-headphones mr-2"></i>{{user.musicType}}</p>
-                            <p><i class="fa fa-message mr-2"></i>{{user.email}}</p>
-                            <p><i class="glyphicon glyphicon-earphone mr-2"></i>{{user.mobile}}</p>
-                            <p><i class="fa fa-map-marker mr-2"></i>{{user.state}}, {{ user.country }}</p>
+                    <div class="mt-5 ml-4">
+                            <p><i class="fs-1 mt-2  fa fa-user mr-2"></i>{{user.firstName}}</p>
+                            <p><i class="fs-1 mt-2  glyphicon glyphicon-headphones mr-2"></i>{{user.musicType}}</p>
+                            <p><i class="fs-1 mt-2  fa fa-message mr-2"></i>{{user.email}}</p>
+                            <p><i class="fs-1 mt-2  glyphicon glyphicon-earphone mr-2"></i>{{user.mobile}}</p>
+                            <p><i class="fs-1 mt-2  fa fa-map-marker mr-2"></i>{{user.state}}, {{ user.country }}</p>
                     </div>
                 </div>
             </div>
@@ -26,19 +26,19 @@
                             <nav >
                                 <ul class="nav justify-content-center">
                                     <li class="nav-item">
-                                        <a class="nav-link active" style="color:#A10035 ;" href="#">About</a>
+                                        <a class="nav-link active" style="color:#A10035 ;" href="#about">About</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" style="color:grey;" href="#">Photos</a>
+                                        <a class="nav-link" style="color:grey;" href="#photos">Photos</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" style="color:grey ;" href="#">Videos</a>
+                                        <a class="nav-link" style="color:grey ;" href="#videos">Videos</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" style="color:grey ;">Song List</a>
+                                        <a class="nav-link" style="color:grey ;" href="song">Song List</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" style="color:grey ;">Genre</a>
+                                        <a class="nav-link" style="color:grey ;" href="genre">Genre</a>
                                     </li>
                                 </ul>
                         </nav>
@@ -46,7 +46,7 @@
                         <hr/>
                         <!-- About -->
                         <div>
-                            <h4 id="title">About</h4>
+                            <h4  id="about" class="title">About</h4>
                             <p>I am {{user.firstName}}, a passionate and talented wedding musician with a deep love for creating beautiful
                                 music. Growing up in a musicial family. I began singing and playing instruments a young age...
                             </p>
@@ -57,7 +57,7 @@
                     </div>
                         <!-- photos -->
                         <div>
-                            <h4 id="title">Photos</h4>
+                            <h4 id="photos" class="title">Photos</h4>
                             <!-- {{ this.artistId }} -->
                             <div class="row">
                             <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
@@ -89,7 +89,7 @@
                         <!-- Videos -->
                         <hr/>
                         <div>
-                            <h4 id="title">Vidoes</h4>
+                            <h4 id="videos" class="title">Vidoes</h4>
                             <div class="row">
                             <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
                                 <video src="../assets/video/elijah.mp4" controls  class="w-100 shadow-1-strong rounded mb-4" alt="Boat on Calm Water"></video>
@@ -113,9 +113,9 @@
 
                         <!-- Songs -->
                         <div>
-                            <h4 id="title">Song Lists</h4>
+                            <h4 id="song" class="title">Song Lists</h4>
                             <div id="list">
-                                <div class=' shadow-sm p-3 mb-5 d-flex m-2' v-for="(song, index) in musics" :key="index" id="song">
+                                <div class=' shadow p-3 mb-5 d-flex m-2' v-for="(song, index) in musics" :key="index" id="song">
                                    <p>0{{ index + 1 }}.</p>
                                    <img :src="song.imageUrl" alt="cover" class="ml-4" width="50" height="50" style="border-radius: 50px;"/> 
                                    <p class="ml-4 mr-4"> {{ song.songTitle }}</p>
@@ -144,12 +144,12 @@
                         </div>
                         <!-- Genre -->
                         <div class="mt-3">
-                            <h4 id="title">Genre</h4>
+                            <h4 id="genre" class="title">Genre</h4>
                             <p>Afro Beat, High life.</p>
                         </div>
                         <!-- Event types -->
                         <div>
-                            <h4 id="title">Event Type</h4>
+                            <h4 id="title" class="title">Event Type</h4>
                             <p>Wedding reception, After party.</p>
                         </div>
                     </div>
@@ -199,7 +199,12 @@ export default {
 
     #list{
         /* background-color: #FFCECE; */
+        margin-top: 2em;
         border-radius: 20px;
+    }
+    
+    #list :hover{
+        background-color: #FFCECE;
     }
 
     video{
