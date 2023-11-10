@@ -2,21 +2,21 @@
        <UserSideBar/> 
       <div class="container-fluid mt-4" id="main-content" >
           <div class="row">
-              <div class="col-md-7 ml-4">
-                    <div class="container  p-3" style="background-color: #FFDDDD; border-radius: 20px;">
+              <div class="col-md-7 ml-4" >
+                    <div class="container  p-3" style="background-color: #FFDDDD; border-radius: 20px; width: auto;">
                         <div class="row">
                           <div class="col-md-4 ml-2">
                 <img class="card-img-top " src="../../assets/Camera/desktop.png" height="300"  alt="Card image" >
                           </div>
                           <div class="col-md-7 mr-5" v-if="user" style="margin-top: 6em;">
                                 <h3>Hi, {{user.firstName}}</h3>
-                                <p>Here you can invite your favourite artist for your different kind of ceremony</p>
+                                <p>Here you can invite your favourite artist for your <br/>different kind of ceremony</p>
                           </div>
                         </div>
                     </div>
 
                     <!-- main content -->
-                    <div class="container mt-4 mb-5 ">
+                    <div class="container mt-4 mb-5" style="width: auto;">
                       <div class='d-flex '>
                         <h4>Top Songs</h4>
                         <p id="ppa" style="margin-left: 70%;"> <a href="allsong">View All</a></p>
