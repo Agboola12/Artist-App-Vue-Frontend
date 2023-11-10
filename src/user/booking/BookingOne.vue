@@ -12,9 +12,6 @@
             </ol>
         </div>
 
-        <div style="width: 10px; background-color: red;">
-            <p>such;os;ejhcf</p>
-        </div>
 
     </div>
 </template>
