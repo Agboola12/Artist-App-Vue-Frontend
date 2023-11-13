@@ -37,22 +37,33 @@
                 </div>
               </header>
 
-              <div class="container-fluid trending p-2">
-                <h3>Trending</h3>
-                <div class="row">
-                  <div class="col-md-7 mx-auto" >
+              <div class="container-fluid p-2">
+                <h3 class="text-center trending" >Trending</h3>
+                <div class="row mt-5">
+                  <div class="col-md-7 mx-auto">
+                    <div class="row">
+                      <h3 class="mb-5">Popular Artist</h3>
+                          <div class="col-md-4 mx-auto" v-for="(artist, index) in artists" :key="index">
+                            <div class="card h-50 border-0">
+                              <img class="card-img-top" :src="artist.imageUrl" alt="image" >
+                              <div class="card-body">
+                                <small class="card-title">{{ artist.firstName }}</small>
+                              </div>
+                            </div>
+                          </div>
+                      </div>
                     
                     </div> 
 
-                    <div class="col-md-4">
-                      <h4 class="mb-4 ">Top Songs</h4>
+                    <div class="col-md-4 ">
+                      <h3 class="mb-4 ">Top Songs</h3>
                     <div class="shadow-sm p-2 jumbotron" v-for="(song, index) in songs" :key="index" >
                       <small class="d-flex">
                         <p>0{{ index + 1 }}.</p>
                         <img :src="song.imageUrl" alt="cover" class="ml-4" width="50" height="50" style="border-radius: 50px;"/> 
-                        <h5 class="ml-4"> {{ song.artistName }}</h5>
+                        <h3 class="ml-4"> {{ song.artistName }}</h3>
                       </small>
-                      <p class="text-center"> {{ song.songTitle }}</p>
+                      <small  class="songtitle"> {{ song.songTitle }}</small>
                     </div>
                      </div>
 
@@ -130,6 +141,15 @@ header{
 .image:hover{
   transform: scale(1.1);
   transition: all 2s;
+}
 
+.trending{
+  font-weight: bolder;
+  font-size: 3em;
+  color: #A10035;
+}
+
+.songtitle{
+  margin-left: 10em;
 }
 </style>
