@@ -30,6 +30,7 @@
                         <h1 style="font-weight: bolder; font-size: 3em;">YOU CALL IT </h1> 
                           <h1 style="font-weight: bolder;">MUSIC </h1> 
                             <h3 style="font-weight: bolder; font-size: 2em;"> I CALL IT MY THERAPIST </h3>
+                            <p>Without music, life would be a mistake</p>
                     </div>
                     <div class="image col-md-5">
                         <img src="../src/assets/Camera/background.png" height="500px"  />
@@ -52,12 +53,10 @@
                             </div>
                           </div>
                       </div>
-                    
                     </div> 
-
                     <div class="col-md-4 ">
                       <h3 class="mb-4 ">Top Songs</h3>
-                    <div class="shadow-sm p-2 jumbotron" v-for="(song, index) in songs" :key="index" >
+                    <div class="shadow-sm p-2 jumbotron w-100" v-for="(song, index) in songs" :key="index" >
                       <small class="d-flex">
                         <p>0{{ index + 1 }}.</p>
                         <img :src="song.imageUrl" alt="cover" class="ml-4" width="50" height="50" style="border-radius: 50px;"/> 
@@ -66,10 +65,22 @@
                       <small  class="songtitle"> {{ song.songTitle }}</small>
                     </div>
                      </div>
-
                 </div>
-
               </div>
+
+              <div class="container-fluid single">
+                 <div class="row">
+                    <div class="col-md-4  offset-1" style="margin-top: 11em; text-align: center;" >
+                        <h2>
+                            “Band may be hard work, but it's worth it when we see the crowd on their feet.”
+                        </h2>
+                    </div>
+                    <div class="col-md-6">
+                      <img src="../src/assets/Camera/sing.png" height="500px"  />
+                    </div>
+                 </div> 
+              </div>
+
             </div>
         </div>
 </template>
@@ -151,5 +162,11 @@ header{
 
 .songtitle{
   margin-left: 10em;
+}
+
+.single{
+  /* background: lightgrey; */
+  background: #FFDDDD;
+  border-radius: 50px;
 }
 </style>
