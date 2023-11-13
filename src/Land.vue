@@ -66,13 +66,32 @@ export default {
 
   data(){
     return{
-
+        artists: null,
+        songs: null
     } 
   },
     created(){
-
+        this.popularArtist();
+        this.popularSong();
     },
     method:{
+
+      // getting the popularArtist
+      popularArtist() {
+            axios.get("http://localhost:8000/popularArtist")
+                .then((res) => {
+                console.log(res.data);
+                this.artists = res.data;
+            });
+        },
+
+        popularSong() {
+            axios.get("http://localhost:8000/popularSong")
+                .then((res) => {
+                console.log(res.data.data);
+                this.songs = res.data.data;
+            });
+        }
 
     }
 
