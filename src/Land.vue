@@ -1,40 +1,31 @@
 <template>
-  <div class="body">
-      <div class="row">
-        <div class="col-sm-6">
-          <img src="../assets/Camera/01.jpg" alt="">
+        <div class="shadow p-3">
+            <div>
+                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                    <a class="navbar-brand" href="#">Navbar</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                      <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active">
+                          <a class="nav-link" href="#">Home </a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#">Link</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link disabled">Disabled</a>
+                        </li>
+                      </ul>
+                </div>
+                </nav>
+            </div>
         </div>
-
-        <div class=" col-sm-6">
-          <!-- <h2 class="text-center fs-1">Welcome to Prime</h2>
-          <p class="text-center fs-4">
-            Easily book musicians for your wedding and browse a range of solo performers and full bands
-          </p>
-          <button style="backgroundColor: rgb(161,0,53);" class="btn mx-auto text-white p-3">Set up account</button> -->
-        </div>
-      </div>
-  </div>
 </template>
 
 <script>
 export default {
- 
+
 }
 </script>
-
-<style scoped>
-.body{
-  margin: 0;
-  padding: 0;
-}
-    /* img{
-      background-size: cover;
-    background-attachment: fixed;
-    -moz-background-size: cover;
-    -webkit-background-size: cover;
-    -o-background-size: cover;
-    overflow: hidden;
-    height: 82vh;
-    width: 100%;
-    } */
-</style>

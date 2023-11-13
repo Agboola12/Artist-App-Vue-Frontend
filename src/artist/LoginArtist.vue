@@ -1,8 +1,8 @@
 <template>
-    <div class="container shadow w-75 p-5" style="margin-top: 5em;margin-left: 30%;  ">
-    <div class="col-sm-5" style="border: 1px solid gray; border-style: none;">
-    <h2 class=" text-center">Welcome Back Artist</h2><br/>
-    <form @submit.prevent="loginPost" method="post">
+    <div class="container shadow w-75 p-5" style="margin-top: 5em; ">
+    <div class="col-sm-5" style= "margin-left: 25%;">
+        <form @submit.prevent="loginPost" method="post" >
+            <h2 class=" text-center">Welcome Back Artist</h2><br/>
       <div class="form-group">
         <input type="email" class="form-control border-right-0 shadow-none border-top-0 border-left-0" id="email" v-model="email" placeholder="Enter email" name="email">
       </div>

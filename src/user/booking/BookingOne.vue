@@ -21,6 +21,11 @@ import UserSideBar from '../UserSideBar.vue'
 
 export default {
   components: { UserSideBar },
+  data(){
+    return{
+        
+    }
+  }
 
 }
 </script>

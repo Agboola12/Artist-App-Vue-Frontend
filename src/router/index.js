@@ -16,8 +16,6 @@ import BookingNine from '../user/booking/BookingNine.vue'
 import BookingTen from '../user/booking/BookingTen.vue'
 import Booking from '../user/booking/Booking.vue'
 import ArtistProfile from '../user/booking/ArtistProfile.vue'
-import Land from '../Land.vue'
-import Home from '../Home.vue'
 import MusicArtist from '../user/music/MusicArtist.vue'
 import AllSong from '../user/music/AllSong.vue'
 import Bands from '../user/music/Bands.vue'
@@ -34,6 +32,7 @@ import SongDetails from '../artist/SongDetails.vue'
 import HomeUser from '../user/music/HomeUser.vue'
 import UserSideBar from '../user/UserSideBar.vue'
 import AllArtist from '../user/music/AllArtist.vue'
+import Land from '../Land.vue'
 
 axios.interceptors.request.use((value) =>{
   value.headers = {
@@ -47,7 +46,6 @@ const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {  path: '/',  name: 'landing',  component: Landing},
-    {  path: '/land',  name: 'land',  component: Land},
     
     {  path: '/about',  name: 'about',  component: () => import('../views/AboutView.vue')},   
     {  path: '/register',  name: 'register',  component: Register},
@@ -69,7 +67,6 @@ const router = createRouter({
     {  path: '/bands',  name: 'bands',  component: Bands},
     {  path: '/djs',  name: 'djs',  component: Djs},
     {  path: '/profileartist',  name: 'profileartist',  component: ProfileArtist},
-    {  path: '/home',  name: 'home',  component: Home},
     {path: '/dashboardartist' , name: 'dashboardartist', component: DashboardArtist},
     {path: '/navartist' , name: 'navartist', component: NavArtist},
     {path: '/mymusic' , name: 'mymusic', component: MyMusic},
@@ -81,6 +78,7 @@ const router = createRouter({
     {path: '/homeuser' , name: 'homeuser', component: HomeUser},
     {path: '/usersidebar' , name: 'usersidebar', component: UserSideBar},
     {path: '/allartist' , name: 'allartist', component: AllArtist},
+    {path: '/land' , name: 'land', component: Land},
     
 
     

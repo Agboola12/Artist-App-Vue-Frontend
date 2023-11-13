@@ -1,5 +1,5 @@
 <template>
-    <div class="container  shadow p-4" style="margin-top: 2em;margin-left: 30%;">
+    <div class="container  shadow p-4" style="margin-top: 2em;">
       <div class="col-sm-5" style="border: 1px solid gray; border-style: none">
         <h2 class="text-center">Create an account for Artist</h2>
         <br />

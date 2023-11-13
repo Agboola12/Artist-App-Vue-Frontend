@@ -10,7 +10,6 @@
           
           </p>	
           <button style="backgroundColor: rgb(161,0,53);" class="btn mx-auto text-white p-3">Set up account</button>
-          <!-- <button class="btn btn-success"><a href="" class="nav-link h5" style="color: white">Enjoy Our Services</a></button> -->
       </div>
 </header>
     </div>
