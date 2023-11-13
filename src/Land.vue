@@ -40,14 +40,10 @@
               <div class="container-fluid trending p-2">
                 <h3>Trending</h3>
                 <div class="row">
-                    <div class="col-md-7 mx-auto" v-for="(artist, index) in artists" :key="index">
-                      <div class="card h-50 border-0">
-                              <img class="card-img-top" :src="artist.imageUrl" alt="image" >
-                              <div class="card-body">
-                                <small class="card-title">{{ artist.firstName }}</small>
-                              </div>
-                            </div>
-                    </div>
+                  <div class="col-md-7 mx-auto" >
+                    
+                    </div> 
+
                     <div class="col-md-4">
                       <h4 class="mb-4 ">Top Songs</h4>
                     <div class="shadow-sm p-2 jumbotron" v-for="(song, index) in songs" :key="index" >
@@ -58,7 +54,8 @@
                       </small>
                       <p class="text-center"> {{ song.songTitle }}</p>
                     </div>
-                    </div>
+                     </div>
+
                 </div>
 
               </div>
@@ -67,6 +64,7 @@
 </template>
 
 <script>
+import axios from 'axios';
 export default {
 
   data(){
@@ -79,9 +77,8 @@ export default {
         this.popularArtist();
         this.popularSong();
     },
-    method:{
+    methods:{
 
-      // getting the popularArtist
       popularArtist() {
             axios.get("http://localhost:8000/popularArtist")
                 .then((res) => {
