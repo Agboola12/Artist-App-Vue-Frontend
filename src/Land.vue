@@ -1,6 +1,6 @@
 <template>
         <div class="body p-5">
-            <header class="shadow">
+            <header class="shadow ">
                 <nav class="navbar navbar-expand-lg navbar-light bg-light ">
                     <h4 class="navbar-brand" href="#" style="color: #A10035;">Prime</h4>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -22,12 +22,13 @@
                 </nav>
 
                 <div class="row">
-                    <div class="col-md-4">
-                        <h3>Vibe to the song</h3>
-                        <p>Enjoy the music.</p>
+                    <div class="col-md-4 text-center" style="margin-top: 6em;">
+                        <h3>YOU CALL IT </h3> 
+                          <h3>MUSIC </h3> 
+                            <h3> I CALL IT MY THERAPIST </h3>
                     </div>
                     <div class="image col-md-6">
-
+                        <img src="../src/assets/Camera/background.png" height="500px"  />
                     </div>
                 </div>
               </header>
@@ -66,7 +67,10 @@ header{
   overflow: hidden;
   height: 100vh;
   width: 100%;
-  
+}
 
+.image{
+  /* height: 2vh; */
+  /* width: 100%; */
 }
 </style>
