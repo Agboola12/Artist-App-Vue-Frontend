@@ -1,5 +1,6 @@
 <template>
         <div class="body">
+          <div>
             <header class="shadow-sm" style="border-radius: 20px;" >
                 <nav class="navbar navbar-expand-lg navbar-light">
                     <h4 class="navbar-brand" href="#" style="color: #FFDDDD; font-size: 2em;"><b>Prime</b></h4>
@@ -25,7 +26,7 @@
                 </nav>
 
                 <div class="row">
-                    <div class="col-md-6 text-center ml-5 " style="margin-top: 8em;">
+                    <div class="col-md-6 text-center ml-5 " style="margin-top: 8em; color: #FFDDDD;">
                         <h1 style="font-weight: bolder; font-size: 3em;">YOU CALL IT </h1> 
                           <h1 style="font-weight: bolder;">MUSIC </h1> 
                             <h3 style="font-weight: bolder; font-size: 2em;"> I CALL IT MY THERAPIST </h3>
@@ -35,6 +36,20 @@
                     </div>
                 </div>
               </header>
+
+              <div class="container-fluid trending p-2">
+                <h3>Trending</h3>
+                <div class="row">
+                    <div class="col-md-7">
+
+                    </div>
+                    <div class="">
+
+                    </div>
+                </div>
+
+              </div>
+            </div>
         </div>
 </template>
 
