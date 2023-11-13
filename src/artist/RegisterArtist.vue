@@ -1,6 +1,6 @@
 <template>
     <div class="container  shadow p-4" style="margin-top: 2em; font-family: Verdana, Geneva, Tahoma, sans-serif;">
-      <div class="col-sm-4" style="margin-left: 30%;">
+      <div class="col-sm-6" style="margin-left: 30%;">
         <form action="post" enctype="multipart/form-data" @submit.prevent="onCreatePost">
           <h2 class="text-center mb-5">Create an account for Artist</h2>
           <div class="form-group form-floating">
