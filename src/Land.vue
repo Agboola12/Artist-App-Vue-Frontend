@@ -43,7 +43,7 @@
                     <div class="col-md-7">
 
                     </div>
-                    <div class="">
+                    <div class="col-md-4">
 
                     </div>
                 </div>
