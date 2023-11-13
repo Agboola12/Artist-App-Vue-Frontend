@@ -67,12 +67,15 @@
                      </div>
                 </div>
               </div>
+            </div>
 
-              <div class="container-fluid single">
+              </div>
+
+              <div class=" single">
                  <div class="row">
                     <div class="col-md-4  offset-1" style="margin-top: 11em; text-align: center;" >
                         <h2>
-                            “Band may be hard work, but it's worth it when we see the crowd on their feet.”
+                          The only thing that's better in a group versus being by yourself is the companionship
                         </h2>
                     </div>
                     <div class="col-md-6">
@@ -81,8 +84,33 @@
                  </div> 
               </div>
 
-            </div>
-        </div>
+              <div class="container-fluid  mt-5">
+                 <div class="row">
+                    <div class="col-md-4  offset-1" style="margin-top: 11em; text-align: center;" >
+                        <h2>
+                            “Band may be hard work, but it's worth it when we see the crowd on their feet.”
+                        </h2>
+                    </div>
+                    <div class="col-md-6">
+                      <img src="../src/assets/Camera/band.png" height="500px"  />
+                    </div>
+                 </div> 
+              </div>
+              
+              <div class="container-fluid bg-light mt-5 p-5">
+                 <div class="row">
+                    <div class="col-md-6" style=" text-align: center;" >
+                        <h2>
+                          Anyone can be a DJ but it's understanding how to read a crowd and keeping them on the floor is what takes
+                           years of experience. 
+                        </h2>
+                    </div>
+                    <div class="col-md-6">
+                      <img src="../src/assets/Camera/dj.jpg" height="300px" style="border-radius: 20%;" />
+                    </div>
+                 </div> 
+              </div>
+
 </template>
 
 <script>
@@ -167,6 +195,6 @@ header{
 .single{
   /* background: lightgrey; */
   background: #FFDDDD;
-  border-radius: 50px;
+  border-radius: 10px;
 }
 </style>
