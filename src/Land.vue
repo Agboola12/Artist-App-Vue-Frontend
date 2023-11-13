@@ -9,16 +9,16 @@
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                       <ul class="navbar-nav" style="margin-left: 70%;">
                         <li class="nav-item active">
-                          <a class="nav-link  " href="#">Home </a>
+                          <a class="nav-link  text-light" href="#">Home </a>
                         </li>
                         <li class="nav-item">
-                          <a class="nav-link " href="#">About</a>
+                          <a class="nav-link text-light" href="#">About</a>
                         </li>
                         <li class="nav-item">
-                          <a class="nav-link " href="register">User</a>
+                          <a class="nav-link text-light" href="register">User</a>
                         </li>
                         <li class="nav-item">
-                          <a class="nav-link " href="registerartist">Artist</a>
+                          <a class="nav-link text-light" href="registerartist">Artist</a>
                         </li>
                       </ul>
                 </div>
