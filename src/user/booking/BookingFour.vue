@@ -6,13 +6,13 @@
               <hr class="w-50 ml-4"/>
               <div class="mt-4">
                   <h4>Where is your event wedding taking place?</h4>
-                  <p>Please be specific (e.g venue) so musicians can send you accurate quotes</p>
+                  <p>Please be specific (e.g venue: lawrence street No 24) so the musicians can send you accurate quotes</p>
                      <input type="search" class="form-control" placeholder="Abuja"/>
               </div>
 
               <div class="mt-4">
                   <h4>Where is the exact location?</h4>
-                     <input type="text" class="form-control" placeholder="Lane 12"/>
+                     <input type="text" class="form-control" v-model="lane" placeholder="Lane 12"/>
               </div>
 
               <div class="mt-3 text-center">
