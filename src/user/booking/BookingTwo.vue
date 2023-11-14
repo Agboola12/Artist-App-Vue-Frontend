@@ -1,7 +1,7 @@
 <template>
     <div class="container "  style="margin-top: 5em;  ">
         <a href="homeuser" style="margin-left: 90%;"><button class="btn btn-danger  ">Go Back Home</button></a>
-        <div class="col-sm-4 mx-auto " style="border: 1px solid gray; border-style: none; ">
+        <div class="col-sm-4" style="margin-left: 30%;" >
             <h1 class="ml-5">Booking</h1>
             <hr class="w-50 ml-4"/>
             <div class="mt-5">
@@ -21,9 +21,22 @@
                         <option value="gospel">Gospel</option>
                     </select>
             </div>
+
+            <div class="dropdown show">
+  <p class=" form-control dropdown-toggle" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Dropdown link
+  </p>
+
+  <div class="dropdown-menu form-control" aria-labelledby="dropdownMenuLink">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+  </div>
+</div>
+
             <div class="mt-3 text-center">
                 <button class="btn btn text-light  w-25 m-1 ">Back</button>
-                <button class="btn btn text-light  w-25 m-1 "><a href="bookingthree">Next</a></button>
+                <a href="bookingthree"><button class="btn btn text-light  w-25 m-1 ">Next</button></a>
             </div>
          </div>   
 
