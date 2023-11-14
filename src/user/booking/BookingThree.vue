@@ -28,6 +28,10 @@ export default {
 
     },
     methods:{
+
+        onSend(){
+            
+        }
         var users = []; 
             var user = {
                 artistType: this.artistType,
