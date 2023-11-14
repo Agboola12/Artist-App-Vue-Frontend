@@ -45,8 +45,17 @@ export default {
     },
     methods:{
         onCreate(){
-            
-           const user = localStorage.setItem('users', JSON.stringify({artistType:this.artistType,musicType:this.musicType}))
+            var users = []; 
+            var user = {
+                artistType: this.artistType,
+                musicType: this.musicType
+            }
+            let getUsers = localStorage.users?JSON.parse(localStorage.getItem ("users")):[];
+            users = [...getUsers, user];
+            localStorage.setItem('users', JSON.stringify(users))
+            console.log(getUsers);
+
+            const user = localStorage.setItem('users', JSON.stringify({artistType:this.artistType,musicType:this.musicType}))
            console.log(user); 
            this.$router.push('/bookingthree')
 
