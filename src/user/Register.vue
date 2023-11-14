@@ -3,13 +3,29 @@
     <div class="col-sm-5  p-3" style="margin-left: 30%;">
       <form action="post" enctype="multipart/form-data" @submit.prevent="onCreatePost">
         <h2 class="text-center">Create an account</h2>
+        
         <div class="form-group">
           <div class="input-container">
             <input type="text" id="input" required="">
             <label for="input" class="label">Enter Text</label>
             <div class="underline"></div>
           </div>
-
+          </div>
+        <div class="form-group">
+          <div class="input-container">
+            <input type="text" id="input" required="">
+            <label for="input" class="label">Enter Text</label>
+            <div class="underline"></div>
+          </div>
+          </div>
+        <div class="form-group">
+          <div class="input-container">
+            <input type="text" id="input" required="">
+            <label for="input" class="label">Enter Text</label>
+            <div class="underline"></div>
+          </div>
+          </div>
+          <!-- <div class="form-group">
           <input
             type="text"
             name="firstName"
@@ -18,8 +34,8 @@
             placeholder="Enter Your Name"
             id="firstName"
           />
-        </div>
-        <div class="form-group">
+        </div> -->
+        <!-- <div class="form-group">
           <input
             type="email"
             name="email"
@@ -39,7 +55,7 @@
             id="password"
             placeholder="Enter password"
           />
-        </div>
+        </div> -->
         <div class="mx-5">
           <!-- <button
             type="submit"
@@ -190,7 +206,7 @@ a {
 
 .input-container input[type="text"] {
   font-size: 20px;
-  width: 100%;
+  /* width: 100%; */
   border: none;
   border-bottom: 2px solid #ccc;
   padding: 5px 0;
