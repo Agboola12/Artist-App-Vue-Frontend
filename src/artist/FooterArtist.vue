@@ -16,6 +16,7 @@
       </div>
       <div class="foote w-100 text-light p-3">
           <p>© Copyright Prime Music, 2006-2023</p>
+          <!-- <p class="mx-auto">Elijay ltd</p> -->
           <p class="ml-auto"> Company No: 03976764. VAT Number: GB107076729.</p>
       </div>
     </div>
@@ -28,16 +29,20 @@ export default {
 </script>
 
 <style scoped>
+
+.body{
+  background-color: #0F0F0F;
+}
  
 .foot{
   width: 100%;
-  background-color: #0F0F0F;
   color: white;
 
 }
+
 .foote{
   display: flex;
-  background-color: #000000;
+  /* background-color: #000000; */
 }
 hr{
   color: #000000;
