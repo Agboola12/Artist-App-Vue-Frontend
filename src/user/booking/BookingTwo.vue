@@ -53,6 +53,10 @@ export default {
             let getUsers = localStorage.users?JSON.parse(localStorage.getItem ("users")):[];
             users = [...getUsers, user];
             localStorage.setItem('users', JSON.stringify(users))
+            console.log(getUsers);
+            this.$router.push('/bookingthree')
+
+
         }
 
 
