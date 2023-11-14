@@ -10,7 +10,7 @@
                    <input type="date" class="form-control"/>
             </div>
             <div class="mt-3 text-center">
-                <button type="submit" class="btn btn text-light  w-25 m-2 ">Back</button>
+                <button type="submit" class="btn btn text-light  w-50 m-2 ">Back</button>
                 <!-- <button class="btn btn text-light  w-25 m-2 "><a href="bookingfour">Next</a></button> -->
             </div>
          </form> 
@@ -28,7 +28,7 @@ export default {
 
     },
     methods:{
-        
+
     }
 
 }
