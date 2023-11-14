@@ -44,7 +44,9 @@
     methods:{
 
         onSend(){
-            
+            let getUsers = localStorage.users?JSON.parse(localStorage.getItem ("users")):{};
+            localStorage.setItem('users', JSON.stringify({...getUsers,date:this.date}))
+           this.$router.push('/bookingfour')
         }
 
     }
