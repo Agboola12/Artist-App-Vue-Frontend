@@ -34,7 +34,7 @@
                             <p>Without music, life would be a mistake</p>
                     </div>
                     <div class="image col-md-5">
-                        <!-- <img src="../src/assets/Camera/background.png" height="500px"  /> -->
+                        <img src="../src/assets/Camera/background.png" height="500px"  />
                     </div>
                 </div>
               </header>
@@ -188,13 +188,7 @@ header{
   width: 100%;
 }
 
-.image{
-  /* background: url(../src/assets/Camera/background.png); */
-  background: url('../src/assets/Camera/background.png');
-  background-size: cover;
-  height: 500px;
-  width: 100%;
-}
+
 
 .image:hover{
   transform: scale(1.1);
