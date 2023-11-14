@@ -31,15 +31,6 @@ export default {
 
         onSend(){
 
-            var users = []; 
-            var user = {
-                date: this.date,
-            }
-            let getUsers = localStorage.users?JSON.parse(localStorage.getItem ("users")):[];
-            users = [...getUsers, user];
-            localStorage.setItem('users', JSON.stringify(users))
-            console.log(users);
-            this.$router.push('/bookingthree')
         }
     }
 
