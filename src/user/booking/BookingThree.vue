@@ -30,13 +30,10 @@ export default {
     methods:{
             
             onSend(){
-            var users = []; 
 
-            let getUsers = localStorage.users?JSON.parse(localStorage.getItem ("users")):[];
-            users = [...getUsers, user];
-            const user = localStorage.setItem('users', JSON.stringify({date:this.date}))
-           console.log(user); 
-           this.$router.push('/bookingthree')
+            let getUsers = localStorage.users?JSON.parse(localStorage.getItem ("users")):{};
+            localStorage.setItem('users', JSON.stringify({...getUsers,date:this.date}))
+           this.$router.push('/bookingfour')
 
         }
     }
