@@ -47,7 +47,6 @@ export default {
         onCreate(){
             
             localStorage.setItem('users', JSON.stringify({artistType:this.artistType,musicType:this.musicType}))
-           console.log(user); 
            this.$router.push('/bookingthree')
 
         }
