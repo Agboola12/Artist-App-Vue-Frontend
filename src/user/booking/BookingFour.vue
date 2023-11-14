@@ -46,7 +46,7 @@
         onSend(){
             let getUsers = localStorage.users?JSON.parse(localStorage.getItem ("users")):{};
             localStorage.setItem('users', JSON.stringify({...getUsers,state:this.state, country:this.country, address:this.address}))
-           this.$router.push('/bookingfour')
+           this.$router.push('/bookingfive')
         }
 
     }
