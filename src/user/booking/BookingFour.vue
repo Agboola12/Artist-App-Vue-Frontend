@@ -32,6 +32,9 @@
   export default {
     data(){
         return{
+            state: '',
+            country: '',
+            address:'',
 
         }
     },
@@ -39,7 +42,11 @@
 
     },
     methods:{
-        
+
+        onSend(){
+            
+        }
+
     }
   
   }
