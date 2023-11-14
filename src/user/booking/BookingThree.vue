@@ -30,20 +30,17 @@ export default {
     methods:{
 
         onSend(){
-            
-        }
-        var users = []; 
+
+            var users = []; 
             var user = {
-                artistType: this.artistType,
-                musicType: this.musicType
+                date: this.date,
             }
             let getUsers = localStorage.users?JSON.parse(localStorage.getItem ("users")):[];
             users = [...getUsers, user];
             localStorage.setItem('users', JSON.stringify(users))
             console.log(users);
             this.$router.push('/bookingthree')
-
-
+        }
     }
 
 }
