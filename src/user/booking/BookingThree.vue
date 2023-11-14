@@ -7,7 +7,7 @@
             <div class="mt-5">
                 <h4>What type of musician are you looking for?</h4>
                 <p>Musicians need it to estimate travel times.</p>
-                   <input type="date" class="form-control"/>
+                   <input type="date" v-model="date" class="form-control"/>
             </div>
             <div class="mt-3 text-center">
                 <button type="submit" class="btn btn text-light  w-50 m-2 ">Back</button>
@@ -21,7 +21,7 @@
 export default {
     data(){
         return{
-
+            date:''
         }
     },
     created(){
