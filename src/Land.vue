@@ -34,7 +34,7 @@
                             <p>Without music, life would be a mistake</p>
                     </div>
                     <div class="image col-md-5">
-                        <img src="../src/assets/Camera/background.png" height="500px"  />
+                        <!-- <img src="../src/assets/Camera/background.png" height="500px"  /> -->
                     </div>
                 </div>
               </header>
@@ -100,14 +100,13 @@
               
               <div class="container-fluid bg-light mt-5 p-5">
                  <div class="row">
-                    <div class="col-md-4 offset-2" style=" text-align: center;" >
+                    <div class="col-md-4 offset-1" style="margin-top: 6 em; text-align: center;" >
                         <h2>
-                          Anyone can be a DJ but it's understanding how to read a crowd and keeping them on the floor is what takes
-                           years of experience. 
+                          I think music in itself is healing. 
                         </h2>
                     </div>
-                    <div class="col-md-6">
-                      <img src="../src/assets/Camera/dj.jpg" height="300px" style="border-radius: 20%;" />
+                    <div class="col-md-5 offset-2">
+                      <img src="../src/assets/Camera/dj.jpg" height="300px"  />
                     </div>
                  </div> 
               </div>
@@ -186,6 +185,14 @@ header{
   -o-background-size: cover;
   overflow: hidden;
   height: 100vh;
+  width: 100%;
+}
+
+.image{
+  /* background: url(../src/assets/Camera/background.png); */
+  background: url('../src/assets/Camera/background.png');
+  background-size: cover;
+  height: 500px;
   width: 100%;
 }
 
