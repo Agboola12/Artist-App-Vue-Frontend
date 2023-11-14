@@ -16,13 +16,13 @@
               </div>
 
               <div class="mt-4">
-                  <h4>Where is the exact location?</h4>
+                  <h4>What is your address?</h4>
                      <input type="text" class="form-control" v-model="address" placeholder="Lane 12"/>
               </div>
 
               <div class="mt-3 text-center">
                   <button class="btn btn text-light  w-50 m-2 ">Next</button>
-                  <button class="btn btn text-light  w-25 m-2 "><a href="bookingfive">Next</a></button>
+                  <!-- <button class="btn btn text-light  w-25 m-2 "><a href="bookingfive">Next</a></button> -->
               </div>
            </form> 
            </div>  
