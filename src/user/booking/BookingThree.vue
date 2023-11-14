@@ -30,7 +30,7 @@ export default {
     methods:{
 
         onSend(){
-            const user = localStorage.setItem('users', JSON.stringify({artistType:this.artistType,musicType:this.musicType}))
+            const user = localStorage.setItem('users', JSON.stringify({Date:this.date}))
            console.log(user); 
            this.$router.push('/bookingthree')
 
