@@ -1,7 +1,7 @@
 <template>
     <div class="container "  style="margin-top: 5em;  ">
         <a href="homeuser" style="margin-left: 90%;"><button class="btn btn-danger  ">Go Back Home</button></a>
-        <div class="col-sm-4" style="margin-left: 30%;" >
+        <form action="post" enctype="multipart/form-data" @submit.prevent="onCreate" class="col-sm-4" style="margin-left: 30%;" >
             <h1 class="ml-5">Booking</h1>
             <hr class="w-50 ml-4"/>
             <div class="mt-5">
@@ -15,19 +15,18 @@
 
             <div class="mt-5">
                 <h5>What style musician would you like?</h5>
-                <select name="cars" style="width: 90%;" v-model="musicType">
-                        <option value="band">Band</option>
-                        <option value="afro-beat">Afro Beat</option>
-                        <option value="juju">Juju</option>
+                <select name="cars" class="p-2" style="width: 90%;" v-model="musicType">
+                        <option value="afroBeat">Afro Beat</option>
+                        <option value="hipPop">HipPop</option>
                         <option value="gospel">Gospel</option>
                     </select>
             </div>
 
             <div class="mt-3 text-center">
-                <button class="btn btn text-light  w-25 m-1 ">Back</button>
-                <a href="bookingthree"><button class="btn btn text-light  w-25 m-1 ">Next</button></a>
+                <button type="submit" class="btn btn text-light  w-50 m-1 ">Next</button>
+                <!-- <a href="bookingthree"><button class="btn btn text-light  w-25 m-1 ">Next</button></a> -->
             </div>
-         </div>   
+         </form>   
 
     </div>
 </template>
@@ -35,6 +34,29 @@
 <script>
 
 export default {
+    data(){
+        return{
+            artistType: " ",
+            musicType: " ",
+        }
+    },
+    created(){
+
+    },
+    methods:{
+        onCreate(){
+            var users = []; 
+            var user = {
+                artistType: this.artistType,
+                musicType: this.musicType
+            }
+            let getUsers = localStorage.users?JSON.parse(localStorage.getItem ("users")):[];
+            users = [...getUsers, user];
+            localStorage.setItem('users', JSON.stringify(users))
+        }
+
+
+    }
 
 }
 </script>
