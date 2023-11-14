@@ -6,33 +6,22 @@
             <hr class="w-50 ml-4"/>
             <div class="mt-5">
                 <h5>What type of musician are you looking for?</h5>
-                    <select name="cars" class="form-control" id="cars">
-                        <option value="band">Music Band</option>
-                        <option value="artiste">Artiste</option>>
+                    <select name="cars" class=" p-2" style="width: 90%;" v-model="artistType" id="cars">
+                        <option value="Music Artist">Music Artist</option>
+                        <option value="Bands">Bands</option>
+                        <option value="Djs">Djs</option>
                     </select>
             </div>
 
             <div class="mt-5">
                 <h5>What style musician would you like?</h5>
-                <select name="cars" class="form-control" id="cars">
+                <select name="cars" style="width: 90%;" v-model="musicType">
                         <option value="band">Band</option>
                         <option value="afro-beat">Afro Beat</option>
                         <option value="juju">Juju</option>
                         <option value="gospel">Gospel</option>
                     </select>
             </div>
-
-            <div class="dropdown show">
-  <p class=" form-control dropdown-toggle" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Dropdown link
-  </p>
-
-  <div class="dropdown-menu form-control" aria-labelledby="dropdownMenuLink">
-    <a class="dropdown-item" href="#">Action</a>
-    <a class="dropdown-item" href="#">Another action</a>
-    <a class="dropdown-item" href="#">Something else here</a>
-  </div>
-</div>
 
             <div class="mt-3 text-center">
                 <button class="btn btn text-light  w-25 m-1 ">Back</button>
