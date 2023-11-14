@@ -7,17 +7,22 @@
               <div class="mt-4">
                   <h4>Where is your event wedding taking place?</h4>
                   <p>Please be specific (e.g venue: lawrence street No 24) so the musicians can send you accurate quotes</p>
-                     <input type="search" class="form-control" placeholder="Abuja"/>
+                     <input type="search" class="form-control" v-model="country" placeholder="USA"/>
+              </div>
+
+              <div class="mt-4">
+                  <h4>Where is the state is event taken place?</h4>
+                     <input type="text" class="form-control" v-model="state" placeholder="Abuja"/>
               </div>
 
               <div class="mt-4">
                   <h4>Where is the exact location?</h4>
-                     <input type="text" class="form-control" v-model="lane" placeholder="Lane 12"/>
+                     <input type="text" class="form-control" v-model="address" placeholder="Lane 12"/>
               </div>
 
               <div class="mt-3 text-center">
                   <button class="btn btn text-light  w-50 m-2 ">Next</button>
-                  <!-- <button class="btn btn text-light  w-25 m-2 "><a href="bookingfive">Next</a></button> -->
+                  <button class="btn btn text-light  w-25 m-2 "><a href="bookingfive">Next</a></button>
               </div>
            </form> 
            </div>  
