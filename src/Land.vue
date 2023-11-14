@@ -71,7 +71,7 @@
 
               </div>
 
-              <div class=" single">
+              <div class="container-fluid single">
                  <div class="row">
                     <div class="col-md-4  offset-1" style="margin-top: 11em; text-align: center;" >
                         <h2>
@@ -84,7 +84,7 @@
                  </div> 
               </div>
 
-              <div class="container-fluid  mt-5">
+              <!-- <div class="container-fluid  mt-5">
                  <div class="row">
                     <div class="col-md-4  offset-1" style="margin-top: 11em; text-align: center;" >
                         <h2>
@@ -95,9 +95,9 @@
                       <img src="../src/assets/Camera/band.png" height="500px"  />
                     </div>
                  </div> 
-              </div>
+              </div> -->
               
-              <div class="container-fluid bg-light mt-5 p-5">
+              <!-- <div class="container-fluid bg-light mt-5 p-5">
                  <div class="row">
                     <div class="col-md-6" style=" text-align: center;" >
                         <h2>
@@ -109,7 +109,7 @@
                       <img src="../src/assets/Camera/dj.jpg" height="300px" style="border-radius: 20%;" />
                     </div>
                  </div> 
-              </div>
+              </div> -->
 
 </template>
 
@@ -195,6 +195,6 @@ header{
 .single{
   /* background: lightgrey; */
   background: #FFDDDD;
-  border-radius: 10px;
+  /* border-radius: 10px; */
 }
 </style>
