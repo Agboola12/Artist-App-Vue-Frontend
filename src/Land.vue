@@ -1,4 +1,5 @@
 <template>
+        <div class="whole">
         <div class="body">
           <div>
             <header class="shadow-sm" style="border-radius: 20px;" >
@@ -84,7 +85,7 @@
                  </div> 
               </div>
 
-              <!-- <div class="container-fluid  mt-5">
+              <div class="container-fluid  mt-5">
                  <div class="row">
                     <div class="col-md-4  offset-1" style="margin-top: 11em; text-align: center;" >
                         <h2>
@@ -95,11 +96,11 @@
                       <img src="../src/assets/Camera/band.png" height="500px"  />
                     </div>
                  </div> 
-              </div> -->
+              </div>
               
-              <!-- <div class="container-fluid bg-light mt-5 p-5">
+              <div class="container-fluid bg-light mt-5 p-5">
                  <div class="row">
-                    <div class="col-md-6" style=" text-align: center;" >
+                    <div class="col-md-4 offset-2" style=" text-align: center;" >
                         <h2>
                           Anyone can be a DJ but it's understanding how to read a crowd and keeping them on the floor is what takes
                            years of experience. 
@@ -109,13 +110,21 @@
                       <img src="../src/assets/Camera/dj.jpg" height="300px" style="border-radius: 20%;" />
                     </div>
                  </div> 
-              </div> -->
+              </div>
+
+              <div class=" w-100 mt-5" >
+                <FooterArtist/>
+              </div>
+        </div>
+
 
 </template>
 
 <script>
 import axios from 'axios';
+import FooterArtist from './artist/FooterArtist.vue';
 export default {
+  components: { FooterArtist },
 
   data(){
     return{
@@ -151,8 +160,11 @@ export default {
 </script>
 
 <style scoped>
-.body{
+
+.whole{
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.body{
   padding: 4em;
   background-size: cover;
   background-attachment: fixed;

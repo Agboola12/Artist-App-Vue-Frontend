@@ -1,5 +1,5 @@
 <template>
-  <div class=" body w-100 " >
+  <div class=" bodyy w-100 " >
       <div class="p-5 foot">
         <div style="display: flex;">
           <p style="color: #a10035;" class="fw-bold h3">Prime</p>
@@ -30,7 +30,7 @@ export default {
 
 <style scoped>
 
-.body{
+.bodyy{
   background-color: #0F0F0F;
 }
  
