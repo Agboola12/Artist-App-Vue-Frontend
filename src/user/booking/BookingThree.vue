@@ -10,7 +10,7 @@
                    <input type="date" v-model="date" class="form-control"/>
             </div>
             <div class="mt-3 text-center">
-                <button type="submit" class="btn btn text-light  w-50 m-2 ">Back</button>
+                <button type="submit" class="btn btn text-light  w-50 m-2 ">Next</button>
                 <!-- <button class="btn btn text-light  w-25 m-2 "><a href="bookingfour">Next</a></button> -->
             </div>
          </form> 
