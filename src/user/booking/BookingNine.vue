@@ -1,7 +1,7 @@
 <template>
     <div class="container "  style="margin-top: 5em;  ">
         <a href="homeuser" style="margin-left: 90%;"><button class="btn btn-danger  ">Go Back Home</button></a>
-      <form class="col-sm-5 " style="margin-left: 25%;">
+      <form action="post" enctype="multipart/form-data" @submit.prevent="onSend" class="col-sm-5 " style="margin-left: 25%;">
           <h1 class="mx-5">Booking</h1>
           <hr class="w-50 mx-4"/>
           <div class="mt-4">
@@ -23,7 +23,7 @@
 export default {
     data(){
         return{
-            budget:''
+            information:''
         }
     },
     created(){
@@ -33,8 +33,8 @@ export default {
 
         onSend(){
             let getUsers = localStorage.users?JSON.parse(localStorage.getItem ("users")):{};
-            localStorage.setItem('users', JSON.stringify({...getUsers,budget:this.budget }))
-           this.$router.push('/bookingnine')
+            localStorage.setItem('users', JSON.stringify({...getUsers,information:this.information }))
+           this.$router.push('/bookingten')
         }
 
     }
@@ -43,6 +43,10 @@ export default {
 </script>
 
 <style scoped>
+
+.container{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
 
 .btn{
       background-color: #A10035;
