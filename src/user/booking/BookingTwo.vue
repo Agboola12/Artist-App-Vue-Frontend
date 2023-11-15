@@ -31,7 +31,6 @@
 </template>
 
 <script>
-    import { useCounterStore} from '../../stores/counter.js'
 
 export default {
     data(){

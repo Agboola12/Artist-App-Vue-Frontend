@@ -1,7 +1,7 @@
 <template>
     <div class="container "  style="margin-top: 5em;  ">
         <a href="homeuser" style="margin-left: 90%;"><button class="btn btn p-3  ">Go Back Home</button></a>
-      <form action="post" enctype="multipart/form-data" @submit.prevent="onSend" class="col-sm-5 mx-auto " style="margin-left: 30%;">
+      <form action="post" enctype="multipart/form-data" @submit.prevent="onSend" class="col-sm-5" style="margin-left: 27%;">
           <h1 class="ml-5">Booking</h1>
           <hr class="w-50 ml-4"/>
           <div class="mt-4">
@@ -9,7 +9,7 @@
                  <input type="search" class="form-control" v-model="duration" placeholder="2 hours 30 minutes"/>
           </div>
 
-          <div class="mt-3 text-center">
+          <div class="mt-5 text-center">
             <button type="submit" class="button p-3 w-50"> Next</button>
               <!-- <button class="btn btn text-light  w-25 m-2 ">Back</button> -->
           </div>
