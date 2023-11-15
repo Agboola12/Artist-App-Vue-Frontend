@@ -4,7 +4,7 @@
       <form action="post" enctype="multipart/form-data" @submit.prevent="onSend" class="col-sm-5 " style="margin-left: 25%;">
           <h1 class="mx-5">Booking</h1>
           <hr class="w-50 mx-4"/>
-          <div class="mt-4">
+          <div class="mt-5">
               <h4>Give more information about the progarm </h4>
               <p>Give musicians as much information as possible about your progarm,
                  including venue requirements, and any other relevant details. </p>
@@ -26,6 +26,9 @@ export default {
         return{
             information:''
         }
+    },
+    created(){
+
     },
     methods:{
 
