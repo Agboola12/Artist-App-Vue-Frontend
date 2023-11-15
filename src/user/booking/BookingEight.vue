@@ -6,7 +6,7 @@
           <hr class="w-50 mx-4"/>
           <div class="mt-4">
               <h4>What is your maximum budget?</h4><br/>
-              <input type="text" class="form-control" placeholder="N200,000" /> <br/>
+              <input type="text" class="form-control" v-model="budget" placeholder="N200,000" /> <br/>
           </div>
           <div class="mt-5 text-center">
             <button type="submit" class="button p-3 w-50"> Next</button>
@@ -19,7 +19,7 @@
 export default {
     data(){
         return{
-                event:''
+            budget:''
         }
     },
     created(){
@@ -29,8 +29,8 @@ export default {
 
         onSend(){
             let getUsers = localStorage.users?JSON.parse(localStorage.getItem ("users")):{};
-            localStorage.setItem('users', JSON.stringify({...getUsers,event:this.event }))
-           this.$router.push('/bookingeight')
+            localStorage.setItem('users', JSON.stringify({...getUsers,budget:this.budget }))
+           this.$router.push('/bookingnine')
         }
 
     }
