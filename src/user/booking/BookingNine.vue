@@ -38,6 +38,7 @@ export default {
 
             const bookingInfo = JSON.parse(localStorage.getItem('users'));
               console.log(bookingInfo);
+              
             axios
                  .post(
                    "http://localhost:8000/bookingInfo", bookingInfo)
