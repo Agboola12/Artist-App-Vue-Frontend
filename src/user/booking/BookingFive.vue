@@ -12,7 +12,6 @@
               <div class="mt-5 text-center">
                 <button type="submit" class="button p-3 w-50"> Next</button>
                   <!-- <button type="submit" class="btn btn text-light  w-50 m-2 ">Next</button> -->
-                  <!-- <button class="btn btn text-light  w-25 m-2 "><a href="bookingsix">Next</a></button> -->
               </div>
            </form> 
            </div>
