@@ -31,6 +31,7 @@
 </template>
 
 <script>
+    import { useCounterStore} from '../../stores/counter.js'
 
 export default {
     data(){
@@ -44,6 +45,12 @@ export default {
     },
     methods:{
         onCreate(user){
+                const info={
+                    artistType:this.artistType,
+                    musicType:this.musicType
+                }
+
+                useCounterStore.users
 
         //     const user = localStorage.setItem('users', JSON.stringify({artistType:this.artistType,musicType:this.musicType}))
         //    console.log(user); 
