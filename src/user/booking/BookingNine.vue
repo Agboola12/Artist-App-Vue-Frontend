@@ -38,13 +38,13 @@ export default {
 
             const bookingInfo = JSON.parse(localStorage.getItem('users'));
               console.log(bookingInfo);
-              
+
             axios
                  .post(
                    "http://localhost:8000/bookingInfo", bookingInfo)
                  .then((res) => {
                    console.log(res);
-                             this.$router.push('/bookingten')
+                             this.$router.push('/bookingten'
                  })
                  .catch((err) => {
                    console.log(err);
