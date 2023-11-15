@@ -20,6 +20,7 @@
 </template>
 
 <script>
+import axios from 'axios';
 export default {
     data(){
         return{
@@ -31,10 +32,23 @@ export default {
     },
     methods:{
 
-        onSend(){
-            let getUsers = localStorage.users?JSON.parse(localStorage.getItem ("users")):{};
+      async  onSend(){
+            let getUsers = await localStorage.users?JSON.parse(localStorage.getItem ("users")):{};
             localStorage.setItem('users', JSON.stringify({...getUsers,information:this.information }))
-           this.$router.push('/bookingten')
+
+            const bookingInfo = JSON.parse(localStorage.getItem('users'));
+              console.log(bookingInfo);
+            axios
+                 .post(
+                   "http://localhost:8000/bookingInfo", bookingInfo)
+                 .then((res) => {
+                   console.log(res);
+                             this.$router.push('/bookingten')
+                 })
+                 .catch((err) => {
+                   console.log(err);
+                 });
+
         }
 
     }
