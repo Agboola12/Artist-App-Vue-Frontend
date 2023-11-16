@@ -31,7 +31,7 @@
 </template>
 
 
-<script>
+<script >
     import {useCounterStore} from '../../stores/counter.js'
     import { storeToRefs } from 'pinia'
 
@@ -56,7 +56,16 @@ export default {
                 const store = useCounterStore();
                 const {users, bookingInfo} = storeToRefs(store)
                 users.value.push(info)
-                console.log(users.value);
+                const lastNames = users.value.map(value => value);
+                console.log(lastNames);
+
+                 const people = [
+                      { firstName: 'Brian', lastName: 'Troncone' },
+                      { firstName: 'Todd', lastName: 'Motto' }
+                    ];
+
+                    // [ 'Troncone', 'Motto' ]
+                    console.log(lastNames);
 
         //     const user = localStorage.setItem('users', JSON.stringify({artistType:this.artistType,musicType:this.musicType}))
         //    console.log(user); 
