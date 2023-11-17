@@ -179,7 +179,7 @@ import FooterArtist from "./FooterArtist.vue";
         
         onCreatePost() {
           if (this.validateForm()) {
-        console.log('Form submitted:', this.formData);
+            
         const formData = new FormData();
         formData.append("firstName", this.firstName);
              formData.append("email", this.email);
