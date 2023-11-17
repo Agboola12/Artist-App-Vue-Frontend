@@ -40,10 +40,10 @@
 export default {
     data(){
         return{
-            useCounterStore,
+            // useCounterStore,
             artistType: " ",
             musicType: " ",
-            store: null
+            // store: null
         }
     },
     created(){
