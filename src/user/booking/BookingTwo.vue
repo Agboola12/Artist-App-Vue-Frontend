@@ -32,8 +32,10 @@
 
 
 <script>
-    import {useCounterStore} from '../../stores/counter.js'
-    import { storeToRefs } from 'pinia'
+        import { ref } from 'vue';
+        import { useMyStore } from '../../stores/counter.js';
+    // import {useCounterStore} from '../../stores/counter.js'
+    // import { storeToRefs } from 'pinia'
 
 export default {
     data(){
@@ -53,12 +55,15 @@ export default {
                     artistType:this.artistType,
                     musicType:this.musicType
                 }
+
+                useMyStore().setArtistType(info.artistType);
+                useMyStore().setMusicType(info.musicType);
                     
-                const store = useCounterStore();
-                const {users, bookingInfo} = storeToRefs(store)
-                users.value.push(info)
-                console.log(users.value);
-                this.$router.push('/bookingthree')
+                // const store = useCounterStore();
+                // const {users, bookingInfo} = storeToRefs(store)
+                // users.value.push(info)
+                // console.log(users.value);
+                // this.$router.push('/bookingthree')
 
         //     const user = localStorage.setItem('users', JSON.stringify({artistType:this.artistType,musicType:this.musicType}))
         //    console.log(user); 
