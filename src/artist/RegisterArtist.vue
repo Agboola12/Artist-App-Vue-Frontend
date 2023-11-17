@@ -180,11 +180,8 @@ import FooterArtist from "./FooterArtist.vue";
         onCreatePost() {
           if (this.validateForm()) {
         console.log('Form submitted:', this.formData);
-      } else {
-        console.log('Form has errors. Please fix them.');
-      }
-            const formData = new FormData();
-             formData.append("firstName", this.firstName);
+        const formData = new FormData();
+        formData.append("firstName", this.firstName);
              formData.append("email", this.email);
              formData.append("musicType", this.musicType);
              formData.append("mobile", this.mobile);
@@ -204,6 +201,9 @@ import FooterArtist from "./FooterArtist.vue";
                 .catch((err) => {
                 console.log(err);
             });
+      } else {
+        console.log('Form has errors. Please fix them.');
+      }
         },
     },
     components: { FooterArtist }
