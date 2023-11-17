@@ -143,11 +143,31 @@ import FooterArtist from "./FooterArtist.vue";
     },
     methods: {
 
+      validateForm() {
+      this.errors = {};
+
+      if (!this.firstName) {
+        this.errors.name = 'Name is required';
+      }
+
+      // Add validations for other fields
+
+      return Object.keys(this.errors).length === 0;
+    },
+
+
          handleImageChange (event){
             this.image = event.target.files[0] ;
         },
         
         onCreatePost() {
+
+          if (this.validateForm()) {
+        // Submit the form or perform other actions
+        console.log('Form submitted:', this.formData);
+      } else {
+        console.log('Form has errors. Please fix them.');
+      }
 
             const formData = new FormData();
              formData.append("firstName", this.firstName);
