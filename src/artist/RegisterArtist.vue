@@ -201,7 +201,8 @@ import FooterArtist from "./FooterArtist.vue";
                 .catch((err) => {
                 console.log(err);
             });
-      } else {
+      } 
+      else {
         console.log('Form has errors. Please fix them.');
       }
         },
