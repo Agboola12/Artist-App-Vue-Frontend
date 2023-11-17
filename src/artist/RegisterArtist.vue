@@ -13,7 +13,7 @@
               id="firstName"
               placeholder="Enter Your Name"
             />
-            <p v-if="errors.firstName">{{ errors.firstName }}</p>
+            <!-- <p v-if="errors.firstName">{{ errors.firstName }}</p> -->
           </div>
           <div class="form-group">
             <input
@@ -139,7 +139,8 @@ import FooterArtist from "./FooterArtist.vue";
             country: "",
             image:"null",
             passWord: "",
-        };
+            errors: {},
+          };
     },
     methods: {
 
@@ -179,7 +180,7 @@ import FooterArtist from "./FooterArtist.vue";
         
         onCreatePost() {
           if (this.validateForm()) {
-            
+
         const formData = new FormData();
         formData.append("firstName", this.firstName);
              formData.append("email", this.email);
