@@ -3,15 +3,17 @@
       <div class="col-sm-6" style="margin-left: 30%;">
         <form action="post" enctype="multipart/form-data" @submit.prevent="onCreatePost">
           <h2 class="text-center mb-5">Create an account for Artist</h2>
-          <div class="form-group form-floating">
+          
+          <div class="form-group">
             <input
               type="text"
-              name="fname"
+              name="firstName"
               v-model="firstName"
-              class="form-control fa fa-user border-right-0 shadow-none border-top-0 border-left-0"
-              placeholder="Fullname"
+              class="form-control border-right-0 shadow-none border-top-0 border-left-0"
+              id="firstName"
+              placeholder="Enter Your Name"
             />
-            <label for="">&#128113; Fullname</label>
+            <p v-if="errors.firstName">{{ errors.firstName }}</p>
           </div>
           <div class="form-group">
             <input
@@ -22,16 +24,16 @@
               id="email"
               placeholder="Enter email"
             />
+            <p v-if="errors.name">{{ errors.firstName }}</p>
           </div>
           <div class="form-group">
-              <!-- <label for="musicType">Select Your Music Type:</label> -->
-        <select class="form-select border-right-0 shadow-none border-top-0 border-left-0"  v-model="musicType" name="musicType">
-          <option  disabled value="Rock">Select Your Music Type</option>
-          <option value="Music Artist">Music Artist</option>
-          <option value="Bands">Bands</option>
-          <option value="Djs">Djs</option>
-        </select>
-</div>
+            <select class="form-select border-right-0 shadow-none border-top-0 border-left-0"  v-model="musicType" name="musicType">
+              <option  disabled value="Rock">Select Your Music Type</option>
+              <option value="Music Artist">Music Artist</option>
+              <option value="Bands">Bands</option>
+              <option value="Djs">Djs</option>
+            </select>
+        </div>
           
           <div class="form-group">
             <input

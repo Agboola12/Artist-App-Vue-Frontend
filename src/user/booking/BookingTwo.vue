@@ -42,6 +42,7 @@ export default {
             // useCounterStore,
             artistType: " ",
             musicType: " ",
+            useMyStore
             // store: null
         }
     },
