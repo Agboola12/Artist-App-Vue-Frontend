@@ -53,14 +53,13 @@ export default {
                     artistType:this.artistType,
                     musicType:this.musicType
                 }
-            //     const store = this.useCounterStore();
-            //    console.log(store.bookingInfo(info));
+
                     
 
                 const store = useCounterStore();
                 const {users, bookingInfo} = storeToRefs(store)
                 users.value.push(info)
-                console.log(users.value);
+                console.log(users.value.Array);
 
         //     const user = localStorage.setItem('users', JSON.stringify({artistType:this.artistType,musicType:this.musicType}))
         //    console.log(user); 
