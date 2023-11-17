@@ -32,7 +32,6 @@
 
 
 <script>
-        import { ref } from 'vue';
         import { useMyStore } from '../../stores/counter.js';
     // import {useCounterStore} from '../../stores/counter.js'
     // import { storeToRefs } from 'pinia'
@@ -55,10 +54,8 @@ export default {
                     artistType:this.artistType,
                     musicType:this.musicType
                 }
+                useMyStore().setData(info);
 
-                useMyStore().setArtistType(info.artistType);
-                useMyStore().setMusicType(info.musicType);
-                    
                 // const store = useCounterStore();
                 // const {users, bookingInfo} = storeToRefs(store)
                 // users.value.push(info)

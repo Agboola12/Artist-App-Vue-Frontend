@@ -19,6 +19,17 @@
   const pinia = createPinia();
   
   export const useMyStore = pinia(() => {
+    const state = {
+      data: [],
+    };
   
+    const setData = (newData) => {
+      state.data = newData;
+    };
+  
+    return {
+      ...state,
+      setData,
+    };
 });
 
