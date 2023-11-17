@@ -13,7 +13,7 @@
               id="firstName"
               placeholder="Enter Your Name"
             />
-            <!-- <p v-if="errors.firstName">{{ errors.firstName }}</p> -->
+            <p v-if="errors.firstName">{{ errors.firstName }}</p>
           </div>
           <div class="form-group">
             <input
