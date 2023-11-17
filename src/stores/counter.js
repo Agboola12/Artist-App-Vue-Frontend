@@ -6,7 +6,6 @@ export const useCounterStore = defineStore('counter', () => {
 
   function bookingInfo(user) {
     users.push(user)
-
   }
 
   return {  bookingInfo,users }
