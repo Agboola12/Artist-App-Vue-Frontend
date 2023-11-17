@@ -10,3 +10,30 @@ export const useCounterStore = defineStore('counter', () => {
 
   return {  bookingInfo,users }
 })
+
+// store.js
+
+import { createPinia } from 'pinia';
+
+const pinia = createPinia();
+
+export const useMyStore = pinia(() => {
+  const state = {
+    artistType: '',
+    musicType: '',
+  };
+
+  const setArtistType = (newType) => {
+    state.artistType = newType;
+  };
+
+  const setMusicType = (newType) => {
+    state.musicType = newType;
+  };
+
+  return {
+    ...state,
+    setArtistType,
+    setMusicType,
+  };
+});

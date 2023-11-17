@@ -38,7 +38,7 @@ export default {
                 const store = useCounterStore();
                 const {users, bookingInfo} = storeToRefs(store)
                 users.value.push(this.date)
-                console.log(users.value.Array);
+                console.log(users.value);
                 // this.$router.push('/bookingfour')
 
         //     let getUsers = localStorage.users?JSON.parse(localStorage.getItem ("users")):{};
