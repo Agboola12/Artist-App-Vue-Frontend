@@ -21,7 +21,8 @@
 export default {
     data(){
         return{
-            date:''
+            date:'',
+            store: null
         }
     },
     created(){
@@ -30,6 +31,11 @@ export default {
     methods:{
             
             onSend(){
+
+                const store = useCounterStore();
+                const {users, bookingInfo} = storeToRefs(store)
+                users.value.push(this.date)
+                console.log(users.value.Array);
 
         //     let getUsers = localStorage.users?JSON.parse(localStorage.getItem ("users")):{};
         //     localStorage.setItem('users', JSON.stringify({...getUsers,date:this.date}))

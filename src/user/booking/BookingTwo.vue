@@ -57,7 +57,7 @@ export default {
                 const store = useCounterStore();
                 const {users, bookingInfo} = storeToRefs(store)
                 users.value.push(info)
-                console.log(users.value.Array);
+                console.log(users.value);
 
         //     const user = localStorage.setItem('users', JSON.stringify({artistType:this.artistType,musicType:this.musicType}))
         //    console.log(user); 
