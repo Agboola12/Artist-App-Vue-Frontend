@@ -22,9 +22,9 @@
               v-model="email"
               class="form-control border-right-0 shadow-none border-top-0 border-left-0"
               id="email"
-              placeholder="Enter email"
+              placeholder="Enter Your email"
             />
-            <p v-if="errors.name">{{ errors.firstName }}</p>
+            <p v-if="errors.email">{{ errors.email }}</p>
           </div>
           <div class="form-group">
             <select class="form-select border-right-0 shadow-none border-top-0 border-left-0"  v-model="musicType" name="musicType">
@@ -33,7 +33,8 @@
               <option value="Bands">Bands</option>
               <option value="Djs">Djs</option>
             </select>
-        </div>
+            <p v-if="errors.musicType">{{ errors.musicType }}</p>
+          </div>
           
           <div class="form-group">
             <input
@@ -42,50 +43,56 @@
               v-model="mobile"
               class="form-control border-right-0 shadow-none border-top-0 border-left-0"
               id="mobile"
-              placeholder="Enter Mobile Number"
-            />
-          </div>
+              placeholder="Enter Your Mobile Number"
+              />
+              <p v-if="errors.mobile">{{ errors.mobile }}</p>
+            </div>
 
-          <div class="form-group">
-            <input
-            type='text'
+            <div class="form-group">
+              <input
+              type='text'
               name="state"
               v-model="state"
               class="form-control border-right-0 shadow-none border-top-0 border-left-0"
               id="state"
-              placeholder="Enter State"
-            />
-          </div>
-
-          <div class="form-group">
-            <input
-            type='text'
+              placeholder="Enter Your State"
+              />
+              <p v-if="errors.state">{{ errors.state }}</p>
+            </div>
+            
+            <div class="form-group">
+              <input
+              type='text'
               name="country"
               v-model="country"
               class="form-control border-right-0 shadow-none border-top-0 border-left-0"
               id="country"
-              placeholder="Enter Country"
-            />
-          </div>
-
+              placeholder="Enter Your Country"
+              />
+              <p v-if="errors.country">{{ errors.country}}</p>
+            </div>
+            
           <div class="form-group">
             <input
               type="file"
               class="form-control border-right-0 shadow-none border-top-0 border-left-0"
               ref="imageInput" 
               @change="handleImageChange"
+              id="image"
             />
-          </div>
-
+              <p v-if="errors.image">{{ errors.image}}</p>
+            </div>
+            
           <div class="form-group">
             <input
               type="password"
-              name="password"
+              name="passWord"
               v-model="passWord"
               class="form-control border-right-0 shadow-none border-top-0 border-left-0"
-              id="password"
-              placeholder="Enter password"
+              id="passWord"
+              placeholder="Enter Your password"
             />
+            <p v-if="errors.passWord">{{ errors.passWord}}</p>
           </div>
 
           <div class="mx-5">
