@@ -45,7 +45,8 @@ axios.interceptors.request.use((value) =>{
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
-    {  path: '/',  name: 'landing',  component: Landing},
+    {  path: '/',  name: 'land',  component: Land},
+    {path: '/landing' , name: 'landing', component: Landing},
     
     {  path: '/about',  name: 'about',  component: () => import('../views/AboutView.vue')},   
     {  path: '/register',  name: 'register',  component: Register},
@@ -78,7 +79,6 @@ const router = createRouter({
     {path: '/homeuser' , name: 'homeuser', component: HomeUser},
     {path: '/usersidebar' , name: 'usersidebar', component: UserSideBar},
     {path: '/allartist' , name: 'allartist', component: AllArtist},
-    {path: '/land' , name: 'land', component: Land},
     
 
     

@@ -58,10 +58,10 @@ export default {
                 const {users, bookingInfo} = storeToRefs(store)
                 users.value.push(info)
                 console.log(users.value);
+                this.$router.push('/bookingthree')
 
         //     const user = localStorage.setItem('users', JSON.stringify({artistType:this.artistType,musicType:this.musicType}))
         //    console.log(user); 
-        //    this.$router.push('/bookingthree')
 
         }
 

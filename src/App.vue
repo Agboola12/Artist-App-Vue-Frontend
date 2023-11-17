@@ -1,5 +1,5 @@
 <template>
-  <Landing/>
+  <Land/>
   <RouterView/>
 </template>
 
