@@ -147,8 +147,8 @@ import FooterArtist from "./FooterArtist.vue";
       validateForm() {
       this.errors = {};
 
-      if (!this.firstName) {
-        this.errors.name = 'Name is required';
+      if (!this.firstName && this.firstName > 0 || this.firstName < 4) {
+        this.errors.name = 'Name is required and the name should be more than four letters word';
       }
       if (!this.email) {
         this.errors.email = 'Email is required';
