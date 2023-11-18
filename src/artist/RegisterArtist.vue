@@ -148,7 +148,7 @@ import FooterArtist from "./FooterArtist.vue";
       this.errors = {};
 
       if (!this.firstName && this.firstName < 0 || this.firstName.length <= 5) {
-        this.errors.name = 'Name is required and the name should be more th ';
+        this.errors.name = 'Name is required  ';
       }
       if (!this.email) {
         this.errors.email = 'Email is required';
