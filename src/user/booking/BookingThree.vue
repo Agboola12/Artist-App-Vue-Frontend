@@ -18,14 +18,14 @@
 </template>
 
 <script>
-    // import {useCounterStore} from '../../stores/counter.js'
-    // import { storeToRefs } from 'pinia'
+    import {useCounterStore} from '../../stores/counter.js'
+    import { storeToRefs } from 'pinia'
 export default {
     data(){
         return{
-            // useCounterStore,
+            useCounterStore,
             date:'',
-            // store: null
+            store: null
         }
     },
     created(){

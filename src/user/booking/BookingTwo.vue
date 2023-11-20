@@ -54,7 +54,6 @@ export default {
                     musicType:this.musicType
                 }
 
-
                 const store = useCounterStore();
                 const {users, bookingInfo} = storeToRefs(store)
                 users.value.push(info)
