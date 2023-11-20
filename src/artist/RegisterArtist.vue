@@ -212,6 +212,8 @@
           console.log('Form has errors. Please fix them.');
           return;
         }
+        // Submit the form or perform other actions
+      console.log('Form submitted:', this.$data);
 
 
         const formData = new FormData();
