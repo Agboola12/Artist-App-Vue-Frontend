@@ -13,7 +13,9 @@
               id="firstName"
               placeholder="Enter Your Name"
             />
-            <p v-if="errors.firstName">{{ errors.firstName }}</p>
+            <span>{{ $v.name.$pending ? 'Validating...' : '' }}</span>
+            <span v-if="!$v.name.required">Name is required.</span>
+            <!-- <p v-if="errors.firstName">{{ errors.firstName }}</p> -->
           </div>
           <div class="form-group">
             <input
@@ -100,7 +102,8 @@
               type="submit"
               name="submit"
               id="continue"
-              class="btn btn w-100 mt-2"
+              class="btn btn w-100 mt-2" 
+              :disabled="$v.$pending"
             >
               Continue
             </button>
@@ -125,8 +128,9 @@
   
   <script>
   import axios from "axios";
-import FooterArtist from "./FooterArtist.vue";
-  
+  import FooterArtist from "./FooterArtist.vue";
+  import { useVuelidate } from '@vuelidate/core';
+  import { required } from '@vuelidate/core/validators';
   
   export default {
     data() {
@@ -142,6 +146,13 @@ import FooterArtist from "./FooterArtist.vue";
             errors: {},
           };
     },
+    validations() {
+    return {
+      name: { required },
+      // Add other form fields and validations
+    };
+  },
+
     methods: {
 
       validateForm() {
