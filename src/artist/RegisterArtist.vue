@@ -146,6 +146,7 @@
             errors: {},
           };
     },
+    
     validations() {
     return {
       name: { required },
@@ -155,42 +156,49 @@
 
     methods: {
 
-      validateForm() {
-      this.errors = {};
+    //   validateForm() {
+    //   this.errors = {};
 
-      if (!this.firstName && this.firstName.length <= 5) {
-        this.errors.name = 'Name is required';
-      }
-      if (!this.email) {
-        this.errors.email = 'Email is required';
-      }
-      if (!this.musicType) {
-        this.errors.musicType = 'Music Type is required';
-      }
-      if (!this.mobile) {
-        this.errors.mobile = 'Mobile is required';
-      }
-      if (!this.state) {
-        this.errors.state = 'State is required';
-      }
-      if (!this.country) {
-        this.errors.country = 'Country is required';
-      }
-      if (!this.image) {
-        this.errors.image = 'Image is required';
-      }
-      if (!this.passWord) {
-        this.errors.passWord = 'Password is required';
-      }
-      return Object.keys(this.errors).length === 0;
-    },
+    //   if (!this.firstName && this.firstName.length <= 5) {
+    //     this.errors.name = 'Name is required';
+    //   }
+    //   if (!this.email) {
+    //     this.errors.email = 'Email is required';
+    //   }
+    //   if (!this.musicType) {
+    //     this.errors.musicType = 'Music Type is required';
+    //   }
+    //   if (!this.mobile) {
+    //     this.errors.mobile = 'Mobile is required';
+    //   }
+    //   if (!this.state) {
+    //     this.errors.state = 'State is required';
+    //   }
+    //   if (!this.country) {
+    //     this.errors.country = 'Country is required';
+    //   }
+    //   if (!this.image) {
+    //     this.errors.image = 'Image is required';
+    //   }
+    //   if (!this.passWord) {
+    //     this.errors.passWord = 'Password is required';
+    //   }
+    //   return Object.keys(this.errors).length === 0;
+    // },
 
      handleImageChange (event){
         this.image = event.target.files[0] ;
     },
         
         onCreatePost() {
-          if (this.validateForm()) {
+          // if (this.validateForm()) {
+
+        this.$v.$touch();
+        if (this.$v.$pending || this.$v.$error) {
+          console.log('Form has errors. Please fix them.');
+          return;
+        }
+
 
         const formData = new FormData();
         formData.append("firstName", this.firstName);
@@ -213,10 +221,10 @@
                 .catch((err) => {
                 console.log(err);
             });
-      } 
-      else {
-        console.log('Form has errors. Please fix them.');
-      }
+      // } 
+      // else {
+      //   console.log('Form has errors. Please fix them.');
+      // }
         },
     },
     components: { FooterArtist }
