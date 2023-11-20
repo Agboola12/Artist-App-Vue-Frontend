@@ -13,8 +13,8 @@
               id="firstName"
               placeholder="Enter Your Name"
             />
-            <span>{{ $v.name.$pending ? 'Validating...' : '' }}</span>
-            <span v-if="!$v.name.required">Name is required.</span>
+            <span>{{ $v.firstName.$pending ? 'Validating...' : '' }}</span>
+            <span v-if="!$v.firstName.required">Name is required.</span>
             <!-- <p v-if="errors.firstName">{{ errors.firstName }}</p> -->
           </div>
           <div class="form-group">
@@ -26,7 +26,9 @@
               id="email"
               placeholder="Enter Your email"
             />
-            <p v-if="errors.email">{{ errors.email }}</p>
+            <span>{{ $v.email.$pending ? 'Validating...' : '' }}</span>
+            <span v-if="!$v.email.required">Email is required.</span>
+            <!-- <p v-if="errors.email">{{ errors.email }}</p> -->
           </div>
           <div class="form-group">
             <select class="form-select border-right-0 shadow-none border-top-0 border-left-0"  v-model="musicType" name="musicType">
@@ -35,7 +37,9 @@
               <option value="Bands">Bands</option>
               <option value="Djs">Djs</option>
             </select>
-            <p v-if="errors.musicType">{{ errors.musicType }}</p>
+            <span>{{ $v.musicType.$pending ? 'Validating...' : '' }}</span>
+            <span v-if="!$v.musicType.required">musicType is required.</span>
+            <!-- <p v-if="errors.musicType">{{ errors.musicType }}</p> -->
           </div>
           
           <div class="form-group">
@@ -47,7 +51,9 @@
               id="mobile"
               placeholder="Enter Your Mobile Number"
               />
-              <p v-if="errors.mobile">{{ errors.mobile }}</p>
+              <span>{{ $v.mobile.$pending ? 'Validating...' : '' }}</span>
+              <span v-if="!$v.mobile.required">mobile is required.</span>
+              <!-- <p v-if="errors.mobile">{{ errors.mobile }}</p> -->
             </div>
 
             <div class="form-group">
@@ -59,7 +65,9 @@
               id="state"
               placeholder="Enter Your State"
               />
-              <p v-if="errors.state">{{ errors.state }}</p>
+              <span>{{ $v.state.$pending ? 'Validating...' : '' }}</span>
+            <span v-if="!$v.state.required">state is required.</span>
+              <!-- <p v-if="errors.state">{{ errors.state }}</p> -->
             </div>
             
             <div class="form-group">
@@ -71,7 +79,9 @@
               id="country"
               placeholder="Enter Your Country"
               />
-              <p v-if="errors.country">{{ errors.country}}</p>
+              <span>{{ $v.country.$pending ? 'Validating...' : '' }}</span>
+            <span v-if="!$v.country.required">country is required.</span>
+              <!-- <p v-if="errors.country">{{ errors.country}}</p> -->
             </div>
             
           <div class="form-group">
@@ -82,7 +92,9 @@
               @change="handleImageChange"
               id="image"
             />
-              <p v-if="errors.image">{{ errors.image}}</p>
+            <span>{{ $v.image.$pending ? 'Validating...' : '' }}</span>
+            <span v-if="!$v.image.required">image is required.</span>
+              <!-- <p v-if="errors.image">{{ errors.image}}</p> -->
             </div>
             
           <div class="form-group">
@@ -94,7 +106,9 @@
               id="passWord"
               placeholder="Enter Your password"
             />
-            <p v-if="errors.passWord">{{ errors.passWord}}</p>
+            <span>{{ $v.passWord.$pending ? 'Validating...' : '' }}</span>
+            <span v-if="!$v.passWord.required">passWord is required.</span>
+            <!-- <p v-if="errors.passWord">{{ errors.passWord}}</p> -->
           </div>
 
           <div class="mx-5">
