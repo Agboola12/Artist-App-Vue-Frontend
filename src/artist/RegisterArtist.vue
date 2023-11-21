@@ -156,19 +156,19 @@
       if (!this.musicType) {
         this.errors.musicType = 'Music Type is required';
       }
-      if (!this.mobile) {
-        this.errors.mobile = 'Mobile is required';
+      if (!this.mobile || this.mobile.length === 11) {
+        this.errors.mobile = 'This field is required';
       }
-      if (!this.state) {
-        this.errors.state = 'State is required';
+      if (!this.state || this.state.length <= 2) {
+        this.errors.state = 'State is required wowwwwww';
       }
-      if (!this.country) {
+      if (!this.country || this.state.length <= 5) {
         this.errors.country = 'Country is required';
       }
       if (!this.image) {
         this.errors.image = 'Image is required';
       }
-      if (!this.passWord) {
+      if (!this.passWord || this.state.length <= 5) {
         this.errors.passWord = 'Password is required';
       }
       return Object.keys(this.errors).length === 0;
