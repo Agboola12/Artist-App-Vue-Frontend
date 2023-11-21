@@ -25,20 +25,22 @@ export default {
     data(){
         return{
             information:'',
-            user: 
+            userName: '',
+            userEmail: '',
         }
     },
     created(){
-
+        this.getLoginUser();
     },
     methods:{
 
       // login user
-      getUser() {
+      getLoginUser() {
             axios.get("http://localhost:8000/getUser")
                 .then((res) => {
                   console.log(res.data.data);
-                this.user = res.data.data;
+                this.userName = res.data.data.firstName;
+                this.userEmail = res.data.data.email;
             })
                 .catch((error) => {
                 console.error(error);
@@ -46,6 +48,7 @@ export default {
         },
 
       async  onSend(){
+            const loginUser = this.userName
             let getUsers = await localStorage.users?JSON.parse(localStorage.getItem ("users")):{};
             localStorage.setItem('users', JSON.stringify({...getUsers,information:this.information }))
 
