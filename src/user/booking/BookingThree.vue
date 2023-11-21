@@ -18,15 +18,15 @@
 </template>
 
 <script>
-    import {useCounterStore} from '../../stores/counter.js'
-    import { storeToRefs } from 'pinia'
+    // import {useCounterStore} from '../../stores/counter.js'
+    // import { storeToRefs } from 'pinia'
     
 export default {
     data(){
         return{
-            useCounterStore,
+            // useCounterStore,
             date:'',
-            store: null
+            // store: null
         }
     },
     created(){
@@ -36,15 +36,15 @@ export default {
             
             onSend(){
 
-                const store = useCounterStore();
-                const {book, bookingTwo} = storeToRefs(store)
-                book.value.push(this.date)
-                console.log(book.value);
-                this.$router.push('/bookingfour')
+                // const store = useCounterStore();
+                // const {book, bookingTwo} = storeToRefs(store)
+                // book.value.push(this.date)
+                // console.log(book.value);
+                // this.$router.push('/bookingfour')
                 
 
-        //     let getUsers = localStorage.users?JSON.parse(localStorage.getItem ("users")):{};
-        //     localStorage.setItem('users', JSON.stringify({...getUsers,date:this.date}))
+            let getUsers = localStorage.users?JSON.parse(localStorage.getItem ("users")):{};
+            localStorage.setItem('users', JSON.stringify({...getUsers,date:this.date}))
 
         }
     }

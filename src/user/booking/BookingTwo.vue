@@ -61,7 +61,7 @@ export default {
                 this.$router.push('/bookingthree')
 
         //     const user = localStorage.setItem('users', JSON.stringify({artistType:this.artistType,musicType:this.musicType}))
-        //    console.log(user); 
+           console.log(user); 
 
         }
 
