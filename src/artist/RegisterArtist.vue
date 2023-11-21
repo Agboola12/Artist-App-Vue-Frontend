@@ -101,7 +101,6 @@
               name="submit"
               id="continue"
               class="btn btn w-100 mt-2" 
-              :disabled="$v.$pending"
             >
               Continue
             </button>
@@ -148,8 +147,8 @@
       validateForm() {
       this.errors = {};
 
-      if (!this.firstName && this.firstName.length <= 5) {
-        this.errors.name = 'Name is required';
+      if (!this.firstName || this.firstName.length >= 2 ) {
+        this.errors.name = 'Name is required hellooooooo';
       }
       if (!this.email) {
         this.errors.email = 'Email is required';
