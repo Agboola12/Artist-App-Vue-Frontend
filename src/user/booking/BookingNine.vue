@@ -38,7 +38,7 @@ export default {
       getLoginUser() {
             axios.get("http://localhost:8000/getUser")
                 .then((res) => {
-                  console.log(res.data.data);
+                  // console.log(res.data.data);
                 this.userName = res.data.data.firstName;
                 this.userEmail = res.data.data.email;
             })
@@ -48,7 +48,10 @@ export default {
         },
 
       async  onSend(){
-            const loginUser = this.userName
+            const loginUser = {
+              userName:this.userName,
+              userEmail:this.userEmail
+            }
             let getUsers = await localStorage.users?JSON.parse(localStorage.getItem ("users")):{};
             localStorage.setItem('users', JSON.stringify({...getUsers,information:this.information }))
 
@@ -57,7 +60,7 @@ export default {
               
             axios
                  .post(
-                   "http://localhost:8000/bookingInfo", bookingInfo)
+                   "http://localhost:8000/bookingInfo", {...bookingInfo, ...loginUser})
                  .then((res) => {
                    console.log(res);
                              this.$router.push('/bookingten')
