@@ -32,16 +32,16 @@
 
 
 <script>
-    import {useCounterStore} from '../../stores/counter.js'
-    import { storeToRefs } from 'pinia'
+    // import {useCounterStore} from '../../stores/counter.js'
+    // import { storeToRefs } from 'pinia'
 
 export default {
     data(){
         return{
-            useCounterStore,
+            // useCounterStore,
             artistType: " ",
             musicType: " ",
-            store: null
+            // store: null
         }
     },
     created(){
@@ -49,18 +49,18 @@ export default {
     },
     methods:{
         onCreate(){
-                const info={
-                    artistType:this.artistType,
-                    musicType:this.musicType
-                }
+                // const info={
+                //     artistType:this.artistType,
+                //     musicType:this.musicType
+                // }
 
-                const store = useCounterStore();
-                const {users, bookingInfo} = storeToRefs(store)
-                users.value.push(info)
-                console.log(users.value);
-                this.$router.push('/bookingthree')
+                // const store = useCounterStore();
+                // const {users, bookingInfo} = storeToRefs(store)
+                // users.value.push(info)
+                // console.log(users.value);
+                // this.$router.push('/bookingthree')
 
-        //     const user = localStorage.setItem('users', JSON.stringify({artistType:this.artistType,musicType:this.musicType}))
+            const user = localStorage.setItem('users', JSON.stringify({artistType:this.artistType,musicType:this.musicType}))
            console.log(user); 
 
         }
