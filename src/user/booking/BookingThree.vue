@@ -40,11 +40,11 @@ export default {
                 // const {book, bookingTwo} = storeToRefs(store)
                 // book.value.push(this.date)
                 // console.log(book.value);
-                // this.$router.push('/bookingfour')
                 
-
-            let getUsers = localStorage.users?JSON.parse(localStorage.getItem ("users")):{};
-            localStorage.setItem('users', JSON.stringify({...getUsers,date:this.date}))
+                
+                let getUsers = localStorage.users?JSON.parse(localStorage.getItem ("users")):{};
+                localStorage.setItem('users', JSON.stringify({...getUsers,date:this.date}))
+                this.$router.push('/bookingfour')
 
         }
     }
