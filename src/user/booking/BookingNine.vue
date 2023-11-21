@@ -24,13 +24,26 @@ import axios from 'axios';
 export default {
     data(){
         return{
-            information:''
+            information:'',
+            user: 
         }
     },
     created(){
 
     },
     methods:{
+
+      // login user
+      getUser() {
+            axios.get("http://localhost:8000/getUser")
+                .then((res) => {
+                  console.log(res.data.data);
+                this.user = res.data.data;
+            })
+                .catch((error) => {
+                console.error(error);
+            });
+        },
 
       async  onSend(){
             let getUsers = await localStorage.users?JSON.parse(localStorage.getItem ("users")):{};
