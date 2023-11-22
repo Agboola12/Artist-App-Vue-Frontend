@@ -11,7 +11,7 @@
 
           <div class="row mt-5">
             <div class="col-md-6">
-                <button class="btn btn text-light  w-75 " @click="onSend()">Yes, please</button>
+                <button class="btn btn text-light  w-75 " >Yes, please</button>
             </div>
             <div class="col-md-6">
                 <button  id="btn" class="btn btn text-dark w-75 ">No, thanks</button>
