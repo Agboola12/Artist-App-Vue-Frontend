@@ -26,6 +26,14 @@
             />
             <p v-if="errors.email">{{ errors.email }}</p>
           </div>
+          <div class="mt-5">
+                <h5>What type music do you sing?</h5>
+                <select name="cars" class="p-2" style="width: 90%;" v-model="musicType">
+                        <option value="afroBeat">Afro Beat</option>
+                        <option value="hipPop">HipPop</option>
+                        <option value="gospel">Gospel</option>
+                    </select>
+            </div>
           <div class="form-group">
             <select class="form-select border-right-0 shadow-none border-top-0 border-left-0"  v-model="musicType" name="musicType">
               <option  disabled value="Rock">Select Your Music Type</option>

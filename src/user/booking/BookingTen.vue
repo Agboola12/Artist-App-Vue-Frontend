@@ -59,10 +59,10 @@ export default {
             console.log(bookingInfo);
               
             axios
-                 .get(
+                 .post(
                    "http://localhost:8000/getBookingInfo",bookingInfo)
                  .then((res) => {
-                   console.log(res);
+                   console.log(res.data.user);
                             //  this.$router.push('/bookingten')
                  })
                  .catch((err) => {
