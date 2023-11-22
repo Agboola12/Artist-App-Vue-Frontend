@@ -27,8 +27,8 @@
             <p v-if="errors.email">{{ errors.email }}</p>
           </div>
           <div class="form-group">
-            <select class="form-select border-right-0 shadow-none border-top-0 border-left-0"  v-model="musicType" name="musicType">
-              <option  disabled value="Rock">Select Your Music Type</option>
+            <select class="form-select border-right-0 shadow-none border-top-0 border-left-0"  v-model="artistType" name="musicType">
+              <option  disabled value="Rock">Select Your Artist Type</option>
               <option value="Music Artist">Music Artist</option>
               <option value="Bands">Bands</option>
               <option value="Djs">Djs</option>
@@ -144,6 +144,7 @@
             email: " ",
             musicType: " ",
             mobile: "",
+            artistType: " ",
             state: "",
             country: "",
             image:"null",
@@ -168,6 +169,9 @@
       }
       if (!this.mobile || this.mobile.length === 11) {
         this.errors.mobile = 'This field is required';
+      }
+      if (!this.musicType) {
+        this.errors.musicType = 'Music Type is required';
       }
       if (!this.state || this.state.length <= 2) {
         this.errors.state = 'State is required wowwwwww';
