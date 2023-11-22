@@ -50,16 +50,17 @@ export default {
     //     },
 
       async  onSend(){
-            const loginUser = {
-              userName:this.userName,
-              userEmail:this.userEmail
-            }
+            // const loginUser = {
+            //   userName:this.userName,
+            //   userEmail:this.userEmail
+            //    "http://localhost:8000/bookingInfo", {...bookingInfo, ...loginUser})
+            // }
             const bookingInfo = JSON.parse(localStorage.getItem('users'));
             console.log(bookingInfo);
               
             axios
                  .get(
-                   "http://localhost:8000/bookingInfo", {...bookingInfo, ...loginUser})
+                   "http://localhost:8000/getBookingInfo",bookingInfo)
                  .then((res) => {
                    console.log(res);
                             //  this.$router.push('/bookingten')
