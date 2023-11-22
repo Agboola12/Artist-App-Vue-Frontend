@@ -48,10 +48,7 @@ export default {
         },
 
       async  onSend(){
-            const loginUser = {
-              userName:this.userName,
-              userEmail:this.userEmail
-            }
+            
             let getUsers = await localStorage.users?JSON.parse(localStorage.getItem ("users")):{};
             localStorage.setItem('users', JSON.stringify({...getUsers,information:this.information }))
 

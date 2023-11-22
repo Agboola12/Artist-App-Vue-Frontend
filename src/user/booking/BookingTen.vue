@@ -53,9 +53,8 @@ export default {
               userName:this.userName,
               userEmail:this.userEmail
             }
-
             const bookingInfo = JSON.parse(localStorage.getItem('users'));
-              console.log(bookingInfo);
+            console.log(bookingInfo);
               
             axios
                  .post(
