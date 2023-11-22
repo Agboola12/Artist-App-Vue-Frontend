@@ -33,10 +33,21 @@ export default {
     },
     created(){
         this.getLoginUser();
+        this.getUser();
     },
     methods:{
 
       // login user
+      getUser() {
+            axios.get("http://localhost:8000/getUser")
+                .then((res) => {
+                  console.log(res.data.data);
+                // this.user = res.data.data;
+            })
+                .catch((error) => {
+                console.error(error);
+            });
+        },
       getLoginUser() {
             axios.get("http://localhost:8000/getUser")
                 .then((res) => {
