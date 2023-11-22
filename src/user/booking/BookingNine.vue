@@ -20,22 +20,22 @@
 </template>
 
 <script>
-import axios from 'axios';
 export default {
     data(){
         return{
             information:'',
-            userName: '',
-            userEmail: '',
         }
     },
     created(){
-        this.getLoginUser();
+
     },
     methods:{
 
       onSend(){
             
+          let getUsers = localStorage.users?JSON.parse(localStorage.getItem ("users")):{};
+            localStorage.setItem('users', JSON.stringify({...getUsers,budget:this.budget }))
+           this.$router.push('/bookingnine')
             let getUsers =  localStorage.users?JSON.parse(localStorage.getItem ("users")):{};
             localStorage.setItem('users', JSON.stringify({...getUsers,information:this.information }))
               this.$router.push('/bookingten')
