@@ -7,8 +7,9 @@
             <div class=' shadow-sm p-3 mt-5 mb-5 d-flex m-2' v-for="(user, index) in users" :key="index" id="song">
               <p>0{{ index + 1 }}.</p>
               <img :src="user.imageUrl" alt="cover" class="ml-4" width="50" height="50" style="border-radius: 50px;"/> 
-              <p class="ml-4 mr-4"> {{ user.firstName }}</p>
-              <p class="ml-4 mr-4"> {{ user.email }}</p>
+              <p class="ml-4 mr-4">Name <br/><br/> {{ user.firstName }}</p>
+              <p class="ml-4 mr-4">Email <br/><br/> {{ user.email }}</p>
+              <p class="ml-4 mr-4">Mobile Number <br/><br/> {{ user.mobile }}</p>
               <!-- <audio  controls> <source :src="song.mp3Url" type="audio/mpeg" ></audio> -->
             </div>
         </div>
