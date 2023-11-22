@@ -33,27 +33,16 @@ export default {
     },
     created(){
         this.getLoginUser();
-        this.getUser();
     },
     methods:{
 
       // login user
-      getUser() {
-            axios.get("http://localhost:8000/getUser")
-                .then((res) => {
-                  console.log(res.data.data);
-                // this.user = res.data.data;
-            })
-                .catch((error) => {
-                console.error(error);
-            });
-        },
       getLoginUser() {
             axios.get("http://localhost:8000/getUser")
                 .then((res) => {
                     console.log(res.data.data);
-                // this.userName = res.data.data.firstName;
-                // this.userEmail = res.data.data.email;
+                this.userName = res.data.data.firstName;
+                this.userEmail = res.data.data.email;
             })
                 .catch((error) => {
                 console.error(error);
