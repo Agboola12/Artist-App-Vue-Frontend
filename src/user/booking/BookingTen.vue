@@ -17,13 +17,61 @@
                 <button  id="btn" class="btn btn text-dark w-75 ">No, thanks</button>
             </div>
           </div>
-
        </div> 
        </div>
 </template>
 
 <script>
 export default {
+
+    data(){
+        return{
+            userName: '',
+            userEmail: '',
+        }
+    },
+    created(){
+        this.getLoginUser();
+    },
+    methods:{
+
+      // login user
+      getLoginUser() {
+            axios.get("http://localhost:8000/getUser")
+                .then((res) => {
+                  // console.log(res.data.data);
+                this.userName = res.data.data.firstName;
+                this.userEmail = res.data.data.email;
+            })
+                .catch((error) => {
+                console.error(error);
+            });
+        },
+
+      async  onSend(){
+            const loginUser = {
+              userName:this.userName,
+              userEmail:this.userEmail
+            }
+            let getUsers = await localStorage.users?JSON.parse(localStorage.getItem ("users")):{};
+            localStorage.setItem('users', JSON.stringify({...getUsers,information:this.information }))
+
+            const bookingInfo = JSON.parse(localStorage.getItem('users'));
+              console.log(bookingInfo);
+              
+            axios
+                 .post(
+                   "http://localhost:8000/bookingInfo", {...bookingInfo, ...loginUser})
+                 .then((res) => {
+                   console.log(res);
+                             this.$router.push('/bookingten')
+                 })
+                 .catch((err) => {
+                   console.log(err);
+                 });
+        }
+
+    }
 
 }
 </script>
