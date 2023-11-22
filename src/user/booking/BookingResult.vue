@@ -1,16 +1,14 @@
 <template>
-    <div class="container "  style="margin-top: 5em;  ">
+    <div class="container "  style="margin-top: 2em;  ">
         <a href="homeuser" style="margin-left: 90%;"><button class="btn btn-danger  ">Go Back Home</button></a>
 
         <div class="container mt-4 mb-5" style="width: auto;">
-          <div class='d-flex '>
-            <h4>Top Songs</h4>
-            <p id="ppa" style="margin-left: 70%;"> <a href="allsong">View All</a></p>
-        </div>
-            <div class=' shadow-sm p-3 mb-5 d-flex m-2' v-for="(user, index) in users" :key="index" id="song">
+            <h4 class="text-center">Your Choice Artist</h4>
+            <div class=' shadow-sm p-3 mt-5 mb-5 d-flex m-2' v-for="(user, index) in users" :key="index" id="song">
               <p>0{{ index + 1 }}.</p>
               <img :src="user.imageUrl" alt="cover" class="ml-4" width="50" height="50" style="border-radius: 50px;"/> 
-              <!-- <p class="ml-4 mr-4"> {{ user.songTitle }}</p> -->
+              <p class="ml-4 mr-4"> {{ user.firstName }}</p>
+              <p class="ml-4 mr-4"> {{ user.email }}</p>
               <!-- <audio  controls> <source :src="song.mp3Url" type="audio/mpeg" ></audio> -->
             </div>
         </div>
@@ -30,7 +28,7 @@ export default {
         }
     },
     created(){
-        // this.getLoginUser();
+        this.onSend();
     },
     methods:{
 
