@@ -27,47 +27,47 @@ export default {
 
     data(){
         return{
-            userName: '',
-            userEmail: '',
+            // userName: '',
+            // userEmail: '',
         }
     },
     created(){
-        this.getLoginUser();
+        // this.getLoginUser();
     },
     methods:{
 
       // login user
-      getLoginUser() {
-            axios.get("http://localhost:8000/getUser")
-                .then((res) => {
-                    console.log(res.data.data);
-                this.userName = res.data.data.firstName;
-                this.userEmail = res.data.data.email;
-            })
-                .catch((error) => {
-                console.error(error);
-            });
-        },
+    //   getLoginUser() {
+    //         axios.get("http://localhost:8000/getUser")
+    //             .then((res) => {
+    //                 console.log(res.data.data);
+    //             this.userName = res.data.data.firstName;
+    //             this.userEmail = res.data.data.email;
+    //         })
+    //             .catch((error) => {
+    //             console.error(error);
+    //         });
+    //     },
 
-    //   async  onSend(){
-    //         const loginUser = {
-    //           userName:this.userName,
-    //           userEmail:this.userEmail
-    //         }
-    //         const bookingInfo = JSON.parse(localStorage.getItem('users'));
-    //         console.log(bookingInfo);
+      async  onSend(){
+            const loginUser = {
+              userName:this.userName,
+              userEmail:this.userEmail
+            }
+            const bookingInfo = JSON.parse(localStorage.getItem('users'));
+            console.log(bookingInfo);
               
-    //         axios
-    //              .get(
-    //                "http://localhost:8000/bookingInfo", {...bookingInfo, ...loginUser})
-    //              .then((res) => {
-    //                console.log(res);
+            axios
+                 .get(
+                   "http://localhost:8000/bookingInfo", {...bookingInfo, ...loginUser})
+                 .then((res) => {
+                   console.log(res);
                             //  this.$router.push('/bookingten')
-        //          })
-        //          .catch((err) => {
-        //            console.log(err);
-        //          });
-        // }
+                 })
+                 .catch((err) => {
+                   console.log(err);
+                 });
+        }
     }
 
 }
