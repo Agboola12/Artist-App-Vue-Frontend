@@ -22,53 +22,18 @@
 </template>
 
 <script>
-import axios from 'axios';
 export default {
 
     data(){
         return{
-            // userName: '',
-            // userEmail: '',
+
         }
     },
     created(){
-        // this.getLoginUser();
+
     },
     methods:{
 
-      // login user
-    //   getLoginUser() {
-    //         axios.get("http://localhost:8000/getUser")
-    //             .then((res) => {
-    //                 console.log(res.data.data);
-    //             this.userName = res.data.data.firstName;
-    //             this.userEmail = res.data.data.email;
-    //         })
-    //             .catch((error) => {
-    //             console.error(error);
-    //         });
-    //     },
-
-      async  onSend(){
-            // const loginUser = {
-            //   userName:this.userName,
-            //   userEmail:this.userEmail
-            //    "http://localhost:8000/bookingInfo", {...bookingInfo, ...loginUser})
-            // }
-            const bookingInfo = JSON.parse(localStorage.getItem('users'));
-            console.log(bookingInfo);
-              
-            axios
-                 .post(
-                   "http://localhost:8000/getBookingInfo",bookingInfo)
-                 .then((res) => {
-                   console.log(res.data.user);
-                            //  this.$router.push('/bookingten')
-                 })
-                 .catch((err) => {
-                   console.log(err);
-                 });
-        }
     }
 
 }

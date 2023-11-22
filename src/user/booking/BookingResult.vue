@@ -7,11 +7,11 @@
             <h4>Top Songs</h4>
             <p id="ppa" style="margin-left: 70%;"> <a href="allsong">View All</a></p>
         </div>
-            <div class=' shadow-sm p-3 mb-5 d-flex m-2' v-for="(song, index) in songs" :key="index" id="song">
+            <div class=' shadow-sm p-3 mb-5 d-flex m-2' v-for="(user, index) in users" :key="index" id="song">
               <p>0{{ index + 1 }}.</p>
-              <img :src="song.imageUrl" alt="cover" class="ml-4" width="50" height="50" style="border-radius: 50px;"/> 
-              <p class="ml-4 mr-4"> {{ song.songTitle }}</p>
-              <audio  controls> <source :src="song.mp3Url" type="audio/mpeg" ></audio>
+              <img :src="user.imageUrl" alt="cover" class="ml-4" width="50" height="50" style="border-radius: 50px;"/> 
+              <!-- <p class="ml-4 mr-4"> {{ user.songTitle }}</p> -->
+              <!-- <audio  controls> <source :src="song.mp3Url" type="audio/mpeg" ></audio> -->
             </div>
         </div>
 
@@ -26,7 +26,7 @@ export default {
         return{
             // userName: '',
             // userEmail: '',
-            user: null
+            users: null
         }
     },
     created(){
@@ -62,7 +62,7 @@ export default {
                    "http://localhost:8000/getBookingInfo",bookingInfo)
                  .then((res) => {
                    console.log(res.data.user);
-                   this.user = res.data.user
+                   this.users = res.data.user
                  })
                  .catch((err) => {
                    console.log(err);
