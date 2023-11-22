@@ -33,6 +33,7 @@ import HomeUser from '../user/music/HomeUser.vue'
 import UserSideBar from '../user/UserSideBar.vue'
 import AllArtist from '../user/music/AllArtist.vue'
 import Land from '../Land.vue'
+import BookingResult from '../user/booking/BookingResult.vue'
 
 axios.interceptors.request.use((value) =>{
   value.headers = {
@@ -79,6 +80,7 @@ const router = createRouter({
     {path: '/homeuser' , name: 'homeuser', component: HomeUser},
     {path: '/usersidebar' , name: 'usersidebar', component: UserSideBar},
     {path: '/allartist' , name: 'allartist', component: AllArtist},
+    {path: '/bookingresult' , name: 'bookingresult', component: BookingResult},
     
 
     
