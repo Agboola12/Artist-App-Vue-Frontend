@@ -142,9 +142,9 @@
         return {
             firstName: " ",
             email: " ",
-            musicType: " ",
-            mobile: "",
             artistType: " ",
+            mobile: "",
+            musicType: " ",
             state: "",
             country: "",
             image:"null",
@@ -164,8 +164,8 @@
       if (!this.email) {
         this.errors.email = 'Email is required';
       }
-      if (!this.musicType) {
-        this.errors.musicType = 'Music Type is required';
+      if (!this.artistType) {
+        this.errors.artistType = 'artist Type is required';
       }
       if (!this.mobile || this.mobile.length === 11) {
         this.errors.mobile = 'This field is required';
@@ -197,8 +197,9 @@
         const formData = new FormData();
         formData.append("firstName", this.firstName);
              formData.append("email", this.email);
-             formData.append("musicType", this.musicType);
+             formData.append("artistType", this.artistType);
              formData.append("mobile", this.mobile);
+             formData.append("musicType", this.musicType);
              formData.append("state", this.state);
              formData.append("country", this.country);
              formData.append("image", this.image);
