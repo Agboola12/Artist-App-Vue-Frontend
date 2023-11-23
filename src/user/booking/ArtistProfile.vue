@@ -207,10 +207,10 @@ export default {
         margin-left: 30%;
     }
     .hire:hover{
-        background: 2px solid #A10035;
-        color: #A10035;
-        font-weight: bolder;
-        margin-left: 30%;
+        background:  #A10035;
+        color: white;
+        /* font-weight: bolder; */
+        /* margin-left: 30%; */
     }
 
 </style>
