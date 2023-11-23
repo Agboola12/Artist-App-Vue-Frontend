@@ -13,7 +13,7 @@
                             <p><i class="fs-1 mt-2  glyphicon glyphicon-earphone mr-2"></i>{{user.mobile}}</p>
                             <p><i class="fs-1 mt-2  fa fa-map-marker mr-2"></i>{{user.state}}, {{ user.country }}</p>
                     </div>
-                            <button class="btn btn hire">Hire Me</button>
+                            <button class="btn btn mt-3 w-25 p-3 hire">Hire Me</button>
                 </div>
             </div>
             <div class="col-md-8">
@@ -203,7 +203,14 @@ export default {
     .hire{
         border: 2px solid #A10035;
         color: #A10035;
-        
+        font-weight: bolder;
+        margin-left: 30%;
+    }
+    .hire:hover{
+        background: 2px solid #A10035;
+        color: #A10035;
+        font-weight: bolder;
+        margin-left: 30%;
     }
 
 </style>
