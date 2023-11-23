@@ -153,8 +153,8 @@ export default {
     return{
         user: null,
         musics: null,
-        
-
+        userName: '',
+        userEmail:''
     }
   },
   created(){
@@ -192,12 +192,10 @@ export default {
               userName:this.userName,
               userEmail:this.userEmail
             }
-            
             const bookingInfo = JSON.parse(localStorage.getItem('users'));
             console.log(bookingInfo);
             
-            axios
-            .post(
+            axios.post(
                      "http://localhost:8000/bookingInfo", {...bookingInfo, ...loginUser})
                  .then((res) => {
                    console.log(res.data.user);
