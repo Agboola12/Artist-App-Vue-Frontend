@@ -201,7 +201,11 @@ export default {
     }
 
     .hire{
-        
+        border: 2px solid #A10035;
+        color: #A10035;
+        justify-content: center;
+        justify-self: center;
+        justify-items: center;
     }
 
 </style>
