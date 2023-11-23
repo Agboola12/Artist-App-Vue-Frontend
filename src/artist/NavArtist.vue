@@ -31,7 +31,7 @@
             <a class="nav-link" href="songdetails">Songs</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="artistnotication">Notification</a>
+            <a class="nav-link" href="artistnotification">Notification</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="loginartist" @click="logOut()">Logout</a>
