@@ -50,7 +50,8 @@
                             <p>I am {{user.firstName}}, a passionate and talented wedding musician with a deep love for creating beautiful
                                 music. Growing up in a musicial family. I began singing and playing instruments a young age...
                             </p>
-                            <p><i class="fa fa-user mr-2"></i>{{user.musicType}}</p>
+                            <p><i class="fa fa-user mr-2"></i>{{user.artistType}}</p>
+                            <p><i class="fa fa-music mr-2"></i>{{user.musicType}}</p>
                             <p><i class="fa fa-map-marker mr-2"></i>{{ user.state }}, {{ user.country }}</p>
                             <p><i class="fa fa-usd mr-2"></i>3,000,000</p>
                         </div>
