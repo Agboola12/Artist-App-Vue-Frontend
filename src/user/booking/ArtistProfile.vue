@@ -196,7 +196,7 @@ export default {
               userName:this.userName,
               userEmail:this.userEmail,
               musicId: this.musicId,
-              firstName: this.firstName
+              artistName: this.artistName
             }
             const bookingInfo = JSON.parse(localStorage.getItem('users'));
             // console.log(bookingInfo);
