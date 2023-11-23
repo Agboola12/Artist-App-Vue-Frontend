@@ -151,6 +151,7 @@ export default {
     props:['artistId'],
     data(){
     return{
+        userId: '',
         user: null,
         musics: null,
         userName: '',
@@ -165,7 +166,9 @@ export default {
     getArtistDetails(){    
       axios.get("http://localhost:8000/getArtistDetails/"+ this.artistId)
       .then ((res)=>{
-            console.log(res.data);
+            // console.log(res.data);
+            this.artistId = res.data.user.id
+            console.log(this.artistId);
             this.user = res.data.user
             this.musics = res.data.musics
       })
@@ -178,7 +181,7 @@ export default {
       getLoginUser() {
             axios.get("http://localhost:8000/getUser")
                 .then((res) => {
-                    console.log(res.data.data);
+                    // console.log(res.data.data);
                 this.userName = res.data.data.firstName;
                 this.userEmail = res.data.data.email;
             })
@@ -190,7 +193,8 @@ export default {
     async  hireMe(){
             const loginUser = {
               userName:this.userName,
-              userEmail:this.userEmail
+              userEmail:this.userEmail,
+              user: this.user
             }
             const bookingInfo = JSON.parse(localStorage.getItem('users'));
             console.log(bookingInfo);
