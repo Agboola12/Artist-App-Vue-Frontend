@@ -13,6 +13,7 @@
                             <p><i class="fs-1 mt-2  glyphicon glyphicon-earphone mr-2"></i>{{user.mobile}}</p>
                             <p><i class="fs-1 mt-2  fa fa-map-marker mr-2"></i>{{user.state}}, {{ user.country }}</p>
                     </div>
+                            <button class="btn btn hire">Hire Me</button>
                 </div>
             </div>
             <div class="col-md-8">
@@ -197,6 +198,10 @@ export default {
     #title{
         font-size: 2em;
         font-weight: bolder;
+    }
+
+    .hire{
+        
     }
 
 </style>
