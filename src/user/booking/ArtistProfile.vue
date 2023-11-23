@@ -13,7 +13,7 @@
                             <p><i class="fs-1 mt-2  glyphicon glyphicon-earphone mr-2"></i>{{user.mobile}}</p>
                             <p><i class="fs-1 mt-2  fa fa-map-marker mr-2"></i>{{user.state}}, {{ user.country }}</p>
                     </div>
-                            <button class="btn btn mt-3  p-3 hire"><b>Hire Me</b></button>
+                            <button @click="hireMe()" class="btn btn mt-3  p-3 hire"><b>Hire Me</b></button>
                 </div>
             </div>
             <div class="col-md-8">
@@ -171,6 +171,41 @@ export default {
         console.log(err);
       })
     },
+
+    // login user
+    //   getLoginUser() {
+    //         axios.get("http://localhost:8000/getUser")
+    //             .then((res) => {
+    //                 console.log(res.data.data);
+    //             this.userName = res.data.data.firstName;
+    //             this.userEmail = res.data.data.email;
+    //         })
+    //             .catch((error) => {
+    //             console.error(error);
+    //         });
+    //     },
+
+    async  hireMe(){
+            // const loginUser = {
+            //   userName:this.userName,
+            //   userEmail:this.userEmail
+            //    "http://localhost:8000/bookingInfo", {...bookingInfo, ...loginUser})
+            // }
+
+            const bookingInfo = JSON.parse(localStorage.getItem('users'));
+            console.log(bookingInfo);
+              
+            axios
+                 .post(
+                   "http://localhost:8000/getBookingInfo",bookingInfo)
+                 .then((res) => {
+                   console.log(res.data.user);
+                   this.users = res.data.user
+                 })
+                 .catch((err) => {
+                   console.log(err);
+                 });
+        },
 }
 }
 </script>
