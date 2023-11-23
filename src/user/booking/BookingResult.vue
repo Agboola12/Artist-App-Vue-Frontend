@@ -10,7 +10,7 @@
               <p class="ml-4 mr-4">Name <br/><br/> {{ user.firstName }}</p>
               <p class="ml-4 mr-4">Email <br/><br/> {{ user.email }}</p>
               <p class="ml-4 mr-4">Mobile Number <br/><br/> {{ user.mobile }}</p>
-               <button  class="border-0 btn btn-danger" @click="Artistprofile(artist.id)">Check Profile</button> 
+               <button  class="border-0 btn btn-danger" @click="Artistprofile(user.id)">Check Profile</button> 
             </div>
         </div>
 
@@ -67,7 +67,7 @@ export default {
                    console.log(err);
                  });
         },
-        
+
         Artistprofile(id){
             this.$router.push('/artistprofile/'+id)
         }
