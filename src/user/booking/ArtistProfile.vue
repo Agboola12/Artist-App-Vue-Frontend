@@ -152,6 +152,7 @@ export default {
     data(){
     return{
         musicId: '',
+        artistName: '',
         user: null,
         musics: null,
         userName: '',
@@ -168,6 +169,7 @@ export default {
       .then ((res)=>{
             // console.log(res.data);
             this.musicId = res.data.user.id
+            this.artistName = res.data.user.id
             this.user = res.data.user
             this.musics = res.data.musics
       })
@@ -193,7 +195,8 @@ export default {
             const loginUser = {
               userName:this.userName,
               userEmail:this.userEmail,
-              musicId: this.musicId
+              musicId: this.musicId,
+              firstName: this.firstName
             }
             const bookingInfo = JSON.parse(localStorage.getItem('users'));
             // console.log(bookingInfo);
@@ -201,8 +204,10 @@ export default {
             axios.post(
                      "http://localhost:8000/bookingInfo", {...bookingInfo, ...loginUser})
                  .then((res) => {
-                   console.log(res.data.user);
-                   this.users = res.data.user
+                   console.log(res.data.response);
+                   alert('You have Book' + res.data.response.firstName)
+                //    this.router.push('/')
+                   
                  })
                  .catch((err) => {
                    console.log(err);
