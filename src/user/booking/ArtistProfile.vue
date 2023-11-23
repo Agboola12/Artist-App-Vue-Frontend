@@ -167,8 +167,8 @@ export default {
       axios.get("http://localhost:8000/getArtistDetails/"+ this.artistId)
       .then ((res)=>{
             // console.log(res.data);
-            this.artistId = res.data.user.id
-            console.log(this.artistId);
+            this.userId = res.data.user.id
+            console.log(this.userId);
             this.user = res.data.user
             this.musics = res.data.musics
       })
@@ -194,20 +194,21 @@ export default {
             const loginUser = {
               userName:this.userName,
               userEmail:this.userEmail,
-              user: this.user
+              userId: this.userId
             }
-            const bookingInfo = JSON.parse(localStorage.getItem('users'));
-            console.log(bookingInfo);
+            console.log(loginUser)
+            // const bookingInfo = JSON.parse(localStorage.getItem('users'));
+            // console.log(bookingInfo);
             
-            axios.post(
-                     "http://localhost:8000/bookingInfo", {...bookingInfo, ...loginUser})
-                 .then((res) => {
-                   console.log(res.data.user);
-                   this.users = res.data.user
-                 })
-                 .catch((err) => {
-                   console.log(err);
-                 });
+            // axios.post(
+            //          "http://localhost:8000/bookingInfo", {...bookingInfo, ...loginUser})
+            //      .then((res) => {
+            //        console.log(res.data.user);
+            //        this.users = res.data.user
+            //      })
+            //      .catch((err) => {
+            //        console.log(err);
+            //      });
         },
 }
 }
