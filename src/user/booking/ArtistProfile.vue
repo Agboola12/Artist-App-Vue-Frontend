@@ -169,7 +169,7 @@ export default {
       .then ((res)=>{
             // console.log(res.data);
             this.musicId = res.data.user.id
-            this.artistName = res.data.user.id
+            this.artistName = res.data.user.firstName
             this.user = res.data.user
             this.musics = res.data.musics
       })
@@ -205,8 +205,8 @@ export default {
                      "http://localhost:8000/bookingInfo", {...bookingInfo, ...loginUser})
                  .then((res) => {
                    console.log(res.data.response);
-                   alert('You have Book' + res.data.response.firstName)
-                //    this.router.push('/')
+                   alert('You have hire' + " "+res.data.response.artistName)
+                   this.router.push('/homeuser')
                    
                  })
                  .catch((err) => {
