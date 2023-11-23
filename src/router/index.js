@@ -26,6 +26,7 @@ import NavArtist from '../artist/NavArtist.vue'
 import MyMusic from '../artist/MyMusic.vue'
 import FooterArtist from '../artist/FooterArtist.vue'
 import AudioArtist from '../artist/AudioArtist.vue'
+import ArtistNotification from '../artist/ArtistNotification.vue'
 import LoginArtist from '../artist/LoginArtist.vue'
 import RegisterArtist from '../artist/RegisterArtist.vue'
 import SongDetails from '../artist/SongDetails.vue'
@@ -81,6 +82,7 @@ const router = createRouter({
     {path: '/usersidebar' , name: 'usersidebar', component: UserSideBar},
     {path: '/allartist' , name: 'allartist', component: AllArtist},
     {path: '/bookingresult' , name: 'bookingresult', component: BookingResult},
+    {path: '/artistnotification' , name: 'artistnotification', component: ArtistNotification},
     
 
     
