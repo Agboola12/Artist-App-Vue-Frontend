@@ -25,6 +25,7 @@
             <li><router-link to="/musicartist"><i class="fas fa-music"></i>Music Artists</router-link></li> 
             <li><router-link to="/bands"><i class="fas fa-drum"></i>Bands</router-link></li> 
             <li><router-link to="/djs"><i class="fas fa-compact-disc"></i>Djs</router-link></li> 
+            <li @click="logOut()"><a href=""><i class=" fas fa-sign-out-alt"></i>LogOut</a></li>
             <!-- <li><a href="allartist"></a></li> -->
             <!-- <li><a href="musicartist"></a></li> -->
             <!-- <li><a href="bands"></a></li> -->
@@ -34,7 +35,6 @@
           <a href="#"><i class="fab fa-facebook-f"></i></a>
           <a href="#"><i class="fab fa-twitter"></i></a>
           <a href="#"><i class="fab fa-instagram"></i></a>
-          <router-link to="/login"><i class="fas fa-sign-out-alt"></i></router-link>
       </div>
     </div>
 </div>
@@ -45,6 +45,19 @@
 
 <script>
 export default {
+  data(){
+        return{
+        
+        }
+    },
+    created(){
+
+    },
+    methods:{
+            logOut(){
+              
+            }
+    }
 
 }
 </script>
