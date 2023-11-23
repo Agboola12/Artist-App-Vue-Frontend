@@ -2,8 +2,8 @@
     <div class="container "  style="margin-top: 2em;  ">
         <a href="homeuser" style="margin-left: 90%;"><button class="btn btn-danger  ">Go Back Home</button></a>
 
-        <div class="container mt-4 mb-5" style="width: auto;">
-            <h4 class="text-center">Your Choice Artist</h4>
+        <div class="container mt-4 mb-5"  style="width: auto;">
+                <h2 class="text-center"><b>Your Choice Artist</b></h2>
             <div class=' shadow-sm p-3 mt-5 mb-5 d-flex m-2' v-for="(user, index) in users" :key="index" id="song">
               <p>0{{ index + 1 }}.</p>
               <img :src="user.imageUrl" alt="cover" class="ml-4" width="50" height="50" style="border-radius: 50px;"/> 
@@ -77,6 +77,8 @@ export default {
 </script>
 
 <style scoped>
-
+#song:hover{
+    background-color: #FFDDDD;
+  }
 
 </style>
