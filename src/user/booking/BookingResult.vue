@@ -10,7 +10,7 @@
               <p class="ml-4 mr-4">Name <br/><br/> {{ user.firstName }}</p>
               <p class="ml-4 mr-4">Email <br/><br/> {{ user.email }}</p>
               <p class="ml-4 mr-4">Mobile Number <br/><br/> {{ user.mobile }}</p>
-              <!-- <audio  controls> <source :src="song.mp3Url" type="audio/mpeg" ></audio> -->
+               <button  class="border-0 btn btn-danger" @click="Artistprofile(artist.id)">Check Profile</button> 
             </div>
         </div>
 
@@ -66,6 +66,10 @@ export default {
                  .catch((err) => {
                    console.log(err);
                  });
+        },
+        
+        Artistprofile(id){
+            this.$router.push('/artistprofile/'+id)
         }
     }
 
