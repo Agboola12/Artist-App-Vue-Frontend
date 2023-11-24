@@ -1,23 +1,20 @@
 <template>
     <div class="body">
         <NavArtist/>
-        <div class="row">
-            <div class="">
-
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3 card-client" v-for="(user, index) in users" :key="index">
+                <div class="user-picture">
+                    <svg viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M224 256c70.7 0 128-57.31 128-128s-57.3-128-128-128C153.3 0 96 57.31 96 128S153.3 256 224 256zM274.7 304H173.3C77.61 304 0 381.6 0 477.3c0 19.14 15.52 34.67 34.66 34.67h378.7C432.5 512 448 496.5 448 477.3C448 381.6 370.4 304 274.7 304z"></path>
+                    </svg>
+                </div>
+                <p class="name-client"> {{ user.userName }}
+                    <span>{{ user.userEmail }}</span>
+                </p>
+                </div>
             </div>
-
         </div>
-        <div class="card-client">
-    <div class="user-picture">
-        <svg viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
-            <path d="M224 256c70.7 0 128-57.31 128-128s-57.3-128-128-128C153.3 0 96 57.31 96 128S153.3 256 224 256zM274.7 304H173.3C77.61 304 0 381.6 0 477.3c0 19.14 15.52 34.67 34.66 34.67h378.7C432.5 512 448 496.5 448 477.3C448 381.6 370.4 304 274.7 304z"></path>
-        </svg>
-    </div>
-    <p class="name-client"> Jhon Doe
-        <span>CEO of WritBook
-        </span>
-    </p>
-</div>
     </div>
   
 </template>
@@ -32,6 +29,7 @@ export default {
         return {
             id: '',
             artistName: "",
+            users: null,
         };
     },
     created() {
@@ -47,7 +45,7 @@ export default {
                 
             axios.get(`http://localhost:8000/artistNotice/${this.id}`)
                 .then((res) => {
-                console.log(res.data);
+                console.log(res.data.user);
             })
                 .catch((error) => {
                 console.error(error);
