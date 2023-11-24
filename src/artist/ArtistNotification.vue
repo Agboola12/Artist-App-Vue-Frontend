@@ -14,7 +14,7 @@ export default {
     data() {
         return {
             id: '',
-            // artistName: "",
+            artistName: "",
         };
     },
     created() {
@@ -25,9 +25,9 @@ export default {
         fetchUserProfile() {
             axios.get("http://localhost:8000/getArtist")
                 .then((res) => {
-                        console.log(res.data.data.id)
+                        // console.log(res.data.data.id)
                     this.id = res.data.data.id;
-                //   this.artistName = res.data.data.firstName
+                  this.artistName = res.data.data.firstName
                 
             axios.get(`http://localhost:8000/artistNotice/${this.id}`)
                 .then((res) => {

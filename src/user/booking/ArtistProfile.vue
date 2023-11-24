@@ -205,7 +205,7 @@ export default {
                      "http://localhost:8000/bookingInfo", {...bookingInfo, ...loginUser})
                  .then((res) => {
                    console.log(res.data.response);
-                   alert('You have hire' + " "+res.data.response.artistName)
+                   alert('You have hire' + " "+ res.data.response.artistName)
                    this.router.push('/homeuser')
                    
                  })
