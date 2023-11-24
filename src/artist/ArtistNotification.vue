@@ -12,7 +12,7 @@
                 <p class="name-client"> 
                     {{ user.userName }}
                     <span class="mt-2">{{ user.userEmail }}</span>
-                    <span class="mt-3" @click="infoId(user.id)"><a href="" class="details">Details</a></span>
+                    <span class="mt-3" @click="infoDetails(user.id)"><a href="" class="details">Details</a></span>
                 </p>
                 </div>
             </div>
@@ -65,11 +65,11 @@ export default {
             });
         },
 
-        infoId(id){
-            axios.get(BaseUrl + `infoId/${id}`)
-            .then((res)=>
-            console.log(res)
-            )
+        infoDetails(id){
+            axios.get(BaseUrl + `infoDetails/${id}`)
+            .then((res)=>{
+                console.log(res)
+            })
             .catch((error)=>{
                 console.log(error);
             })
