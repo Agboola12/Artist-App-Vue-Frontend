@@ -12,7 +12,7 @@
                 <p class="name-client"> 
                     {{ user.userName }}
                     <span class="mt-2">{{ user.userEmail }}</span>
-                    <span class="mt-3" @click="infoDetails(user.id)"><a href="" class="details">Details</a></span>
+                    <span class="mt-3" ><button   @click="infoDetails(user.id)" class="btn btn-light details">Details</button></span>
                 </p>
                 </div>
             </div>
@@ -52,7 +52,7 @@ export default {
             (BaseUrl + `artistNotice/${this.id}`)
             // (`http://localhost:8000/artistNotice/${this.id}`)
                 .then((res) => {
-                console.log(res.data.user);
+                // console.log(res.data.user);
                 this.users = res.data.user
             })
                 .catch((error) => {
@@ -109,9 +109,6 @@ export default {
   transform: translateY(-10px);
 }
 
-.details{
-    color: #fddbdb;
-}
 
 .user-picture {
   overflow: hidden;
