@@ -26,10 +26,7 @@
             <li><router-link to="/bands"><i class="fas fa-drum"></i>Bands</router-link></li> 
             <li><router-link to="/djs"><i class="fas fa-compact-disc"></i>Djs</router-link></li> 
             <li @click="logOut()"><a href=""><i class=" fas fa-sign-out-alt"></i>LogOut</a></li>
-            <!-- <li><a href="allartist"></a></li> -->
-            <!-- <li><a href="musicartist"></a></li> -->
-            <!-- <li><a href="bands"></a></li> -->
-            <!-- <li><a href="djs"></a></li> -->
+          
         </ul> 
         <div class="social_media mb-4">
           <a href="#"><i class="fab fa-facebook-f"></i></a>
@@ -55,7 +52,8 @@ export default {
     },
     methods:{
             logOut(){
-              localStorage.removeItem("token", "users");
+              localStorage.removeItem("token");
+              localStorage.removeItem( "users");
               this.$router.push('/login')
 
              }
