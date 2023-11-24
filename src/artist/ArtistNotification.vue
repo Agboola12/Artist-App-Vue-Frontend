@@ -3,16 +3,16 @@
         <NavArtist/>
         <div class="container ">
             <div class="row " >
-                    <div class="col-md-3 m-5 card-client" v-for="(user, index) in users" :key="index" >
-                <div class="user-picture">
+                    <div class="col-md-3 p-4 m-5 card-client" v-for="(user, index) in users" :key="index" >
+                        <div class="user-picture">
                     <svg viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
                         <path d="M224 256c70.7 0 128-57.31 128-128s-57.3-128-128-128C153.3 0 96 57.31 96 128S153.3 256 224 256zM274.7 304H173.3C77.61 304 0 381.6 0 477.3c0 19.14 15.52 34.67 34.66 34.67h378.7C432.5 512 448 496.5 448 477.3C448 381.6 370.4 304 274.7 304z"></path>
                     </svg>
                 </div>
                 <p class="name-client"> 
                     {{ user.userName }}
-                    <span>{{ user.userEmail }}</span>
-                    <span><a href="" class="details">Details</a></span>
+                    <span class="mt-2">{{ user.userEmail }}</span>
+                    <span class="mt-3"><a href="" class="details">Details</a></span>
                 </p>
                 </div>
             </div>
@@ -24,6 +24,7 @@
 <script>
 import axios from "axios";
 import NavArtist from "./NavArtist.vue";
+import BaseUrl from "../BaseUrl.js";
 
 
 export default {
@@ -45,7 +46,10 @@ export default {
                     this.id = res.data.data.id;
                   this.artistName = res.data.data.firstName
                 
-            axios.get(`http://localhost:8000/artistNotice/${this.id}`)
+                
+            axios.get
+            (BaseUrl + `artistNotice/${this.id}`)
+            // (`http://localhost:8000/artistNotice/${this.id}`)
                 .then((res) => {
                 console.log(res.data.user);
                 this.users = res.data.user
@@ -74,12 +78,12 @@ export default {
 .card-client {
   /* margin-left: 10em;   */
   background: #A10035;
-  width: 20rem;
+  width: 25rem;
   height: 15em;
-  padding-top: 20px;
+  /* padding-top: 20px;
   padding-bottom: 25px;
   padding-left: 20px;
-  padding-right: 20px;
+  padding-right: 20px; */
   border: 4px solid #A10035;
   box-shadow: 0 6px 10px #A10035;
   border-radius: 10px;
