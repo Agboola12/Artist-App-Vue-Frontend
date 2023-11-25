@@ -80,8 +80,8 @@
               <td>Information</td>
               <td>{{ datas.information }}</td>
             </tr>
-            <button>Approve</button>
-            <button>Decline</button>
+                <button>Approve</button>
+                <button>Decline</button>
         </table>
       </div>
   </div>
