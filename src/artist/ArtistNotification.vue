@@ -82,10 +82,9 @@
             </tr>
         </table>
     </div>
-    <div class="d-flex mx-auto">
-        <button class="btn btn text-light  w-50 m-2 ">Next</button>
-        <button>Approve</button>
-        <button>Decline</button>
+    <div class="d-flex mx-auto  p-3">
+        <button class="button mr-5">Approve</button>
+        <button class="button">Decline</button>
     </div>
   </div>
 </div>
@@ -218,11 +217,11 @@ export default {
 .button {
   border: none;
   border-radius: 5px;
-  letter-spacing: 5px;
+  /* letter-spacing: 5px; */
   text-transform: uppercase;
   color: #A10035;
   transition: all 1000ms;
-  font-size: 15px;
+  font-size: 20px;
   position: relative;
   overflow: hidden;
   outline: 2px solid #A10035;
