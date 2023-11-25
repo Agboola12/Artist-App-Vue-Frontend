@@ -151,7 +151,12 @@ export default {
 
         Approve(){
             axios.get(BaseUrl + `infoDetails/${id}`)
-            .then
+            .then((res)=>{
+                console.log(res);
+            })
+            .catch((error)=>{
+                console.log(error);
+            })
         }
 
         
