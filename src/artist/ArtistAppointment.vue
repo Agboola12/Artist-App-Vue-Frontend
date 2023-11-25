@@ -25,8 +25,8 @@
   <div class="modal-dialog modal-dialog-centered" role="document" v-if="datas">
     <div class="modal-content" >
         <div class="modal-header">
-            <h4>Booking Information Details</h4>
-      </div>
+          <h4>Booking Information Details</h4>
+        </div>
       <div class="modal-header">
         <table class="table table-bordered">
             <tr>
@@ -79,11 +79,11 @@
               <td>Information</td>
               <td>{{ datas.information }}</td>
             </tr>
-        </table>
+          </table>
+        </div>
+        <button type="button" class="mx-auto m-4 button  " data-dismiss="modal">Close</button>
+      </div>
     </div>
-    
-  </div>
-</div>
 </div>
   
 </template>
