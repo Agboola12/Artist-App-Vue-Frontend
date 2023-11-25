@@ -83,6 +83,7 @@
         </table>
     </div>
     <div class="d-flex mx-auto">
+        <button class="btn btn text-light  w-50 m-2 ">Next</button>
         <button>Approve</button>
         <button>Decline</button>
     </div>
@@ -213,6 +214,7 @@ export default {
   font-weight: 200;
   font-size: 16px;
 }
+
 
 
 
