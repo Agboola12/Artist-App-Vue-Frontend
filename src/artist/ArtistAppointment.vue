@@ -2,7 +2,8 @@
     <div class="body">
         <NavArtist/>
         <div class="container ">
-          <h3>Here are your Schedule</h3>
+          <h3 class="text-center">Here are your Schedule</h3>
+          <hr class="w-50 text-danger mx-auto"/>
             <div class="row">
                     <div class="col-md-3 p-4 mt-5 mx-auto card-client" v-for="(user, index) in users" :key="index" >
                         <div class="user-picture">
