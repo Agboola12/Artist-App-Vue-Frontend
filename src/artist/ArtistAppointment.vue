@@ -1,4 +1,4 @@
-<!-- <template>
+<template>
     <div class="body">
         <NavArtist/>
         <div class="container ">
@@ -81,10 +81,7 @@
             </tr>
         </table>
     </div>
-    <div class="d-flex mx-auto  p-3">
-        <button class="button mr-5" @click="Approve(datas.id)">Approve</button>
-        <button class="button" @click="Decline(datas.id)">Decline</button>
-    </div>
+    
   </div>
 </div>
 </div>
@@ -119,7 +116,7 @@ export default {
                 
                 
             axios.get
-            (BaseUrl + `artistNotice/${this.id}`)
+            (BaseUrl + `artistAppointment/${this.id}`)
                 .then((res) => {
                 this.users = res.data.user
             })
@@ -142,24 +139,7 @@ export default {
             .catch((error)=>{
                 console.log(error);
             })
-
         },
-
-        Approve(id){
-            axios.get(BaseUrl + `Approve/${id}`)
-            .then((res)=>{
-                console.log(res.data.user);
-                this.router.push("/artistnotification")
-            })
-            .catch((error)=>{
-                console.log(error);
-            })
-        },
-
-        Decline(){
-
-        }
-
         
     },
     components: { NavArtist }
@@ -264,4 +244,4 @@ export default {
 
 
 
-</style> -->
+</style>
