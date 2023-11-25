@@ -80,10 +80,12 @@
               <td>Information</td>
               <td>{{ datas.information }}</td>
             </tr>
-                <button style="margin-left: 90px;">Approve</button>
-                <button>Decline</button>
         </table>
-      </div>
+    </div>
+    <div class="d-flex mx-auto">
+        <button>Approve</button>
+        <button>Decline</button>
+    </div>
   </div>
 </div>
 </div>
