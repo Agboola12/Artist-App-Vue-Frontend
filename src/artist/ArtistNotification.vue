@@ -215,6 +215,42 @@ export default {
   font-size: 16px;
 }
 
+.button {
+  border: none;
+  border-radius: 5px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: #A10035;
+  transition: all 1000ms;
+  font-size: 15px;
+  position: relative;
+  overflow: hidden;
+  outline: 2px solid #A10035;
+}
+
+.button:hover {
+  color: white;
+  transform: scale(1.1);
+  outline: 2px solid #A10035;
+  box-shadow: 4px 5px 17px -4px #A10035;
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  left: -50px;
+  top: 0;
+  width: 0;
+  height: 100%;
+  background-color: #A10035;
+  transform: skewX(45deg);
+  z-index: -1;
+  transition: width 1000ms;
+}
+
+.button:hover::before {
+  width: 250%;
+}
 
 
 
