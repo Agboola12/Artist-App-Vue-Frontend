@@ -2,6 +2,7 @@
     <div class="body">
         <NavArtist/>
         <div class="container ">
+          <h3 class="text-center">Here are your Appointment</h3>
             <div class="row">
                     <div class="col-md-3 p-4 mt-5 mx-auto card-client" v-for="(user, index) in users" :key="index" >
                         <div class="user-picture">
@@ -26,7 +27,10 @@
   <div class="modal-dialog modal-dialog-centered" role="document" v-if="datas">
     <div class="modal-content" >
         <div class="modal-header">
-            <h4>Booking Information Details</h4>
+            <div class="d-flex">
+                <h3 class="text-center">Booking Information Details</h3>
+                <button type="button" class="close" style="margin-left:5em" data-dismiss="modal">&times;</button>
+            </div>
       </div>
       <div class="modal-header">
         <table class="table table-bordered">
@@ -76,7 +80,7 @@
               <td>{{ datas.date }}</td>
             </tr>
             <tr>
-              <th scope="row">7</th>
+              <th scope="row">10</th>
               <td>Information</td>
               <td>{{ datas.information }}</td>
             </tr>
