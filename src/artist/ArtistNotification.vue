@@ -121,10 +121,10 @@ export default {
                 
                 
             axios.get
-            (BaseUrl + `artistNotice/${this.id}`)
+                (BaseUrl + `artistNotice/${this.id}`)
             // (`http://localhost:8000/artistNotice/${this.id}`)
                 .then((res) => {
-                // console.log(res.data.user);
+                console.log(res.data.user);
                 this.users = res.data.user
             })
                 .catch((error) => {
