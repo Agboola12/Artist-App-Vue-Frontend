@@ -2,7 +2,7 @@
     <div class="body">
         <NavArtist/>
         <div class="container ">
-            <div class="row " >
+            <div class="row">
                     <div class="col-md-3 p-4 mt-5 mx-auto card-client" v-for="(user, index) in users" :key="index" >
                         <div class="user-picture">
                     <svg viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
@@ -12,12 +12,39 @@
                 <p class="name-client"> 
                     {{ user.userName }}
                     <span class="mt-2">{{ user.userEmail }}</span>
-                    <span class="mt-3" ><button   @click="infoDetails(user.id)" class="btn btn-light details">Details</button></span>
+                    <span class="mt-3" ><button data-toggle="modal" data-target="#myModal"   @click="infoDetails(user.id)" class="btn btn-light details">Details</button></span>
                 </p>
                 </div>
             </div>
         </div>
-    </div>
+
+    
+
+<!-- Modal -->
+</div>
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document" v-if="datas">
+    <div class="modal-content" >
+        <div class="modal-header">
+            <h4>Booking Information Details</h4>
+      </div>
+      <div class="modal-header">
+        <table class="table table-bordered">
+            <tr>
+              <!-- <th scope="row">1</th> -->
+              <td>Name</td>
+              <td>{{ datas.userName }}</td>
+            </tr>
+            <tr>
+              <!-- <th scope="row">1</th> -->
+              <td>Email</td>
+              <td>{{ datas.userEmail }}</td>
+            </tr>
+        </table>
+      </div>
+  </div>
+</div>
+</div>
   
 </template>
 
@@ -33,6 +60,7 @@ export default {
             id: '',
             artistName: "",
             users: null,
+            datas: '',
         };
     },
     created() {
@@ -68,7 +96,8 @@ export default {
         infoDetails(id){
             axios.get(BaseUrl + `infoDetails/${id}`)
             .then((res)=>{
-                console.log(res)
+                console.log(res.data)
+                this.datas = res.data
             })
             .catch((error)=>{
                 console.log(error);
