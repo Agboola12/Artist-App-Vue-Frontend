@@ -46,20 +46,42 @@
               <td>{{ datas.artistType }}</td>
             </tr>
             <tr>
-              <th scope="row">2</th>
+              <th scope="row">4</th>
               <td>Music Type</td>
               <td>{{ datas.musicType }}</td>
             </tr>
             <tr>
-              <th scope="row">4</th>
+              <th scope="row">5</th>
               <td>Budget</td>
               <td>{{ datas.budget }}</td>
             </tr>
             <tr>
-              <th scope="row">2</th>
-              <td>Email</td>
-              <td>{{ datas.userEmail }}</td>
+              <th scope="row">6</th>
+              <td>Event</td>
+              <td>{{ datas.event }}</td>
             </tr>
+            <tr>
+              <th scope="row">7</th>
+              <td>Country</td>
+              <td>{{ datas.country }}</td>
+            </tr>
+            <tr>
+              <th scope="row">8</th>
+              <td>Address</td>
+              <td>{{ datas.address }}</td>
+            </tr>
+            <tr>
+              <th scope="row">9</th>
+              <td>Date</td>
+              <td>{{ datas.date }}</td>
+            </tr>
+            <tr>
+              <th scope="row">7</th>
+              <td>Information</td>
+              <td>{{ datas.information }}</td>
+            </tr>
+            <button>Approve</button>
+            <button>Decline</button>
         </table>
       </div>
   </div>
