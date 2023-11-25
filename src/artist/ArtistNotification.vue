@@ -31,12 +31,32 @@
       <div class="modal-header">
         <table class="table table-bordered">
             <tr>
-              <!-- <th scope="row">1</th> -->
+              <th scope="row">1</th>
               <td>Name</td>
               <td>{{ datas.userName }}</td>
             </tr>
             <tr>
-              <!-- <th scope="row">1</th> -->
+              <th scope="row">2</th>
+              <td>Email</td>
+              <td>{{ datas.userEmail }}</td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>Email</td>
+              <td>{{ datas.userEmail }}</td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>Email</td>
+              <td>{{ datas.userEmail }}</td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>Email</td>
+              <td>{{ datas.userEmail }}</td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
               <td>Email</td>
               <td>{{ datas.userEmail }}</td>
             </tr>
