@@ -41,19 +41,19 @@
               <td>{{ datas.userEmail }}</td>
             </tr>
             <tr>
-              <th scope="row">2</th>
-              <td>Email</td>
-              <td>{{ datas.userEmail }}</td>
+              <th scope="row">3</th>
+              <td>Artist Type</td>
+              <td>{{ datas.artistType }}</td>
             </tr>
             <tr>
               <th scope="row">2</th>
-              <td>Email</td>
-              <td>{{ datas.userEmail }}</td>
+              <td>Music Type</td>
+              <td>{{ datas.musicType }}</td>
             </tr>
             <tr>
-              <th scope="row">2</th>
-              <td>Email</td>
-              <td>{{ datas.userEmail }}</td>
+              <th scope="row">4</th>
+              <td>Budget</td>
+              <td>{{ datas.budget }}</td>
             </tr>
             <tr>
               <th scope="row">2</th>
