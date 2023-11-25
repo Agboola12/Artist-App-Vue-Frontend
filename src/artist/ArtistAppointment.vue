@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
     <div class="body">
         <NavArtist/>
         <div class="container ">
@@ -20,7 +20,6 @@
 
     
 
-<!-- Modal -->
 </div>
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document" v-if="datas">
@@ -115,16 +114,13 @@ export default {
             axios.get
             (BaseUrl+"getArtist")
                 .then((res) => {
-                        // console.log(res.data.data.id)
                     this.id = res.data.data.id;
                   this.artistName = res.data.data.firstName
                 
                 
             axios.get
             (BaseUrl + `artistNotice/${this.id}`)
-            // (`http://localhost:8000/artistNotice/${this.id}`)
                 .then((res) => {
-                // console.log(res.data.user);
                 this.users = res.data.user
             })
                 .catch((error) => {
@@ -268,4 +264,4 @@ export default {
 
 
 
-</style>
+</style> -->
