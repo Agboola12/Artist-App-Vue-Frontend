@@ -83,6 +83,7 @@ const router = createRouter({
     {path: '/allartist' , name: 'allartist', component: AllArtist},
     {path: '/bookingresult' , name: 'bookingresult', component: BookingResult},
     {path: '/artistnotification' , name: 'artistnotification', component: ArtistNotification},
+    {path: '/artistappointment' , name: 'artistappointment', component: ArtistAppointment},
     
 
     

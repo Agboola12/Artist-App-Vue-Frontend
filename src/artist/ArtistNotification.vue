@@ -149,14 +149,19 @@ export default {
 
         },
 
-        Approve(){
-            axios.get(BaseUrl + `infoDetails/${id}`)
+        Approve(id){
+            axios.get(BaseUrl + `Approve/${id}`)
             .then((res)=>{
-                console.log(res);
+                console.log(res.data.user);
+                this.router.push("/artistnotification")
             })
             .catch((error)=>{
                 console.log(error);
             })
+        },
+
+        Decline(){
+
         }
 
         
