@@ -82,6 +82,7 @@
 
 <script>
 import axios from 'axios';
+import BaseUrl from "../BaseUrl.js";
 
 export default {
   data() {
@@ -107,7 +108,9 @@ export default {
   methods: {
 
     fetchUserProfile() {
-      axios.get("http://localhost:8000/getArtist" )
+      axios.get
+      (BaseUrl + "getArtist")
+      // ("http://localhost:8000/getArtist" )
         .then((res) => {
             // console.log(res.data);
           this.user = res.data.data
@@ -124,13 +127,14 @@ export default {
           console.error(error);
         });
     },
+    
     handleImageChange(event) {
       this.image = event.target.files[0];
       const file = event.target.files[0];
       this.imageShow = URL.createObjectURL(file);
     },
+
     updateUserProfile() {
-      
       const formData = new FormData();
       formData.append("id", this.id);
       formData.append("firstName", this.firstName);
@@ -143,7 +147,9 @@ export default {
 
 
       axios
-        .put(`http://localhost:8000/updateProfile/${this.id}`, formData) 
+        .put
+            (BaseUrl + `updateProfile/${this.id}`, formData)
+        // (`http://localhost:8000/updateProfile/${this.id}`, formData) 
         .then((ress) => {
             console.log(ress);
             this.$router.push("/dashboardartist")

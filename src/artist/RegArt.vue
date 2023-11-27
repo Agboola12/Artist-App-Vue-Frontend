@@ -110,6 +110,8 @@
   import axios from "axios";
   import { Cloudinary } from "@cloudinary/url-gen";
 import FooterArtist from "./FooterArtist.vue";
+import BaseUrl from "../BaseUrl.js";
+
   
   
   export default {
@@ -174,7 +176,9 @@ import FooterArtist from "./FooterArtist.vue";
             };
             // console.log(info);
             axios
-                .post("http://localhost:8000/createArtist", info)
+                .post
+                      (BaseUrl + "getArtist")
+                ("http://localhost:8000/createArtist", info)
                 .then((res) => {
                 console.log(res);
                 this.$router.push('/loginartist');
