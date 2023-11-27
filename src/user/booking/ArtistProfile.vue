@@ -207,8 +207,9 @@ export default {
             const bookingInfo = JSON.parse(localStorage.getItem('users'));
             // console.log(bookingInfo);
             
-            axios.post(
-                     "http://localhost:8000/bookingInfo", {...bookingInfo, ...loginUser})
+            axios.post
+                    (BaseUrl + "bookingInfo", {...bookingInfo, ...loginUser})
+                    //  "http://localhost:8000/bookingInfo", {...bookingInfo, ...loginUser})
                  .then((res) => {
                    console.log(res.data.response);
                    alert('You have hire' + " "+ res.data.response.artistName)
