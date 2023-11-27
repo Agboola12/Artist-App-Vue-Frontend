@@ -147,6 +147,8 @@
 <script>
 import axios from 'axios';
 import UserSideBar from '../UserSideBar.vue';
+import BaseUrl from "../../BaseUrl.js"
+
   export default {
     data() {
         return {
@@ -166,7 +168,9 @@ import UserSideBar from '../UserSideBar.vue';
 
       // login user
         getUser() {
-            axios.get("http://localhost:8000/getUser")
+            axios.get
+                    (BaseUrl + "getUser")
+            // ("http://localhost:8000/getUser")
                 .then((res) => {
                   console.log(res.data.data);
                 this.user = res.data.data;
@@ -178,7 +182,9 @@ import UserSideBar from '../UserSideBar.vue';
 
         // getting the popularArtist
         popularArtist() {
-            axios.get("http://localhost:8000/popularArtist")
+            axios.get
+                    (BaseUrl + "popularArtist")
+            // ("http://localhost:8000/popularArtist")
                 .then((res) => {
                 console.log(res.data);
                 this.artists = res.data;
@@ -186,7 +192,9 @@ import UserSideBar from '../UserSideBar.vue';
         },
 
         popularSong() {
-            axios.get("http://localhost:8000/popularSong")
+            axios.get
+            (BaseUrl + "popularSong")
+            // ("http://localhost:8000/popularSong")
                 .then((res) => {
                 console.log(res.data.data);
                 this.songs = res.data.data;

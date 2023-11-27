@@ -18,6 +18,8 @@
 <script>
 import axios from 'axios';
 import UserSideBar from '../UserSideBar.vue';
+import BaseUrl from "../../BaseUrl.js"
+
 
 export default {
     components: { UserSideBar },
@@ -33,7 +35,7 @@ export default {
 
       getBands(){
         axios.get
-        (BaseUrl + "getBands")
+                (BaseUrl + "getBands")
         // ("http://localhost:8000/getBands")
           .then((res) => {
             console.log(res.data.data);

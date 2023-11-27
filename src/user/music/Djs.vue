@@ -17,6 +17,8 @@
 <script>
 import axios from 'axios';
 import UserSideBar from '../UserSideBar.vue'
+import BaseUrl from "../../BaseUrl.js"
+
 export default {
   components: { UserSideBar },
   data(){
@@ -30,7 +32,9 @@ export default {
     methods: {
       
        getDjs(){
-        axios.get("http://localhost:8000/getDjs")
+        axios.get
+                (BaseUrl + "getDjs")
+        // ("http://localhost:8000/getDjs")
           .then((res) => {
             console.log(res.data.data);
             this.users = res.data.data;
