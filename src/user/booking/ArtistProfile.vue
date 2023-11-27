@@ -145,7 +145,7 @@
 <script>
 import axios from 'axios';
 import UserSideBar from '../UserSideBar.vue';
-import BaseUrl from "../BaseUrl.js";
+import BaseUrl from "../../BaseUrl.js"
 
 
 export default {
@@ -167,7 +167,9 @@ export default {
   },
   methods:{
     getArtistDetails(){    
-      axios.get("http://localhost:8000/getArtistDetails/"+ this.artistId)
+      axios.get
+            (BaseUrl + "getArtistDetails/"+ this.artistId)
+    //   ("http://localhost:8000/getArtistDetails/"+ this.artistId)
       .then ((res)=>{
             // console.log(res.data);
             this.musicId = res.data.user.id
@@ -182,7 +184,9 @@ export default {
 
     // loginuser
       getLoginUser() {
-            axios.get("http://localhost:8000/getUser")
+            axios.get
+            (BaseUrl + "getUser")
+            // ("http://localhost:8000/getUser")
                 .then((res) => {
                     // console.log(res.data.data);
                 this.userName = res.data.data.firstName;
