@@ -83,8 +83,9 @@ export default {
       }
 
       axios
-        .post(
-          "http://localhost:8000/createUser", info)
+        .post
+            (BaseUrl + "createUser", info)
+          // "http://localhost:8000/createUser", info)
         .then((res) => {
           console.log(res);
                     this.$router.push('/login')

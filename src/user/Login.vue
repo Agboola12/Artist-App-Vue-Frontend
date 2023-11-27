@@ -21,6 +21,8 @@
 
 <script>
 import axios from 'axios'
+import BaseUrl from "../BaseUrl.js"
+
 
 export default {
   data(){
@@ -37,7 +39,9 @@ export default {
         passWord : this.passWord,
       }
 
-      axios.post("http://localhost:8000/loginUser", info)
+      axios.post
+              (BaseUrl + "loginUser", info)
+      // ("http://localhost:8000/loginUser", info)
       .then ((res)=>{
           if(res.data.status){
             localStorage.setItem("token", res.data.token)

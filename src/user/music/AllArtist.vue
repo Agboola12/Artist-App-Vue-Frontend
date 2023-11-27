@@ -36,7 +36,9 @@ export default {
       
         // getting all the artist
         getAllArtist() {
-            axios.get("http://localhost:8000/getAllArtist")
+            axios.get
+                    (BaseUrl + "getAllArtist")
+            // ("http://localhost:8000/getAllArtist")
                 .then((res) => {
                 console.log(res.data);
                 this.artists = res.data;
