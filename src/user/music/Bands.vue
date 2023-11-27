@@ -32,7 +32,9 @@ export default {
     methods: {
 
       getBands(){
-        axios.get("http://localhost:8000/getBands")
+        axios.get
+        (BaseUrl + "getBands")
+        // ("http://localhost:8000/getBands")
           .then((res) => {
             console.log(res.data.data);
             this.users = res.data.data;

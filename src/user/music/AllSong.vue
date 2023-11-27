@@ -19,6 +19,8 @@
 <script>
 import axios from 'axios';
 import UserSideBar from '../UserSideBar.vue';
+import BaseUrl from "../../BaseUrl.js"
+
 export default {
   components: { UserSideBar, UserSideBar },
 
@@ -34,7 +36,9 @@ export default {
     
       // getting all the song
       AllSong() {
-          axios.get("http://localhost:8000/AllSong")
+          axios.get
+                  (BaseUrl + "AllSong")
+          // ("http://localhost:8000/AllSong")
               .then((res) => {
               console.log(res.data.data);
               this.songs = res.data.data;

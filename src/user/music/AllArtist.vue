@@ -21,6 +21,8 @@
 <script>
 import axios from 'axios';
 import UserSideBar from '../UserSideBar.vue'
+import BaseUrl from "../../BaseUrl.js"
+
 export default {
     components: { UserSideBar },
 
