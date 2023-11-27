@@ -129,7 +129,9 @@ export default {
     methods:{
 
       fetchSong(){
-        axios.get("http://localhost:8000/getAllSong")
+        axios.get
+                (BaseUrl + "getAllSong")
+        // ("http://localhost:8000/getAllSong")
         .then((res)=>{
           console.log(res.data.data);
             this.users = res.data.data
@@ -164,7 +166,9 @@ export default {
 
         
         songID(id){
-          axios.get(`http://localhost:8000/songDetail/${id}`)
+          axios.get
+                    (BaseUrl + `songDetail/${id}`)
+              // (`http://localhost:8000/songDetail/${id}`)
           .then((res)=>{
               // this.songs = res.data
               // console.log(res.data);
@@ -186,7 +190,9 @@ export default {
         },
 
         delSong(id){
-          axios.delete(`http://localhost:8000/delSong/${id}`)
+          axios.delete
+                  (BaseUrl + `delSong/${id}`)
+          // (`http://localhost:8000/delSong/${id}`)
           .then((ress)=>{
             this.users = this.users.filter((user) => user.id !== id);
           })
@@ -214,7 +220,9 @@ export default {
       formData.append("instagramHandle", this.instagramHandle);
 
       axios
-        .put(`http://localhost:8000/updateSong/${this.id}`, formData) 
+        .put
+            (BaseUrl + `updateSong/${this.id}`, formData)
+        // (`http://localhost:8000/updateSong/${this.id}`, formData) 
         .then((ress) => {
             console.log(ress);
             // this.$router.push("/dashboardartist")
