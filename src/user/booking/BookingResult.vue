@@ -57,8 +57,9 @@ export default {
             console.log(bookingInfo);
               
             axios
-                 .post(
-                   "http://localhost:8000/getBookingInfo",bookingInfo)
+                 .post
+                  (BaseUrl + "getBookingInfo",bookingInfo)
+                  //  "http://localhost:8000/getBookingInfo",bookingInfo)
                  .then((res) => {
                    console.log(res.data.user);
                    this.users = res.data.user
