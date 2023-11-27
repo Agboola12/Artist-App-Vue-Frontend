@@ -66,6 +66,8 @@ import ProfileArtist from "./ProfileArtist.vue";
 import NavArtist from "./NavArtist.vue"
 import FooterArtist from "./FooterArtist.vue";
 import axios from 'axios';
+import BaseUrl from "../BaseUrl.js";
+
 
 export default {
   components: { ProfileArtist, NavArtist, FooterArtist },
@@ -82,7 +84,9 @@ export default {
   },
   methods: {
     fetchUserProfile() {
-      axios.get("http://localhost:8000/getArtist")
+      axios.get
+              (BaseUrl+"getArtist")
+      // ("http://localhost:8000/getArtist")
         .then((res) => {
             console.log(res.data);
           this.user = res.data.data;

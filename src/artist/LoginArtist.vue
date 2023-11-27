@@ -25,6 +25,8 @@
 <script>
 import axios from 'axios'
 import FooterArtist from './FooterArtist.vue'
+import BaseUrl from "../BaseUrl.js";
+
 
 export default {
     data() {
@@ -39,7 +41,9 @@ export default {
                 email: this.email,
                 passWord: this.passWord,
             };
-            axios.post("http://localhost:8000/loginArtist", info)
+            axios.post
+            (BaseUrl+"loginArtist", info)
+            // ("http://localhost:8000/loginArtist", info)
                 .then((res) => {
                     // console.log(res.data.token);
                     if(res.data.status){
