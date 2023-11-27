@@ -210,5 +210,51 @@ import FooterArtist from "./FooterArtist.vue";
     text-decoration: none;
   }
   </style>
+
+<!-- const express = require('express');
+const cors = require('cors');
+const sequelize = require('./database/connection');
+const User = require('./models/User');
+const nodemailer = require('nodemailer');
+
+const app = express();
+const PORT = process.env.PORT || 3000;
+
+app.use(cors());
+app.use(express.json());
+
+sequelize.sync();
+
+const transporter = nodemailer.createTransport({
+  service: 'gmail',
+  auth: {
+    user: 'your-email@gmail.com',
+    pass: 'your-email-password',
+  },
+});
+
+app.post('/submit-form', async (req, res) => {
+  try {
+    const { firstName, email, mobile } = req.body;
+    const newUser = await User.create({ firstName, email, mobile });
+
+    await transporter.sendMail({
+      from: 'your-email@gmail.com',
+      to: email,
+      subject: 'Form Submission Confirmation',
+      text: `Thank you for submitting the form, ${firstName}!`,
+    });
+
+    res.status(201).json({ message: 'Form submitted successfully' });
+  } catch (error) {
+    console.error('Error handling form submission:', error);
+    res.status(500).json({ error: 'Internal server error' });
+  }
+});
+
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
+}); -->
+
   
   
