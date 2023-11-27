@@ -19,6 +19,8 @@
 
 <script>
 import axios from 'axios';
+import BaseUrl from "../../BaseUrl.js"
+
 export default {
 
     data(){

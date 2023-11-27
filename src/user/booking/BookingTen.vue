@@ -14,7 +14,7 @@
               <a href="bookingresult"> <button class="btn btn text-light  w-75">Yes, please</button> </a>
             </div>
             <div class="col-md-6">
-                <button  id="btn" class="btn btn text-dark w-75 ">No, thanks</button>
+            <router-link to="/allartist"><button  id="btn" class="btn btn text-dark w-75 ">No, thanks</button></router-link>    
             </div>
           </div>
        </div> 
