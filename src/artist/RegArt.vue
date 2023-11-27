@@ -108,9 +108,8 @@
   
   <script>
   import axios from "axios";
-  import { Cloudinary } from "@cloudinary/url-gen";
+  import BaseUrl from "../BaseUrl.js";
 import FooterArtist from "./FooterArtist.vue";
-import BaseUrl from "../BaseUrl.js";
 
   
   
@@ -177,8 +176,8 @@ import BaseUrl from "../BaseUrl.js";
             // console.log(info);
             axios
                 .post
-                      (BaseUrl + "getArtist")
-                ("http://localhost:8000/createArtist", info)
+                      (BaseUrl + "createArtist", info)
+                // ("http://localhost:8000/createArtist", info)
                 .then((res) => {
                 console.log(res);
                 this.$router.push('/loginartist');

@@ -208,7 +208,9 @@
              console.log(formData);
             
             axios
-                .post("http://localhost:8000/createArtist", formData)
+                .post
+                    (BaseUrl + "createArtist", formData)
+                // ("http://localhost:8000/createArtist", formData)
                 .then((res) => {
                 console.log(res);
                 this.$router.push('/loginartist');
