@@ -95,6 +95,7 @@
 
 <script>
 import axios from 'axios';
+import BaseUrl from "../BaseUrl.js";
 import FooterArtist from './FooterArtist.vue';
 import NavArtist from './NavArtist.vue';
 
