@@ -61,7 +61,8 @@
 
 <script>
 import axios from "axios";
-
+import 'vue-toast-notification/dist/theme-sugar.css';
+import Toast from 'vue-toast-notification'; 
 
 export default {
   data() {
@@ -75,13 +76,11 @@ export default {
     
 
     onCreatePost() {
-      
       const info ={
         firstName : this.firstName,
         email : this.email,
         passWord :this.passWord,
       }
-
       axios
         .post
             (BaseUrl + "createUser", info)
