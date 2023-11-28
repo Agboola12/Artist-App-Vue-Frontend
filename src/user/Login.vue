@@ -34,7 +34,7 @@ export default {
     }
   },
   methods:{
-    
+
     showToast(message, status) {
       this.$toast.open({
         message: message,
@@ -50,7 +50,7 @@ export default {
               (BaseUrl + "loginUser", info)
       // ("http://localhost:8000/loginUser", info)
       .then ((res)=>{
-        
+       this.showToast(res.data.message, res.data.status);    
         if(res.data.status){
           localStorage.setItem("token", res.data.token)
           this.$router.push("/homeuser");
