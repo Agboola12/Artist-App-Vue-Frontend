@@ -30,7 +30,7 @@ export default {
     return{
           email: '',
           passWord: '',
-          result: ''
+          result: '',
     }
   },
   created() {
@@ -38,7 +38,6 @@ export default {
     this.$toast = VueToast;
   },
   methods:{
-
     showToast(message, status) {
       this.$toast.open({
         message: message,
