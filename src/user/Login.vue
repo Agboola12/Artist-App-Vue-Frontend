@@ -25,7 +25,7 @@ import BaseUrl from "../BaseUrl.js"
 import 'vue-toast-notification/dist/theme-sugar.css';
 import Toast from 'vue-toast-notification'; 
 
-Vue.use(Toast);
+// Vue.use(Toast);
 
 export default {
   data(){
@@ -36,7 +36,7 @@ export default {
     }
   },
   created(){
-
+    this.$toast = VueToast;
   },
   methods:{
 
