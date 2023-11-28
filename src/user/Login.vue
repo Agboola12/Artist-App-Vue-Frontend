@@ -34,7 +34,13 @@ export default {
     }
   },
   methods:{
-
+    
+    showToast(message, status) {
+      this.$toast.open({
+        message: message,
+        type: status === 'success' ? 'success' : 'error',
+      });
+    },
     loginPost(){    
      const info = {
         email: this.email,
