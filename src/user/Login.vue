@@ -22,8 +22,8 @@
 <script>
 import axios from 'axios'
 import BaseUrl from "../BaseUrl.js"
-import 'vue-toast-notification/dist/theme-sugar.css';
-import VueToast from 'vue-toast-notification';
+// import 'vue-toast-notification/dist/theme-sugar.css';
+// import VueToast from 'vue-toast-notification';
 
 export default {
   data(){
@@ -35,15 +35,15 @@ export default {
   },
   created() {
     // Initialize vue-toast-notification
-    this.$toast = VueToast;
+    // this.$toast = VueToast;
   },
   methods:{
-    showToast(message, status) {
-      this.$toast.open({
-        message: message,
-        type: status === 'success' ? 'success' : 'error',
-      });
-    },
+    // showToast(message, status) {
+    //   this.$toast.success({
+    //     message: message,
+    //     type: status === 'success' ? 'success' : 'error',
+    //   });
+    // },
     loginPost(){    
      const info = {
         email: this.email,
@@ -53,7 +53,7 @@ export default {
               (BaseUrl + "loginUser", info)
       // ("http://localhost:8000/loginUser", info)
       .then ((res)=>{
-       this.showToast(res.data.message, res.data.status);    
+      //  this.showToast(res.data.message, res.data.status);    
         if(res.data.status){
           localStorage.setItem("token", res.data.token)
           this.$router.push("/homeuser");
