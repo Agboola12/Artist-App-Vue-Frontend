@@ -33,6 +33,10 @@ export default {
           result: ''
     }
   },
+  created() {
+    // Initialize vue-toast-notification
+    this.$toast = VueToast;
+  },
   methods:{
 
     showToast(message, status) {
