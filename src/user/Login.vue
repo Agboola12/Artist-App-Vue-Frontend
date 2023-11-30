@@ -22,8 +22,6 @@
 <script>
 import axios from 'axios'
 import BaseUrl from "../BaseUrl.js"
-// import 'vue-toast-notification/dist/theme-sugar.css';
-// import VueToast from 'vue-toast-notification';
 
 export default {
   data(){
@@ -34,8 +32,6 @@ export default {
     }
   },
   created() {
-    // Initialize vue-toast-notification
-    // this.$toast = VueToast;
   },
   methods:{
     loginPost(){    
@@ -47,8 +43,7 @@ export default {
               (BaseUrl + "loginUser", info)
       // ("http://localhost:8000/loginUser", info)
       .then ((res)=>{
-      //  this.showToast(res.data.message, res.data.status);    
-      if(res.data.status){
+      if(res.data){
           const result= res.data.message;    
           alert(result)
           localStorage.setItem("token", res.data.token)
@@ -57,6 +52,10 @@ export default {
       })
       .catch((err)=>{
         console.log(err);
+        if(res.data){
+          const result= res.data.message;    
+          alert(result)
+        }
       })
     },
 }
