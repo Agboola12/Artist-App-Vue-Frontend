@@ -52,8 +52,8 @@ export default {
       })
       .catch((err)=>{
         console.log(err);
-        if(res.data){
-          const result= res.data.message;    
+        if(err.data){
+          const result= err.data.message;    
           alert(result)
         }
       })
