@@ -38,12 +38,6 @@ export default {
     // this.$toast = VueToast;
   },
   methods:{
-    // showToast(message, status) {
-    //   this.$toast.success({
-    //     message: message,
-    //     type: status === 'success' ? 'success' : 'error',
-    //   });
-    // },
     loginPost(){    
      const info = {
         email: this.email,
@@ -54,7 +48,9 @@ export default {
       // ("http://localhost:8000/loginUser", info)
       .then ((res)=>{
       //  this.showToast(res.data.message, res.data.status);    
-        if(res.data.status){
+      if(res.data.status){
+          const result= res.data.message;    
+          alert(result)
           localStorage.setItem("token", res.data.token)
           this.$router.push("/homeuser");
         }

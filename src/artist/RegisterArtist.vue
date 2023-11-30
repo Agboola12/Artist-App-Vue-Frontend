@@ -136,6 +136,7 @@
   <script>
   import axios from "axios";
   import FooterArtist from "./FooterArtist.vue";
+import BaseUrl from "../BaseUrl";
   
   export default {
     data() {
@@ -149,7 +150,7 @@
             country: "",
             image:"null",
             passWord: "",
-            errors: {},
+            // errors: {},
           };
     },
     
@@ -205,7 +206,7 @@
              formData.append("image", this.image);
              formData.append("passWord", this.passWord);
 
-             console.log(formData);
+            //  console.log(formData);
             
             axios
                 .post
