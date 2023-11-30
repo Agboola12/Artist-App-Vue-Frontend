@@ -155,45 +155,45 @@
     
     methods: {
 
-      validateForm() {
-      this.errors = {};
+    //   validateForm() {
+    //   this.errors = {};
 
-      if (!this.firstName || this.firstName.length >= 2 ) {
-        this.errors.name = 'Name is required hellooooooo';
-      }
-      if (!this.email) {
-        this.errors.email = 'Email is required';
-      }
-      if (!this.artistType) {
-        this.errors.artistType = 'artist Type is required';
-      }
-      if (!this.mobile || this.mobile.length === 11) {
-        this.errors.mobile = 'This field is required';
-      }
-      if (!this.musicType) {
-        this.errors.musicType = 'Music Type is required';
-      }
-      if (!this.state || this.state.length <= 2) {
-        this.errors.state = 'State is required wowwwwww';
-      }
-      if (!this.country || this.state.length <= 5) {
-        this.errors.country = 'Country is required';
-      }
-      if (!this.image) {
-        this.errors.image = 'Image is required';
-      }
-      if (!this.passWord || this.state.length <= 5) {
-        this.errors.passWord = 'Password is required';
-      }
-      return Object.keys(this.errors).length === 0;
-    },
+    //   if (!this.firstName || this.firstName.length >= 2 ) {
+    //     this.errors.name = 'Name is required hellooooooo';
+    //   }
+    //   if (!this.email) {
+    //     this.errors.email = 'Email is required';
+    //   }
+    //   if (!this.artistType) {
+    //     this.errors.artistType = 'artist Type is required';
+    //   }
+    //   if (!this.mobile || this.mobile.length === 11) {
+    //     this.errors.mobile = 'This field is required';
+    //   }
+    //   if (!this.musicType) {
+    //     this.errors.musicType = 'Music Type is required';
+    //   }
+    //   if (!this.state || this.state.length <= 2) {
+    //     this.errors.state = 'State is required wowwwwww';
+    //   }
+    //   if (!this.country ) {
+    //     this.errors.country = 'Country is required';
+    //   }
+    //   if (!this.image) {
+    //     this.errors.image = 'Image is required';
+    //   }
+    //   if (!this.passWord ) {
+    //     this.errors.passWord = 'Password is required';
+    //   }
+    //   return Object.keys(this.errors).length === 0;
+    // },
 
      handleImageChange (event){
         this.image = event.target.files[0] ;
     },
         
         onCreatePost() {
-          if (this.validateForm()) {
+          // if (this.validateForm()) {
         const formData = new FormData();
         formData.append("firstName", this.firstName);
              formData.append("email", this.email);
@@ -218,10 +218,10 @@
                 .catch((err) => {
                 console.log(err);
             });
-      } 
-      else {
-        console.log('Form has errors. Please fix them.');
-      }
+      // } 
+      // else {
+      //   console.log('Form has errors. Please fix them.');
+      // }
 
         },
     },
