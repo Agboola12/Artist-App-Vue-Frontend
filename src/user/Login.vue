@@ -29,6 +29,7 @@ export default {
           email: '',
           passWord: '',
           result: '',
+          setResult: {}
     }
   },
   created() {
@@ -43,19 +44,17 @@ export default {
               (BaseUrl + "loginUser", info)
       // ("http://localhost:8000/loginUser", info)
       .then ((res)=>{
-      if(res.data){
-          const result= res.data.message;    
-          alert(result)
+            
+        const result= res.data.message;    
+        alert(result)
+      if(res.data.status){
           localStorage.setItem("token", res.data.token)
           this.$router.push("/homeuser");
         }
       })
       .catch((err)=>{
         console.log(err);
-        if(err.data){
-          const result= err.data.message;    
-          alert(result)
-        }
+        alert(err.message)
       })
     },
 }
