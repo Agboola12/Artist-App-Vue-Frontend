@@ -13,7 +13,7 @@
               id="firstName"
               placeholder="Enter Your Name"
             />
-            <p v-if="errors.firstName">{{ errors.firstName }}</p>
+            <!-- <p v-if="errors.firstName">{{ errors.firstName }}</p> -->
           </div>
           <div class="form-group">
             <input
@@ -24,7 +24,7 @@
               id="email"
               placeholder="Enter Your email"
             />
-            <p v-if="errors.email">{{ errors.email }}</p>
+            <!-- <p v-if="errors.email">{{ errors.email }}</p> -->
           </div>
           <div class="form-group">
             <select class="form-select border-right-0 shadow-none border-top-0 border-left-0"  v-model="artistType" name="musicType">
@@ -33,7 +33,7 @@
               <option value="Bands">Bands</option>
               <option value="Djs">Djs</option>
             </select>
-            <p v-if="errors.artistType">{{ errors.artistType }}</p>
+            <!-- <p v-if="errors.artistType">{{ errors.artistType }}</p> -->
           </div>
           
           <div class="form-group">
@@ -45,7 +45,7 @@
               id="mobile"
               placeholder="Enter Your Mobile Number"
               />
-              <p v-if="errors.mobile">{{ errors.mobile }}</p>
+              <!-- <p v-if="errors.mobile">{{ errors.mobile }}</p> -->
             </div>
 
             <div class="form-group">
@@ -55,7 +55,7 @@
               <option value="hipPop">HipPop</option>
               <option value="gospel">Gospel</option>
             </select>
-            <p v-if="errors.musicType">{{ errors.musicType }}</p>
+            <!-- <p v-if="errors.musicType">{{ errors.musicType }}</p> -->
             </div>
 
             <div class="form-group">
@@ -67,7 +67,7 @@
               id="state"
               placeholder="Enter Your State"
               />
-              <p v-if="errors.state">{{ errors.state }}</p>
+              <!-- <p v-if="errors.state">{{ errors.state }}</p> -->
             </div>
             
             <div class="form-group">
@@ -79,7 +79,7 @@
               id="country"
               placeholder="Enter Your Country"
               />
-              <p v-if="errors.country">{{ errors.country}}</p>
+              <!-- <p v-if="errors.country">{{ errors.country}}</p> -->
             </div>
             
           <div class="form-group">
@@ -90,7 +90,7 @@
               @change="handleImageChange"
               id="image"
             />
-              <p v-if="errors.image">{{ errors.image}}</p>
+              <!-- <p v-if="errors.image">{{ errors.image}}</p> -->
             </div>
             
           <div class="form-group">
@@ -102,7 +102,7 @@
               id="passWord"
               placeholder="Enter Your password"
             />
-            <p v-if="errors.passWord">{{ errors.passWord}}</p>
+            <!-- <p v-if="errors.passWord">{{ errors.passWord}}</p> -->
           </div>
 
           <div class="mx-5">
