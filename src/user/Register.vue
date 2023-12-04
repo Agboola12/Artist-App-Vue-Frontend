@@ -53,6 +53,7 @@
         </button>
         <p class="mt-5">
           Have an account? <a href="login" style="color: #a10035">Sign In</a>
+          <a href="/" class="ml-5" style="color: #a10035">Go Back Home</a>
         </p>
       </div>
     </div>
@@ -90,8 +91,10 @@ export default {
         .then((res) => {
           const result= res.data.message;    
         alert(result);
-          console.log(res);
-                    this.$router.push('/login')
+          if(res.data.status){
+            console.log(res);
+            this.$router.push('/login')
+            }
         })
         .catch((err) => {
           console.log(err);
