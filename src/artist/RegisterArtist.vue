@@ -213,6 +213,8 @@ import BaseUrl from "../BaseUrl";
                     (BaseUrl + "createArtist", formData)
                 // ("http://localhost:8000/createArtist", formData)
                 .then((res) => {
+                  const result= res.data.message;    
+                    alert(result);
                   if(res.data.status){
                     console.log(res);
                     this.$router.push('/loginartist');
