@@ -13,7 +13,7 @@
       <div class="mx-5">
       <button type="submit" id="continue" class="btn btn  mt-4">Continue</button> <br/><br/>
         Don't have an account? <a href="registerartist" style="color: #A10035;">Sign Up</a>
-        <a href="/" style="color: #A10035;">Sign Up</a>
+        <a href="/" class="ml-4" style="color: #A10035;">Go back home</a>
       </div>
     </form>
   </div>
@@ -46,7 +46,8 @@ export default {
             (BaseUrl+"loginArtist", info)
             // ("http://localhost:8000/loginArtist", info)
                 .then((res) => {
-                    // console.log(res.data.token);
+                    const result= res.data.message;    
+                    alert(result);
                     if(res.data.status){
                     localStorage.setItem("token", res.data.token)
                     this.$router.push("/dashboardartist");
