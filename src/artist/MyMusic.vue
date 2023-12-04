@@ -11,7 +11,7 @@
                     <h2>Music</h2>
                     <i class="h2 fa fa-file-audio "></i>
                 <a href="audioartist">
-                    <input type="button" value="Create New" class=" btn btn text-white mx-auto" />
+                    <input type="button" value="Create New" class=" btn btn p-3  mx-auto" />
                 </a>  
                 </div>
                 <div class="col-md-5 col-sm-1 card shadow   p-5" >
