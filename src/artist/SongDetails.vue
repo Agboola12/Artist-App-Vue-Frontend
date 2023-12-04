@@ -195,7 +195,11 @@ export default {
                   (BaseUrl + `delSong/${id}`)
           // (`http://localhost:8000/delSong/${id}`)
           .then((ress)=>{
-            this.users = this.users.filter((user) => user.id !== id);
+            const result= ress.data.message;    
+               alert(result);
+            if(ress.data.status){
+              this.users = this.users.filter((user) => user.id !== id);
+            }
           })
           .catch(err =>{
             console.log(err);
@@ -225,6 +229,7 @@ export default {
             (BaseUrl + `updateSong/${this.id}`, formData)
         // (`http://localhost:8000/updateSong/${this.id}`, formData) 
         .then((ress) => {
+          
             console.log(ress);
             // this.$router.push("/dashboardartist")
         })

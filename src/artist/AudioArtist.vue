@@ -138,7 +138,11 @@ export default {
 
             axios.post("http://localhost:8000/createMusic",  formData)
             .then(res =>{
-                this.$router.push("/songdetails");
+                const result= res.data.message;    
+                    alert(result);
+                if(res.data.status){
+                    this.$router.push("/songdetails");
+                }
             })
             .catch(err =>{
                 console.log(err);
