@@ -20,7 +20,7 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ml-auto">
+        <ul class="navbar-nav" style="margin-left: 30%;">
           <li class="nav-item active">
             <a class="nav-link" href="dashboardartist">Profile</a>
           </li>
