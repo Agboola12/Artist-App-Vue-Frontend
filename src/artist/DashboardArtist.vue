@@ -20,29 +20,29 @@
             </li>
           </ul>
 
-          <div class="tab-content">
-            <!-- <div id="home" class="container tab-pane active mb-4">
+          <div class=" container tab-content w-75">
+            <div id="home" class=" tab-pane active mb-4">
               <br /><br />
               <h3 class="ml-5 fw-bold">Dashboard</h3>
-              <div class="card shadow p-5 mt-4">
+              <div class="card shadow w-75 ml-5 p-5 mt-4">
                 <div class="row" id="offset">
-                  <div class="col-md-3 offset-1">
+                  <div class="col-md-3 ">
                     <h4>Audios</h4>
                     <p class="ml-4">5</p>
                   </div>
-                  <div class="col-md-3 offset-1">
+                  <div class="col-md-3 ">
                     <h4>Vidoes</h4>
                     <p class="ml-4">2</p>
                   </div>
-                  <div class="col-md-3 offset-1">
+                  <div class="col-md-3 ">
                     <h4>Likes</h4>
                     <p class="ml-2">500</p>
                   </div>
                 </div>
               </div>
-            </div> -->
+            </div>
 
-            <div id="menu1" class="container tab-pane fade">
+            <div id="menu1" class=" tab-pane fade">
               <br />
               <ProfileArtist  />
             </div>
