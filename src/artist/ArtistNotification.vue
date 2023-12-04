@@ -119,6 +119,7 @@ export default {
             axios.get
             (BaseUrl+"getArtist")
                 .then((res) => {
+
                         // console.log(res.data.data.id)
                     this.id = res.data.data.id;
                   this.artistName = res.data.data.firstName
@@ -156,8 +157,12 @@ export default {
         Approve(id){
             axios.get(BaseUrl + `Approve/${id}`)
             .then((res)=>{
+              const result= res.data.message;    
+                  alert(result);
+              if(res.data.status){
                 console.log(res.data.user);
                 this.router.push("/artistnotification")
+                    }
             })
             .catch((error)=>{
                 console.log(error);

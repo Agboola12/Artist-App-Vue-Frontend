@@ -229,8 +229,11 @@ export default {
             (BaseUrl + `updateSong/${this.id}`, formData)
         // (`http://localhost:8000/updateSong/${this.id}`, formData) 
         .then((ress) => {
-          
+          const result= ress.data.message;    
+          alert(result);
+            if(ress.data.status){
             console.log(ress);
+            }
             // this.$router.push("/dashboardartist")
         })
         .catch((error) => {
