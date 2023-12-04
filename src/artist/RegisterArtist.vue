@@ -124,6 +124,7 @@
           </button>
           <p class="mt-2">
             Have an account? <a href="loginartist" style="color: #a10035">Sign In</a>
+            Have an account? <a href="loginartist" style="color: #a10035">Sign In</a>
           </p>
         </div>
       </div>
