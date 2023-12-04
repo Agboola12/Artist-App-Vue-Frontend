@@ -3,7 +3,7 @@
 
 
         
-        <div class="col-md-9  " >
+        <!-- <div class="col-md-8  " > -->
             <table class="table table-borderless " style="font-size: 18px;">
                 <tbody>
                     <tr>
@@ -32,7 +32,7 @@
                   <button class='btn btn-success' data-toggle="modal" data-target="#exampleModal">Edit Profile</button>
                 </div>
                    
-              </div>
+              <!-- </div> -->
                 <div v-else>
                   <p>Please log in to access your profile.</p>
                 </div>  

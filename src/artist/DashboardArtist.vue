@@ -1,23 +1,19 @@
 <template>
   <div class="body">
     <NavArtist />
-    <div class="container-fluid">
+    <div class="container-fluid" style="background-color: #f8f8fd;">
       <div class="row">
         <div class="col-md-4 text-center" id="picture" v-if="user">
-          <!-- <img src="../assets/Camera/02.jpg"  /> -->
-      <img :src="user.imageUrl" alt="profile" class="w-100"/>
+      <img :src="user.imageUrl" alt="profile" class="w-75 "/>
           <div class="mt-3">
             <h4 class="text-danger">{{ user.firstName }}</h4>
-            <!-- <h4 class="text-danger">{{ user.id }}</h4> -->
           </div>
         </div>
 
-        <div class="col-md-8 mx-auto" id="profile">
-          <ul class="nav nav- mx-auto col-6 mt-3" id="sidebar">
+        <div class="col-md-8 " id="profile">
+          <ul class="nav nav mx-auto col-6 mt-3" id="sidebar">
             <li class="nav-item">
-              <a class="nav-link active" data-toggle="pill" href="#home"
-                >Dashboard</a
-              >
+              <a class="nav-link active" data-toggle="pill" href="#home">Dashboard</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" data-toggle="pill" href="#menu1">Profile</a>
@@ -25,7 +21,7 @@
           </ul>
 
           <div class="tab-content">
-            <div id="home" class="container tab-pane active mb-4">
+            <!-- <div id="home" class="container tab-pane active mb-4">
               <br /><br />
               <h3 class="ml-5 fw-bold">Dashboard</h3>
               <div class="card shadow p-5 mt-4">
@@ -44,7 +40,7 @@
                   </div>
                 </div>
               </div>
-            </div>
+            </div> -->
 
             <div id="menu1" class="container tab-pane fade">
               <br />
@@ -118,7 +114,7 @@ nav #aa {
 }
 #picture {
   height: 89vh;
-  background-color: #f8f8fd;
+  /* background-color: #f8f8fd; */
   min-width: auto;
   min-height: auto;
 }
@@ -127,7 +123,7 @@ nav #aa {
   border-radius: 20px;
 }
 #profile {
-  background-color: #f8f8fd;
+  /* background-color: #f8f8fd; */
 }
 #sidebar li a {
   font-size: 16px;
