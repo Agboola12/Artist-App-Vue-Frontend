@@ -13,7 +13,7 @@
       <div class="mx-5">
       <button type="submit" id="continue" class="btn btn  mt-4">Continue</button> <br/><br/>
         Don't have an account? <a href="registerartist" style="color: #A10035;">Sign Up</a>
-        Don't have an account? <a href="registerartist" style="color: #A10035;">Sign Up</a>
+        <a href="/" style="color: #A10035;">Sign Up</a>
       </div>
     </form>
   </div>
