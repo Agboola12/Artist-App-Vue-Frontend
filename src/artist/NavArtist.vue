@@ -20,12 +20,12 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav" >
+        <ul class="navbar-nav fs-4" style="margin-left: 30%; ">
           <li class="nav-item active">
             <a class="nav-link" href="dashboardartist">Profile</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="mymusic">Music</a>
+            <a class="nav-link" href="mymusic">Upload</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="songdetails">Songs</a>

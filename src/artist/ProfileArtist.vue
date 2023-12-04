@@ -151,8 +151,12 @@ export default {
             (BaseUrl + `updateProfile/${this.id}`, formData)
         // (`http://localhost:8000/updateProfile/${this.id}`, formData) 
         .then((ress) => {
-            console.log(ress);
+          const result= ress.data.message;    
+          alert(result);
+          if(ress.data.status){
+            // console.log(ress);
             this.$router.push("/dashboardartist")
+          }
         })
         .catch((error) => {
           console.error(error);

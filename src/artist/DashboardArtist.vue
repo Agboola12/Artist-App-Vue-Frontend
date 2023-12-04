@@ -24,7 +24,7 @@
             <div id="home" class=" tab-pane active mb-4">
               <br /><br />
               <h3 class="ml-5 fw-bold">Dashboard</h3>
-              <div class="card shadow w-75 ml-5 p-5 mt-4">
+              <div class="card shadow w-100 text-center ml-5 p-5 mt-4">
                 <div class="row" id="offset">
                   <div class="col-md-3 ">
                     <h4>Audios</h4>

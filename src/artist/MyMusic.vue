@@ -11,13 +11,13 @@
                     <h2>Music</h2>
                     <i class="h2 fa fa-file-audio "></i>
                 <a href="audioartist">
-                    <input type="button" value="Create New" class=" btn btn-outline-danger text-white mx-auto" />
+                    <input type="button" value="Create New" class=" btn btn text-white mx-auto" />
                 </a>  
                 </div>
                 <div class="col-md-5 col-sm-1 card shadow   p-5" >
                     <h2>Video</h2>
                     <i class="h2 fa fa-file-video"></i>
-                    <input type="buton" value="Create New" class="  mx-auto btn btn-outline-danger text-white" /> 
+                    <input type="buton" value="Create New" class="mx-auto p-3 btn btn " /> 
                 </div>
             </div>
         </div>
@@ -48,11 +48,17 @@ export default {
     border-radius: 20px;
 }
 
-.card .btn {
+.card .btn{
+    color: white;
+}
+.card .btn:hover {
     margin-top: 1em;
     border-radius: 20px;
-    width: 50%;
-    height: 10vh;
+    color: black;
+    /* width: 50%; */
+    /* height: 10vh; */
+    background: #FEDCDC;
+    width: 150px;
 }
 
 
