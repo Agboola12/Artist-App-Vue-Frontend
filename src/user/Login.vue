@@ -43,8 +43,7 @@ export default {
       axios.post
               (BaseUrl + "loginUser", info)
       // ("http://localhost:8000/loginUser", info)
-      .then ((res)=>{
-            
+      .then ((res)=>{     
         const result= res.data.message;    
         alert(result)
       if(res.data.status){

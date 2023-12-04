@@ -71,6 +71,7 @@ export default {
       firstName: " ",
       email: " ",
       passWord: "",
+      result:"",
     };
   },
   methods: {
@@ -87,6 +88,8 @@ export default {
             (BaseUrl + "createUser", info)
           // "http://localhost:8000/createUser", info)
         .then((res) => {
+          const result= res.data.message;    
+        alert(result);
           console.log(res);
                     this.$router.push('/login')
         })
