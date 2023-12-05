@@ -25,7 +25,7 @@
                           <router-link to="/register" class="nav-link text-light">User</router-link>
                         </li>
                         <li class="nav-item">
-                          <router-link to="/registerartist" class="text-light mr-3">Artist</router-link>
+                          <router-link to="/registerartist" class="text-light nav-link">Artist</router-link>
                           <!-- <a class="nav-link text-light" href="/registerartist">Artist</a> -->
                         </li>
                       </ul>
