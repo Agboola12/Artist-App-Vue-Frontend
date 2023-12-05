@@ -212,12 +212,12 @@ export default {
                     //  "http://localhost:8000/bookingInfo", {...bookingInfo, ...loginUser})
                  .then((res) => {
                     const result= res.data.message;    
-        alert(result);
-          if(res.data.status){
-                    console.log(res.data);
-                   alert('You have hire' + " "+ res.data.response.artistName)
-                   this.router.push('/homeuser')
-          }
+                      alert(result);
+                    if(res.data.status){
+                        console.log(res.data);
+                         alert('You have hire' + " "+ res.data.response.artistName)
+                         this.router.push('/homeuser')
+                     }
                  })
                  .catch((err) => {
                    console.log(err);
