@@ -92,15 +92,14 @@
                         <hr/>
                         <div>
                             <h4 id="videos" class="title">Vidoes</h4>
-                            <div class="row">
+                            <p > Song is yet  to be uploaded.</p>
+                            <!-- <div class="row">
                             <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
                                 <video src="../assets/video/elijah.mp4" controls  class="w-100 shadow-1-strong rounded mb-4" alt="Boat on Calm Water"></video>
                                 
                                 <video src="../assets/video/elijah.mp4" controls  class="w-100 shadow-1-strong rounded mb-4" alt="Boat on Calm Water"></video>
                             </div>
-
-                            
-                            </div>
+                            </div> -->
                         </div>
 
                         <!-- Songs -->
