@@ -99,11 +99,7 @@
                                 <video src="../assets/video/elijah.mp4" controls  class="w-100 shadow-1-strong rounded mb-4" alt="Boat on Calm Water"></video>
                             </div>
 
-                            <div class="col-lg-4 mb-4 mb-lg-0">
-                                <video src="../assets/video/elijah.mp4" controls  class="w-100 shadow-1-strong rounded mb-4" alt="Boat on Calm Water"></video>
-                                
-                                <video src="../assets/video/elijah.mp4" controls  class="w-100 shadow-1-strong rounded mb-4" alt="Boat on Calm Water"></video>
-                            </div>
+                            
                             </div>
                         </div>
 
