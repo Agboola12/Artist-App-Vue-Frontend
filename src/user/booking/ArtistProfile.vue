@@ -217,7 +217,7 @@ export default {
                     console.log(res.data);
                    alert('You have hire' + " "+ res.data.response.artistName)
                    this.router.push('/homeuser')
-                   
+          }
                  })
                  .catch((err) => {
                    console.log(err);
