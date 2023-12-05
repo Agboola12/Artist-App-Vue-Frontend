@@ -60,7 +60,7 @@
                       </div>
                       <div v-else> <p>No Artist has been created</p></div>
                     </div> 
-                    <div class="col-md-4 ">
+                    <div class="col-md-4" v-if="songs">
                       <h3 class="mb-4 ">Top Songs</h3>
                     <div class="shadow-sm p-2 jumbotron w-100" v-for="(song, index) in songs" :key="index" >
                       <small class="d-flex">
@@ -70,6 +70,9 @@
                       </small>
                       <small  class="songtitle"> {{ song.songTitle }}</small>
                     </div>
+                     </div>
+                     <div v-else>
+                          <p>No Song has been Uploaded</p>
                      </div>
                 </div>
               </div>
