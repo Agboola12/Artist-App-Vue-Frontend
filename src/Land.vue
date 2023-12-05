@@ -21,10 +21,12 @@
                           <a class="nav-link text-light" href="#">About</a>
                         </li>
                         <li class="nav-item">
-                          <a class="nav-link text-light" href="register">User</a>
+                          <!-- <a class="nav-link text-light" href="/register">User</a> -->
+                          <router-link to="/register" class="text-light">User</router-link>
                         </li>
                         <li class="nav-item">
-                          <a class="nav-link text-light" href="registerartist">Artist</a>
+                          <router-link to="/registerartist" class="text-light">Artist</router-link>
+                          <!-- <a class="nav-link text-light" href="/registerartist">Artist</a> -->
                         </li>
                       </ul>
                 </div>
