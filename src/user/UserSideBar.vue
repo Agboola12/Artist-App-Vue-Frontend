@@ -5,7 +5,7 @@
   <i class="fas fa-bars"></i>
 </button>
       <p class="mt-4" style="margin-left: 65%;">
-       <router-link to="/bookingone"><button class="btn btn-danger">Booking</button>
+       <router-link to="/bookingone"><button class="btn btn-danger">Booking</button></router-link>
           <i class="fa fa-user ml-3 "></i>
       </p>
     </div>
