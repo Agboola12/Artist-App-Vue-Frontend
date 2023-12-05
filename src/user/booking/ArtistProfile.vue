@@ -171,7 +171,7 @@ export default {
             (BaseUrl + "getArtistDetails/"+ this.artistId)
     //   ("http://localhost:8000/getArtistDetails/"+ this.artistId)
       .then ((res)=>{
-            // console.log(res.data);
+            console.log(res.data);
             this.musicId = res.data.user.id
             this.artistName = res.data.user.firstName
             this.user = res.data.user
@@ -188,7 +188,7 @@ export default {
             (BaseUrl + "getUser")
             // ("http://localhost:8000/getUser")
                 .then((res) => {
-                    // console.log(res.data.data);
+                    console.log(res.data.data);
                 this.userName = res.data.data.firstName;
                 this.userEmail = res.data.data.email;
             })
@@ -211,9 +211,9 @@ export default {
                     (BaseUrl + "bookingInfo", {...bookingInfo, ...loginUser})
                     //  "http://localhost:8000/bookingInfo", {...bookingInfo, ...loginUser})
                  .then((res) => {
-                   console.log(res.data.response);
-                   alert('You have hire' + " "+ res.data.response.artistName)
-                   this.router.push('/homeuser')
+                   console.log(res.data);
+                //    alert('You have hire' + " "+ res.data.response.artistName)
+                //    this.router.push('/homeuser')
                    
                  })
                  .catch((err) => {
