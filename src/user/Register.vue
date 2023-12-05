@@ -44,7 +44,7 @@
             Continue
           </button>
           <br /><br />
-          <p>--------- OR ---------</p>
+          <p class="text-center">--------- OR ---------</p>
         </div>
       </form>
       <div class="mx-5">
