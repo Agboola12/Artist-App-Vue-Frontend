@@ -5,11 +5,13 @@
             <header class="shadow-sm" style="border-radius: 20px;" >
                 <nav class="navbar navbar-expand-lg navbar-light">
                     <h4 class="navbar-brand" href="#" style="color: #FFDDDD; font-size: 2em;"><b>Prime</b></h4>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                       <span class="navbar-toggler-icon"></span>
-                    </button>
+                    </button> -->
+                    
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                      <ul class="navbar-nav" style="margin-left: 70%;">
+                      <!-- <ul class="navbar-nav" style="margin-left: 70%;"> -->
+                      <ul class="navbar-nav list-line ml-auto">               
                         <li class="nav-item active">
                           <a class="nav-link  text-light" href="#">Home </a>
                         </li>
@@ -122,6 +124,7 @@
 <script>
 import axios from 'axios';
 import FooterArtist from './artist/FooterArtist.vue';
+import BaseUrl from './BaseUrl';
 export default {
   components: { FooterArtist },
 
@@ -138,7 +141,9 @@ export default {
     methods:{
 
       popularArtist() {
-            axios.get("http://localhost:8000/popularArtist")
+            axios.get
+            (BaseUrl + "popularArtist")
+            // ("http://localhost:8000/popularArtist")
                 .then((res) => {
                 console.log(res.data);
                 this.artists = res.data;
@@ -146,7 +151,9 @@ export default {
         },
 
         popularSong() {
-            axios.get("http://localhost:8000/popularSong")
+            axios.get
+            (BaseUrl + "popularSong")
+            // ("http://localhost:8000/popularSong")
                 .then((res) => {
                 console.log(res.data.data);
                 this.songs = res.data.data;
