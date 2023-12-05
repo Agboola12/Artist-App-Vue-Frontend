@@ -205,15 +205,18 @@ export default {
               artistName: this.artistName
             }
             const bookingInfo = JSON.parse(localStorage.getItem('users'));
-            // console.log(bookingInfo);
+            console.log(bookingInfo);
             
             axios.post
                     (BaseUrl + "bookingInfo", {...bookingInfo, ...loginUser})
                     //  "http://localhost:8000/bookingInfo", {...bookingInfo, ...loginUser})
                  .then((res) => {
-                   console.log(res.data);
-                //    alert('You have hire' + " "+ res.data.response.artistName)
-                //    this.router.push('/homeuser')
+                    const result= res.data.message;    
+        alert(result);
+          if(res.data.status){
+                    console.log(res.data);
+                   alert('You have hire' + " "+ res.data.response.artistName)
+                   this.router.push('/homeuser')
                    
                  })
                  .catch((err) => {
