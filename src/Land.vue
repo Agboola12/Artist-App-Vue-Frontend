@@ -131,6 +131,7 @@
 import axios from 'axios';
 import FooterArtist from './artist/FooterArtist.vue';
 import BaseUrl from './BaseUrl';
+// import BaseUrl from './BaseUrl';
 export default {
   components: { FooterArtist },
 
