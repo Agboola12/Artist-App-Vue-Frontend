@@ -47,7 +47,7 @@
                 <h3 class="text-center trending" >Trending</h3>
                 <div class="row mt-5">
                   <div class="col-md-7 mx-auto">
-                    <div class="row">
+                    <div class="row" v-if="artists">
                       <h3 class="mb-5">Popular Artist</h3>
                           <div class="col-md-4 mx-auto" v-for="(artist, index) in artists" :key="index">
                             <div class="card h-50 border-0">
@@ -58,6 +58,7 @@
                             </div>
                           </div>
                       </div>
+                      <div v-else> <p>No Artist has been created</p></div>
                     </div> 
                     <div class="col-md-4 ">
                       <h3 class="mb-4 ">Top Songs</h3>
