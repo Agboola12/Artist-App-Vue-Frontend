@@ -64,10 +64,12 @@
             <router-link to="/artistnotification" class="nav-link">Notification</router-link>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="artistappointment">Appointment</a>
+            <!-- <a class="nav-link" href="artistappointment">Appointment</a> -->
+            <router-link to="/artistappointment" class="nav-link">Appointment</router-link>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="loginartist" @click="logOut()">Logout</a>
+            <!-- <a class="nav-link" href="loginartist" @click="logOut()">Logout</a> -->
+            <router-link to="/loginartist" class="nav-link" @click="logOut()">Appointment</router-link>
           </li>
           
         </ul>
