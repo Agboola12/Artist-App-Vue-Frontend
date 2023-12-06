@@ -47,9 +47,9 @@
       </button>
       <div class="collapse navbar-collapse" id="sab">
         <ul class="navbar-nav list-line mx-auto">               
-        <!-- <ul class="navbar-nav fs-4" style="margin-left: 30%; "> -->
           <li class="nav-item active">
-            <a class="nav-link" href="dashboardartist">Profile</a>
+            <router-link to="/dashboardartist" class=" nav-link">Artist</router-link>
+            <!-- <a class="nav-link" href="dashboardartist">Profile</a> -->
           </li>
           <li class="nav-item">
             <a class="nav-link" href="mymusic">Upload</a>
