@@ -13,7 +13,8 @@
       <div class="mx-5">
       <button type="submit" id="continue" class="btn btn  mt-4">Continue</button> <br/><br/>
         Don't have an account? 
-        
+        <router-link to="/registerartist" style="color: #a10035" >Sign Un</router-link>
+        <router-link to="/" class="ml-5" style="color: #a10035" >Go back home</router-link>
         <!-- <a href="registerartist" style="color: #A10035;">Sign Up</a>
         <a href="/" class="ml-4" style="color: #A10035;">Go back home</a> -->
       </div>
