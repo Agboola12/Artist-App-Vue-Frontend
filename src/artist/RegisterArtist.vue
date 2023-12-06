@@ -125,9 +125,9 @@
           <p class="mt-2">
             Have an account?
             <router-link to="/loginartist" style="color: #a10035" >Sign In</router-link>
-            <router-link to="/loginartist" style="color: #a10035" >Go</router-link>
+            <router-link to="/" class="ml-5" style="color: #a10035" >Go back home</router-link>
              <!-- <a href="loginartist" style="color: #a10035">Sign In</a> -->
-            <a href="/" class="ml-5" style="color: #a10035">Go back home</a>
+            <!-- <a href="/" class="ml-5" style="color: #a10035">Go back home</a> -->
           </p>
         </div>
       </div>
