@@ -12,8 +12,11 @@
       <a href="#" >Forgot Password</a>
       <div class="mx-5">
       <button type="submit" id="continue" class="btn btn w-100 mt-4">Continue</button> <br/><br/>
-          Don't have an account? <a href="register" style="color: #A10035;">Sign Up</a>
-           <a href="/" class="ml-5" style="color: #A10035;">Go back home</a>
+          Don't have an account? 
+          <router-link to="/register" style="color: #a10035" >Sign Up</router-link>
+          <router-link to="/" class="ml-5" style="color: #a10035" >Go back home</router-link>
+          <!-- <a href="register" style="color: #A10035;">Sign Up</a>
+           <a href="/" class="ml-5" style="color: #A10035;">Go back home</a> -->
       </div>
     </form>
   </div>
