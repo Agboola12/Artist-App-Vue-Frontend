@@ -48,17 +48,20 @@
       <div class="collapse navbar-collapse" id="sab">
         <ul class="navbar-nav list-line mx-auto">               
           <li class="nav-item active">
-            <router-link to="/dashboardartist" class=" nav-link">Artist</router-link>
+            <router-link to="/dashboardartist" class="nav-link">Profile</router-link>
             <!-- <a class="nav-link" href="dashboardartist">Profile</a> -->
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="mymusic">Upload</a>
+            <router-link to="/mymusic" class="nav-link">Upload</router-link>
+            <!-- <a class="nav-link" href="mymusic">Upload</a> -->
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="songdetails">Songs</a>
+            <!-- <a class="nav-link" href="songdetails">Songs</a> -->
+            <router-link to="/songdetails" class="nav-link">Songs</router-link>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="artistnotification">Notification</a>
+            <!-- <a class="nav-link" href="artistnotification">Notification</a> -->
+            <router-link to="/artistnotification" class="nav-link">Notification</router-link>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="artistappointment">Appointment</a>
