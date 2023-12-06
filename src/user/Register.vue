@@ -53,6 +53,8 @@
         </button>
         <p class="mt-5">
           Have an account? 
+          <router-link to="/login" style="color: #a10035" >Sign Ip</router-link>
+          <router-link to="/" class="ml-4" style="color: #a10035" >Go back home</router-link>
           <!-- <a href="login" style="color: #a10035">Sign In</a>
           <a href="/" class="ml-5" style="color: #a10035">Go Back Home</a> -->
         </p>
