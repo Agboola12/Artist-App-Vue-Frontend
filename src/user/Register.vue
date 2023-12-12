@@ -1,6 +1,6 @@
 <template>
   <div class="container"  style="margin-top: 5em; ">
-    <div class="col-sm-5" style="margin-left: 30%;">
+    <div class="col-sm-5 mx-auto" >
       <h2 class="text-center">Create an account</h2>
       <br />
       <form action="post" enctype="multipart/form-data" @submit.prevent="onCreatePost">
@@ -55,8 +55,6 @@
           Have an account? 
           <router-link to="/login" style="color: #a10035" >Sign In</router-link>
           <router-link to="/" class="ml-5" style="color: #a10035" >Go back home</router-link>
-          <!-- <a href="login" style="color: #a10035">Sign In</a>
-          <a href="/" class="ml-5" style="color: #a10035">Go Back Home</a> -->
         </p>
       </div>
     </div>
