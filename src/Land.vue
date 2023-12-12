@@ -76,8 +76,8 @@
 
               </div>
 
-              <div class="container-fluid single">
-                 <div class="row">
+             <div class="container-fluid">
+                 <div class="row single">
                     <div class="col-md-4  offset-1" style="margin-top: 11em; text-align: center;" >
                         <h2>
                           The only thing that's better in a group versus being by yourself is the companionship
@@ -87,10 +87,8 @@
                       <img src="../src/assets/Camera/sing.png" height="500px"  />
                     </div>
                  </div> 
-              </div>
-
-              <div class="container-fluid  mt-5">
-                 <div class="row">
+                 
+                 <div class="row mt-5">
                     <div class="col-md-4  offset-1" style="margin-top: 11em; text-align: center;" >
                         <h2>
                             “Band may be hard work, but it's worth it when we see the crowd on their feet.”
@@ -99,21 +97,21 @@
                     <div class="col-md-6">
                       <img src="../src/assets/Camera/band.png" height="500px"  />
                     </div>
-                 </div> 
-              </div>
-              
-              <div class="container-fluid bg-light mt-5 p-5">
-                 <div class="row">
+                  </div> 
+                
+                <div class="container-fluid bg-light mt-5 p-5">
+                  <div class="row">
                     <div class="col-md-4 offset-1" style="margin-top: 6 em; text-align: center;" >
-                        <h2>
-                          I think music in itself is healing. 
-                        </h2>
+                      <h2>
+                        I think music in itself is healing. 
+                      </h2>
                     </div>
                     <div class="col-md-5 offset-2">
                       <img src="../src/assets/Camera/dj.jpg" height="300px"  />
                     </div>
-                 </div> 
-              </div>
+                  </div> 
+                </div>
+              </div> 
 
               <div class=" w-100 mt-5" >
                 <FooterArtist/>
@@ -211,13 +209,11 @@ header{
   color: #A10035;
 }
 
-.songtitle{
+/* .songtitle{
   margin-left: 10em;
-}
+} */
 
 .single{
-  /* background: lightgrey; */
   background: #FFDDDD;
-  /* border-radius: 10px; */
 }
 </style>
