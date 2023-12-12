@@ -64,8 +64,8 @@
 <script>
 import axios from "axios";
 import BaseUrl from "../BaseUrl";
-// import 'vue-toast-notification/dist/theme-sugar.css';
-// import Toast from 'vue-toast-notification'; 
+import 'vue-toast-notification/dist/theme-sugar.css';
+import VueToast from 'vue-toast-notification'; 
 
 export default {
   data() {
@@ -91,7 +91,8 @@ export default {
           // "http://localhost:8000/createUser", info)
         .then((res) => {
           const result= res.data.message;    
-        alert(result);
+        // alert(result);
+        this.$toast.success(result);
           if(res.data.status){
             console.log(res);
             this.$router.push('/login')
