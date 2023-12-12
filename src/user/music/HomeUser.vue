@@ -29,7 +29,9 @@
                           <audio  controls> <source :src="song.mp3Url" type="audio/mpeg" ></audio>
                         </div>
                       </div>
-                      <div v-else>Song is Yet to be uploaded</div>
+                      <div v-else>
+                      <p>Song is Yet to be uploaded </p>
+                      </div>
                     </div>
                   </div>
                   <div class="col-md-3 offset-1">
@@ -44,7 +46,9 @@
                       <p class="text-center"> {{ song.songTitle }}</p>
                     </div>
                     </div>
-                    <div v-else>Song is Yet to be uploaded</div>
+                    <div v-else>
+                      <p>Song is Yet to be uploaded </p>
+                    </div>
                     <div class="mt-5 ">
                       <div class='d-flex '>
                         <h4>Popular Artist</h4>

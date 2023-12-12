@@ -85,6 +85,7 @@ const router = createRouter({
     {path: '/bookingresult' , name: 'bookingresult', component: BookingResult},
     {path: '/artistnotification' , name: 'artistnotification', component: ArtistNotification},
     {path: '/artistappointment' , name: 'artistappointment', component: ArtistAppointment},
+    // {  path: '*',  name: 'land',  component: Land},
     
 
     
