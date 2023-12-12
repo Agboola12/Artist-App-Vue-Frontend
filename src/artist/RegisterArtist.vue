@@ -1,6 +1,6 @@
 <template>
     <div class="container  shadow p-4" style="margin-top: 2em; font-family: Verdana, Geneva, Tahoma, sans-serif;">
-      <div class="col-sm-6" style="margin-left: 30%;">
+      <div class="col-sm-6 mx-auto" >
         <form action="post" enctype="multipart/form-data" @submit.prevent="onCreatePost">
           <h2 class="text-center mb-5">Create an account for Artist</h2>
           
@@ -126,8 +126,6 @@
             Have an account?
             <router-link to="/loginartist" style="color: #a10035" >Sign In</router-link>
             <router-link to="/" class="ml-5" style="color: #a10035" >Go back home</router-link>
-             <!-- <a href="loginartist" style="color: #a10035">Sign In</a> -->
-            <!-- <a href="/" class="ml-5" style="color: #a10035">Go back home</a> -->
           </p>
         </div>
       </div>

@@ -1,6 +1,6 @@
 <template>
     <div class="container shadow w-75 p-5" style="margin-top: 5em; ">
-    <div class="col-sm-5" style= "margin-left: 25%;">
+    <div class="col-sm-5" >
         <form @submit.prevent="loginPost" method="post" >
             <h2 class=" text-center">Welcome Back Artist</h2><br/>
       <div class="form-group">
@@ -15,8 +15,6 @@
         Don't have an account? 
         <router-link to="/registerartist" style="color: #a10035" >Sign Up</router-link>
         <router-link to="/" class="ml-4" style="color: #a10035" >Go back home</router-link>
-        <!-- <a href="registerartist" style="color: #A10035;">Sign Up</a>
-        <a href="/" class="ml-4" style="color: #A10035;">Go back home</a> -->
       </div>
     </form>
   </div>
