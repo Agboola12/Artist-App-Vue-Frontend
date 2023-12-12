@@ -39,7 +39,7 @@
                 </div>
               </header>
 
-              <div class="container-fluid ">
+              <div class="container mt-5">
                 <h3 class="text-center trending" >Trending</h3>
                 <div class="row mt-5">
                   <div class="col-md-7 mx-auto">
@@ -54,9 +54,9 @@
                             </div>
                           </div>
                       </div>
-                      <div v-else> <p>No Artist has been created</p></div>
+                      <div v-else> <p class="text-center">No Artist has been created</p></div>
                     </div> 
-                    <!-- <div class="col-md-4" v-if="songs">
+                    <div class="col-md-4" v-if="songs">
                       <h3 class="mb-4 ">Top Songs</h3>
                     <div class="shadow-sm p-2 jumbotron w-100" v-for="(song, index) in songs" :key="index" >
                       <small class="d-flex">
@@ -64,40 +64,40 @@
                         <img :src="song.imageUrl" alt="cover" class="ml-4" width="50" height="50" style="border-radius: 50px;"/> 
                         <h3 class="ml-4"> {{ song.artistName }}</h3>
                       </small>
-                      <small  class="songtitle"> {{ song.songTitle }}</small>
+                      <small class="songtitle"> {{ song.songTitle }}</small>
                     </div>
                      </div>
                      <div v-else>
-                          <p>No Song has been Uploaded</p>
-                     </div> -->
+                          <p class="text-center">No Song has been Uploaded</p>
+                     </div>
                 </div>
               </div>
-              <!-- </div> -->
+              </div>
 
-             <!-- <div class="container-fluid"> -->
-                 <!-- <div class="row single">
-                    <div class="col-md-4  offset-1" style="margin-top: 11em; text-align: center;" >
-                        <h2>
+             <div class="container-fluid mt-5">
+                 <div class="row single p-5">
+                    <div class="col-md-4 text-center mt-5" style="text-align: center;" >
+                        <h2 class="text-center">
                           The only thing that's better in a group versus being by yourself is the companionship
                         </h2>
                     </div>
-                    <div class="col-md-6">
-                      <img src="../src/assets/Camera/sing.png" height="500px"  />
+                    <div class="col-md-5 text-center">
+                      <img src="../src/assets/Camera/sing.png" class="w-50" />
                     </div>
-                 </div>  -->
+                 </div> 
                  
-                 <!-- <div class="row mt-5">
-                    <div class="col-md-4  offset-1" style="margin-top: 11em; text-align: center;" >
+                 <div class="row mt-4">
+                    <div class="col-md-4 " style="margin-top: 11em; text-align: center;" >
                         <h2>
                             “Band may be hard work, but it's worth it when we see the crowd on their feet.”
                         </h2>
                     </div>
-                    <div class="col-md-6">
-                      <img src="../src/assets/Camera/band.png" height="500px"  />
+                    <div class="col-md-6 text-center">
+                      <img src="../src/assets/Camera/band.png" class="w-50"  />
                     </div>
-                  </div>  -->
+                  </div> 
                 
-                <!-- <div class=" mt-5 p-5">
+                <div class=" mt-5 p-5">
                   <div class="row">
                     <div class="col-md-4 offset-1" style="margin-top: 6 em; text-align: center;" >
                       <h2>
@@ -105,10 +105,10 @@
                       </h2>
                     </div>
                     <div class="col-md-5 offset-2">
-                      <img src="../src/assets/Camera/dj.jpg" height="300px"  />
+                      <img src="../src/assets/Camera/dj.jpg" height="30  />
                     </div>
                   </div> 
-                </div> -->
+                </div>
               </div> 
 
               <div class=" w-100 mt-5" >
