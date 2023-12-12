@@ -1,6 +1,6 @@
 <template>
     <div class="container shadow w-75 p-5" style="margin-top: 5em; ">
-    <div class="col-sm-5" >
+    <div class="col-sm-5 mx-auto" >
         <form @submit.prevent="loginPost" method="post" >
             <h2 class=" text-center">Welcome Back Artist</h2><br/>
       <div class="form-group">
