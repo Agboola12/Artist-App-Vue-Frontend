@@ -1,7 +1,7 @@
 <template>
         <div class="whole">
         <div class="body">
-          <div>
+        
             <header class="shadow-sm" style="border-radius: 20px;" >
                 <nav class="navbar navbar-expand-lg navbar-light">
                     <h4 class="navbar-brand" href="#" style="color: #FFDDDD; font-size: 2em;"><b>Prime</b></h4>
@@ -39,10 +39,10 @@
                 </div>
               </header>
 
-              <div class="container-fluid p-2">
+              <div class="container-fluid ">
                 <h3 class="text-center trending" >Trending</h3>
                 <div class="row mt-5">
-                  <!-- <div class="col-md-7 mx-auto">
+                  <div class="col-md-7 mx-auto">
                     <div class="row" v-if="artists">
                       <h3 class="mb-5">Popular Artist</h3>
                           <div class="col-md-4 mx-auto" v-for="(artist, index) in artists" :key="index">
@@ -55,7 +55,7 @@
                           </div>
                       </div>
                       <div v-else> <p>No Artist has been created</p></div>
-                    </div>  -->
+                    </div> 
                     <!-- <div class="col-md-4" v-if="songs">
                       <h3 class="mb-4 ">Top Songs</h3>
                     <div class="shadow-sm p-2 jumbotron w-100" v-for="(song, index) in songs" :key="index" >
@@ -72,12 +72,10 @@
                      </div> -->
                 </div>
               </div>
-            </div>
+              <!-- </div> -->
 
-              </div>
-
-             <div class="container-fluid">
-                 <div class="row single">
+             <!-- <div class="container-fluid"> -->
+                 <!-- <div class="row single">
                     <div class="col-md-4  offset-1" style="margin-top: 11em; text-align: center;" >
                         <h2>
                           The only thing that's better in a group versus being by yourself is the companionship
@@ -86,9 +84,9 @@
                     <div class="col-md-6">
                       <img src="../src/assets/Camera/sing.png" height="500px"  />
                     </div>
-                 </div> 
+                 </div>  -->
                  
-                 <div class="row mt-5">
+                 <!-- <div class="row mt-5">
                     <div class="col-md-4  offset-1" style="margin-top: 11em; text-align: center;" >
                         <h2>
                             “Band may be hard work, but it's worth it when we see the crowd on their feet.”
@@ -97,9 +95,9 @@
                     <div class="col-md-6">
                       <img src="../src/assets/Camera/band.png" height="500px"  />
                     </div>
-                  </div> 
+                  </div>  -->
                 
-                <div class="container-fluid bg-light mt-5 p-5">
+                <!-- <div class=" mt-5 p-5">
                   <div class="row">
                     <div class="col-md-4 offset-1" style="margin-top: 6 em; text-align: center;" >
                       <h2>
@@ -110,7 +108,7 @@
                       <img src="../src/assets/Camera/dj.jpg" height="300px"  />
                     </div>
                   </div> 
-                </div>
+                </div> -->
               </div> 
 
               <div class=" w-100 mt-5" >
