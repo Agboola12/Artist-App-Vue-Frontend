@@ -75,7 +75,7 @@
               </div>
 
              <div class="container-fluid mt-5">
-                 <div class="row single p-5">
+                 <div class="row single  p-5">
                     <div class="col-md-4 text-center mt-5" style="text-align: center;" >
                         <h2 class="text-center">
                           The only thing that's better in a group versus being by yourself is the companionship
@@ -86,25 +86,25 @@
                     </div>
                  </div> 
                  
-                 <div class="d-flex" style="margin-top: 7em;">
-                    <div class="text " style=" text-align: center;" >
+                 <div class="row ml-5" style="margin-top: 7em;">
+                    <div class="col-md-4 mt-5" style=" text-align: center;" >
                         <h2>
                             “Band may be hard work, but it's worth it when we see the crowd on their feet.”
                         </h2>
                     </div>
-                    <div class="mt-3 text-center">
-                      <img src="../src/assets/Camera/band.png" class="w-75"  />
+                    <div class="col-md-6 text-center">
+                      <img src="../src/assets/Camera/band.png" class="w-50"  />
                     </div>
                   </div> 
                 
                 <div class=" mt-5 p-5">
-                  <div class="row">
-                    <div class="col-md-4 " style="margin-top: 6 em; text-align: center;" >
+                  <div class="row ml-5">
+                    <div class="col-md-4" style="text-align: center;" >
                       <h2>
                         I think music in itself is healing. 
                       </h2>
                     </div>
-                    <div class="col-md-5">
+                    <div class="col-md-5 text-center">
                       <img src="../src/assets/Camera/dj.jpg" class="w-50"  />
                     </div>
                   </div> 
@@ -213,17 +213,5 @@ header{
 
 .single{
   background: #FFDDDD;
-}
-
-@media only screen and (max-width: 1200px){
-    /*Tablets [601px -> 1200px]*/
-}
-@media only screen and (max-width: 600px){
-	/*Big smartphones [426px -> 600px]*/
-}
-@media only screen and (max-width: 425px){
-    .text{
-      margin-top: 4r;
-    }
 }
 </style>
