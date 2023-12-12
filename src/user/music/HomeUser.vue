@@ -21,16 +21,20 @@
                         <h4>Top Songs</h4>
                         <p id="ppa" style="margin-left: 70%;"> <a href="allsong">View All</a></p>
                     </div>
+                        <div v-if="songs">
                         <div class=' shadow-sm p-3 mb-5 d-flex m-2' v-for="(song, index) in songs" :key="index" id="song">
                           <p>0{{ index + 1 }}.</p>
                           <img :src="song.imageUrl" alt="cover" class="ml-4" width="50" height="50" style="border-radius: 50px;"/> 
                           <p class="ml-4 mr-4"> {{ song.songTitle }}</p>
                           <audio  controls> <source :src="song.mp3Url" type="audio/mpeg" ></audio>
                         </div>
+                      </div>
+                      <div v-else>Song is Yet to be uploaded</div>
                     </div>
                   </div>
                   <div class="col-md-3 offset-1">
                     <h4 class="mb-4 ">Top Songs</h4>
+                    <div v-if="songs">
                     <div class="shadow-sm p-2 jumbotron" v-for="(song, index) in songs" :key="index" >
                       <small class="d-flex">
                         <p>0{{ index + 1 }}.</p>
@@ -39,13 +43,15 @@
                       </small>
                       <p class="text-center"> {{ song.songTitle }}</p>
                     </div>
-
+                    </div>
+                    <div v-else>Song is Yet to be uploaded</div>
                     <div class="mt-5 ">
                       <div class='d-flex '>
                         <h4>Popular Artist</h4>
                         <p id="ppa" style="margin-left: 25%;"> <a href="allartist">View All</a></p>
                     </div>
                       <div class="row">
+                        <div v-if="artists">
                           <div class="col-md-4 mx-auto" v-for="(artist, index) in artists" :key="index">
                             <div class="card h-50 border-0">
                               <img class="card-img-top" :src="artist.imageUrl" alt="image" >
@@ -54,92 +60,14 @@
                               </div>
                             </div>
                           </div>
+                          </div>
+                          <div v-else><p>Artist is yet to sign Up to the site</p></div>
                       </div>
                     </div>
                    </div>
           </div>
 
-      <!-- <div class="container">
-        <div class="row">
-          <h1 class="mb-5">Popular Musicians</h1> 
-          <div class=" col-md-3 mx-auto"  v-for="(artist, index) in artists" :key="index">
-            <img class="card-img-top w-50 h-50" :src="artist.imageUrl" alt="Card image" height="300" >
-              <div class="card-body">
-                <h4 class="card-title">{{ artist.firstName }}</h4>
-                <p class="card-text">Band</p>
-              </div>
-          </div>
-      </div>
-      
-      <div class="row mt-5" >
-        <h1 class="mb-3">Recommended For You</h1> 
-        <div class=" col-md-4 mx-auto" style="width:300px" v-for="(artist, index) in artists" :key="index">
-            <img class="card-img-top w-100" :src="artist.imageUrl" alt="Card image" height="300" >
-              <div class="card-body">
-                <h4 class="card-title">{{ artist.firstName }}</h4>
-                <p class="card-text">Band</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      <div class=" find  p-4 text-center">
-        <h2>Not sure of what you want?</h2>
-        <p>Finding the perfect musician has ever been easier</p>
-        <button class="btn btn-danger"> Find Musicians </button>
-      </div>
-
-      <div class=" middle container p-5" >
-          <div class="row" style="margin-left:5em ;" >
-              <div class="col-md-3 "  >
-                <p class="p-4 text-center" style="height: 100px; width: 100px; border-radius: 50px ;background-color: #FFDDDD; ">
-                  <i class="fa fa-microphone p-3" style="color: #A10035;"></i>
-                </p> 
-                <p class="ml-4">Artists</p>
-              </div>
-              <div class="col-md-3  " >
-                <p class="p-4 text-center" style="height: 100px; width: 100px; border-radius: 50px ;background-color: #FFDDDD; ">
-                  <i class="fa fa-microphone p-3" style="color: #A10035;"></i>
-                </p> 
-                <p class="ml-4">Bands</p>
-              </div>
-              <div class="col-md-3  " >
-                <p class="p-4 text-center" style="height: 100px; width: 100px; border-radius: 50px ;background-color: #FFDDDD; ">
-                  <i class="fa fa-microphone p-3" style="color: #A10035;"></i>
-                </p> 
-                <p class="ml-4">Djs</p>
-              </div>
-          </div>
-      </div>
-
-      <div class="container">
-          <div class="row">
-            <div class="col-md-4">
-              <div class="card img-fluid" >
-                <img class="card-img-top " src="../../assets/Camera/bride.jpg" height="300"  alt="Card image" >
-                <div class="card-img-overlay" style="margin-top: 60%;">
-                  <h2 class="card-title text-light text-center">Wedding Party</h2>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="card img-fluid" >
-                <img class="card-img-top " src="../../assets/Camera/church.jpg" height="300"  alt="Card image" >
-                <div class="card-img-overlay" style="margin-top: 60%;">
-                  <h2 class="card-title text-light text-center">Wedding Party</h2>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="card img-fluid" >
-                <img class="card-img-top " src="../../assets/Camera/birthday.jpg" height="300"  alt="Card image" >
-                <div class="card-img-overlay" style="margin-top: 60%;">
-                  <h2 class="card-title text-light text-center">Wedding Party</h2>
-                </div>
-              </div>
-            </div>
-          </div>
-      </div> -->
+     
 
     </div>
 </template>
