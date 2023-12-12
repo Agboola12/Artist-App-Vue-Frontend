@@ -5,15 +5,11 @@
             <header class="shadow-sm" style="border-radius: 20px;" >
                 <nav class="navbar navbar-expand-lg navbar-light">
                     <h4 class="navbar-brand" href="#" style="color: #FFDDDD; font-size: 2em;"><b>Prime</b></h4>
-                    <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                      <span class="navbar-toggler-icon"></span>
-                    </button> -->
                     <button class="navbar-toggler" data-toggle="collapse" type="button" data-target="#sab">
                       <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse" id="sab">
-                      <!-- <ul class="navbar-nav" style="margin-left: 70%;"> -->
-                      <ul class="navbar-nav list-line ml-auto">               
+                       <ul class="navbar-nav list-line ml-auto">               
                         <li class="nav-item active">
                           <a class="nav-link  text-light" href="#">Home </a>
                         </li>
@@ -21,26 +17,24 @@
                           <a class="nav-link text-light" href="#">About</a>
                         </li>
                         <li class="nav-item">
-                          <!-- <a class="nav-link text-light" href="/register">User</a> -->
                           <router-link to="/register" class="nav-link text-light">User</router-link>
                         </li>
                         <li class="nav-item">
                           <router-link to="/registerartist" class="text-light nav-link">Artist</router-link>
-                          <!-- <a class="nav-link text-light" href="/registerartist">Artist</a> -->
                         </li>
                       </ul>
-                </div>
+                    </div>
                 </nav>
 
                 <div class="row">
-                    <div class="col-md-6 text-center ml-5 " style="margin-top: 8em; color: #FFDDDD;">
+                    <div class="col-md-6 text-center" style="margin-top: 10em ;color: #FFDDDD;">
                         <h1 style="font-weight: bolder; font-size: 3em;">YOU CALL IT </h1> 
                           <h1 style="font-weight: bolder;">MUSIC </h1> 
                             <h3 style="font-weight: bolder; font-size: 2em;"> I CALL IT MY THERAPIST </h3>
                             <p>Without music, life would be a mistake</p>
                     </div>
-                    <div class="image col-md-5">
-                        <img src="../src/assets/Camera/background.png" height="500px"  />
+                    <div class="image col-md-6">
+                        <img src="../src/assets/Camera/background.png"  height="500px"  />
                     </div>
                 </div>
               </header>
@@ -48,7 +42,7 @@
               <div class="container-fluid p-2">
                 <h3 class="text-center trending" >Trending</h3>
                 <div class="row mt-5">
-                  <div class="col-md-7 mx-auto">
+                  <!-- <div class="col-md-7 mx-auto">
                     <div class="row" v-if="artists">
                       <h3 class="mb-5">Popular Artist</h3>
                           <div class="col-md-4 mx-auto" v-for="(artist, index) in artists" :key="index">
@@ -61,8 +55,8 @@
                           </div>
                       </div>
                       <div v-else> <p>No Artist has been created</p></div>
-                    </div> 
-                    <div class="col-md-4" v-if="songs">
+                    </div>  -->
+                    <!-- <div class="col-md-4" v-if="songs">
                       <h3 class="mb-4 ">Top Songs</h3>
                     <div class="shadow-sm p-2 jumbotron w-100" v-for="(song, index) in songs" :key="index" >
                       <small class="d-flex">
@@ -75,7 +69,7 @@
                      </div>
                      <div v-else>
                           <p>No Song has been Uploaded</p>
-                     </div>
+                     </div> -->
                 </div>
               </div>
             </div>
