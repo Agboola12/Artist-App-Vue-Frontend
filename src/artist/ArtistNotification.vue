@@ -2,7 +2,7 @@
     <div class="body">
         <NavArtist/>
         <div class="container ">
-          <h3 class="text-center">Here are your Appointments</h3>
+          <h3 class="text-center mt-5">Here are your Appointments</h3>
           <div v-if="users.length>0">
             <div class="row">
                     <div class="col-md-3 p-4 mt-5 mx-auto card-client" v-for="(user, index) in users" :key="index" >
@@ -19,7 +19,9 @@
                 </div>
               </div>
             </div>
-            <div v-else><p>You don't any notification yet</p></div>
+            <div v-else>
+              <h3 class="text-center">You don't any notification yet</h3>
+            </div>
         </div>
 
     
