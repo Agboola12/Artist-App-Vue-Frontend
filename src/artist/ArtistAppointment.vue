@@ -2,7 +2,7 @@
     <div class="body">
         <NavArtist/>
         <div class="container ">
-          <h3 class="text-center">Here are your Schedule</h3>
+          <h3 class="text-center mt-5">Here are your Schedule</h3>
           <hr class="w-50 text-danger mx-auto"/>
             <div class="row">
               <div v-if="users.lenght>0">
@@ -20,7 +20,7 @@
               </div>
             </div>
             <div v-else>
-                <p>No Appointment</p>
+                <h3 class="text-center">No Appointment Yet</h3>
             </div>
             </div>
         </div>
