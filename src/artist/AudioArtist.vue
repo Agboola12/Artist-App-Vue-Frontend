@@ -54,7 +54,7 @@
                         </div>
                     </div>          
                     <div class="mt-4 pb-5" style="margin-left: 13em; ">
-                           <input type="submit" value="" class="btn btn ml-5  w-50 p-2 text-light" style="background-color: #A10035;"/>
+                           <input type="submit" value="" class="btn btn ml-5  w-50 p-2 text-light" :disabled="isLoading" style="background-color: #A10035;"/>
                     </div>
                 </form>
                  </div>
@@ -88,7 +88,8 @@ export default {
             instagramHandle: "",
             imageFile: null,
             mp3File: null,
-            imageShow: null
+            imageShow: null,
+            isLoading: false
         }
     },
     created() {  
@@ -126,7 +127,7 @@ export default {
         const artistName = this.artistName;
         const formData = new FormData();
         formData.append("songTitle", this.songTitle);
-        formData.append('image', this.imageFile);
+        formData.append('imageUrl', this.imageFile);
         formData.append('mp3', this.mp3File);
         formData.append("songDescription", this.songDescription);
         formData.append("websiteUrl", this.websiteUrl);
@@ -136,6 +137,7 @@ export default {
         formData.append("artistId", artistId);
         formData.append("artistName", artistName);
 
+            this.isLoading = true;
             axios.post("http://localhost:8000/createMusic",  formData)
             .then(res =>{
                 const result= res.data.message;    
@@ -146,6 +148,8 @@ export default {
             })
             .catch(err =>{
                 console.log(err);
+            }).finally(()=>{
+                this.isLoading = false;
             })
         }, 
 
