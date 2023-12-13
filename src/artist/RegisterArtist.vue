@@ -8,6 +8,7 @@
             <input
               type="text"
               name="firstName"
+              required
               v-model="firstName"
               class="form-control border-right-0 shadow-none border-top-0 border-left-0"
               id="firstName"
@@ -18,6 +19,7 @@
           <div class="form-group">
             <input
               type="email"
+              required
               name="email"
               v-model="email"
               class="form-control border-right-0 shadow-none border-top-0 border-left-0"
@@ -27,7 +29,7 @@
             <!-- <p v-if="errors.email">{{ errors.email }}</p> -->
           </div>
           <div class="form-group">
-            <select class="form-select border-right-0 shadow-none border-top-0 border-left-0"  v-model="artistType" name="musicType">
+            <select class="form-select border-right-0 shadow-none border-top-0 border-left-0" required  v-model="artistType" name="musicType">
               <option  disabled value="Rock">Select Your Artist Type</option>
               <option value="Music Artist">Music Artist</option>
               <option value="Bands">Bands</option>
@@ -40,6 +42,7 @@
             <input
               type="number"
               name="mobile"
+              required
               v-model="mobile"
               class="form-control border-right-0 shadow-none border-top-0 border-left-0"
               id="mobile"
@@ -49,7 +52,7 @@
             </div>
 
             <div class="form-group">
-            <select name="cars" class="form-select border-right-0 shadow-none border-top-0 border-left-0"  v-model="musicType">
+            <select name="cars" class="form-select border-right-0 shadow-none border-top-0 border-left-0" required v-model="musicType">
               <option  disabled value="Rock">What type music do you sing?</option>
               <option value="afroBeat">Afro Beat</option>
               <option value="hipPop">HipPop</option>
