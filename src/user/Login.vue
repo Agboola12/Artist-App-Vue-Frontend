@@ -11,7 +11,7 @@
       </div> <br/>
       <a href="#" >Forgot Password</a>
       <div class="mx-5">
-      <button type="submit" id="continue" class="btn btn w-100 mt-4">Continue</button> <br/><br/>
+      <button type="submit" id="continue" class="btn btn w-100 mt-4" :disabled="isLoading">Continue</button> <br/><br/>
           Don't have an account? 
           <router-link to="/register" style="color: #a10035" >Sign Up</router-link>
           <router-link to="/" class="ml-5" style="color: #a10035" >Go back home</router-link>
@@ -31,7 +31,8 @@ export default {
           email: '',
           passWord: '',
           result: '',
-          setResult: {}
+          setResult: {},
+          isLoading: false
     }
   },
   created() {
@@ -42,6 +43,7 @@ export default {
         email: this.email,
         passWord : this.passWord,
       }
+      this.isLoading=true
       axios.post
               (BaseUrl + "loginUser", info)
       // ("http://localhost:8000/loginUser", info)
@@ -56,7 +58,9 @@ export default {
       .catch((err)=>{
         console.log(err);
         alert(err.message)
-      })
+      }).finally(()=>{
+          this.isLoading = false;
+        })
     },
 }
 }

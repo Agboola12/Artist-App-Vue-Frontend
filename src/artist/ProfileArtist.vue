@@ -67,8 +67,7 @@
                    <div class="col-md-6">  <input type="file" ref="imageInput" @change="handleImageChange" class="form-control" /></div>
                </div>
            <div class="mt-4" style="margin-left: 10em;">
-            <!-- <button @click="updateUserProfile(id)"  class="btn btn w-50 p-2 text-light" style="background-color: #A10035; ">Update Profile</button>  -->
-                  <input type="submit"  class="btn btn  w-75 p-2 text-light" value="Update Profile" style="background-color: #A10035; "/>
+                  <input type="submit"  class="btn btn  w-75 p-2 text-light" value="Update Profile" :disabled="isLoading" style="background-color: #A10035; "/>
            </div>
           </div>
     </div>
@@ -97,7 +96,8 @@ export default {
       mobile:"",
       image: null,
       imageShow:  null,
-      avatarFile: null
+      avatarFile: null,
+      isLoading : false
     }
   },
   created() {  
@@ -110,7 +110,6 @@ export default {
     fetchUserProfile() {
       axios.get
       (BaseUrl + "getArtist")
-      // ("http://localhost:8000/getArtist" )
         .then((res) => {
             // console.log(res.data);
           this.user = res.data.data
@@ -145,11 +144,10 @@ export default {
       formData.append("image", this.image);
       
 
-
+      this.isLoading = true
       axios
         .put
             (BaseUrl + `updateProfile/${this.id}`, formData)
-        // (`http://localhost:8000/updateProfile/${this.id}`, formData) 
         .then((ress) => {
           const result= ress.data.message;    
           alert(result);
@@ -160,7 +158,9 @@ export default {
         })
         .catch((error) => {
           console.error(error);
-        });
+        }).finally(()=>{
+            this.isLoading = false;
+          })
     },
   },
 
