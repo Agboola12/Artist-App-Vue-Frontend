@@ -19,7 +19,7 @@
                     <div class="container mt-4 mb-5" style="width: auto;">
                       <div class='d-flex '>
                         <h4>Top Songs</h4>
-                        <p id="ppa" style="margin-left: 70%;"> <a href="allsong">View All</a></p>
+                        <p id="ppa" style="margin-left: 70%;"><router-link to="/allsong">View All</router-link></p>
                     </div>
                         <div v-if="songs.length > 0">
                         <div class=' shadow-sm p-3 mb-5 d-flex m-2' v-for="(song, index) in songs" :key="index" id="song">
@@ -52,7 +52,7 @@
                     <div class="mt-5 ">
                       <div class='d-flex '>
                         <h4>Popular Artist</h4>
-                        <p id="ppa" style="margin-left: 25%;"> <a href="allartist">View All</a></p>
+                        <p id="ppa" style="margin-left: 25%;"> <router-link to="/allartist">View All</router-link></p>
                     </div>
                       <div class="row">
                         <div v-if="artists.length > 0">

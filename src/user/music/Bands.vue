@@ -3,7 +3,7 @@
   <div class="container main-content">
             <div class="row ">
                 <h2 class="text-center">All Band Artist</h2>
-                <div v-if="users>0">
+                <div v-if="users.length>0">
                   <div class="col-md-3 mt-3" v-for="(user, index) in users" :key="index">
                     <img class="card-img-top w-100" :src="user.imageUrl" alt="Card image" height="200" >
                     <div class="card-body">
