@@ -54,8 +54,8 @@
                         <h4>Popular Artist</h4>
                         <p id="ppa" style="margin-left: 25%;"> <router-link to="/allartist">View All</router-link></p>
                     </div>
+                    <div v-if="artists.length > 0">
                       <div class="row">
-                        <div v-if="artists.length > 0">
                           <div class="col-md-4 mx-auto" v-for="(artist, index) in artists" :key="index">
                             <div class="card h-50 border-0">
                               <img class="card-img-top" :src="artist.imageUrl" alt="image" >
@@ -64,9 +64,9 @@
                               </div>
                             </div>
                           </div>
-                          </div>
-                          <div v-else><p>Artist is yet to sign Up to the site</p></div>
+                        </div>
                       </div>
+                      <div v-else><p>Artist is yet to sign Up to the site</p></div>
                     </div>
                    </div>
           </div>

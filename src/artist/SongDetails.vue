@@ -78,7 +78,7 @@
                      </div>
                  </div>
              <div class="mt-4 text-center" >
-                    <input type="submit" class="btn btn w-25 p-2 text-light" style="background-color: #A10035; "/>
+                    <input type="submit" :disabled="isLoading" class="btn btn w-25 p-2 text-light" style="background-color: #A10035; "/>
              </div>
       </div>
     </div>
@@ -119,7 +119,8 @@ export default {
         tiktokHandle:"",
         websiteUrl:"",
         image: null,
-        imageShow: null
+        imageShow: null,
+        isLoading: false
 
         
         
@@ -172,7 +173,6 @@ export default {
         songID(id){
           axios.get
                     (BaseUrl + `songDetail/${id}`)
-              // (`http://localhost:8000/songDetail/${id}`)
           .then((res)=>{
               // this.songs = res.data
               // console.log(res.data);
@@ -196,7 +196,6 @@ export default {
         delSong(id){
           axios.delete
                   (BaseUrl + `delSong/${id}`)
-          // (`http://localhost:8000/delSong/${id}`)
           .then((ress)=>{
             const result= ress.data.message;    
                alert(result);
@@ -226,11 +225,10 @@ export default {
       formData.append("tiktokHandle", this.tiktokHandle);
       formData.append("facebookHandle", this.facebookHandle);
       formData.append("instagramHandle", this.instagramHandle);
-
+      this.isLoading=true
       axios
         .put
             (BaseUrl + `updateSong/${this.id}`, formData)
-        // (`http://localhost:8000/updateSong/${this.id}`, formData) 
         .then((ress) => {
           const result= ress.data.message;    
           alert(result);
@@ -241,7 +239,9 @@ export default {
         })
         .catch((error) => {
           console.error(error);
-        });
+        }).finally(()=>{
+          this.isLoading=false
+        })
     },
       
 

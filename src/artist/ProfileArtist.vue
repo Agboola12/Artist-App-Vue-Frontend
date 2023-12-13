@@ -43,7 +43,6 @@
     <div class="modal-content" >
       <div class="modal-header">
         <h5 class="modal-title mx-auto" >Edit Profile</h5>
-      <!-- <img :src="avatarFile" alt="profile" class="w-25" style="border-radius: 50px;"/> -->
       <img v-if="imageShow" :src="imageShow" alt="profile" class="w-25" style="border-radius: 50px;" />
         <button type="button" data-dismiss="modal" class="close"  aria-label="Close">
           <span aria-hidden="true">&times;</span>
@@ -141,7 +140,7 @@ export default {
       formData.append("email", this.email);
       formData.append("state", this.state);
       formData.append("country", this.country);
-      formData.append("image", this.image);
+      formData.append("imageUrl", this.image);
       
 
       this.isLoading = true
