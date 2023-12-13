@@ -219,7 +219,7 @@ export default {
       const formData = new FormData();
       formData.append("id", this.id);
       formData.append("songTitle", this.songTitle);
-      formData.append("image", this.image);
+      formData.append("imageUrl", this.image);
       formData.append("songDescription", this.songDescription);
       formData.append("websiteUrl", this.websiteUrl);
       formData.append("tiktokHandle", this.tiktokHandle);
