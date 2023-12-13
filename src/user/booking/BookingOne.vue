@@ -8,7 +8,7 @@
                 <li class="m-4">Tell us about event.</li>
                 <li class="m-4"> Relevant musicians are instantly alerted.</li>
                 <li class="m-4"> Available musicians respond with tailored quotes.</li>
-                <a href="bookingtwo"><button class="btn btn ml-5  w-50 text-light"> Next</button></a>
+                <router-link to="bookingtwo"><button class="btn btn ml-5  w-50 text-light"> Next</button></router-link>
             </ol>
         </div>
 
