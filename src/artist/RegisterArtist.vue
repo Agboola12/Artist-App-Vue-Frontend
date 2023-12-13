@@ -82,13 +82,15 @@
               <!-- <p v-if="errors.country">{{ errors.country}}</p> -->
             </div>
             
+
           <div class="form-group">
             <input
+              required
               type="file"
               class="form-control border-right-0 shadow-none border-top-0 border-left-0"
               ref="imageInput" 
               @change="handleImageChange"
-              id="image"
+              id="imageUrl"
             />
               <!-- <p v-if="errors.image">{{ errors.image}}</p> -->
             </div>
@@ -97,6 +99,7 @@
             <input
               type="password"
               name="passWord"
+              required
               v-model="passWord"
               class="form-control border-right-0 shadow-none border-top-0 border-left-0"
               id="passWord"
@@ -106,14 +109,7 @@
           </div>
 
           <div class="mx-5">
-            <button
-              type="submit"
-              name="submit"
-              id="continue"
-              class="btn btn w-100 mt-2" 
-            >
-              Continue
-            </button>
+            <button type="submit" name="submit" id="continue" class="btn btn w-100 mt-2" :disabled="isLoading"> Continue</button>
             <br /><br />
             <p>--------- OR ---------</p>
           </div>
@@ -150,70 +146,49 @@ import BaseUrl from "../BaseUrl";
             musicType: " ",
             state: "",
             country: "",
-            image:"null",
+            imageUrl:"null",
             passWord: "",
-            // errors: {},
+            isLoading: false
           };
     },
     
     methods: {
 
-    //   validateForm() {
-    //   this.errors = {};
-
-    //   if (!this.firstName || this.firstName.length >= 2 ) {
-    //     this.errors.name = 'Name is required hellooooooo';
-    //   }
-    //   if (!this.email) {
-    //     this.errors.email = 'Email is required';
-    //   }
-    //   if (!this.artistType) {
-    //     this.errors.artistType = 'artist Type is required';
-    //   }
-    //   if (!this.mobile || this.mobile.length === 11) {
-    //     this.errors.mobile = 'This field is required';
-    //   }
-    //   if (!this.musicType) {
-    //     this.errors.musicType = 'Music Type is required';
-    //   }
-    //   if (!this.state || this.state.length <= 2) {
-    //     this.errors.state = 'State is required wowwwwww';
-    //   }
-    //   if (!this.country ) {
-    //     this.errors.country = 'Country is required';
-    //   }
-    //   if (!this.image) {
-    //     this.errors.image = 'Image is required';
-    //   }
-    //   if (!this.passWord ) {
-    //     this.errors.passWord = 'Password is required';
-    //   }
-    //   return Object.keys(this.errors).length === 0;
-    // },
 
      handleImageChange (event){
-        this.image = event.target.files[0] ;
+        this.imageUrl = event.target.files[0] ;
     },
         
         onCreatePost() {
-          // if (this.validateForm()) {
-        const formData = new FormData();
-        formData.append("firstName", this.firstName);
+          // const info ={
+          //   firstName : this.firstName,
+          //   email : this.email,
+          //   passWord :this.passWord,
+          //   artistType : this.artistType,
+          //   mobile : this.mobile,
+          //   musicType : this.musicType,
+          //   state : this.state,
+          //   country : this.country,
+          //   imageUrl : this.imageUrl,
+          //   passWord : this.passWord,
+          // }
+          // console.log(info);
+            const formData = new FormData();
+             formData.append("firstName", this.firstName);
              formData.append("email", this.email);
              formData.append("artistType", this.artistType);
              formData.append("mobile", this.mobile);
              formData.append("musicType", this.musicType);
              formData.append("state", this.state);
              formData.append("country", this.country);
-             formData.append("image", this.image);
+             formData.append("imageUrl", this.imageUrl);
              formData.append("passWord", this.passWord);
 
             //  console.log(formData);
-            
+            this.isLoading = true;
             axios
                 .post
                     (BaseUrl + "createArtist", formData)
-                // ("http://localhost:8000/createArtist", formData)
                 .then((res) => {
                   const result= res.data.message;    
                     alert(result);
@@ -224,11 +199,9 @@ import BaseUrl from "../BaseUrl";
             })
                 .catch((err) => {
                 console.log(err);
-            });
-      // } 
-      // else {
-      //   console.log('Form has errors. Please fix them.');
-      // }
+            }).finally(()=>{
+              this.isLoading = false;
+            })
 
         },
     },
