@@ -2,7 +2,7 @@
   <UserSideBar/>
   <div class="main-content container">
             <div class="row">
-              <div v-if="users">
+              <div v-if="users.length>0">
                 <h2 class="text-center">All Music Artists</h2>
                 <div class="col-md-3 mt-2" v-for="(user, index) in users" :key="index">
                   <img class="card-img-top w-100" :src="user.imageUrl" alt="Card image" height="200" >

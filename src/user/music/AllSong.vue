@@ -4,7 +4,7 @@
         <div class="container">
           <h2 class="text-center">All Songs</h2>
             <div class="row mt-3">
-              <div v-if="songs">
+              <div v-if="songs.length>0">
                 <div class="col-md-3 mt-4" v-for="(song, index) in songs" :key="index">
                   <img class="card-img-top w-100" :src="song.imageUrl" alt="Card image" height="200" >
                   <div class="card-body">
