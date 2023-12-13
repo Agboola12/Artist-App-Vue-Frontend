@@ -69,7 +69,7 @@
           </li>
           <li class="nav-item">
             <!-- <a class="nav-link" href="loginartist" @click="logOut()">Logout</a> -->
-            <router-link to="/loginartist" class="nav-link" @click="logOut()">Appointment</router-link>
+            <router-link to="/loginartist" class="nav-link" @click="logOut()">LogOut</router-link>
           </li>
           
         </ul>
