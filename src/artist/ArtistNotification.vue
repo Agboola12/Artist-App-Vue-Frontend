@@ -3,6 +3,7 @@
         <NavArtist/>
         <div class="container ">
           <h3 class="text-center">Here are your Appointments</h3>
+          <div v-if="users.length>0">
             <div class="row">
                     <div class="col-md-3 p-4 mt-5 mx-auto card-client" v-for="(user, index) in users" :key="index" >
                         <div class="user-picture">
@@ -14,9 +15,11 @@
                     {{ user.userName }}
                     <span class="mt-2">{{ user.userEmail }}</span>
                     <span class="mt-3" ><button data-toggle="modal" data-target="#myModal"   @click="infoDetails(user.id)" class="btn btn-light details">Details</button></span>
-                </p>
+                  </p>
                 </div>
+              </div>
             </div>
+            <div v-else><p>You don't any notification yet</p></div>
         </div>
 
     
