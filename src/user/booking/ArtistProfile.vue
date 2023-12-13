@@ -13,7 +13,7 @@
                             <p><i class="fs-1 mt-2  glyphicon glyphicon-earphone mr-2"></i>{{user.mobile}}</p>
                             <p><i class="fs-1 mt-2  fa fa-map-marker mr-2"></i>{{user.state}}, {{ user.country }}</p>
                     </div>
-                            <button @click="hireMe()" class="btn btn mt-3  p-3 hire"><b>Hire Me</b></button>
+                            <button @click="hireMe()" :disabled="isLoading" class="btn btn mt-3  p-3 hire"><b>Hire Me</b></button>
                 </div>
             </div>
             <div class="col-md-8">
@@ -147,7 +147,8 @@ export default {
         user: null,
         musics: null,
         userName: '',
-        userEmail:''
+        userEmail:'',
+        isLoading: false
     }
   },
   created(){
@@ -195,7 +196,7 @@ export default {
             }
             const bookingInfo = JSON.parse(localStorage.getItem('users'));
             console.log(bookingInfo);
-            
+            this.isLoading=true
             axios.post
                     (BaseUrl + "bookingInfo", {...bookingInfo, ...loginUser})
                     //  "http://localhost:8000/bookingInfo", {...bookingInfo, ...loginUser})
@@ -210,7 +211,9 @@ export default {
                  })
                  .catch((err) => {
                    console.log(err);
-                 });
+                 }).finally(()=>{
+                    this.isLoading=false
+                 })
         },
 }
 }

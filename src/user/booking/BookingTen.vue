@@ -11,10 +11,10 @@
 
           <div class="row mt-5">
             <div class="col-md-6">
-              <a href="bookingresult"> <button class="btn btn text-light  w-75">Yes, please</button> </a>
+              <router-link to="bookingresult"> <button class="btn btn text-light  w-75">Yes, please</button> </router-link>
             </div>
             <div class="col-md-6">
-            <router-link to="/allartist"><button  id="btn" class="btn btn text-dark w-75 ">No, thanks</button></router-link>    
+            <router-link to="/homeuser"><button  id="btn" class="btn btn text-dark w-75 ">No, thanks</button></router-link>    
             </div>
           </div>
        </div> 
