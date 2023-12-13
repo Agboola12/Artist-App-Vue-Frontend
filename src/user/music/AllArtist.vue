@@ -2,9 +2,9 @@
     <UserSideBar/>
     <div class="main-content">
         <div class="container">
+            <div v-if="artists.length>0">
             <div class="row mt-3">
                 <h2 class="text-center">All Musicians</h2>
-                <div v-if="artists.length>0">
                     <div class="col-md-3 mt-4 mb-2" v-for="(artist, index) in artists" :key="index">
                         <img class="card-img-top w-100" :src="artist.imageUrl" alt="Card image" height="200" >
                         <div class="card-body">
@@ -15,11 +15,11 @@
                         </div>
                     </div>
                 </div>
-                <div v-else>
-                        <p>Artist is yet to signUp</p>
-                </div>
             </div>
+        <div v-else>
+                <p>Artist is yet to signUp</p>
         </div>
+            </div>
     </div>
 </template>
 
