@@ -20,7 +20,7 @@
                   </p>  
                 </div>
               </div>
-              <div v-else><p>Song is yet to be uploaded</p></div>
+              <div v-else><p class="text-center">Song is yet to be uploaded</p></div>
             </div>
         </div>
 
