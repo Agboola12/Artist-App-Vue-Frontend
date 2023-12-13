@@ -10,14 +10,17 @@
 
         <div class="container row" >
             <p class="text-center mt-4 h2">Music Uploaded</p>
-            <div class="col-md-5 offset-4 mt-4"  >
+            <div class="col-md-5 offset-4 mt-4">
+              <div v-if="users.length>0">
                 <div   v-for="(user, index) in users" :key="index">
-                 <p>{{ index +1 }}.      
-                  {{ user.songTitle }} 
+                  <p>{{ index +1 }}.      
+                    {{ user.songTitle }} 
                     <button @click="songID(user.id)"  class="btn btn-primary ml-5" data-toggle="modal" data-target="#exampleModal" ><i class="fa fa-info-circle"></i></button> 
                     <button @click="delSong(user.id)"  class="btn btn-danger ml-3"><i class="fas fa-trash"></i></button> 
                   </p>  
                 </div>
+              </div>
+              <div v-else><p>Song is yet to be uploaded</p></div>
             </div>
         </div>
 
