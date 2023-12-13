@@ -1,6 +1,6 @@
  <template>
         <div class="container mx-auto"  style="margin-top: 5em;  ">
-        <a href="homeuser" style="margin-left: 90%;"><button class="btn btn p-3">Go Back Home</button></a>
+        <!-- <router-link to="homeuser" style="margin-left: 90%;"><button class="btn btn p-3">Go Back Home</button></router-link> -->
           <form action="post" enctype="multipart/form-data" @submit.prevent="onSend" class="col-sm-4" style="margin-left: 30%;">
               <h1 class="ml-5">Booking</h1>
               <hr class="w-50 ml-5"/>
