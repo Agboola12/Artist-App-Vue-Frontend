@@ -1,6 +1,6 @@
 <template>
     <div class="container "  style="margin-top: 5em;  ">
-      <a href="homeuser" style="margin-left: 90%;"><button class="btn btn-danger  ">Go Back Home</button></a>
+      <router-link to="homeuser" style="margin-left: 90%;"><button class="btn btn-danger  ">Go Back Home</button></router-link>
       <div class="col-sm-6 mx-auto " style="border: 1px solid gray; border-style: none; ">
           <h1 class="text-center">Booking</h1>
           <div class="mt-5 text-center" >
