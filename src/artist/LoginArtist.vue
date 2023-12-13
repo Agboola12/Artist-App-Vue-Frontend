@@ -44,7 +44,7 @@ export default {
                 email: this.email,
                 passWord: this.passWord,
             };
-            this.isLoading=true
+            this.isLoading=true;
             axios.post
             (BaseUrl+"loginArtist", info)
             // ("http://localhost:8000/loginArtist", info)
