@@ -20,7 +20,7 @@
               </div>
             </div>
             <div v-else>
-                <h3 class="text-center">No Appointment Yet</h3>
+                <p class="text-center">No Appointment Yet</p>
             </div>
             </div>
         </div>

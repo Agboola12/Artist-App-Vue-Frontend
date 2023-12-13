@@ -20,7 +20,7 @@
               </div>
             </div>
             <div v-else>
-              <h3 class="text-center">You don't any notification yet</h3>
+              <p class="text-center">You don't any notification yet</p>
             </div>
         </div>
 
