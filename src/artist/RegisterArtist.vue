@@ -63,6 +63,7 @@
               type='text'
               name="state"
               v-model="state"
+              required
               class="form-control border-right-0 shadow-none border-top-0 border-left-0"
               id="state"
               placeholder="Enter Your State"
@@ -73,6 +74,7 @@
             <div class="form-group">
               <input
               type='text'
+              required
               name="country"
               v-model="country"
               class="form-control border-right-0 shadow-none border-top-0 border-left-0"
