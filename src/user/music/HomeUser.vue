@@ -21,7 +21,7 @@
                         <h4>Top Songs</h4>
                         <p id="ppa" style="margin-left: 70%;"> <a href="allsong">View All</a></p>
                     </div>
-                        <div v-if="songs">
+                        <div v-if="songs.length > 0">
                         <div class=' shadow-sm p-3 mb-5 d-flex m-2' v-for="(song, index) in songs" :key="index" id="song">
                           <p>0{{ index + 1 }}.</p>
                           <img :src="song.imageUrl" alt="cover" class="ml-4" width="50" height="50" style="border-radius: 50px;"/> 
@@ -36,7 +36,7 @@
                   </div>
                   <div class="col-md-3 offset-1">
                     <h4 class="mb-4 ">Top Songs</h4>
-                    <div v-if="songs">
+                    <div v-if="songs.length > 0">
                     <div class="shadow-sm p-2 jumbotron" v-for="(song, index) in songs" :key="index" >
                       <small class="d-flex">
                         <p>0{{ index + 1 }}.</p>
@@ -55,7 +55,7 @@
                         <p id="ppa" style="margin-left: 25%;"> <a href="allartist">View All</a></p>
                     </div>
                       <div class="row">
-                        <div v-if="artists">
+                        <div v-if="artists.length > 0">
                           <div class="col-md-4 mx-auto" v-for="(artist, index) in artists" :key="index">
                             <div class="card h-50 border-0">
                               <img class="card-img-top" :src="artist.imageUrl" alt="image" >
