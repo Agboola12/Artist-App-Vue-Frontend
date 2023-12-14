@@ -44,10 +44,9 @@ axios.interceptors.request.use((value) =>{
   return value;
 })
 
-//history: createWebHistory(import.meta.env.BASE_URL),
 
 const router = createRouter({
-  mode: "hash",
+  history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {  path: '/',  name: 'land',  component: Land},
     {path: '/landing' , name: 'landing', component: Landing},
