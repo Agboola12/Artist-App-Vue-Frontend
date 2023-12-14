@@ -15,6 +15,7 @@
                 <div   v-for="(user, index) in users" :key="index">
                   <p>{{ index +1 }}.      
                     {{ user.songTitle }} 
+                    <audio  controls> <source :src="user.mp3Url" type="audio/mpeg" ></audio>
                     <button @click="songID(user.id)"  class="btn btn-primary ml-5" data-toggle="modal" data-target="#exampleModal" ><i class="fa fa-info-circle"></i></button> 
                     <button @click="delSong(user.id)"  class="btn btn-danger ml-3"><i class="fas fa-trash"></i></button> 
                   </p>  
@@ -145,29 +146,6 @@ export default {
            console.log(err)
           })
         },
-//             async fetchUserProfile() {
-//   try {
-//     const artistResponse = await axios.get("http://localhost:8000/getArtist");
-    
-//     if (artistResponse.data.status) {
-//       const artistId = artistResponse.data.data.id;
-//       console.log("Artist ID:", artistId);
-      
-//       const songsResponse = await axios.get(`http://localhost:8000/getAllSong/${artistId}`);
-      
-//       if (songsResponse.data.status) {
-//         this.users = songsResponse.data.data;
-//         console.log(this.users);
-//       } else {
-//         console.error("Error fetching songs data:", songsResponse.data.error);
-//       } 
-//     } else {
-//       console.error("Error fetching artist data:", artistResponse.data.error);
-//     }
-//   } catch (error) {
-//     console.error("An error occurred:", error);
-//   }
-// },
 
         
         songID(id){
