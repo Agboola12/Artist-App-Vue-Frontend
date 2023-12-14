@@ -138,7 +138,9 @@ export default {
         formData.append("artistName", artistName);
 
             this.isLoading = true;
-            axios.post("http://localhost:8000/createMusic",  formData)
+            axios.post
+            (BaseUrl+"createMusic", formData)
+            // ("http://localhost:8000/createMusic",  formData)
             .then(res =>{
                 const result= res.data.message;    
                     alert(result);
