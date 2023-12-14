@@ -28,10 +28,10 @@
 
                 <div class="row">
                     <div class="col-md-6 text-center" style="margin-top: 10em ;color: #FFDDDD;">
-                        <h1 style="font-weight: bolder; font-size: 3em;">YOU CALL IT </h1> 
+                        <h1 style="font-weight: bolder; font-size: 3em;">'YOU CALL IT </h1> 
                           <h1 style="font-weight: bolder;">MUSIC </h1> 
-                            <h3 style="font-weight: bolder; font-size: 2em;"> I CALL IT MY THERAPIST </h3>
-                            <p>Without music, life would be a mistake</p>
+                            <h3 style="font-weight: bolder; font-size: 2em;"> I CALL IT MY THERAPIST' </h3>
+                            <!-- <p>Without music, life would be a mistake</p> -->
                     </div>
                     <div class="image col-md-6">
                         <img src="../src/assets/Camera/background.png"  height="500px"  />
