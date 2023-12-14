@@ -44,7 +44,8 @@
                 <div class="row mt-5">
                   <div class="col-md-7 mx-auto">
                     <div class="row" v-if="artists">
-                      <h3 class="mb-5">Popular Artist</h3>
+                      <h3 class="mb-5 ">Popular Artist <hr class="w-25 text-danger"/></h3>
+                      
                           <div class="col-md-4 mx-auto" v-for="(artist, index) in artists" :key="index">
                             <div class="card h-50 border-0">
                               <img class="card-img-top" :src="artist.imageUrl" alt="image" >
@@ -57,7 +58,7 @@
                       <div v-else> <p class="text-center">No Artist has been created</p></div>
                     </div> 
                     <div class="col-md-4" v-if="songs">
-                      <h3 class="mb-4 ">Top Songs</h3>
+                      <h3 class="mb-4 ">Top Songs</h3>  
                     <div class="shadow-sm p-2 jumbotron w-100" v-for="(song, index) in songs" :key="index" >
                       <small class="d-flex">
                         <p>0{{ index + 1 }}.</p>
