@@ -33,7 +33,7 @@ export default {
 
     data() {
         return {
-            artists: null,
+            artists: [],
         };
     },
     created() {

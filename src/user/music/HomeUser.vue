@@ -21,7 +21,7 @@
                         <h4>Top Songs</h4>
                         <p id="ppa" style="margin-left: 70%;"><router-link to="/allsong">View All</router-link></p>
                     </div>
-                        <div v-if="songs.length > 0">
+                        <div v-if="songs.length>0">
                         <div class=' shadow-sm p-3 mb-5 d-flex m-2' v-for="(song, index) in songs" :key="index" id="song">
                           <p>0{{ index + 1 }}.</p>
                           <img :src="song.imageUrl" alt="cover" class="ml-4" width="50" height="50" style="border-radius: 50px;"/> 
@@ -86,8 +86,8 @@ import BaseUrl from "../../BaseUrl.js"
         return {
             user: null,
             id: "",
-            artists: null,
-            songs: null
+            artists: [],
+            songs: []
         };
     },
     created() {

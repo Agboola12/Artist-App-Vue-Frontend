@@ -50,11 +50,11 @@ export default {
       axios.post
               (BaseUrl + "loginUser", info)
       .then ((res)=>{             
-        if(res.data.status){
         const result= res.data.message;    
           toast(result, {
-            autoClose: 9000,
+            autoClose: 5000,
           }); 
+        if(res.data.status){
           localStorage.setItem("token", res.data.token)
           this.$router.push("/homeuser");
         }
