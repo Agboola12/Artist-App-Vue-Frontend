@@ -135,6 +135,8 @@
 import axios from 'axios';
 import UserSideBar from '../UserSideBar.vue';
 import BaseUrl from "../../BaseUrl.js"
+import { toast } from 'vue3-toastify';
+import 'vue3-toastify/dist/index.css';
 
 
 export default {
@@ -199,13 +201,13 @@ export default {
             this.isLoading=true
             axios.post
                     (BaseUrl + "bookingInfo", {...bookingInfo, ...loginUser})
-                    //  "http://localhost:8000/bookingInfo", {...bookingInfo, ...loginUser})
                  .then((res) => {
-                    const result= res.data.message;    
-                      alert(result);
                     if(res.data.status){
                         console.log(res.data);
-                         alert('You have hire' + " "+ res.data.response.artistName)
+                        toast(('You have hire' + " "+ res.data.response.artistName), {
+                            autoClose: 5000,
+                          });
+                        //  alert('You have hire' + " "+ res.data.response.artistName)
                          this.router.push('/homeuser')
                      }
                  })

@@ -4,6 +4,7 @@
 
         <div class="container mt-4 mb-5"  style="width: auto;">
                 <h2 class="text-center"><b>Your Choice Artist</b></h2>
+                <div v-if="users.length>0">
             <div class=' shadow-sm p-3 mt-5 mb-5 d-flex m-2'  v-for="(user, index) in users" :key="index" id="song">
               <p>0{{ index + 1 }}.</p>
               <img :src="user.imageUrl" alt="cover" class="ml-4" width="50" height="50" style="border-radius: 50px;"/> 
@@ -12,7 +13,11 @@
               <p class="ml-4 mr-5">Mobile Number <br/><br/> {{ user.mobile }}</p>
                <button  class="border-0 btn btn" @click="Artistprofile(user.id)"><a id="bttt" href="">Check Profile</a></button> 
             </div>
-        </div>
+            </div>
+            <div v-else>
+                <p>Your Choice is not availabile</p>
+            </div>
+          </div>
 
        </div>
 </template>
@@ -27,7 +32,7 @@ export default {
         return{
             // userName: '',
             // userEmail: '',
-            users: null
+            users: []
         }
     },
     created(){
