@@ -81,6 +81,8 @@
 <script>
 import axios from 'axios';
 import BaseUrl from "../BaseUrl.js";
+import { toast } from 'vue3-toastify'
+import 'vue3-toastify/dist/index.css'
 
 export default {
   data() {
@@ -149,7 +151,9 @@ export default {
             (BaseUrl + `updateProfile/${this.id}`, formData)
         .then((ress) => {
           const result= ress.data.message;    
-          alert(result);
+          toast(result, {
+                    autoClose: 5000,
+                  });
           if(ress.data.status){
             // console.log(ress);
             this.$router.push("/dashboardartist")

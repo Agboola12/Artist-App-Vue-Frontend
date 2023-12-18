@@ -102,6 +102,8 @@ import axios from 'axios';
 import BaseUrl from "../BaseUrl.js";
 import FooterArtist from './FooterArtist.vue';
 import NavArtist from './NavArtist.vue';
+import { toast } from 'vue3-toastify'
+import 'vue3-toastify/dist/index.css'
 
 export default {
     components: { NavArtist, FooterArtist },
@@ -209,7 +211,10 @@ export default {
             (BaseUrl + `updateSong/${this.id}`, formData)
         .then((ress) => {
           const result= ress.data.message;    
-          alert(result);
+          toast(result, {
+                    autoClose: 5000,
+                  });
+
             if(ress.data.status){
             console.log(ress);
             }
