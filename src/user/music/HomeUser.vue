@@ -54,7 +54,7 @@
                         <h4>Popular Artist</h4>
                         <p id="ppa" style="margin-left: 25%;"> <router-link to="/allartist">View All</router-link></p>
                     </div>
-                    <div v-if="artists.length > 0">
+                    <div v-if="artists.length>0">
                       <div class="row">
                           <div class="col-md-4 mx-auto" v-for="(artist, index) in artists" :key="index">
                             <div class="card h-50 border-0">

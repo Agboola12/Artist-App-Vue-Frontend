@@ -12,7 +12,8 @@
       <a href="#" >Forgot Password</a>
       <div class="mx-5">
       <button type="submit" id="continue" class="btn btn w-100 mt-4" :disabled="isLoading">Continue</button> <br/><br/>
-          Don't have an account? 
+      <button class="btn btn-info" @click="notify()">Notify !</button><br/>
+      Don't have an account? 
           <router-link to="/register" style="color: #a10035" >Sign Up</router-link>
           <router-link to="/" class="ml-5" style="color: #a10035" >Go back home</router-link>
       </div>
@@ -24,6 +25,8 @@
 <script>
 import axios from 'axios'
 import BaseUrl from "../BaseUrl.js"
+import { toast } from 'vue3-toastify';
+import 'vue3-toastify/dist/index.css';
 
 export default {
   data(){
@@ -38,6 +41,7 @@ export default {
   created() {
   },
   methods:{
+
     loginPost(){    
      const info = {
         email: this.email,
@@ -46,11 +50,12 @@ export default {
       this.isLoading=true
       axios.post
               (BaseUrl + "loginUser", info)
-      // ("http://localhost:8000/loginUser", info)
-      .then ((res)=>{     
+      .then ((res)=>{             
+        if(res.data.status){
         const result= res.data.message;    
-        alert(result)
-      if(res.data.status){
+          toast(result, {
+            autoClose: 9000,
+          }); 
           localStorage.setItem("token", res.data.token)
           this.$router.push("/homeuser");
         }

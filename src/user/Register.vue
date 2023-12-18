@@ -48,7 +48,7 @@
         </div>
       </form>
       <div class="mx-5">
-        <button id="sign" class="btn btn" @click="notifyMe()">
+        <button id="sign" class="btn btn">
           <i class="fa fa-google"></i>Sign up with google
         </button>
         <p class="mt-5">
