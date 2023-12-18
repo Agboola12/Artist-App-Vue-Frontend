@@ -64,6 +64,8 @@
 <script>
 import axios from "axios";
 import BaseUrl from "../BaseUrl";
+import { toast } from 'vue3-toastify';
+import 'vue3-toastify/dist/index.css';
 
 export default {
   data() {
@@ -90,7 +92,9 @@ export default {
             (BaseUrl + "createUser", info)
         .then((res) => {
           const result= res.data.message;    
-        alert(result);
+          toast(result, {
+            autoClose: 5000,
+          });
           if(res.data.status){
             console.log(res);
             this.$router.push('/login')

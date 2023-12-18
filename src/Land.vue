@@ -130,8 +130,8 @@ export default {
 
   data(){
     return{
-        artists: null,
-        songs: null
+        artists: [],
+        songs: []
     } 
   },
     created(){

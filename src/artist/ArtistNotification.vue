@@ -112,7 +112,7 @@ export default {
         return {
             id: '',
             artistName: "",
-            users: null,
+            users: [],
             datas: '',
         };
     },

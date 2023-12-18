@@ -27,7 +27,9 @@
 <script>
 import axios from 'axios'
 import FooterArtist from './FooterArtist.vue'
-import BaseUrl from "../BaseUrl.js";
+import BaseUrl from "../BaseUrl.js"
+import { toast } from 'vue3-toastify'
+import 'vue3-toastify/dist/index.css'
 
 
 export default {
@@ -50,7 +52,9 @@ export default {
             // ("http://localhost:8000/loginArtist", info)
                 .then((res) => {
                     const result= res.data.message;    
-                    alert(result);
+                    toast(result, {
+                    autoClose: 5000,
+                  });
                     if(res.data.status){
                     localStorage.setItem("token", res.data.token)
                     this.$router.push("/dashboardartist");

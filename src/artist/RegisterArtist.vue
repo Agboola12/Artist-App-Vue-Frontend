@@ -140,6 +140,8 @@
   import axios from "axios";
   import FooterArtist from "./FooterArtist.vue";
 import BaseUrl from "../BaseUrl";
+import { toast } from 'vue3-toastify';
+import 'vue3-toastify/dist/index.css';
   
   export default {
     data() {
@@ -165,19 +167,6 @@ import BaseUrl from "../BaseUrl";
     },
         
         onCreatePost() {
-          // const info ={
-          //   firstName : this.firstName,
-          //   email : this.email,
-          //   passWord :this.passWord,
-          //   artistType : this.artistType,
-          //   mobile : this.mobile,
-          //   musicType : this.musicType,
-          //   state : this.state,
-          //   country : this.country,
-          //   imageUrl : this.imageUrl,
-          //   passWord : this.passWord,
-          // }
-          // console.log(info);
             const formData = new FormData();
              formData.append("firstName", this.firstName);
              formData.append("email", this.email);
@@ -196,7 +185,9 @@ import BaseUrl from "../BaseUrl";
                     (BaseUrl + "createArtist", formData)
                 .then((res) => {
                   const result= res.data.message;    
-                    alert(result);
+                          toast(result, {
+                    autoClose: 5000,
+                  });
                   if(res.data.status){
                     console.log(res);
                     this.$router.push('/loginartist');
