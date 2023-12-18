@@ -12,7 +12,7 @@
       <a href="#" >Forgot Password</a>
       <div class="mx-5">
       <button type="submit" id="continue" class="btn btn w-100 mt-4" :disabled="isLoading">Continue</button> <br/><br/>
-      <button class="btn btn-info" @click="notify()">Notify !</button><br/>
+      <button class="btn btn-info" @click="notify(
       Don't have an account? 
           <router-link to="/register" style="color: #a10035" >Sign Up</router-link>
           <router-link to="/" class="ml-5" style="color: #a10035" >Go back home</router-link>
