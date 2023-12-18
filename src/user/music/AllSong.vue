@@ -31,7 +31,7 @@ export default {
 
   data() {
       return {
-          songs: null,
+          songs: [],
       };
   },
   created() {

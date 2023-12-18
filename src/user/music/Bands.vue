@@ -30,7 +30,7 @@ export default {
     components: { UserSideBar },
     data(){
       return{
-          users: null
+          users: []
       }
     },
     created(){
