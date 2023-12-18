@@ -105,6 +105,8 @@
 import axios from "axios";
 import NavArtist from "./NavArtist.vue";
 import BaseUrl from "../BaseUrl.js";
+import { toast } from 'vue3-toastify'
+import 'vue3-toastify/dist/index.css'
 
 
 export default {
@@ -163,7 +165,9 @@ export default {
             axios.get(BaseUrl + `Approve/${id}`)
             .then((res)=>{
               const result= res.data.message;    
-                  alert(result);
+              toast(result, {
+                    autoClose: 5000,
+                  });
               if(res.data.status){
                 console.log(res.data.user);
                 this.router.push("/artistnotification")
