@@ -48,7 +48,7 @@
         </div>
       </form>
       <div class="mx-5">
-        <button id="sign" class="btn btn">
+        <button id="sign" class="btn btn" @click="notifyMe()">
           <i class="fa fa-google"></i>Sign up with google
         </button>
         <p class="mt-5">
@@ -64,8 +64,6 @@
 <script>
 import axios from "axios";
 import BaseUrl from "../BaseUrl";
-// import 'vue-toast-notification/dist/theme-sugar.css';
-// import VueToast from 'vue-toast-notification'; 
 
 export default {
   data() {
@@ -74,9 +72,11 @@ export default {
       email: " ",
       passWord: "",
       result:"",
+      instance: '',
     };
   },
   methods: {
+
     
 
     onCreatePost() {
@@ -88,11 +88,9 @@ export default {
       axios
         .post
             (BaseUrl + "createUser", info)
-          // "http://localhost:8000/createUser", info)
         .then((res) => {
           const result= res.data.message;    
         alert(result);
-        // this.$toast.success(result);
           if(res.data.status){
             console.log(res);
             this.$router.push('/login')
